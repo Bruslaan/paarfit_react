@@ -19,9 +19,16 @@ body {
     ;
 }
 
+@media (max-width: 600px) {
+    .disable_on_mobile {
+        display: none;
+    }
+}
+
+
 
 
 @font-face {
     font-family: Logo;
     src: url(./assets/fonts/PaarfitLogo.ttf);
-  }
+}

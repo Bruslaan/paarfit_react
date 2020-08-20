@@ -1,13 +1,17 @@
 import React from 'react';
-import { NavBar } from './NavBar'
-import { Logo } from './Logo'
+import NavBarContainer from './NavBarContainer'
+
+// import { Link } from 'react-router-dom';
 
 
 let App = () => {
 
 
   return (
-    <NavBar itemLeft={<Logo name="PaarFit"></Logo>} itemRight={<p>Mascha</p>} />
+    <div>
+      <NavBarContainer />
+
+    </div>
   );
 }
 
