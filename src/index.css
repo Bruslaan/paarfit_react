@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+html,
+body {
+    background-color: var(--background-color);
+}
+
+
+:root {
+    --background: #f4f5f7;
+    --content-width: 975px;
+    --border-color: rgb(219, 219, 219);
+    --background-color:
+        #fafafa;
+    ;
+}
+
+
+
+@font-face {
+    font-family: Logo;
+    src: url(./assets/fonts/PaarfitLogo.ttf);
+  }

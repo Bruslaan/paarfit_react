@@ -1,0 +1,23 @@
+.nav__bar {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav_bar_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--content-width);
+    padding: 0 20px;
+  }

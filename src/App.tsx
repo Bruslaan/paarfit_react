@@ -1,13 +1,16 @@
 import React from 'react';
+import { NavBar } from './NavBar'
+import { Logo } from './Logo'
 
 
 let App = () => {
 
-  return (
-    <h1>Hallo World</h1>
 
+  return (
+    <NavBar itemLeft={<Logo name="PaarFit"></Logo>} itemRight={<p>Mascha</p>} />
   );
 }
+
 
 export default App;
 
