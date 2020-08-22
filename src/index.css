@@ -19,8 +19,40 @@ body {
     ;
 }
 
+.main__container {
+    max-width: var(--content-width);
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    padding-top: 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-box-flex: 1;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+.spacer {
+    height: 54px;
+}
+
 @media (max-width: 600px) {
     .disable_on_mobile {
+        display: none;
+    }
+}
+@media (min-width: 600px) {
+    .disable_on_desktop {
+        display: none !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .disable_on_small {
         display: none;
     }
 }

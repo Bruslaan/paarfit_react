@@ -1,0 +1,26 @@
+.bottom__nav__bar {
+    position: fixed !important;
+    z-index: 3;
+    width: 100%;
+    bottom:0;
+    flex: 1;
+    display: flex;
+    background-color: white;
+    border-top: 1px solid var(--border-color) !important;
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+    /* padding-bottom: env(safe-area-inset-bottom); */
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+
+.bottom__nav_bar_items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: var(--content-width);
+    padding: 0 20px;
+    height:100% !important
+}
