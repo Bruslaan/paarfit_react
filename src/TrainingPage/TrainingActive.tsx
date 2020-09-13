@@ -5,8 +5,8 @@ import {
     SnapItem,
     useVisibleElements,
     useScroll,
-    useDragToScroll,
-    isTouchDevice,
+    // useDragToScroll,
+    // isTouchDevice,
 } from 'react-snaplist-carousel';
 import { MobileStepper, Button } from '@material-ui/core';
 
@@ -25,12 +25,12 @@ function TrainingActive() {
 
     // const { isDragging } = useDragToScroll({ ref: snapList });
     const handleNext = () => {
-        goToSnapItem(activeStep+1)
+        goToSnapItem(activeStep + 1)
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
 
     const handleBack = () => {
-        goToSnapItem(activeStep-1)
+        goToSnapItem(activeStep - 1)
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
@@ -59,6 +59,9 @@ function TrainingActive() {
                 </SnapItem>
             </SnapList>
 
+
+
+            <div style={{height:"40vh"}}>Informationen usw</div>
             <MobileStepper
                 variant="progress"
                 steps={5}
