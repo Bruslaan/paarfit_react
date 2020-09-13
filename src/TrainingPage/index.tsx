@@ -10,6 +10,8 @@ function TrainingsPage() {
     const startWorkout = () => { history.push("/training/active") }
     return (
         <div className="trainings__container">
+
+            <h1>Woche 1</h1>
             <PulseButton buttonName="Workout Starten" buttonClicked={() => startWorkout()} />
 
 
