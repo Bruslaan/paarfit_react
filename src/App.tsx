@@ -1,38 +1,27 @@
 import React from 'react';
-import NavBarContainer from './NavBarContainer'
-import { BottomNavBarContainer } from './BottomNavBar'
-import Blog from './BlogPage'
-import ProfilePage from './ProfilePage'
+
+
+import Login from './LoginPage'
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
 
+import PrivateRoute from './PrivateRoute';
+
+
 let App = () => {
- 
-
-
   return (
     <div>
       <Router>
-        <NavBarContainer />
-        <div className="spacer"></div>
-        <div className="main__container">
-          <Switch>
 
-            <Route exact path="/profile">
-              <ProfilePage  />
-     
+        <Switch>
+          <Route exact path="/auth" component={Login} />
+          <PrivateRoute path="/" />
 
-            </Route>
-            <Route exact path="/training"></Route>
-            <Route exact path="/">
-              <Blog />
-            </Route>
-          </Switch>
-        </div>
-        <BottomNavBarContainer />
+        </Switch>
       </Router>
     </div>
   );
