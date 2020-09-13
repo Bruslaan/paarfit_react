@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { User, auth } from "firebase";
+// import { User, auth } from "firebase";
 import firebase from "../firebase";
 import "firebase/auth";
 import "firebase/firestore";
@@ -34,7 +34,7 @@ const Login = () => {
             .then((res: any) => {
                 authContext.setUser(res);
                 console.log(res, 'res')
-                history.push("/dashboard");
+                history.push("/");
             })
             .catch((error: any) => {
                 console.log(error.message);

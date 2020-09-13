@@ -7,15 +7,18 @@ import { BottomNavBarContainer } from './BottomNavBar'
 import Blog from './BlogPage'
 import ProfilePage from './ProfilePage'
 import TrainingPage from './TrainingPage'
+import TraningActive from './TrainingPage/TrainingActive'
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { Logo } from './Logo'
 
-
-const PrivateRoute = ({...rest }) => {
+const PrivateRoute = ({ ...rest }) => {
     const { authenticated, loadingAuthState } = useContext(AuthContext);
 
     if (loadingAuthState) {
         return (
-            <div>
-                <h1>Loading...</h1>
+            <div className="center__all">
+                <Logo name="PaarFit" />
+                <CircularProgress />
             </div>
         );
     }
@@ -24,9 +27,8 @@ const PrivateRoute = ({...rest }) => {
         <Route
             {...rest}
             render={routeProps =>
-                authenticated ? (               
+                authenticated ? (
                     <div>
-                        <Redirect from="/auth" to="/"/>
                         <NavBarContainer />
                         <div className="spacer"></div>
                         <div className="main__container">
@@ -38,7 +40,7 @@ const PrivateRoute = ({...rest }) => {
                                     <TrainingPage />
                                 </Route>
                                 <Route exact path="/training/active">
-                                    <div>Hallo Training</div>
+                                    <TraningActive />
                                 </Route>
                                 <Route exact path="/">
                                     <Blog />

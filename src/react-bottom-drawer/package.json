@@ -1,0 +1,84 @@
+{
+  "_from": "react-bottom-drawer",
+  "_id": "react-bottom-drawer@0.0.5",
+  "_inBundle": false,
+  "_integrity": "sha512-3I2LzrNfZbIOn9lEwNwTxHhJc+CngpkgsBq6sCWMrrKvtT/Z42quvDfz1daFYYDKIFSMK0NyC++iTX0oH1E0vg==",
+  "_location": "/react-bottom-drawer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-bottom-drawer",
+    "name": "react-bottom-drawer",
+    "escapedName": "react-bottom-drawer",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-bottom-drawer/-/react-bottom-drawer-0.0.5.tgz",
+  "_shasum": "e1b9d8c9030462548acbd02c26947545aa08b400",
+  "_spec": "react-bottom-drawer",
+  "_where": "/Users/bruslan/Projects/safeat_react",
+  "author": {
+    "name": "Francesc Pellicero",
+    "email": "fpellicero@gmail.com",
+    "url": "https://fpellicero.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/fpellicero/react-bottom-drawer/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "body-scroll-lock": "^3.0.1",
+    "lodash.debounce": "^4.0.8",
+    "react-swipeable": "^5.5.1",
+    "react-transition-group": "^4.3.0"
+  },
+  "deprecated": false,
+  "description": "A React Component to build friendly dialogs that slide from the bottom",
+  "devDependencies": {
+    "@types/body-scroll-lock": "^2.6.1",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "@types/react-swipeable": "^5.2.0",
+    "@types/react-transition-group": "^4.2.4",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/fpellicero/react-bottom-drawer#readme",
+  "keywords": [
+    "react",
+    "ui",
+    "modal",
+    "dialog"
+  ],
+  "license": "ISC",
+  "main": "dist",
+  "name": "react-bottom-drawer",
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fpellicero/react-bottom-drawer.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prebuild": "rm -rf dist",
+    "prepublishOnly": "yarn build",
+    "start": "parcel index.html",
+    "test": "test"
+  },
+  "version": "0.0.5"
+}

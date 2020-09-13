@@ -19,6 +19,13 @@ body {
     ;
 }
 
+
+.center__all {
+    display: grid;
+    place-items: center;
+    height: 300px;
+}
+
 .main__container {
     max-width: var(--content-width);
     display: flex;
@@ -34,7 +41,7 @@ body {
     position: relative;
     width: 100%;
     flex-shrink: 0;
-  }
+}
 
 .spacer {
     height: 54px;
@@ -45,6 +52,7 @@ body {
         display: none;
     }
 }
+
 @media (min-width: 600px) {
     .disable_on_desktop {
         display: none !important;
