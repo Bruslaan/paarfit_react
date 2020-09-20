@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { Prompt } from 'react-router'
+import MyItem from './WorkoutItem'
 import {
     SnapList,
     SnapItem,
@@ -39,8 +40,11 @@ function TrainingActive() {
     }, [visible])
 
     return (
-        <div>
+        <div >
+ 
+
             <SnapList direction="horizontal" ref={snapList}>
+
                 <SnapItem margin={{ left: '10vw', right: '15px' }} snapAlign="center">
                     <MyItem onClick={() => goToSnapItem(0)} visible={visible === 0}></MyItem>
                 </SnapItem>
@@ -58,14 +62,11 @@ function TrainingActive() {
                 </SnapItem>
             </SnapList>
 
-
-
-            <div style={{ }}>Informationen usw</div>
             <MobileStepper
-                style={{position:"fixed", bottom:"60px", maxWidth:"600px", margin:"auto"}}
+                style={{ position: "fixed", bottom: "60px", maxWidth: "600px", margin: "auto" }}
                 variant="progress"
                 steps={5}
-                
+
                 activeStep={activeStep}
 
                 nextButton={
@@ -83,27 +84,5 @@ function TrainingActive() {
         </div>
     )
 }
-const MyItem: React.FC<any> = ({ onClick, children, visible }) => (
-    <div
-        style={{
-            width: '80vw',
-            maxWidth: "600px",
-            // height: 300,
-            objectFit: "cover",
-            // background: "orange",
-            cursor: visible ? 'default' : 'pointer',
-        }}
-        onClick={onClick}
-    >
 
-        <video preload="metadata" controls style={{height:"100%", width:"100%", objectFit:"contain"}} width="100%" poster="">
-            <source src="https://firebasestorage.googleapis.com/v0/b/paarfit-90016.appspot.com/o/video1.mp4?alt=media&token=c526f78b-82c3-41fe-b145-ecbd96d3ec34#t=0.5" type="video/mp4" />
-            <source src="https://firebasestorage.googleapis.com/v0/b/paarfit-90016.appspot.com/o/video1.mp4?alt=media&token=c526f78b-82c3-41fe-b145-ecbd96d3ec34#t=0.5" type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>
-
-
-        {children}
-    </div>
-);
 export default TrainingActive

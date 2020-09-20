@@ -25,12 +25,15 @@ function TrainingsPage() {
             <button onClick={() => openDrawer()}>Trainingstagebuch</button>
 
 
+
             <Drawer isVisible={drawerVisible} onClose={closeDrawer}>
                 Trainingstagebuch
-                <div style={{ height: "100vh" }}>
+                <div style={{ height: "100vh"}}>
 
                 </div>
             </Drawer>
+
+
 
         </div >
     )
