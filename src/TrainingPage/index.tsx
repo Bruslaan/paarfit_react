@@ -7,7 +7,7 @@ import Drawer from '../react-bottom-drawer'
 function TrainingsPage() {
     const history = useHistory()
     const [drawerVisible, setdrawerVisible] = useState(false)
-    const startWorkout = () => { history.push("/training/active") }
+    const startWorkout = () => { history.push("/training/overview") }
 
 
     const openDrawer = () => {

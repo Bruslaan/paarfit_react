@@ -25,7 +25,7 @@ export const navLinks: Route[] = [
     {
         id: 3,
         name: "Training",
-        icon: <Badge badgeContent={1} color="secondary"><FitnessCenterRoundedIcon /></Badge>,
+        icon: <FitnessCenterRoundedIcon />,
         destination: "/training"
     },
     {

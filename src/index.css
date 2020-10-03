@@ -4,6 +4,10 @@
 
 }
 
+h1{
+    color: rgb(19, 0, 77);
+}
+
 html,
 body {
     background-color: var(--background-color);
@@ -24,9 +28,10 @@ body {
 .center__all {
     display: grid;
     place-items: center;
-    height: 300px;
 }
-
+.no__padding{
+    padding-top:0px !important;
+}
 .main__container {
     max-width: var(--content-width);
     display: flex;
@@ -34,6 +39,7 @@ body {
     place-content: center;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 54px;
     display: flex;
     padding-top: 30px;
     -webkit-box-orient: horizontal;

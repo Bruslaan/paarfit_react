@@ -8,6 +8,7 @@ import Blog from './BlogPage'
 import ProfilePage from './ProfilePage'
 import TrainingPage from './TrainingPage'
 import TraningActive from './TrainingPage/TrainingActive'
+import TrainingOverView from './TrainingPage/TrainingOverview'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Logo } from './Logo'
 
@@ -39,7 +40,10 @@ const PrivateRoute = ({ ...rest }) => {
                                 <Route exact path="/training">
                                     <TrainingPage />
                                 </Route>
-                                <Route exact path="/training/active">
+                                <Route exact path="/training/overview">
+                                    <TrainingOverView />
+                                </Route>
+                                <Route exact path="/training/overview/active/:id">
                                     <TraningActive />
                                 </Route>
                                 <Route exact path="/">

@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, CardActions, Button, CardActionArea, Typography, CardContent, CardMedia } from "@material-ui/core";
+import { Card, CardActions, Button, CardActionArea, Typography, CardContent } from "@material-ui/core";
 
 const MyItem: React.FC<any> = ({ onClick, children, visible }) => (
     <div
