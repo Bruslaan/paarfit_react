@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useContext } from 'react'
 import { Prompt } from 'react-router'
 import MyItem from './WorkoutItem'
+import { useHistory } from "react-router-dom";
 import {
     SnapList,
     SnapItem,
@@ -10,12 +11,16 @@ import {
     // isTouchDevice,
 } from 'react-snaplist-carousel';
 import { MobileStepper, Button } from '@material-ui/core';
+import { Context } from "../GlobalState/store"
 
 function TrainingActive() {
 
     const snapList = useRef(null);
-
+    const steps = 4
     const [activeStep, setActiveStep] = React.useState(0);
+    const [state, dispatch]: any = useContext(Context);
+    const history = useHistory()
+    const [prompNeeded, enablePromp] = React.useState(true);
 
     const visible = useVisibleElements(
         { debounce: 10, ref: snapList },
@@ -29,6 +34,16 @@ function TrainingActive() {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
 
+    const finishWorkouts = () => {
+        // workout finished
+        console.log("Workouts finished")
+        if (state.currentWorkout === 3) {
+            dispatch({ type: "FINISH_WORKOUT" })
+        } else {
+            dispatch({ type: "NEXT_WORKOUT", payload: "" })
+        }
+        history.push("/training/overview")
+    }
     const handleBack = () => {
         goToSnapItem(activeStep - 1)
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
@@ -41,10 +56,7 @@ function TrainingActive() {
 
     return (
         <div >
- 
-
             <SnapList direction="horizontal" ref={snapList}>
-
                 <SnapItem margin={{ left: '10vw', right: '15px' }} snapAlign="center">
                     <MyItem onClick={() => goToSnapItem(0)} visible={visible === 0}></MyItem>
                 </SnapItem>
@@ -66,11 +78,9 @@ function TrainingActive() {
                 style={{ position: "fixed", bottom: "60px", maxWidth: "600px", margin: "auto" }}
                 variant="progress"
                 steps={5}
-
                 activeStep={activeStep}
-
                 nextButton={
-                    <Button size="small" onClick={handleNext} disabled={activeStep === 4}>Weiter</Button>
+                    <Button size="small" onClick={activeStep === steps ? finishWorkouts : handleNext} >{activeStep === steps ? "Fertigstellen" : "Weiter"}</Button>
                 }
                 backButton={
                     <Button size="small" onClick={handleBack} disabled={activeStep === 0}>Zurück</Button>
@@ -78,7 +88,7 @@ function TrainingActive() {
             />
 
             <Prompt
-                when={true}
+                when={prompNeeded}
                 message='Du bist mitten im Workout, sicher dass du es abbrechen willst?'
             />
         </div>

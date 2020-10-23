@@ -1,11 +1,12 @@
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import StepContent from '@material-ui/core/StepContent';
 import { useHistory } from "react-router-dom";
 import { Button } from '@material-ui/core';
+import { Context } from "../GlobalState/store"
 
 const style = {
     maxWidth: "500px",
@@ -23,12 +24,11 @@ const TrainingOverview = () => {
         "https://images.unsplash.com/photo-1544216717-3bbf52512659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
         "https://images.unsplash.com/photo-1522898467493-49726bf28798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
         "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2594&q=80"
-
     ]
     const history = useHistory()
     const startWorkout = () => {
         console.log("hallo world")
-        history.push("/training/overview/active/1")
+        history.push("/training/overview/active/"+activeIndex)
     }
 
     const mapping = [
@@ -39,7 +39,11 @@ const TrainingOverview = () => {
     ]
 
 
-    const [activeIndex, setactiveIndex] = useState(0)
+    //const [activeIndex, setactiveIndex] = useState(0)
+    const [state, dispatch]: any = useContext(Context);
+    let activeIndex = state.currentWorkout
+
+    console.log(activeIndex)
     return (
         <div className="center__all" style={{ background: "white" }}>
             <Stepper orientation="vertical" >
@@ -48,7 +52,7 @@ const TrainingOverview = () => {
                         <StepLabel>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "30px" }}>
                                 <h1 className="test">{mapping[index].name}</h1>
-                                <p style={{color:"gray"}}>Max: 5 Min</p>
+                                <p style={{ color: "gray" }}>Max: 5 Min</p>
                             </div>
                         </StepLabel>
                         <StepContent>
@@ -64,11 +68,12 @@ const TrainingOverview = () => {
                                 </div>
                             </div>
                             {activeIndex === index && <div className="center__all">
-                                <div style={{display:"flex"}}>   <Button onClick={startWorkout} variant="outlined" >
+                                <div style={{ display: "flex" }}>   <Button onClick={startWorkout} variant="outlined" >
                                     Starten</Button>
-                                    <div style={{width:"10px"}}></div>
-                                    <Button onClick={()=>setactiveIndex(activeIndex+1)} >
-                                        Überspringen</Button></div>
+                                    <div style={{ width: "10px" }}></div>
+                                    {/* <Button onClick={()=>setactiveIndex(activeIndex+1)} >
+                                        Überspringen</Button> */}
+                                </div>
 
                             </div>}
 
@@ -78,6 +83,13 @@ const TrainingOverview = () => {
                     </Step>
                 ))}
             </Stepper>
+            {
+                activeIndex === 4 &&
+                <div>
+                    Workout Complete
+                </div>
+            }
+
         </div>
     )
 }

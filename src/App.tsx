@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Store from './GlobalState/store'
 
 import Login from './LoginPage'
 
@@ -16,11 +16,11 @@ let App = () => {
   return (
     <div>
       <Router>
-
         <Switch>
           <Route exact path="/auth" component={Login} />
-          <PrivateRoute path="/" />
-
+          <Store>
+            <PrivateRoute path="/" />
+          </Store>
         </Switch>
       </Router>
     </div>
