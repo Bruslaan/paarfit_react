@@ -8,8 +8,6 @@ import { AuthContext } from "../AuthProvider";
 import TextField from '@material-ui/core/TextField';
 
 import Button from '@material-ui/core/Button';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
@@ -40,21 +38,24 @@ const useStyles = makeStyles((theme) => ({
 interface UserData {
     email: string;
     password: string;
+    passwordrepeat: string;
 }
-const Login = () => {
+const Register = () => {
     const classes = useStyles();
 
     const authContext = useContext(AuthContext);
     const history = useHistory();
+    const [error, seterror] = useState("")
     const [values, setValues] = useState({
         email: "",
-        password: ""
+        password: "",
+        passwordrepeat:"",
     } as UserData);
-    const handleClick = () => {
-        history.push("/auth/signup");
-    }
+
     const handleChange = (event: any) => {
+
         event.persist();
+        console.log(event.target.name)
         setValues(values => ({
             ...values,
             [event.target.name]: event.target.value
@@ -62,9 +63,15 @@ const Login = () => {
     }
     const handleSubmit = (event: any) => {
         event.preventDefault();
+
+        if (values.password !== values.passwordrepeat){
+            seterror("Passwörter stimmen nicht überein")
+            return
+        }
+
         firebase
             .auth()
-            .signInWithEmailAndPassword(values.email, values.password)
+            .createUserWithEmailAndPassword(values.email, values.password)
             .then((res: any) => {
                 authContext.setUser(res);
                 console.log(res, 'res')
@@ -109,10 +116,19 @@ const Login = () => {
                         value={values.password}
                         onChange={handleChange}
                     />
-                    <FormControlLabel
-                        control={<Checkbox value="remember" color="primary" />}
-                        label="Remember me"
+                    <TextField
+                        variant="outlined"
+                        margin="normal"
+                        required
+                        fullWidth
+                        name="passwordrepeat"
+                        label="Repeat Password"
+                        type="password"
+                        id="password2"
+                        value={values.passwordrepeat}
+                        onChange={handleChange}
                     />
+                    {error!=="" && <p style={{color:"red"}}>{error}</p>}
                     <Button
                         type="submit"
                         fullWidth
@@ -120,17 +136,13 @@ const Login = () => {
                         color="primary"
                         className={classes.submit}
                     >
-                        Login
-          </Button>
+                        Register
+                    </Button>
                     <Grid container>
-                        <Grid item xs>
-                            <Link href="#" variant="body2">
-                                Forgot password?
-              </Link>
-                        </Grid>
+                        
                         <Grid item>
-                            <Link href="/register" variant="body2">
-                                {"Don't have an account? Sign Up"}
+                            <Link href="/auth" variant="body2">
+                                {"Have an account? Sign In"}
                             </Link>
                         </Grid>
                     </Grid>
@@ -159,4 +171,4 @@ function Copyright() {
     );
 }
 
-export default Login;
+export default Register;

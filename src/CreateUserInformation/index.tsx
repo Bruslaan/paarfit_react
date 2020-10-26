@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
 // import { User, auth } from "firebase";
 import firebase from "../firebase";
 import "firebase/auth";
@@ -10,10 +9,6 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { Logo } from "../Logo"
 
@@ -41,18 +36,15 @@ interface UserData {
     email: string;
     password: string;
 }
-const Login = () => {
+const UserInformation = () => {
     const classes = useStyles();
+    const db = firebase.firestore()
+    const { user } = useContext(AuthContext);
 
-    const authContext = useContext(AuthContext);
-    const history = useHistory();
     const [values, setValues] = useState({
         email: "",
         password: ""
     } as UserData);
-    const handleClick = () => {
-        history.push("/auth/signup");
-    }
     const handleChange = (event: any) => {
         event.persist();
         setValues(values => ({
@@ -62,22 +54,23 @@ const Login = () => {
     }
     const handleSubmit = (event: any) => {
         event.preventDefault();
-        firebase
-            .auth()
-            .signInWithEmailAndPassword(values.email, values.password)
-            .then((res: any) => {
-                authContext.setUser(res);
-                console.log(res, 'res')
-                history.push("/");
-            })
-            .catch((error: any) => {
-                console.log(error.message);
-                alert(error.message);
+
+        db.collection("users").doc(user?.uid).set({
+            first: "Alan",
+            middle: "Mathison",
+            teamName: "Die Kartoschki",
+            kilo: "200",
+            userId: user?.uid
+        }).then(function (docRef) {
+            window.location.reload()
+        })
+            .catch(function (error) {
+                console.error("Error adding document: ", error);
             });
     }
 
     return (
-        <div style={{ maxWidth: "500px", margin: "auto", padding:"10px"}}>
+        <div style={{ maxWidth: "500px", margin: "auto", padding: "10px" }}>
 
             <div className={classes.paper}>
                 <Logo name="PaarFit"></Logo>
@@ -89,26 +82,14 @@ const Login = () => {
                         required
                         fullWidth
                         id="email"
-                        label="Email Address"
+                        label="Name"
                         name="email"
                         autoComplete="email"
                         autoFocus
                         value={values.email}
                         onChange={handleChange}
                     />
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        name="password"
-                        label="Password"
-                        type="password"
-                        id="password"
-                        autoComplete="current-password"
-                        value={values.password}
-                        onChange={handleChange}
-                    />
+
                     <FormControlLabel
                         control={<Checkbox value="remember" color="primary" />}
                         label="Remember me"
@@ -120,43 +101,15 @@ const Login = () => {
                         color="primary"
                         className={classes.submit}
                     >
-                        Login
+                        Save
           </Button>
-                    <Grid container>
-                        <Grid item xs>
-                            <Link href="#" variant="body2">
-                                Forgot password?
-              </Link>
-                        </Grid>
-                        <Grid item>
-                            <Link href="/register" variant="body2">
-                                {"Don't have an account? Sign Up"}
-                            </Link>
-                        </Grid>
-                    </Grid>
                 </form>
             </div>
-            <Box mt={8}>
-                <Copyright />
-            </Box>
+
 
         </div>
     );
 }
 
 
-
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
-        </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
-
-export default Login;
+export default UserInformation;

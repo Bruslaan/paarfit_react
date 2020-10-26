@@ -2,6 +2,7 @@ import React from 'react';
 import Store from './GlobalState/store'
 
 import Login from './LoginPage'
+import Register from './RegisterPage'
 
 import {
   BrowserRouter as Router,
@@ -18,6 +19,7 @@ let App = () => {
       <Router>
         <Switch>
           <Route exact path="/auth" component={Login} />
+          <Route exact path="/register" component={Register} />
           <Store>
             <PrivateRoute path="/" />
           </Store>
