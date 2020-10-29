@@ -10,7 +10,7 @@ import WorkoutItem from './WorkoutItem'
 import { useHistory, useParams } from 'react-router';
 import { Context } from "../GlobalState/store"
 import { CircularProgress } from '@material-ui/core';
-
+import { Prompt } from 'react-router'
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -173,6 +173,11 @@ export default function VerticalLinearStepper() {
                     <CircularProgress />
                 </Paper>
             )}
+
+            <Prompt
+                when={!(activeStep === workouts.length - 1)}
+                message='Du bist mitten im Workout, sicher dass du es abbrechen willst?'
+            />
         </div>
     );
 }
