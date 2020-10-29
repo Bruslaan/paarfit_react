@@ -32,7 +32,6 @@ const LevelMapping: { [key: number]: string; } = {
 function TrainingActive() {
 
     const snapList = useRef(null);
-    const steps = 4
     const [activeStep, setActiveStep] = React.useState(0);
     const [state, dispatch]: any = useContext(Context);
     const history = useHistory()
@@ -76,7 +75,7 @@ function TrainingActive() {
             .then(response =>
                 response.json())
             .then(data => {
-                console.log(data)
+               
                 setworkouts(data)
             }
             )
@@ -106,10 +105,10 @@ function TrainingActive() {
             <MobileStepper
                 style={{ position: "fixed", bottom: "60px", maxWidth: "600px", margin: "auto" }}
                 variant="progress"
-                steps={5}
+                steps={workouts.length}
                 activeStep={activeStep}
                 nextButton={
-                    <Button size="small" onClick={activeStep === steps ? finishWorkouts : handleNext} >{activeStep === steps ? "Fertigstellen" : "Weiter"}</Button>
+                    <Button size="small" onClick={activeStep === workouts.length-1 ? finishWorkouts : handleNext} >{activeStep === workouts.length-1 ? "Fertigstellen" : "Weiter"}</Button>
                 }
                 backButton={
                     <Button size="small" onClick={handleBack} disabled={activeStep === 0}>Zurück</Button>

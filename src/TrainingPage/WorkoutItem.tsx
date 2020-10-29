@@ -22,14 +22,15 @@ const MyItem: React.FC<any> = ({ onClick, children, visible, workout }) => (
     >
 
         <video preload="metadata" controls style={{ width: "100%", top: 0, objectFit: "contain" }} width="100%" poster="">
-            <source src={workout.video.url + "#t=0.5"} type="video/mp4" />
-            <source src={workout.video.url + "#t=0.5"} type="video/mp4" />
+            <source src={workout.video?.url + "#t=0.5"} type="video/mp4" />
+            <source src={workout.video?.url + "#t=0.5"} type="video/mp4" />
             Your browser does not support the video tag.
         </video>
 
         <div style={{ padding: "20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <div>
-                <h1 style={{}}>{workout.workoutname}</h1>
+                <h1 style={{ marginBottom: "20px" }}>{workout.workoutname}</h1>
+
                 <p style={{ color: "gray" }}>{workout.sets} Sets</p>
                 <p style={{ color: "gray" }}>{workout.reps} Reps</p>
                 <p style={{ color: "gray" }}>{workout.pause} Pause</p>
