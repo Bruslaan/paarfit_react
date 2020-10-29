@@ -1,7 +1,8 @@
-import React, { useRef, useEffect, useContext } from 'react'
+import React, { useRef, useEffect, useContext, useState } from 'react'
 import { Prompt } from 'react-router'
 import MyItem from './WorkoutItem'
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
+
 import {
     SnapList,
     SnapItem,
@@ -13,6 +14,21 @@ import {
 import { MobileStepper, Button } from '@material-ui/core';
 import { Context } from "../GlobalState/store"
 
+
+
+
+const LevelMapping: { [key: number]: string; } = {
+    0: "Aufwärmen",
+    1: "Kraft",
+    2: "Dehnen",
+    3: "Yoga"
+}
+
+
+
+
+
+
 function TrainingActive() {
 
     const snapList = useRef(null);
@@ -21,6 +37,10 @@ function TrainingActive() {
     const [state, dispatch]: any = useContext(Context);
     const history = useHistory()
     const [prompNeeded, enablePromp] = React.useState(true);
+    const [workouts, setworkouts]: any = useState([])
+    let params: any = useParams();
+    let currentID: number = params["id"]
+    let stage = LevelMapping[currentID]
 
     const visible = useVisibleElements(
         { debounce: 10, ref: snapList },
@@ -49,29 +69,38 @@ function TrainingActive() {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
+    async function fetchWorkouts() {
+        const currentID = params["id"]
+
+        fetch(`https://paarfit-strapi.herokuapp.com/workouts?workoutcategories.categoryname=${LevelMapping[currentID]}&&workoutlevels.levelname=Anfänger`)
+            .then(response =>
+                response.json())
+            .then(data => {
+                console.log(data)
+                setworkouts(data)
+            }
+            )
+
+    }
 
     useEffect(() => {
         setActiveStep(visible)
+
     }, [visible])
+
+    useEffect(() => {
+        fetchWorkouts()
+    }, [])
 
     return (
         <div >
             <SnapList direction="horizontal" ref={snapList}>
-                <SnapItem margin={{ left: '10vw', right: '15px' }} snapAlign="center">
-                    <MyItem onClick={() => goToSnapItem(0)} visible={visible === 0}></MyItem>
-                </SnapItem>
-                <SnapItem margin={{ left: '15px', right: '15px' }} snapAlign="center">
-                    <MyItem onClick={() => goToSnapItem(1)} visible={visible === 1}></MyItem>
-                </SnapItem>
-                <SnapItem margin={{ left: '15px', right: '15px' }} snapAlign="center">
-                    <MyItem onClick={() => goToSnapItem(2)} visible={visible === 2}></MyItem>
-                </SnapItem>
-                <SnapItem margin={{ left: '15px', right: '15px' }} snapAlign="center">
-                    <MyItem onClick={() => goToSnapItem(3)} visible={visible === 3}></MyItem>
-                </SnapItem>
-                <SnapItem margin={{ left: '15px', right: '10vw' }} snapAlign="center">
-                    <MyItem onClick={() => goToSnapItem(4)} visible={visible === 4}></MyItem>
-                </SnapItem>
+                {workouts.map((workout: any) => (
+                    <SnapItem key={workout["_id"]} margin={{ left: '10vw', right: '15px' }} snapAlign="center">
+                        <MyItem workout={workout} onClick={() => goToSnapItem(0)} visible={visible === 0}></MyItem>
+                    </SnapItem>
+                ))}
+
             </SnapList>
 
             <MobileStepper

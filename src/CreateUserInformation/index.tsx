@@ -89,11 +89,27 @@ const UserInformation = () => {
                         value={values.email}
                         onChange={handleChange}
                     />
-
-                    <FormControlLabel
-                        control={<Checkbox value="remember" color="primary" />}
-                        label="Remember me"
+                    <TextField
+                        variant="outlined"
+                        margin="normal"
+                        required
+                        fullWidth
+                        id="email"
+                        label="Name"
+                        name="email"
+                        autoComplete="email"
+                        autoFocus
+                        value={values.email}
+                        onChange={handleChange}
                     />
+                    <TextField
+                        variant="outlined"
+                        id="standard-number"
+                        label="Number"
+                        type="number"
+                  
+                    />
+
                     <Button
                         type="submit"
                         fullWidth

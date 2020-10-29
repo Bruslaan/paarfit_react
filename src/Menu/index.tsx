@@ -20,7 +20,5 @@ export const Menu: React.FC<Props> = ({ links }) => {
         <div className="menu">
             {links.map(link => <NavLink exact activeClassName="active__link" key={link.id} to={link.destination} >{link.icon}</NavLink>)}
         </div>
-
-
     )
 }

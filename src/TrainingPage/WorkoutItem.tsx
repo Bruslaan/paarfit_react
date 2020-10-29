@@ -1,7 +1,10 @@
 import React from "react"
 import { Card, CardActions, Button, CardActionArea, Typography, CardContent } from "@material-ui/core";
 
-const MyItem: React.FC<any> = ({ onClick, children, visible }) => (
+
+
+
+const MyItem: React.FC<any> = ({ onClick, children, visible, workout }) => (
     <div
         style={{
             width: '80vw',
@@ -11,28 +14,30 @@ const MyItem: React.FC<any> = ({ onClick, children, visible }) => (
             objectFit: "cover",
             overflow: "hidden",
             // background: "orange",
-            position:"relative",
+            position: "relative",
             border: "solid 1px var(--border-color)",
             cursor: visible ? 'default' : 'pointer',
         }}
         onClick={onClick}
     >
 
-        <video preload="metadata" controls style={{ width: "100%", top:0, objectFit: "contain" }} width="100%" poster="">
-            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4#t=0.5" type="video/mp4" />
-            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4#t=0.5" type="video/mp4" />
+        <video preload="metadata" controls style={{ width: "100%", top: 0, objectFit: "contain" }} width="100%" poster="">
+            <source src={workout.video.url + "#t=0.5"} type="video/mp4" />
+            <source src={workout.video.url + "#t=0.5"} type="video/mp4" />
             Your browser does not support the video tag.
         </video>
 
         <div style={{ padding: "20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <div>
-                <h1 style={{}}>Squads</h1>
-                <h2 style={{ color: "gray" }}>Irgendwas</h2>
+                <h1 style={{}}>{workout.workoutname}</h1>
+                <p style={{ color: "gray" }}>{workout.sets} Sets</p>
+                <p style={{ color: "gray" }}>{workout.reps} Reps</p>
+                <p style={{ color: "gray" }}>{workout.pause} Pause</p>
             </div>
 
         </div>
         <div style={{ padding: "20px", color: "gray" }}>
-            #squads #aufwärmen
+            #aufwärmen
         </div>
 
         {children}
