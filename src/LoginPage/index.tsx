@@ -50,9 +50,8 @@ const Login = () => {
         email: "",
         password: ""
     } as UserData);
-    const handleClick = () => {
-        history.push("/auth/signup");
-    }
+
+
     const handleChange = (event: any) => {
         event.persist();
         setValues(values => ({
@@ -77,7 +76,7 @@ const Login = () => {
     }
 
     return (
-        <div style={{ maxWidth: "500px", margin: "auto", padding:"10px"}}>
+        <div style={{ maxWidth: "500px", margin: "auto", padding: "10px" }}>
 
             <div className={classes.paper}>
                 <Logo name="PaarFit"></Logo>

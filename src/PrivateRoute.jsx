@@ -8,7 +8,7 @@ import Blog from './BlogPage'
 import ProfilePage from './ProfilePage'
 import CreateUserInformation from './CreateUserInformation'
 import TrainingPage from './TrainingPage'
-import TraningActive from './TrainingPage/TrainingActive'
+import TraningActive from './TrainingPage/TrainingActiveMaterial'
 import TrainingOverView from './TrainingPage/TrainingOverview'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Logo } from './Logo'

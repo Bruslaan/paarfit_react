@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, createContext } from "react";
 import firebase from "../firebase";
 type ContextProps = {
@@ -7,28 +8,39 @@ type ContextProps = {
   haveInformation: boolean;
   setUser: any;
   loadingAuthState: boolean;
+
 };
 export const AuthContext = createContext<Partial<ContextProps>>({});
 export const AuthProvider = ({ children }: any) => {
   const [user, setUser] = useState(null as firebase.User | null);
   const db = firebase.firestore()
   const [loadingAuthState, setLoadingAuthState] = useState(true);
+
   const [userInformation, setuserInformation]: any | null = useState(null)
   useEffect(() => {
 
     firebase.auth().onAuthStateChanged((user: any) => {
       setUser(user);
 
+      if (user) {
+        db.collection("users").doc(user?.uid).get().then(document => {
 
-      db.collection("users").doc(user?.uid).get().then(document => {
+          document.exists && setuserInformation(document.data())
+          console.log(document.data())
+          setLoadingAuthState(false);
 
-        document.exists && setuserInformation(document.data())
+        }).catch(error => {
+          setLoadingAuthState(false);
 
+        })
+      } else {
         setLoadingAuthState(false);
-      })
+      }
+
+
 
     });
-  }, []);
+  }, [db]);
   return (
     <AuthContext.Provider
       value={{
@@ -37,7 +49,8 @@ export const AuthProvider = ({ children }: any) => {
         setUser,
         userInformation: userInformation,
         haveInformation: userInformation !== null,
-        loadingAuthState
+        loadingAuthState,
+
       }}>
       {children}
     </AuthContext.Provider>

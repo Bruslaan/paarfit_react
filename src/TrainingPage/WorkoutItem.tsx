@@ -4,13 +4,14 @@ import { Card, CardActions, Button, CardActionArea, Typography, CardContent } fr
 
 
 
-const MyItem: React.FC<any> = ({ onClick, children, visible, workout }) => (
+const MyItem: React.FC<any> = ({ onClick, children, visible, workout, stage }) => (
     <div
         style={{
             width: '80vw',
             borderRadius: "10px",
             maxWidth: "600px",
-            height: 600,
+            marginRight: "auto",
+            marginLeft: "auto",
             objectFit: "cover",
             overflow: "hidden",
             // background: "orange",
@@ -38,7 +39,7 @@ const MyItem: React.FC<any> = ({ onClick, children, visible, workout }) => (
 
         </div>
         <div style={{ padding: "20px", color: "gray" }}>
-            #aufwärmen
+            #{stage}
         </div>
 
         {children}

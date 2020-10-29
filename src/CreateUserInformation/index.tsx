@@ -7,8 +7,6 @@ import { AuthContext } from "../AuthProvider";
 import TextField from '@material-ui/core/TextField';
 
 import Button from '@material-ui/core/Button';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import { makeStyles } from '@material-ui/core/styles';
 import { Logo } from "../Logo"
 

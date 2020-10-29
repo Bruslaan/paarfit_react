@@ -35,7 +35,7 @@ function TrainingActive() {
     const [activeStep, setActiveStep] = React.useState(0);
     const [state, dispatch]: any = useContext(Context);
     const history = useHistory()
-    const [prompNeeded, enablePromp] = React.useState(true);
+    const [prompNeeded] = React.useState(true);
     const [workouts, setworkouts]: any = useState([])
     let params: any = useParams();
     let currentID: number = params["id"]
@@ -69,13 +69,11 @@ function TrainingActive() {
     };
 
     async function fetchWorkouts() {
-        const currentID = params["id"]
-
-        fetch(`https://paarfit-strapi.herokuapp.com/workouts?workoutcategories.categoryname=${LevelMapping[currentID]}&&workoutlevels.levelname=Anfänger`)
+        fetch(`https://paarfit-strapi.herokuapp.com/workouts?workoutcategories.categoryname=${stage}&&workoutlevels.levelname=Anfänger`)
             .then(response =>
                 response.json())
             .then(data => {
-               
+
                 setworkouts(data)
             }
             )
@@ -108,7 +106,7 @@ function TrainingActive() {
                 steps={workouts.length}
                 activeStep={activeStep}
                 nextButton={
-                    <Button size="small" onClick={activeStep === workouts.length-1 ? finishWorkouts : handleNext} >{activeStep === workouts.length-1 ? "Fertigstellen" : "Weiter"}</Button>
+                    <Button size="small" onClick={activeStep === workouts.length - 1 ? finishWorkouts : handleNext} >{activeStep === workouts.length - 1 ? "Fertigstellen" : "Weiter"}</Button>
                 }
                 backButton={
                     <Button size="small" onClick={handleBack} disabled={activeStep === 0}>Zurück</Button>
