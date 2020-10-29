@@ -1,5 +1,5 @@
 
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -8,8 +8,6 @@ import { useHistory } from "react-router-dom";
 import { Button } from '@material-ui/core';
 import { Context } from "../GlobalState/store"
 import Confetti from 'react-confetti'
-
-
 
 const style = {
     maxWidth: "500px",
@@ -45,8 +43,8 @@ const TrainingOverview = () => {
 
     //const [activeIndex, setactiveIndex] = useState(0)
     const [state]: any = useContext(Context);
-    //let activeIndex = state.currentWorkout
-    let activeIndex = 4
+    let activeIndex = state.currentWorkout
+    // let activeIndex = 2
 
     console.log(activeIndex)
     return (
@@ -90,10 +88,19 @@ const TrainingOverview = () => {
             </Stepper>
             {
                 activeIndex === 4 &&
-                <Confetti
-                    width={1000}
-                    height={1000}
-                />
+                (
+                    <div>
+                        <Confetti
+                            gravity={0.9}
+
+                            recycle={false}
+                            width={1000}
+                            height={1000}
+                        />
+
+                    </div>
+                )
+
             }
 
         </div>

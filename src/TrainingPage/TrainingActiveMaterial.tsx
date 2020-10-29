@@ -9,6 +9,7 @@ import Paper from '@material-ui/core/Paper';
 import WorkoutItem from './WorkoutItem'
 import { useHistory, useParams } from 'react-router';
 import { Context } from "../GlobalState/store"
+import { CircularProgress } from '@material-ui/core';
 
 
 
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             width: '100%',
+
         },
         button: {
             marginTop: theme.spacing(1),
@@ -26,11 +28,16 @@ const useStyles = makeStyles((theme: Theme) =>
             display: "flex",
             width: "100%",
             justifyContent: "center",
-            marginLeft: "auto",
+
         },
         resetContainer: {
             // padding: theme.spacing(3),
+
+            display: "flex",
+
+
         },
+
     }),
 );
 
@@ -49,15 +56,14 @@ const LevelMapping: { [key: number]: string; } = {
 export default function VerticalLinearStepper() {
     const classes = useStyles();
     const [activeStep, setActiveStep] = useState(0);
-    const [workoutDone, setworkoutDone] = useState(false)
     const [loading, setloading] = useState(false)
     const [workouts, setworkouts]: any = useState([])
     const [state, dispatch]: any = useContext(Context);
     const history = useHistory()
-
+    const [enableCongrats, setenableCongrats] = useState(false)
 
     let params: any = useParams();
-    let currentID: number = params["id"]
+    let currentID: number = Number(params["id"])
     let stage = LevelMapping[currentID]
 
     async function fetchWorkouts() {
@@ -76,6 +82,9 @@ export default function VerticalLinearStepper() {
             })
 
     }
+
+    const finalWorkout = currentID === Number("2")
+
     const finishWorkouts = () => {
         // workout finished
         console.log("Workouts finished")
@@ -84,6 +93,8 @@ export default function VerticalLinearStepper() {
         } else {
             dispatch({ type: "NEXT_WORKOUT", payload: "" })
         }
+
+
         history.push("/training/overview")
     }
 
@@ -96,9 +107,16 @@ export default function VerticalLinearStepper() {
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
+
+    const showCongrats = () => {
+        setActiveStep((prevActiveStep) => prevActiveStep + 1)
+        setenableCongrats(true)
+
+    }
+
     const handleFinish = () => {
-        setworkoutDone(true)
-        finishWorkouts()
+        finalWorkout ? showCongrats() :
+            finishWorkouts()
 
     }
 
@@ -110,11 +128,11 @@ export default function VerticalLinearStepper() {
 
     return (
         <div className={classes.root} style={{ width: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-            <Stepper activeStep={activeStep} orientation="vertical" style={{ width: "100%", marginLeft:"10px" }}>
+            <Stepper activeStep={activeStep} orientation="vertical" style={{ width: "100%", padding: "0" }}>
                 {workouts.map((workout: any) => (
                     <Step key={workout["_id"]}>
                         <StepLabel><h1>{workout.workoutname}</h1></StepLabel>
-                        <StepContent style={{padding:"0"}}>
+                        <StepContent style={{ padding: "0" }}>
                             <WorkoutItem workout={workout} stage={stage} />
                             <div className={classes.actionsContainer}>
                                 <div>
@@ -139,17 +157,20 @@ export default function VerticalLinearStepper() {
                     </Step>
                 ))}
             </Stepper>
-            {/* {activeStep === workouts.length && workoutDone && (
+            {enableCongrats && (
                 <Paper square elevation={0} className={classes.resetContainer}>
-                    <Typography>{stage} abgeschlossen - zurück zur Übersicht</Typography>
-                    <Button onClick={handleReset} className={classes.button}>
+
+                    <h1>Workouts erfolgreich abgeschlossen.</h1>
+                    <Button onClick={() => history.push("/training")} className={classes.button}>
                         Zurück zur Übersicht</Button>
                 </Paper>
-            )} */}
+            )}
 
             {loading && (
                 <Paper square elevation={0} className={classes.resetContainer}>
-                    Workouts werden geladen...
+                    <p style={{ marginBottom: "20px" }}>Workouts werden geladen...</p>
+
+                    <CircularProgress />
                 </Paper>
             )}
         </div>
