@@ -129,11 +129,11 @@ export default function VerticalLinearStepper() {
 
 
     return (
-        <div className={classes.root} style={{ width: "100%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+        <div className={classes.root} style={{ width: "90%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", margin:"auto" }}>
             <Stepper activeStep={activeStep} orientation="vertical" style={{ width: "100%", padding: "0" }}>
                 {workouts.map((workout: any) => (
                     <Step key={workout["_id"]}>
-                        <StepLabel ><h1 style={{marginLeft:"20px"}}>{workout.workoutname}</h1></StepLabel>
+                        <StepLabel ><h3 style={{marginLeft:"20px"}}>{workout.workoutname}</h3></StepLabel>
                         <StepContent style={{ padding: "0" }}>
                             <WorkoutItem workout={workout} stage={stage} />
                             <div className={classes.actionsContainer}>

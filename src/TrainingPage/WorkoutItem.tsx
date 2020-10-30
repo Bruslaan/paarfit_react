@@ -12,7 +12,7 @@ const MyItem: React.FC<any> = ({ onClick, children, visible, workout, stage }) =
             // background: "orange",
             position: "relative",
 
-        
+
             cursor: visible ? 'default' : 'pointer',
         }}
         onClick={onClick}
@@ -26,17 +26,19 @@ const MyItem: React.FC<any> = ({ onClick, children, visible, workout, stage }) =
 
         <div style={{ padding: "20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <div>
-                <h1 style={{ marginBottom: "20px" }}>{workout.workoutname}</h1>
+                <h2 style={{ marginBottom: "20px" }}>{workout.workoutname}</h2>
 
-                <p style={{ color: "gray" }}>Sets: {workout.sets}</p>
-                <p style={{ color: "gray" }}>Wiederholungen: {workout.reps}</p>
-                <p style={{ color: "gray" }}>Pause: {workout.pause}</p>
+                <p style={{ color: "#4b4561" }}><strong>Sets:</strong> {workout.sets}</p>
+                <br/>
+                <p style={{ color: "#4b4561" }}><strong>Wiederholungen:</strong> {workout.reps}</p>
+                <br/>
+                <p style={{ color: "#4b4561" }}><strong>Pause:</strong> {workout.pause}</p>
             </div>
 
         </div>
-        <div style={{ padding: "20px", color: "gray" }}>
+        {/* <div style={{ padding: "20px", color: "gray" }}>
             #{stage}
-        </div>
+        </div> */}
 
         {children}
     </div>

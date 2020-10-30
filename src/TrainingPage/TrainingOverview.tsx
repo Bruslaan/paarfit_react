@@ -48,8 +48,8 @@ const TrainingOverview = () => {
 
     console.log(activeIndex)
     return (
-        <div className="center__all" style={{ background: "white" }}>
-            <Stepper style={{  maxWidth: "500px" }} orientation="vertical" >
+        <div className="center__all" style={{ background: "white", width: "90%", margin: "auto" }}>
+            <Stepper style={{ maxWidth: "500px", width: "100%", padding: "0px", overflow: "hidden" }} orientation="vertical" >
                 {images.map((image, index) => (
                     <Step completed={activeIndex > index} active={true} key={index} >
                         <StepLabel>
