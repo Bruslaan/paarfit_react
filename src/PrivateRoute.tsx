@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
         fab: {
             position: 'fixed',
             bottom: theme.spacing(10),
-            right: theme.spacing(2),
+            right: "10%",
         },
 
     }),
@@ -79,9 +79,12 @@ const PrivateRoute = ({ ...rest }) => {
                                 </Switch>
                             </div>
                             <BottomNavBarContainer />
-                            <Fab  onClick={openDrawer} color="secondary" aria-label="add" className={customStyle.fab}>
+
+                            <Fab onClick={openDrawer} color="secondary" aria-label="add" className={customStyle.fab}>
                                 <DescriptionIcon />
                             </Fab>
+
+
 
                             <Drawer isVisible={drawerVisible} onClose={closeDrawer}>
                                 Trainingstagebuch

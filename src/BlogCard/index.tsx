@@ -22,7 +22,6 @@ const useStyles = makeStyles({
 
 export default function BlogCard({ image, title, beschreibung }: any) {
   const classes = useStyles();
-  // const seed = "https://picsum.photos/" + (Math.floor(Math.random() * 700) + 500);
   return (
     <Card className={classes.root} variant="outlined">
       <CardActionArea>
@@ -33,11 +32,11 @@ export default function BlogCard({ image, title, beschreibung }: any) {
         />
         <CardContent >
           <Typography gutterBottom variant="h5" component="h1">
-           {title}
+            {title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            <ReactMarkdown source={beschreibung} />
-          </Typography>
+
+          <ReactMarkdown escapeHtml={false} source={beschreibung} />
+
         </CardContent>
       </CardActionArea>
       {/* <CardActions>

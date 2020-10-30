@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BlogCard from '../BlogCard'
 import './index.css'
-import { handleLogout } from '../firebase'
 import { CircularProgress, createStyles, makeStyles, Paper, Theme } from '@material-ui/core'
 
 
@@ -51,7 +50,7 @@ export default function Blog() {
         <div className="">
             <div className="left__section">
                 {blobgEntries.map((entry: any) => (
-                    <BlogCard title={entry?.Name} beschreibung={entry?.Beschreibung} image={entry?.foto?.url} />
+                    <BlogCard key={entry["_id"]} title={entry?.Name} beschreibung={entry?.Beschreibung} image={entry?.foto?.url} />
                 ))}
             </div>
             <div className="right__section disable_on_small">
