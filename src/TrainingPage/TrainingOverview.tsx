@@ -49,19 +49,22 @@ const TrainingOverview = () => {
     console.log(activeIndex)
     return (
         <div className="center__all" style={{ background: "white" }}>
-            <Stepper orientation="vertical" >
+            <Stepper style={{  maxWidth: "500px" }} orientation="vertical" >
                 {images.map((image, index) => (
                     <Step completed={activeIndex > index} active={true} key={index} >
                         <StepLabel>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "30px" }}>
                                 <h1 className="test">{mapping[index].name}</h1>
-                                <p style={{ color: "gray" }}>Max: 5 Min</p>
+                                {/* <p style={{ color: "gray" }}>Max: 5 Min</p> */}
                             </div>
                         </StepLabel>
                         <StepContent>
                             <div key={index} style={{ margin: "10px", width: "100%" }} >
                                 <div style={style} className="relative">
+
                                     <img style={{ objectFit: "cover", height: "100%", width: "100%" }} src={image} alt="" />
+
+
                                     {
                                         activeIndex > index &&
                                         <div className="overlay center__all" style={{ color: "white" }}>

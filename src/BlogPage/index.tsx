@@ -39,7 +39,6 @@ export default function Blog() {
                 console.log(error)
                 setloading(false)
             })
-
     }
 
     useEffect(() => {

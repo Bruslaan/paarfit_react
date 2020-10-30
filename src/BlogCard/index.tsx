@@ -32,8 +32,8 @@ export default function BlogCard({ image, title, beschreibung }: any) {
           title={title}
         />
         <CardContent >
-          <Typography gutterBottom variant="h5" component="h2">
-           <h2>{title}</h2> 
+          <Typography gutterBottom variant="h5" component="h1">
+           {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             <ReactMarkdown source={beschreibung} />

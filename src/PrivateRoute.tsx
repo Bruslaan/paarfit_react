@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
-
+import Fab from '@material-ui/core/Fab';
 import NavBarContainer from './NavBarContainer'
 import { BottomNavBarContainer } from './BottomNavBar'
 import Blog from './BlogPage'
@@ -12,9 +12,33 @@ import TraningActive from './TrainingPage/TrainingActiveMaterial'
 import TrainingOverView from './TrainingPage/TrainingOverview'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Logo } from './Logo'
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
+import DescriptionIcon from '@material-ui/icons/Description';
+import Drawer from './react-bottom-drawer'
+const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+
+        fab: {
+            position: 'fixed',
+            bottom: theme.spacing(10),
+            right: theme.spacing(2),
+        },
+
+    }),
+);
+
 
 const PrivateRoute = ({ ...rest }) => {
+    const customStyle = useStyles()
     const { authenticated, loadingAuthState, haveInformation } = useContext(AuthContext);
+    const [drawerVisible, setdrawerVisible] = useState(false)
+    const openDrawer = () => {
+        console.log("hallo")
+        setdrawerVisible(true)
+    }
+    const closeDrawer = () => {
+        setdrawerVisible(false)
+    }
 
     if (loadingAuthState) {
         return (
@@ -55,6 +79,16 @@ const PrivateRoute = ({ ...rest }) => {
                                 </Switch>
                             </div>
                             <BottomNavBarContainer />
+                            <Fab  onClick={openDrawer} color="secondary" aria-label="add" className={customStyle.fab}>
+                                <DescriptionIcon />
+                            </Fab>
+
+                            <Drawer isVisible={drawerVisible} onClose={closeDrawer}>
+                                Trainingstagebuch
+                                    <div style={{ height: "100vh" }}>
+
+                                </div>
+                            </Drawer>
                         </div>
 
                     ) : (

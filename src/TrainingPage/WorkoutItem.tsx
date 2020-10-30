@@ -1,15 +1,17 @@
 import React from "react"
 
+
 const MyItem: React.FC<any> = ({ onClick, children, visible, workout, stage }) => (
     <div
         style={{
 
-            marginRight: "auto",
+            marginRight: "10px",
             marginLeft: "auto",
             objectFit: "cover",
             overflow: "hidden",
             // background: "orange",
             position: "relative",
+
         
             cursor: visible ? 'default' : 'pointer',
         }}
