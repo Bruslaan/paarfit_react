@@ -34,8 +34,10 @@ const useStyles = makeStyles((theme: Theme) =>
             // padding: theme.spacing(3),
 
             display: "flex",
-
-
+            flexDirection:"column",
+            justifyContent:"center",
+            alignItems:"center",
+            padding:"10px"
         },
 
     }),
@@ -131,7 +133,7 @@ export default function VerticalLinearStepper() {
             <Stepper activeStep={activeStep} orientation="vertical" style={{ width: "100%", padding: "0" }}>
                 {workouts.map((workout: any) => (
                     <Step key={workout["_id"]}>
-                        <StepLabel><h1>{workout.workoutname}</h1></StepLabel>
+                        <StepLabel ><h1 style={{marginLeft:"20px"}}>{workout.workoutname}</h1></StepLabel>
                         <StepContent style={{ padding: "0" }}>
                             <WorkoutItem workout={workout} stage={stage} />
                             <div className={classes.actionsContainer}>

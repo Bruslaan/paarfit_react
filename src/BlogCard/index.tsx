@@ -17,35 +17,36 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BlogCard() {
+
+
+export default function BlogCard({ image, title, beschreibung }:any) {
   const classes = useStyles();
-  const seed = "https://picsum.photos/" + (Math.floor(Math.random() * 700) + 500);
+  // const seed = "https://picsum.photos/" + (Math.floor(Math.random() * 700) + 500);
   return (
     <Card className={classes.root} variant="outlined">
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={seed}
-          title="Contemplative Reptile"
+          image={image}
+          title={title}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {beschreibung}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      {/* <CardActions>
         <Button size="small" >
           Share
         </Button>
         <Button size="small" >
           Learn More
         </Button>
-      </CardActions>
+      </CardActions> */}
     </Card>
   );
 }

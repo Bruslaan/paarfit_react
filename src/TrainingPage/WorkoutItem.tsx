@@ -32,9 +32,9 @@ const MyItem: React.FC<any> = ({ onClick, children, visible, workout, stage }) =
             <div>
                 <h1 style={{ marginBottom: "20px" }}>{workout.workoutname}</h1>
 
-                <p style={{ color: "gray" }}>{workout.sets} Sets</p>
-                <p style={{ color: "gray" }}>{workout.reps} Reps</p>
-                <p style={{ color: "gray" }}>{workout.pause} Pause</p>
+                <p style={{ color: "gray" }}>Sets: {workout.sets}</p>
+                <p style={{ color: "gray" }}>Wiederholungen: {workout.reps}</p>
+                <p style={{ color: "gray" }}>Pause: {workout.pause}</p>
             </div>
 
         </div>

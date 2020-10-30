@@ -25,7 +25,7 @@ const TrainingOverview = () => {
     const images = ["https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80",
         "https://images.unsplash.com/photo-1544216717-3bbf52512659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
         "https://images.unsplash.com/photo-1522898467493-49726bf28798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
-        "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2594&q=80"
+        // "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2594&q=80"
     ]
     const history = useHistory()
     const startWorkout = () => {
@@ -37,9 +37,9 @@ const TrainingOverview = () => {
         { erledigt: true, name: "Aufwärmen" },
         { erledigt: true, name: "Kraft" },
         { erledigt: false, name: "Dehnen" },
-        { erledigt: false, name: "Yoga" },
-    ]
 
+    ]
+    // { erledigt: false, name: "Yoga" },
 
     //const [activeIndex, setactiveIndex] = useState(0)
     const [state]: any = useContext(Context);
