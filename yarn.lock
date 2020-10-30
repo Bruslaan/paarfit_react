@@ -2296,11 +2296,6 @@
     "semver" "^6.3.0"
     "tsutils" "^3.17.1"
 
-"@use-it/event-listener@^0.1.2":
-  "integrity" "sha512-SWbhB0iFcoNL1BEldApGTqfB9aoGpU82iZUVTBtZaTFNrVKAGwuQTF15N9MzRvTgyuOASWf1pCKXbdVtKZgeRg=="
-  "resolved" "https://registry.npmjs.org/@use-it/event-listener/-/event-listener-0.1.5.tgz"
-  "version" "0.1.5"
-
 "@webassemblyjs/ast@1.8.5":
   "integrity" "sha512-aJMfngIZ65+t71C3y2nBBg5FFG0Okt9m0XEgWZ7Ywgn1oMAT8cNwx00Uv1cQyHtidq0Xn94R4TAywO+LCQ+ZAQ=="
   "resolved" "https://registry.npmjs.org/@webassemblyjs/ast/-/ast-1.8.5.tgz"
@@ -10065,14 +10060,6 @@
     "react-swipeable" "^5.5.1"
     "react-transition-group" "^4.3.0"
 
-"react-clear-cache@^1.3.2":
-  "integrity" "sha512-6Wv8dEwqyG9iZyWbvMFSrxrOu5l1Ezjn91VQu56VqR6f48ka08xK8tE47KA1DdZPdXpmFT2Ht2zoUaxbrgwRZg=="
-  "resolved" "https://registry.npmjs.org/react-clear-cache/-/react-clear-cache-1.3.2.tgz"
-  "version" "1.3.2"
-  dependencies:
-    "use-persisted-state" "^0.3.0"
-    "uuid" "^3.3.2"
-
 "react-confetti@^6.0.0":
   "integrity" "sha512-gPuMIiJcpRFtyv3LvWKOvXxwbm1X9fyWT3wQsIMmmM7UhW3u84Te/xqfee4c0gicQXli8zCfIDkOlZyrHBk7pw=="
   "resolved" "https://registry.npmjs.org/react-confetti/-/react-confetti-6.0.0.tgz"
@@ -10110,7 +10097,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@^15.0.0 || ^16.0.0", "react-dom@^16.13.1":
+"react-dom@^16.13.1":
   "integrity" "sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.13.1.tgz"
   "version" "16.13.1"
@@ -10258,7 +10245,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^15.0.0 || ^16.0.0", "react@^16.0 || ^17.0", "react@^16.13.1", "react@^16.3.0", "react@^16.8.0":
+"react@^15.0.0 || ^16.0.0", "react@^16.0 || ^17.0", "react@^16.13.1", "react@^16.3.0":
   "integrity" "sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.13.1.tgz"
   "version" "16.13.1"
@@ -12150,13 +12137,6 @@
   dependencies:
     "punycode" "1.3.2"
     "querystring" "0.2.0"
-
-"use-persisted-state@^0.3.0":
-  "integrity" "sha512-UlWEq0JYg7NbvcRBZ1g6Bwe4SEbYfr1wr/D5mrmfCzSxXSwsPRYygGLlsxHcW58Rf7gGwRPBT23sNVvyVn4WYg=="
-  "resolved" "https://registry.npmjs.org/use-persisted-state/-/use-persisted-state-0.3.0.tgz"
-  "version" "0.3.0"
-  dependencies:
-    "@use-it/event-listener" "^0.1.2"
 
 "use@^3.1.0":
   "integrity" "sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ=="
