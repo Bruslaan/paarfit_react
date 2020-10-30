@@ -6,13 +6,14 @@ import * as serviceWorker from './serviceWorker';
 import { AuthProvider } from './AuthProvider'
 import { ThemeProvider } from '@material-ui/core';
 
+
 import { createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
       light: '#757ce8',
-      main: '#000000',
+      main: '#f44336',
       dark: '#002884',
       contrastText: '#fff',
     },
