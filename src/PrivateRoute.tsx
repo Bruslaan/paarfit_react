@@ -54,7 +54,6 @@ const PrivateRoute = ({ ...rest }) => {
             {...rest}
             render={routeProps =>
                 authenticated ? (
-
                     haveInformation ? (
                         <div>
                             <NavBarContainer />
@@ -93,14 +92,10 @@ const PrivateRoute = ({ ...rest }) => {
                                 </div>
                             </Drawer>
                         </div>
-
                     ) : (
                             <CreateUserInformation />
                         )
-
-
                 ) : (
-
                         <Redirect to={{ pathname: "/auth", state: { prevPath: rest.path } }} />
                     )
             }

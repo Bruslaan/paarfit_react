@@ -4,7 +4,7 @@ import './index.css'
 import { handleLogout } from '../firebase'
 import { AuthContext } from '../AuthProvider'
 import LinearProgress from '@material-ui/core/LinearProgress';
-import { createStyles, makeStyles, Theme, withStyles } from '@material-ui/core';
+import { createStyles, Theme, withStyles } from '@material-ui/core';
 
 const BorderLinearProgress = withStyles((theme: Theme) =>
     createStyles({
@@ -25,16 +25,19 @@ const BorderLinearProgress = withStyles((theme: Theme) =>
 
 
 export default function ProfilePage() {
-    const { user, userInformation } = useContext(AuthContext);
+    const { userInformation } = useContext(AuthContext);
     return (
 
-        <div style={{ marginLeft:"auto", marginRight:"auto", padding:"10px"}}>
-            <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", justifyContent:"center", alignContent:"center" }}>
+        <div style={{ marginLeft: "auto", marginRight: "auto", padding: "10px", width:"300px"}}>
+            <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", justifyContent: "center", alignContent: "center" }}>
                 <Avatar alt="Remy Sharp" src="https://avatars.dicebear.com/api/avataaars/seed.svg" style={{ marginRight: "20px", height: "100px", width: "100px" }} />
-                <h3>{user?.email}</h3>
+                <h3>{userInformation?.teamname}</h3>
+
             </div>
 
             <br />
+            <span style={{color:"gray"}}>{userInformation?.stufe}</span>
+            <br/>
             <BorderLinearProgress variant="determinate" value={50} />
             <br />
             <button onClick={() => handleLogout()}>Logout</button>

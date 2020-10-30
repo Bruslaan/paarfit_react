@@ -10,6 +10,14 @@ type ContextProps = {
   loadingAuthState: boolean;
 
 };
+
+
+interface Userinformation{
+  teamname: string
+  stufe: string
+  email: string
+}
+
 export const AuthContext = createContext<Partial<ContextProps>>({});
 export const AuthProvider = ({ children }: any) => {
   const [user, setUser] = useState(null as firebase.User | null);

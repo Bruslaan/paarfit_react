@@ -9,6 +9,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import { Logo } from "../Logo"
+import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -31,8 +32,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 interface UserData {
-    email: string;
-    password: string;
+    teamname: string;
+    stufe: string;
 }
 const UserInformation = () => {
     const classes = useStyles();
@@ -40,8 +41,8 @@ const UserInformation = () => {
     const { user } = useContext(AuthContext);
 
     const [values, setValues] = useState({
-        email: "",
-        password: ""
+        teamname: "",
+        stufe: "Anfänger",
     } as UserData);
     const handleChange = (event: any) => {
         event.persist();
@@ -52,12 +53,13 @@ const UserInformation = () => {
     }
     const handleSubmit = (event: any) => {
         event.preventDefault();
+        if (values.teamname === "" || values.stufe === "")
+            return
 
         db.collection("users").doc(user?.uid).set({
-            first: "Alan",
-            middle: "Mathison",
-            teamName: "Die Kartoschki",
-            kilo: "200",
+            teamname: values.teamname,
+            email: user?.email,
+            stufe: values.stufe,
             userId: user?.uid
         }).then(function (docRef) {
             window.location.reload()
@@ -79,44 +81,37 @@ const UserInformation = () => {
                         margin="normal"
                         required
                         fullWidth
-                        id="email"
-                        label="Name"
-                        name="email"
-                        autoComplete="email"
+                        label="Gebt eueren Teamnamen ein"
+                        name="teamname"
                         autoFocus
-                        value={values.email}
+                        value={values.teamname}
                         onChange={handleChange}
                     />
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        fullWidth
-                        id="email"
-                        label="Name"
-                        name="email"
-                        autoComplete="email"
-                        autoFocus
-                        value={values.email}
-                        onChange={handleChange}
-                    />
-                    <TextField
-                        variant="outlined"
-                        id="standard-number"
-                        label="Number"
-                        type="number"
-                  
-                    />
+
+                    <FormControl variant="outlined" className={classes.form} >
+                        <InputLabel id="demo-simple-select-outlined-label">Schwierigkeits Stufe</InputLabel>
+                        <Select
+                            required
+                            labelId="demo-simple-select-outlined-label"
+                            value={values.stufe}
+                            name="stufe"
+                            onChange={handleChange}
+                            label="Schwierigkeits Stufe"
+                        >
+                            {/* TODO get these from backend */}
+                            <MenuItem value="Anfänger">Anfänger</MenuItem>
+                            <MenuItem value="Fortgeschrittene">Fortgeschrittene</MenuItem>
+                            <MenuItem value="Profis">Profis</MenuItem>
+                        </Select>
+                    </FormControl>
 
                     <Button
                         type="submit"
                         fullWidth
-                        variant="outlined"
+                        variant="contained"
                         color="primary"
                         className={classes.submit}
-                    >
-                        Save
-          </Button>
+                    >Speichern </Button>
                 </form>
             </div>
 
