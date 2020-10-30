@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import ReactMarkdown from 'react-markdown'
 
 const useStyles = makeStyles({
   root: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles({
 
 
 
-export default function BlogCard({ image, title, beschreibung }:any) {
+export default function BlogCard({ image, title, beschreibung }: any) {
   const classes = useStyles();
   // const seed = "https://picsum.photos/" + (Math.floor(Math.random() * 700) + 500);
   return (
@@ -30,12 +31,12 @@ export default function BlogCard({ image, title, beschreibung }:any) {
           image={image}
           title={title}
         />
-        <CardContent>
+        <CardContent >
           <Typography gutterBottom variant="h5" component="h2">
-            {title}
+           <h2>{title}</h2> 
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {beschreibung}
+            <ReactMarkdown source={beschreibung} />
           </Typography>
         </CardContent>
       </CardActionArea>
