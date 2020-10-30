@@ -177,7 +177,7 @@ export default function VerticalLinearStepper() {
             )}
 
             <Prompt
-                when={!(activeStep === workouts.length - 1)}
+                when={!(activeStep >= workouts.length - 1)}
                 message='Du bist mitten im Workout, sicher dass du es abbrechen willst?'
             />
         </div>

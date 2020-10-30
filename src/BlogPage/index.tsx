@@ -56,8 +56,9 @@ export default function Blog() {
                 ))}
             </div>
             <div className="right__section disable_on_small">
-                Hallo World
-                <button onClick={() => handleLogout()}>Logout</button>
+                <Paper style={{height:"300px"}} square elevation={0} >
+                    Hier kann etwas stehen
+                </Paper>
             </div>
             {loading && (
                 <Paper square elevation={0} className={classes.resetContainer}>
