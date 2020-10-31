@@ -11,7 +11,7 @@ function TrainingsPage() {
     return (
         <div className="trainings__container">
 
-            <Typography gutterBottom variant="h3" component="h1">Woche 1 V. 6</Typography>
+            <Typography gutterBottom variant="h3" component="h1">Woche 1</Typography>
             <PulseButton buttonName="Workout Starten" buttonClicked={() => startWorkout()} />
         </div >
     )

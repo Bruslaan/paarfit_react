@@ -42,8 +42,6 @@ const TrainingOverview = () => {
     }
     const [reactiveSequenceState, setSequenceState]: any = useState(sequenceState)
     const firestore = firebase.firestore()
-    const noew = firebase.firestore.FieldValue.serverTimestamp
-    console.log(noew)
     useEffect(() => {
         firestore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("workout_1").get().then((data: any) => {
             if (data.exists) {
@@ -91,15 +89,17 @@ const TrainingOverview = () => {
                                     }
                                 </div>
                             </div>
-                            {!reactiveSequenceState[sequence.name] && <div className="center__all">
-                                <div style={{ display: "flex" }}>   <Button onClick={() => startWorkout(index)} variant="outlined" >
-                                    Starten</Button>
-                                    <div style={{ width: "10px" }}></div>
-                                    {/* <Button onClick={()=>setactiveIndex(activeIndex+1)} >
-                                        Überspringen</Button> */}
+                            <div className="center__all">
+                                <div style={{ display: "flex" }}>
+                                    <Button onClick={() => startWorkout(index)}
+                                        fullWidth
+                                        variant="outlined"
+                                        color="primary">
+                                        {!reactiveSequenceState[sequence.name] ? "Starten" : "Wiederholen"}</Button>
+
                                 </div>
 
-                            </div>}
+                            </div>
 
                         </StepContent>
 
