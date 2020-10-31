@@ -42,8 +42,10 @@ const TrainingOverview = () => {
     }
     const [reactiveSequenceState, setSequenceState]: any = useState(sequenceState)
     const firestore = firebase.firestore()
+    const noew = firebase.firestore.FieldValue.serverTimestamp
+    console.log(noew)
     useEffect(() => {
-        firestore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("pflicht_heute").get().then((data: any) => {
+        firestore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("workout_1").get().then((data: any) => {
             if (data.exists) {
                 console.log(data.data()["Aufwärmen"])
                 setSequenceState(data.data())

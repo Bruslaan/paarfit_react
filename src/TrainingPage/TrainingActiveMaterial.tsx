@@ -125,8 +125,9 @@ export default function VerticalLinearStepper() {
     const handleFinish = () => {
         uploadWorkoutTocloud()
 
-        finalWorkout ? showCongrats() :
-            finishWorkouts()
+        // finalWorkout 
+        // ? showCongrats() :
+        finishWorkouts()
 
     }
 
@@ -139,7 +140,7 @@ export default function VerticalLinearStepper() {
         const workout: any = {}
         workout[stage] = true
         const fireastore = firebase.firestore()
-        fireastore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("pflicht_heute").set(workout, { merge: true }).then((doc) => {
+        fireastore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("workout_1").set(workout, { merge: true }).then((doc) => {
             console.log("Workout gespeichert ", doc)
         }
         ).catch(error => {
