@@ -9,9 +9,11 @@ import Paper from '@material-ui/core/Paper';
 import WorkoutItem from './WorkoutItem'
 import { useHistory, useParams } from 'react-router';
 import { Context } from "../GlobalState/store"
+import { AuthContext } from '../AuthProvider'
 import { CircularProgress } from '@material-ui/core';
 import { Prompt } from 'react-router'
-
+import firebase from '../firebase'
+import { firestore } from 'firebase';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -34,10 +36,10 @@ const useStyles = makeStyles((theme: Theme) =>
             // padding: theme.spacing(3),
 
             display: "flex",
-            flexDirection:"column",
-            justifyContent:"center",
-            alignItems:"center",
-            padding:"10px"
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "10px"
         },
 
     }),
@@ -61,6 +63,7 @@ export default function VerticalLinearStepper() {
     const [loading, setloading] = useState(false)
     const [workouts, setworkouts]: any = useState([])
     const [state, dispatch]: any = useContext(Context);
+    const { user } = useContext(AuthContext)
     const history = useHistory()
     const [enableCongrats, setenableCongrats] = useState(false)
 
@@ -116,7 +119,12 @@ export default function VerticalLinearStepper() {
 
     }
 
+
+
+
     const handleFinish = () => {
+        uploadWorkoutTocloud()
+
         finalWorkout ? showCongrats() :
             finishWorkouts()
 
@@ -126,14 +134,27 @@ export default function VerticalLinearStepper() {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
+    const uploadWorkoutTocloud = () => {
+        // upload 
+        const workout: any = {}
+        workout[stage] = true
+        const fireastore = firebase.firestore()
+        fireastore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("pflicht_heute").set(workout, { merge: true }).then((doc) => {
+            console.log("Workout gespeichert ", doc)
+        }
+        ).catch(error => {
+            console.log("Workout konnte nicht gespeichert werden ", error)
+        })
+    }
+
 
 
     return (
-        <div className={classes.root} style={{ width: "90%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", margin:"auto" }}>
+        <div className={classes.root} style={{ width: "90%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", margin: "auto" }}>
             <Stepper activeStep={activeStep} orientation="vertical" style={{ width: "100%", padding: "0" }}>
                 {workouts.map((workout: any) => (
                     <Step key={workout["_id"]}>
-                        <StepLabel ><h3 style={{marginLeft:"20px"}}>{workout.workoutname}</h3></StepLabel>
+                        <StepLabel ><h3 style={{ marginLeft: "20px" }}>{workout.workoutname}</h3></StepLabel>
                         <StepContent style={{ padding: "0" }}>
                             <WorkoutItem workout={workout} stage={stage} />
                             <div className={classes.actionsContainer}>

@@ -15,6 +15,7 @@ import { Logo } from './Logo'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import DescriptionIcon from '@material-ui/icons/Description';
 import Drawer from './react-bottom-drawer'
+import Tagebuch from './Tagebuch'
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
 
@@ -88,7 +89,7 @@ const PrivateRoute = ({ ...rest }) => {
                             <Drawer isVisible={drawerVisible} onClose={closeDrawer}>
                                 Trainingstagebuch
                                     <div style={{ height: "100vh" }}>
-
+                                    <Tagebuch />
                                 </div>
                             </Drawer>
                         </div>
