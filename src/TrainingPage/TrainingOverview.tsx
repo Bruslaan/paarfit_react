@@ -9,7 +9,7 @@ import { Button } from '@material-ui/core';
 import { Context } from "../GlobalState/store"
 import { AuthContext } from '../AuthProvider'
 import Confetti from 'react-confetti'
-import firebase from '../firebase'
+import firebase, { heutigesDatum } from '../firebase'
 const style = {
     maxWidth: "500px",
     width: "100%",
@@ -43,7 +43,7 @@ const TrainingOverview = () => {
     const [reactiveSequenceState, setSequenceState]: any = useState(sequenceState)
     const firestore = firebase.firestore()
     useEffect(() => {
-        firestore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("workout_1").get().then((data: any) => {
+        firestore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("workout_" + heutigesDatum).get().then((data: any) => {
             if (data.exists) {
                 console.log(data.data()["Aufwärmen"])
                 setSequenceState(data.data())
@@ -107,22 +107,10 @@ const TrainingOverview = () => {
                     </Step>
                 ))}
             </Stepper>
-            {
-                activeIndex === 4 &&
-                (
-                    <div>
-                        <Confetti
-                            gravity={0.9}
 
-                            recycle={false}
-                            width={1000}
-                            height={1000}
-                        />
+        <div style={{height:"100px"}}>
 
-                    </div>
-                )
-
-            }
+        </div>
 
         </div>
     )

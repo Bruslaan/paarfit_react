@@ -8,12 +8,11 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import WorkoutItem from './WorkoutItem'
 import { useHistory, useParams } from 'react-router';
-import { Context } from "../GlobalState/store"
 import { AuthContext } from '../AuthProvider'
 import { CircularProgress } from '@material-ui/core';
 import { Prompt } from 'react-router'
-import firebase from '../firebase'
-import { firestore } from 'firebase';
+import firebase, { heutigesDatum } from '../firebase'
+
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -62,14 +61,15 @@ export default function VerticalLinearStepper() {
     const [activeStep, setActiveStep] = useState(0);
     const [loading, setloading] = useState(false)
     const [workouts, setworkouts]: any = useState([])
-    const [state, dispatch]: any = useContext(Context);
     const { user } = useContext(AuthContext)
     const history = useHistory()
-    const [enableCongrats, setenableCongrats] = useState(false)
 
     let params: any = useParams();
     let currentID: number = Number(params["id"])
     let stage = LevelMapping[currentID]
+
+
+
 
     async function fetchWorkouts() {
         setloading(true)
@@ -88,20 +88,7 @@ export default function VerticalLinearStepper() {
 
     }
 
-    const finalWorkout = currentID === Number("2")
 
-    const finishWorkouts = () => {
-        // workout finished
-        console.log("Workouts finished")
-        if (state.currentWorkout === 3) {
-            dispatch({ type: "FINISH_WORKOUT" })
-        } else {
-            dispatch({ type: "NEXT_WORKOUT", payload: "" })
-        }
-
-
-        history.push("/training/overview")
-    }
 
 
     useEffect(() => {
@@ -113,22 +100,10 @@ export default function VerticalLinearStepper() {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
 
-    const showCongrats = () => {
-        setActiveStep((prevActiveStep) => prevActiveStep + 1)
-        setenableCongrats(true)
-
-    }
-
-
 
 
     const handleFinish = () => {
         uploadWorkoutTocloud()
-
-        // finalWorkout 
-        // ? showCongrats() :
-        finishWorkouts()
-
     }
 
     const handleBack = () => {
@@ -140,8 +115,9 @@ export default function VerticalLinearStepper() {
         const workout: any = {}
         workout[stage] = true
         const fireastore = firebase.firestore()
-        fireastore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("workout_1").set(workout, { merge: true }).then((doc) => {
+        fireastore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("workout_" + heutigesDatum).set(workout, { merge: true }).then((doc) => {
             console.log("Workout gespeichert ", doc)
+            history.push("/training/overview")
         }
         ).catch(error => {
             console.log("Workout konnte nicht gespeichert werden ", error)
@@ -181,14 +157,6 @@ export default function VerticalLinearStepper() {
                     </Step>
                 ))}
             </Stepper>
-            {enableCongrats && (
-                <Paper square elevation={0} className={classes.resetContainer}>
-
-                    <h1>Workouts erfolgreich abgeschlossen.</h1>
-                    <Button onClick={() => history.push("/training")} className={classes.button}>
-                        Zurück zur Übersicht</Button>
-                </Paper>
-            )}
 
             {loading && (
                 <Paper square elevation={0} className={classes.resetContainer}>
