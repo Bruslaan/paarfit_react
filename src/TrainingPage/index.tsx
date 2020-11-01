@@ -55,7 +55,8 @@ function TrainingsPage() {
 
     return (
         <div className="trainings__container">
-            <Typography gutterBottom variant="h3" component="h1"><span style={{ color: "gray", fontSize: "2rem" }}>@Beta</span> Woche 1</Typography>
+            <Typography gutterBottom variant="h3" component="h1">Woche 1</Typography>
+            <span style={{ color: "gray", fontSize: "1rem" }}>@Beta v1</span>
             <p style={{ color: "gray" }}>von 1.11.20 bis 1.12.20 </p>
             <br />
             {ButtonCoponent(workoutState, () => startWorkout())}
