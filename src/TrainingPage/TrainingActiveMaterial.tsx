@@ -45,6 +45,20 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 
+function getRandom(arr: any, n: number) {
+    var result = new Array(n),
+        len = arr.length,
+        taken = new Array(len);
+    if (n > len)
+        throw new RangeError("getRandom: more elements taken than available");
+    while (n--) {
+        var x = Math.floor(Math.random() * len);
+        result[n] = arr[x in taken ? taken[x] : x];
+        taken[x] = --len in taken ? taken[len] : len;
+    }
+    return result;
+}
+
 
 
 const LevelMapping: { [key: number]: string; } = {
@@ -61,35 +75,31 @@ export default function VerticalLinearStepper() {
     const [activeStep, setActiveStep] = useState(0);
     const [loading, setloading] = useState(false)
     const [workouts, setworkouts]: any = useState([])
-    const { user } = useContext(AuthContext)
+    const { user, userInformation } = useContext(AuthContext)
     const history = useHistory()
 
     let params: any = useParams();
     let currentID: number = Number(params["id"])
     let stage = LevelMapping[currentID]
 
-
+    let schwierigkeitsgrad = userInformation?.stufe
 
 
     async function fetchWorkouts() {
         setloading(true)
-        fetch(`https://paarfit-strapi.herokuapp.com/workouts?workoutcategories.categoryname=${stage}&&workoutlevels.levelname=Anfänger`)
+        fetch(`https://paarfit-strapi.herokuapp.com/workouts?workoutcategories.categoryname=${stage}&&workoutlevels.levelname=${schwierigkeitsgrad}`)
             .then(response =>
                 response.json())
             .then(data => {
-
-                setworkouts(data)
+                const filteredData = getRandom(data, 3)
+                setworkouts(filteredData)
                 setloading(false)
             }
             ).catch(error => {
                 console.log(error)
                 setloading(false)
             })
-
     }
-
-
-
 
     useEffect(() => {
         fetchWorkouts()

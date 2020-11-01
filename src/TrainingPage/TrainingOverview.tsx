@@ -8,7 +8,6 @@ import { useHistory } from "react-router-dom";
 import { Button } from '@material-ui/core';
 import { Context } from "../GlobalState/store"
 import { AuthContext } from '../AuthProvider'
-import Confetti from 'react-confetti'
 import firebase, { heutigesDatum } from '../firebase'
 const style = {
     maxWidth: "500px",
@@ -54,14 +53,6 @@ const TrainingOverview = () => {
             console.log("Cannot fetch overview data ", error)
         })
     }, [])
-
-
-    // { erledigt: false, name: "Yoga" },
-
-    //const [activeIndex, setactiveIndex] = useState(0)
-    const [state]: any = useContext(Context);
-    let activeIndex = state.currentWorkout
-    // let activeIndex = 2
 
     return (
         <div className="center__all" style={{ background: "white", width: "90%", margin: "auto" }}>

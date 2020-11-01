@@ -28,8 +28,6 @@ export const handleLogout = (event?: any, loggedOut?: () => void) => {
         })
 }
 
-
-
 let todayTimestamp = firebase.firestore.Timestamp.now().toDate()
 export const heutigesDatum: string = todayTimestamp.getDate() + "_" + todayTimestamp.getMonth() + "_" + todayTimestamp.getFullYear()
 
