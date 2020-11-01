@@ -31,7 +31,7 @@ export const navLinks: Route[] = [
     {
         id: 4,
         name: "Training",
-        icon: <Badge badgeContent={4} color="secondary">
+        icon: <Badge badgeContent={"!"} color="secondary">
             <Avatar src="https://avatars.dicebear.com/api/avataaars/seed.svg" />
         </Badge>,
         destination: "/profile"

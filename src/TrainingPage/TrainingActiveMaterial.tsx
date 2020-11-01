@@ -110,8 +110,6 @@ export default function VerticalLinearStepper() {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
 
-
-
     const handleFinish = () => {
         uploadWorkoutTocloud()
     }
@@ -133,8 +131,6 @@ export default function VerticalLinearStepper() {
             console.log("Workout konnte nicht gespeichert werden ", error)
         })
     }
-
-
 
     return (
         <div className={classes.root} style={{ width: "90%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", margin: "auto" }}>

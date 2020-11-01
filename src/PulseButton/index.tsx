@@ -16,4 +16,13 @@ const Pulsebutton: React.FC<ButtonProps> = ({ buttonClicked, buttonName }) => {
     )
 }
 
+export const Parfitbutton: React.FC<ButtonProps> = ({ buttonClicked, buttonName }) => {
+
+    return (
+        <div>
+            <button className=" orange pulse__button" onClick={() => buttonClicked()}>{buttonName}</button>
+        </div>
+    )
+}
+
 export default Pulsebutton
