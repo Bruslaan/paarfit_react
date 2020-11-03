@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
             position: 'fixed',
             bottom: theme.spacing(10),
             right: "10%",
-            zIndex:10,
+            zIndex: 10,
         },
 
     }),
@@ -75,7 +75,7 @@ const PrivateRoute = ({ ...rest }) => {
                                         <TraningActive />
                                     </Route>
                                     <Route exact path="/">
-                                        <Blog />
+                                        <TrainingPage />
                                     </Route>
                                 </Switch>
                             </div>

@@ -6,7 +6,6 @@ import StepLabel from '@material-ui/core/StepLabel';
 import StepContent from '@material-ui/core/StepContent';
 import { useHistory } from "react-router-dom";
 import { Button } from '@material-ui/core';
-import { Context } from "../GlobalState/store"
 import { AuthContext } from '../AuthProvider'
 import firebase, { heutigesDatum } from '../firebase'
 const style = {
@@ -19,10 +18,7 @@ const style = {
 }
 
 
-
 const TrainingOverview = () => {
-
-
     const history = useHistory()
     const startWorkout = (index: number) => {
         console.log("hallo world")
@@ -70,12 +66,10 @@ const TrainingOverview = () => {
                             </div>
                         </StepLabel>
                         <StepContent>
-                            <div key={index} style={{ margin: "10px", width: "100%" }} >
+                            <div key={index} style={{ margin: "5px", width: "100%" }} >
                                 <div style={style} className="relative">
 
                                     <img style={{ objectFit: "cover", height: "100%", width: "100%" }} src={sequence.image} alt="" />
-
-
                                     {
                                         reactiveSequenceState[sequence.name] &&
                                         <div className="overlay center__all" style={{ color: "white" }}>

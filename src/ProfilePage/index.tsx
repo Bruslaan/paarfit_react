@@ -5,6 +5,8 @@ import { handleLogout } from '../firebase'
 import { AuthContext } from '../AuthProvider'
 import LinearProgress from '@material-ui/core/LinearProgress';
 import { createStyles, Theme, withStyles } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+
 
 const BorderLinearProgress = withStyles((theme: Theme) =>
     createStyles({
@@ -12,13 +14,14 @@ const BorderLinearProgress = withStyles((theme: Theme) =>
             height: 10,
             maxWidth: "400px",
             borderRadius: 5,
+            marginTop:"10px"
         },
         colorPrimary: {
             backgroundColor: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
         },
         bar: {
             borderRadius: 5,
-            backgroundColor: '#1a90ff',
+            backgroundColor: '#f75c1a"',
         },
     }),
 )(LinearProgress);
@@ -28,19 +31,23 @@ export default function ProfilePage() {
     const { userInformation } = useContext(AuthContext);
     return (
 
-        <div style={{ marginLeft: "auto", marginRight: "auto", padding: "10px", width:"300px"}}>
+        <div style={{ marginLeft: "auto", marginRight: "auto",  maxWidth:"400px", width:"90%"}}>
             <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", justifyContent: "center", alignContent: "center" }}>
                 <Avatar alt="Remy Sharp" src="https://avatars.dicebear.com/api/avataaars/seed.svg" style={{ marginRight: "20px", height: "100px", width: "100px" }} />
                 <h3>{userInformation?.teamname}</h3>
-
+                
+            </div>
+           
+            <br />
+            <div style={{display:"flex", justifyContent:"space-between"}}>
+            <span style={{color:"gray"}}>{userInformation?.stufe}</span>
+            <span style={{color:"gray"}}>300/500 Punkte</span>
             </div>
 
-            <br />
-            <span style={{color:"gray"}}>{userInformation?.stufe}</span>
             <br/>
             <BorderLinearProgress variant="determinate" value={50} />
             <br />
-            <button onClick={() => handleLogout()}>Logout</button>
+            <Button variant="outlined" onClick={() => handleLogout()}>Logout</Button>
         </div>
     )
 }
