@@ -69,7 +69,7 @@ function TrainingsPage() {
             {ButtonCoponent(workoutState, () => startWorkout())}
             <div style={{ width: "250px", height: "250px", marginTop: "20px" }}>
                 <CircularProgressbar value={percentage} text="2 / 3" styles={buildStyles({
-                    textColor: "gray",
+                    textColor: "#fecdb7",
                     pathColor: "#f75c1a",
                     trailColor: "#fecdb7"
                 })} />

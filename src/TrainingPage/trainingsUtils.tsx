@@ -73,3 +73,19 @@ export function getRandom(arr: any, n: number) {
     return result;
 }
 
+
+
+export const getPoints = (stage: string) => {
+    switch (stage) {
+        case "Kraft":
+            return 40
+        case "Aufwärmen":
+            return 15
+        case "Ausdauer/Fettverbrennung":
+            return 30
+        case "Yoga":
+            return 15
+        default:
+            return 15;
+    }
+}

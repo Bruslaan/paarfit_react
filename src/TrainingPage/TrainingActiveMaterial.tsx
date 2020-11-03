@@ -12,7 +12,7 @@ import { AuthContext } from '../AuthProvider'
 import { CircularProgress } from '@material-ui/core';
 import { Prompt } from 'react-router'
 import firebase, { heutigesDatum } from '../firebase'
-import { ReturnLink, HandleData } from './trainingsUtils'
+import { ReturnLink, HandleData, getPoints } from './trainingsUtils'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -108,12 +108,29 @@ export default function VerticalLinearStepper() {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
-    const uploadWorkoutTocloud = () => {
+
+
+    const uploadWorkoutTocloud = async () => {
         // upload 
         const workout: any = {}
         workout[stage] = true
         console.log("workout to upload", workout)
         const fireastore = firebase.firestore()
+        const doneWorkouts = await fireastore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("workout_" + heutigesDatum).get()
+        const data = doneWorkouts?.data()!
+        const stageExists = doneWorkouts.exists && data[stage]
+
+        if (!stageExists) {
+            const increment = firebase.firestore.FieldValue.increment(getPoints(stage));
+            // Document reference
+            const storyRef = fireastore.collection('users').doc(user?.uid);
+
+            // Update read count
+            await storyRef.update({ punkte: increment });
+            console.log("Incremented")
+        }
+
+
         fireastore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("workout_" + heutigesDatum).set(workout, { merge: true }).then((doc) => {
             console.log("Workout gespeichert ", doc)
             history.push("/training/overview")
