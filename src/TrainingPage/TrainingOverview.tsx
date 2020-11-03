@@ -32,13 +32,17 @@ const TrainingOverview = () => {
     const Sequence = [
         { name: "Aufwärmen", image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80" },
         { name: "Kraft", image: "https://images.unsplash.com/photo-1544216717-3bbf52512659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" },
-        { name: "Dehnen", image: "https://images.unsplash.com/photo-1522898467493-49726bf28798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" },
+        { name: "Ausdauer/Fettverbrennung", image: "https://images.unsplash.com/photo-1522898467493-49726bf28798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" },
+        { name: "Yoga", image: "https://images.unsplash.com/photo-1522898467493-49726bf28798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" },
     ]
     const sequenceState = {
-        "Aufwärmen": false,
-        "Kraft": false,
-        "Dehnen": false
+        0: "Aufwärmen",
+        1: "Kraft",
+        2: "Ausdauer/Fettverbrennung",
+        3: "Yoga",
+        4: "Dehnen"
     }
+
     const [reactiveSequenceState, setSequenceState]: any = useState(sequenceState)
     const firestore = firebase.firestore()
     useEffect(() => {

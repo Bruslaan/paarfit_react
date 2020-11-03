@@ -29,6 +29,7 @@ export const AuthProvider = ({ children }: any) => {
 
     firebase.auth().onAuthStateChanged((user: any) => {
       setUser(user);
+      setLoadingAuthState(true)
 
       if (user) {
         db.collection("users").doc(user?.uid).get().then(document => {

@@ -110,6 +110,7 @@ const UserInformation = () => {
                         fullWidth
                         variant="contained"
                         color="primary"
+                        
                         className={classes.submit}
                     >Speichern </Button>
                 </form>

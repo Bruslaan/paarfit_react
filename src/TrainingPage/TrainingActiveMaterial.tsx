@@ -45,12 +45,14 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 
+
+
 function getRandom(arr: any, n: number) {
     var result = new Array(n),
         len = arr.length,
         taken = new Array(len);
     if (n > len)
-        throw new RangeError("getRandom: more elements taken than available");
+        return arr
     while (n--) {
         var x = Math.floor(Math.random() * len);
         result[n] = arr[x in taken ? taken[x] : x];
@@ -64,9 +66,11 @@ function getRandom(arr: any, n: number) {
 const LevelMapping: { [key: number]: string; } = {
     0: "Aufwärmen",
     1: "Kraft",
-    2: "Dehnen",
-    3: "Yoga"
+    2: "Ausdauer/Fettverbrennung",
+    3: "Yoga",
+    4: "Dehnen"
 }
+
 
 
 
@@ -82,16 +86,81 @@ export default function VerticalLinearStepper() {
     let currentID: number = Number(params["id"])
     let stage = LevelMapping[currentID]
 
-    let schwierigkeitsgrad = userInformation?.stufe
+    let schwierigkeitsgrad: string = userInformation?.stufe
+
+
+    const ReturnLink = (stage: string, level: string) => {
+
+        let workoutsLevel = `&&workoutlevels.levelname=${level}`
+
+        switch (stage) {
+            case "Kraft":
+                return `https://paarfit-strapi.herokuapp.com/workouts?workoutcategories.categoryname=${stage}` + workoutsLevel
+            case "Ausdauer/Fettverbrennung":
+                return `https://paarfit-strapi.herokuapp.com/workouts?workoutbodyparts.bodypart=Ausdauer%20Pool%20Anf%C3%A4nger`
+            case "Yoga":
+                return `https://paarfit-strapi.herokuapp.com/workouts?workoutcategories.categoryname=${stage}`
+            case "Aufwärmen":
+                return `https://paarfit-strapi.herokuapp.com/workouts?workoutbodyparts.bodypart=Aufw%C3%A4rmen%20Anf%C3%A4nger%20Pool%20` + 1
+            case "Dehnen":
+                return `https://paarfit-strapi.herokuapp.com/workouts?workoutbodyparts.bodypart=Dehnpool%20Anf%C3%A4nger/Fortgeschrittene/Profis`
+            default:
+                break;
+        }
+    }
+
+    const CreateWorkouts = (object: Array<any>) => {
+
+        const BrustWorkouts = object.filter(workout => workout.workoutbodyparts[0].bodypart === "Brust")
+        const Beine = object.filter(workout => workout.workoutbodyparts[0].bodypart === "Beine")
+        const Rücken = object.filter(workout => workout.workoutbodyparts[0].bodypart === "Rücken")
+        const Schulter = object.filter(workout => workout.workoutbodyparts[0].bodypart === "Schulter")
+        const Arme = object.filter(workout => workout.workoutbodyparts[0].bodypart === "Arme")
+        const Bauch = object.filter(workout => workout.workoutbodyparts[0].bodypart === "Bauch")
+
+        const CompleteWorkout = [
+            ...getRandom(BrustWorkouts, 1),
+            ...getRandom(Beine, 1),
+            ...getRandom(Rücken, 1),
+            ...getRandom(Schulter, 1),
+            ...getRandom(Arme, 1),
+            ...getRandom(Bauch, 1)]
+
+        console.log("The workous", CompleteWorkout)
+
+        return CompleteWorkout
+    }
+
+    const HandleData = (stage: string, level: string, data: Array<any>) => {
+
+
+        switch (stage) {
+            case "Kraft":
+                return CreateWorkouts(data)
+            case "Ausdauer/Fettverbrennung":
+                return data
+            case "Yoga":
+                return getRandom(data, 1)
+            case "Aufwärmen":
+                return data
+            case "Dehnen":
+                return getRandom(data, 2)
+            default:
+                break;
+        }
+
+    }
 
 
     async function fetchWorkouts() {
+
         setloading(true)
-        fetch(`https://paarfit-strapi.herokuapp.com/workouts?workoutcategories.categoryname=${stage}&&workoutlevels.levelname=${schwierigkeitsgrad}`)
+        const link: string = ReturnLink(stage, schwierigkeitsgrad) as string
+        fetch(link)
             .then(response =>
                 response.json())
             .then(data => {
-                const filteredData = getRandom(data, 3)
+                const filteredData = HandleData(stage, schwierigkeitsgrad, data)
                 setworkouts(filteredData)
                 setloading(false)
             }
@@ -122,6 +191,7 @@ export default function VerticalLinearStepper() {
         // upload 
         const workout: any = {}
         workout[stage] = true
+        console.log("workout to upload", workout)
         const fireastore = firebase.firestore()
         fireastore.collection("users").doc(user?.uid).collection("pflicht_workouts").doc("workout_" + heutigesDatum).set(workout, { merge: true }).then((doc) => {
             console.log("Workout gespeichert ", doc)
