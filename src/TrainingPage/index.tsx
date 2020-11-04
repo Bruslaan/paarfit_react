@@ -28,9 +28,8 @@ const ButtonCoponent = (state: string, calBackFunction: Function) => {
 
 const CalculateState = (document: any) => {
 
-    const ongoing = document.Aufwärmen || document.Dehnen || document.Kraft
-    const finished = document.Aufwärmen && document.Dehnen && document.Kraft
-
+    const ongoing = document.Aufwärmen || document.Kraft || document.Yoga || document["Ausdauer/Fettverbrennung"]
+    const finished = document.Aufwärmen && document.Kraft && document.Yoga && document["Ausdauer/Fettverbrennung"]
     if (finished) {
         return "finished"
     } else if (ongoing) {

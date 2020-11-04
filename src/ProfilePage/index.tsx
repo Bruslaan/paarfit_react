@@ -41,11 +41,11 @@ export default function ProfilePage() {
             <br />
             <div style={{display:"flex", justifyContent:"space-between"}}>
             <span style={{color:"gray"}}>{userInformation?.stufe}</span>
-            <span style={{color:"gray"}}>300/500 Punkte</span>
+            <span style={{color:"gray"}}>{userInformation?.punkte}/1500 Punkte</span>
             </div>
 
             <br/>
-            <BorderLinearProgress variant="determinate" value={50} />
+            <BorderLinearProgress variant="determinate" value={userInformation?.punkte/1500*100} />
             <br />
             <Button variant="outlined" onClick={() => handleLogout()}>Logout</Button>
         </div>

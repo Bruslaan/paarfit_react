@@ -22,12 +22,12 @@ export const navLinks: Route[] = [
     //     icon: <PersonRoundedIcon />,
     //     destination: "/profile"
     // },
-    {
-        id: 3,
-        name: "Training",
-        icon: <FitnessCenterRoundedIcon />,
-        destination: "/training"
-    },
+    // {
+    //     id: 3,
+    //     name: "Training",
+    //     icon: <FitnessCenterRoundedIcon />,
+    //     destination: "/training"
+    // },
     {
         id: 4,
         name: "Training",
