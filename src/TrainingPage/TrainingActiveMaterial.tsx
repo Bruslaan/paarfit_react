@@ -13,7 +13,7 @@ import { CircularProgress } from '@material-ui/core';
 import { Prompt } from 'react-router'
 import firebase, { heutigesDatum } from '../firebase'
 import { ReturnLink, HandleData, getPoints } from './trainingsUtils'
-
+import {sequenceState} from "./trainingsUtils"
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -46,13 +46,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 
 
-const LevelMapping: { [key: number]: string; } = {
-    0: "Aufwärmen",
-    1: "Kraft",
-    2: "Ausdauer/Fettverbrennung",
-    3: "Yoga",
-    4: "Dehnen"
-}
 
 
 export default function VerticalLinearStepper() {
@@ -65,7 +58,7 @@ export default function VerticalLinearStepper() {
 
     let params: any = useParams();
     let currentID: number = Number(params["id"])
-    let stage = LevelMapping[currentID]
+    let stage = sequenceState[currentID]
 
     let schwierigkeitsgrad: string = userInformation?.stufe
 

@@ -1,3 +1,12 @@
+
+    export const sequenceState: { [key: number]: string; } = {
+        0: "Aufwärmen",
+        1: "Kraft",
+        2: "Ausdauer/Fettverbrennung",
+        3: "Yoga",
+        4: "Dehnen"
+    }
+
 export const ReturnLink = (stage: string, level: string) => {
 
     let workoutsLevel = `&&workoutlevels.levelname=${level}`

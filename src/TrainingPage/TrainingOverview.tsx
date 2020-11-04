@@ -8,6 +8,7 @@ import { useHistory } from "react-router-dom";
 import { Button } from '@material-ui/core';
 import { AuthContext } from '../AuthProvider'
 import firebase, { heutigesDatum } from '../firebase'
+import {sequenceState} from "./trainingsUtils"
 const style = {
     maxWidth: "500px",
     width: "100%",
@@ -31,13 +32,7 @@ const TrainingOverview = () => {
         { name: "Ausdauer/Fettverbrennung", image: "https://images.unsplash.com/photo-1522898467493-49726bf28798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" },
         { name: "Yoga", image: "https://images.unsplash.com/photo-1522898467493-49726bf28798?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80" },
     ]
-    const sequenceState = {
-        0: "Aufwärmen",
-        1: "Kraft",
-        2: "Ausdauer/Fettverbrennung",
-        3: "Yoga",
-        4: "Dehnen"
-    }
+
 
     const [reactiveSequenceState, setSequenceState]: any = useState(sequenceState)
     const firestore = firebase.firestore()
