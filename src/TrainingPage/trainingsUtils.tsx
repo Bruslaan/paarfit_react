@@ -1,11 +1,11 @@
 
-    export const sequenceState: { [key: number]: string; } = {
-        0: "Aufwärmen",
-        1: "Kraft",
-        2: "Ausdauer/Fettverbrennung",
-        3: "Yoga",
-        4: "Dehnen"
-    }
+export const sequenceState: { [key: number]: string; } = {
+    0: "Aufwärmen",
+    1: "Kraft",
+    2: "Ausdauer/Fettverbrennung",
+    3: "Yoga",
+    4: "Dehnen"
+}
 
 export const ReturnLink = (stage: string, level: string) => {
 
@@ -97,4 +97,11 @@ export const getPoints = (stage: string) => {
         default:
             return 15;
     }
+}
+
+
+export const diff_minutes = (dt2: Date, dt1: Date) => {
+    var diff = (dt2.getTime() - dt1.getTime()) / 1000;
+    diff /= 60;
+    return Math.abs(Math.round(diff));
 }

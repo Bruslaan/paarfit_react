@@ -12,8 +12,8 @@ import { AuthContext } from '../AuthProvider'
 import { CircularProgress } from '@material-ui/core';
 import { Prompt } from 'react-router'
 import firebase, { heutigesDatum } from '../firebase'
-import { ReturnLink, HandleData, getPoints } from './trainingsUtils'
-import {sequenceState} from "./trainingsUtils"
+import { ReturnLink, HandleData, getPoints, diff_minutes } from './trainingsUtils'
+import { sequenceState } from "./trainingsUtils"
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -54,6 +54,7 @@ export default function VerticalLinearStepper() {
     const [loading, setloading] = useState(false)
     const [workouts, setworkouts]: any = useState([])
     const { user, userInformation } = useContext(AuthContext)
+    const [startTime, setstartTime]: any = useState(null)
     const history = useHistory()
 
     let params: any = useParams();
@@ -85,6 +86,8 @@ export default function VerticalLinearStepper() {
     }
 
     useEffect(() => {
+        const now = new Date()
+        setstartTime(now)
         fetchWorkouts()
     }, [])
 
@@ -121,6 +124,21 @@ export default function VerticalLinearStepper() {
             // Update read count
             await storyRef.update({ punkte: increment });
             console.log("Incremented")
+            const doneWorkouts: any = {}
+            const key: string = stage + "_workouts"
+            const EndTime = new Date()
+            const timeTaken = diff_minutes(EndTime, startTime)
+            doneWorkouts[key] = workouts.map((workout: any) => {
+                let newObject = {
+                    "id": workout["_id"],
+                    "workoutName": workout["workoutname"],
+                }
+                return newObject
+
+            })
+            doneWorkouts["timeTaken"] = timeTaken
+            await storyRef.collection("pflicht_workouts").doc("workout_" + heutigesDatum).set(doneWorkouts, { merge: true })
+            console.log("Pflich workouts set", doneWorkouts)
         }
 
 
