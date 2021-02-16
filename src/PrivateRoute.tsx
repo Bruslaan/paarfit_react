@@ -6,6 +6,7 @@ import NavBarContainer from './NavBarContainer'
 import { BottomNavBarContainer } from './BottomNavBar'
 import Blog from './BlogPage'
 import ProfilePage from './ProfilePage'
+import DashboardPage from './DashboardPage'
 import CreateUserInformation from './CreateUserInformation'
 import TrainingPage from './TrainingPage'
 import TraningActive from './TrainingPage/TrainingActiveMaterial'
@@ -64,6 +65,9 @@ const PrivateRoute = ({ ...rest }) => {
                                 <Switch>
                                     <Route exact path="/profile">
                                         <ProfilePage />
+                                    </Route>
+									<Route exact path="/dashboard"> 
+                                        <DashboardPage />
                                     </Route>
                                     <Route exact path="/training">
                                         <TrainingPage />
