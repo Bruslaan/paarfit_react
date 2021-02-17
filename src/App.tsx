@@ -14,8 +14,6 @@ import PrivateRoute from './PrivateRoute';
 
 let App = () => {
 
-
-
   return (
     <div>
       <Router>

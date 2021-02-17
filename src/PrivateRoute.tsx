@@ -6,6 +6,7 @@ import NavBarContainer from './NavBarContainer'
 import { BottomNavBarContainer } from './BottomNavBar'
 import Blog from './BlogPage'
 import ProfilePage from './ProfilePage'
+import PaymentPage from './PaymentPage'
 import CreateUserInformation from './CreateUserInformation'
 import TrainingPage from './TrainingPage'
 import TraningActive from './TrainingPage/TrainingActiveMaterial'
@@ -62,6 +63,9 @@ const PrivateRoute = ({ ...rest }) => {
                             <div className="spacer"></div>
                             <div className="main__container">
                                 <Switch>
+                                    <Route exact path="/payment">
+                                        <PaymentPage />
+                                    </Route>
                                     <Route exact path="/profile">
                                         <ProfilePage />
                                     </Route>
@@ -85,11 +89,9 @@ const PrivateRoute = ({ ...rest }) => {
                                 <DescriptionIcon />
                             </Fab>
 
-
-
                             <Drawer isVisible={drawerVisible} onClose={closeDrawer}>
                                 Trainingstagebuch
-                                    <div style={{ height: "100vh" }}>
+                                    <div style={{ }}>
                                     <Tagebuch />
                                 </div>
                             </Drawer>
