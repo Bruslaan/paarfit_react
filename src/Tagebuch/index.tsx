@@ -21,8 +21,6 @@ function Tagebuch() {
 
     }, [])
 
-
-
     return (
         <div>
             Mein Tagebuch
