@@ -9,10 +9,9 @@ import { SidebarNavBottomContainer } from './sidebarNavBottom'
 import Blog from './BlogPage'
 import Dashboard from './DashboardPage'
 import ProfilePage from './ProfilePage'
-<<<<<<< Updated upstream
+
 import PaymentPage from './PaymentPage'
-=======
->>>>>>> Stashed changes
+
 import CreateUserInformation from './CreateUserInformation'
 import TrainingPage from './TrainingPage'
 import TraningActive from './TrainingPage/TrainingActiveMaterial'
@@ -68,30 +67,7 @@ const PrivateRoute = ({ ...rest }) => {
                     haveInformation ? (
                         <div>
                             <NavBarContainer />
-<<<<<<< Updated upstream
-                            <div className="spacer"></div>
-                            <div className="main__container">
-                                <Switch>
-                                    <Route exact path="/payment">
-                                        <PaymentPage />
-                                    </Route>
-                                    <Route exact path="/profile">
-                                        <ProfilePage />
-                                    </Route>
-                                    <Route exact path="/training">
-                                        <TrainingPage />
-                                    </Route>
-                                    <Route exact path="/training/overview">
-                                        <TrainingOverView />
-                                    </Route>
-                                    <Route exact path="/training/overview/active/:id">
-                                        <TraningActive />
-                                    </Route>
-                                    <Route exact path="/">
-                                        <TrainingPage />
-                                    </Route>
-                                </Switch>
-=======
+
                             <div className="spacer"></div>                            
                             <div className="main__container mainContainerStyle">
                                 <div className="ctMenuLeft disable_on_mobile">
@@ -120,7 +96,7 @@ const PrivateRoute = ({ ...rest }) => {
                                         </Route>
                                     </Switch>
                                 </div>
->>>>>>> Stashed changes
+
                             </div>
                             <BottomNavBarContainer />
                             

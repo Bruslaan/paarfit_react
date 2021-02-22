@@ -36,6 +36,7 @@ export const navLinks: Route[] = [
         </Badge>,
         destination: "/profile"
     }
+
 ]
 export const navLinksMobileFooter: Route[] = [
     

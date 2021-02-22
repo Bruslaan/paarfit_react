@@ -88,9 +88,7 @@ body {
     font-family: Logo;
     src: url(./assets/fonts/PaarfitLogo.ttf);
 }
-<<<<<<< Updated upstream
 
-=======
 /*********************CUSTOM STYLE****************************/
 @media (max-width: 767px) {
   .MuiGrid-spacing-xs-3 > .MuiGrid-item {
@@ -340,10 +338,13 @@ body {
   padding:0px;
   border-radius: 25px 0px 25px 0px;
 }
+
+/*
 .areaMenuTop{
   position:relative;
   z-index:1400;
-}
+}*/
+
 .areaMenuTopMob{
   border-radius:25px 0px 25px 0px;
   padding-top:8px;
@@ -532,4 +533,4 @@ body {
   .pb122{
     padding-bottom:122px;
   }
->>>>>>> Stashed changes
+
