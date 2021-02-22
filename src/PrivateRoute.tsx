@@ -4,9 +4,15 @@ import { AuthContext } from "./AuthProvider";
 import Fab from '@material-ui/core/Fab';
 import NavBarContainer from './NavBarContainer'
 import { BottomNavBarContainer } from './BottomNavBar'
+import { SidebarNavTopContainer } from './sidebarNavTop'
+import { SidebarNavBottomContainer } from './sidebarNavBottom' 
 import Blog from './BlogPage'
+import Dashboard from './DashboardPage'
 import ProfilePage from './ProfilePage'
+<<<<<<< Updated upstream
 import PaymentPage from './PaymentPage'
+=======
+>>>>>>> Stashed changes
 import CreateUserInformation from './CreateUserInformation'
 import TrainingPage from './TrainingPage'
 import TraningActive from './TrainingPage/TrainingActiveMaterial'
@@ -17,6 +23,8 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import DescriptionIcon from '@material-ui/icons/Description';
 import Drawer from './react-bottom-drawer'
 import Tagebuch from './Tagebuch'
+
+
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
 
@@ -60,6 +68,7 @@ const PrivateRoute = ({ ...rest }) => {
                     haveInformation ? (
                         <div>
                             <NavBarContainer />
+<<<<<<< Updated upstream
                             <div className="spacer"></div>
                             <div className="main__container">
                                 <Switch>
@@ -82,9 +91,39 @@ const PrivateRoute = ({ ...rest }) => {
                                         <TrainingPage />
                                     </Route>
                                 </Switch>
+=======
+                            <div className="spacer"></div>                            
+                            <div className="main__container mainContainerStyle">
+                                <div className="ctMenuLeft disable_on_mobile">
+                                    <SidebarNavTopContainer />
+                                    <SidebarNavBottomContainer/>                                    
+                                </div>
+                                <div className="contentArea">
+                                    <Switch>
+                                        <Route exact path="/profile">
+                                            <ProfilePage />
+                                        </Route>
+                                        <Route exact path="/dashboard">
+                                            <Dashboard />
+                                        </Route>
+                                        <Route exact path="/training">
+                                            <TrainingPage />
+                                        </Route>
+                                        <Route exact path="/training/overview">
+                                            <TrainingOverView />
+                                        </Route>
+                                        <Route exact path="/training/overview/active/:id">
+                                            <TraningActive />
+                                        </Route>
+                                        <Route exact path="/">
+                                            <TrainingPage />
+                                        </Route>
+                                    </Switch>
+                                </div>
+>>>>>>> Stashed changes
                             </div>
                             <BottomNavBarContainer />
-
+                            
                             <Fab onClick={openDrawer} color="secondary" aria-label="add" className={customStyle.fab}>
                                 <DescriptionIcon />
                             </Fab>
