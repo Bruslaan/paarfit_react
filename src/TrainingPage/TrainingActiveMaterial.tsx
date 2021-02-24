@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import clsx from 'clsx';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -14,6 +15,12 @@ import { Prompt } from 'react-router'
 import firebase, { heutigesDatum } from '../firebase'
 import { ReturnLink, HandleData, getPoints, diff_minutes } from './trainingsUtils'
 import { sequenceState } from "./trainingsUtils"
+import {
+    CircularProgressbar,
+    buildStyles
+} from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css"
+
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
@@ -46,7 +53,42 @@ const useStyles = makeStyles((theme: Theme) =>
 
 
 
-
+function ColorlibStepIcon(props:any) {
+    const classes = useColorlibStepIconStyles();
+    const { active, completed } = props;
+    
+    return (
+      <div className={clsx(classes.root, {
+          [classes.active]: active,
+          [classes.completed]: completed,
+        })}
+      >
+        <div className="customStepperIcon_ins1">
+            <div className="customStepperIcon_ins2">{props.icon}</div>
+        </div>
+      </div>
+    );
+  }
+  const useColorlibStepIconStyles = makeStyles({
+    root: {
+      backgroundColor: '#F8CD4E;',
+      zIndex: 1,
+      color: '#fff',
+      width: 44,
+      height: 44,
+      display: 'flex',
+      borderRadius: '50%',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    active: {
+        backgroundColor: '#F8CD4E;',
+     
+    },
+    completed: {
+        backgroundColor: '#883EF0;',
+    },
+  });
 
 export default function VerticalLinearStepper() {
     const classes = useStyles();
@@ -150,51 +192,104 @@ export default function VerticalLinearStepper() {
             console.log("Workout konnte nicht gespeichert werden ", error)
         })
     }
-
+    const percentage = 63
     return (
-        <div className={classes.root} style={{ width: "90%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", margin: "auto" }}>
-            <Stepper activeStep={activeStep} orientation="vertical" style={{ width: "100%", padding: "0" }}>
-                {workouts.map((workout: any) => (
-                    <Step key={workout["_id"]}>
-                        <StepLabel ><h3 style={{ marginLeft: "20px" }}>{workout.workoutname}</h3></StepLabel>
-                        <StepContent style={{ padding: "0" }}>
-                            <WorkoutItem workout={workout} stage={stage} />
-                            <div className={classes.actionsContainer}>
-                                <div>
-                                    <Button
-                                        disabled={activeStep === 0}
-                                        onClick={handleBack}
-                                        className={classes.button}
-                                    >
-                                        Zurück
-                                    </Button>
-                                    <Button
-                                        variant="contained"
-                                        color="primary"
-                                        onClick={activeStep === workouts.length - 1 ? handleFinish : handleNext}
-                                        className={classes.button}
-                                    >
-                                        {activeStep === workouts.length - 1 ? 'Abschließen' : 'Weiter'}
-                                    </Button>
+        <div className="trainingStepperMob">
+        <div className="trainingStepperSt"> 
+            <div className="detTrainingWork" style={{ width: "90%", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", margin: "auto" }}>
+                <Stepper activeStep={activeStep} orientation="vertical" style={{ width: "100%", padding: "0" }}>
+                    {workouts.map((workout: any) => (
+                        <Step key={workout["_id"]}>
+                            <StepLabel className="titleTrainingStep" StepIconComponent={ColorlibStepIcon}><h3 style={{ marginLeft: "20px" }}>{workout.workoutname}</h3></StepLabel>
+                            <StepContent style={{ padding: "0" }}>
+                                <div className="areaCtTrainingDet">
+                                    <WorkoutItem workout={workout} stage={stage} />
+                                    <div className={classes.actionsContainer}>
+                                        <div className="detTrainingBtn btnDspNone">
+                                            <Button
+                                                disabled={activeStep === 0}
+                                                onClick={handleBack}
+                                                className={classes.button}
+                                            >
+                                                Zurück
+                                            </Button>
+                                            <Button
+                                                variant="contained"
+                                                onClick={activeStep === workouts.length - 1 ? handleFinish : handleNext}
+                                                className={classes.button}
+                                            >
+                                                {activeStep === workouts.length - 1 ? 'Abschließen' : 'Weiter'}
+                                            </Button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </StepContent>
-                    </Step>
-                ))}
-            </Stepper>
+                                <div className="timeTrainingWork">
+                                    <div className="boxTimeTraining">
+                                        <h2>pause</h2>
+                                        <div className="lineProgressbar purpleBg2"></div>
+                                        <div className="boxTimeProgressbar">
+                                            <div className="flipText">
+                                            <CircularProgressbar value={63} text="" styles={{
+                                                path: {
+                                                    strokeWidth: "8",
+                                                    stroke: "#9529F9",
+                                                    strokeLinecap: 'round',
+                                                    transition: 'stroke-dashoffset 0.5s ease 0s',
+                                                },
+                                                trail: {
+                                                    strokeWidth: "4",
+                                                    stroke: "#EAEBEB",
+                                                    strokeLinecap: 'round',
+                                                }
+                                                }} />
+                                            </div>
+                                            <div className="titleTimeProgressbar">
+                                                <h3>00:05</h3>
+                                                <p className="purple1">relax</p>
+                                            </div>
+                                        </div>
+                                        <div className="ctSetProgressbar">
+                                            <div className="boxSetProgressbar gray2">Set 1</div>
+                                            <div className="boxSetProgressbar purple1">Set 2</div>
+                                            <div className="boxSetProgressbar gray2">Set 3</div>
+                                        </div>
+                                        <div className="detTrainingBtn btnDspNoneDesk">
+                                            <Button
+                                                disabled={activeStep === 0}
+                                                onClick={handleBack}
+                                                className={classes.button}
+                                            >
+                                                Zurück
+                                            </Button>
+                                            <Button
+                                                variant="contained"
+                                                onClick={activeStep === workouts.length - 1 ? handleFinish : handleNext}
+                                                className={classes.button}
+                                            >
+                                                {activeStep === workouts.length - 1 ? 'Abschließen' : 'Weiter'}
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </StepContent>
+                        </Step>
+                    ))}
+                </Stepper>
 
-            {loading && (
-                <Paper square elevation={0} className={classes.resetContainer}>
-                    <p style={{ marginBottom: "20px" }}>Workouts werden geladen...</p>
+                {loading && (
+                    <Paper square elevation={0} className={classes.resetContainer}>
+                        <p style={{ marginBottom: "20px" }}>Workouts werden geladen...</p>
 
-                    <CircularProgress />
-                </Paper>
-            )}
+                        <CircularProgress />
+                    </Paper>
+                )}
 
-            <Prompt
-                when={!(activeStep >= workouts.length - 1)}
-                message='Du bist mitten im Workout, sicher dass du es abbrechen willst?'
-            />
+                <Prompt
+                    when={!(activeStep >= workouts.length - 1)}
+                    message='Du bist mitten im Workout, sicher dass du es abbrechen willst?'
+                />
+            </div>
+        </div>
         </div>
     );
 }
