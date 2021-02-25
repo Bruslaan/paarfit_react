@@ -41,8 +41,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614254121638</updated>
-      <workItem from="1614254125767" duration="735000" />
+      <workItem from="1614254125767" duration="1051000" />
     </task>
+    <task id="LOCAL-00001" summary="untracked files">
+      <created>1614255133252</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614255133252</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -58,5 +66,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="untracked files" />
+    <option name="LAST_COMMIT_MESSAGE" value="untracked files" />
   </component>
 </project>
