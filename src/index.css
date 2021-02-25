@@ -90,14 +90,14 @@ body {
 }
 /*********************CUSTOM STYLE****************************/
 @font-face {
-  font-family: 'Linearicons';
-  src:url('assets/fonts/Linearicons.ttf') format('truetype'),
-       url('assets/fonts/linearicons-webfont.woff2') format('woff2'),
-       url('assets/fonts/linearicons-webfont.woff') format('woff'),
-       url('assets/fonts/linearicons-webfont.svg#lineariconsregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-
+    font-family: 'Linearicons';
+    src: url('assets/fonts/Linearicons.ttf') format('truetype'),
+    url('assets/fonts/linearicons-webfont.woff2') format('woff2'),
+    url('assets/fonts/linearicons-webfont.woff') format('woff'),
+    url('assets/fonts/linearicons-webfont.svg#lineariconsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 /*********************CUSTOM STYLE****************************/
 @media (max-width: 767px) {
   .MuiGrid-spacing-xs-3 > .MuiGrid-item {
