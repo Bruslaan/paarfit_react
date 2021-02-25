@@ -55,27 +55,29 @@ function TrainingsPage() {
             }
         })
     }, [user])
-
-
     return (
-        <div className="trainings__container">
-            <Typography gutterBottom variant="h3" component="h1">Woche 1</Typography>
-            <span style={{ color: "gray", fontSize: "1rem" }}>@Beta v1</span>
-            <br />
-            <span style={{ color: "#c79a87", fontSize: "1rem" }}>Sie trainieren gerade mit 21 weiteren Personen</span>
-            <br/>
+        <div className="areaJumpingJacks">
+            <div className="trainings__container">
+                <Typography gutterBottom variant="h3" component="h1">Woche 1</Typography>
+                <span style={{ color: "gray", fontSize: "1rem" }}>@Beta v1</span>
+                <br />
+                <span style={{ color: "#c79a87", fontSize: "1rem" }}>Sie trainieren gerade mit 21 weiteren Personen</span>
+                <br/>
 
-            {ButtonCoponent(workoutState, () => startWorkout())}
-            <div style={{ width: "250px", height: "250px", marginTop: "20px" }}>
-                <CircularProgressbar value={percentage} text="2 / 3" styles={buildStyles({
-                    textColor: "#fecdb7",
-                    pathColor: "#f75c1a",
-                    trailColor: "#fecdb7"
-                })} />
-            </div>
-            {/* <PulseButton buttonName="Pflicht Training Starten" buttonClicked={() => startWorkout()} /> */}
-        </div >
+                {ButtonCoponent(workoutState, () => startWorkout())}
+                <div style={{ width: "250px", height: "250px", marginTop: "20px" }}>
+                    <CircularProgressbar value={percentage} text="2 / 3" styles={buildStyles({
+                        textColor: "#fecdb7",
+                        pathColor: "#f75c1a",
+                        trailColor: "#fecdb7"
+                    })} />
+                </div>
+                {/* <PulseButton buttonName="Pflicht Training Starten" buttonClicked={() => startWorkout()} /> */}
+            </div >
+        </div>
     )
+
+
 }
 
 export default TrainingsPage

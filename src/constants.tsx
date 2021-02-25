@@ -39,7 +39,7 @@ export const navLinks: Route[] = [
 
 ]
 export const navLinksMobileFooter: Route[] = [
-    
+
      {
          id: 5,
          name: "Test",
@@ -65,8 +65,8 @@ export const navLinksMobileFooter: Route[] = [
          destination: "/profile"
      },
  ]
- 
-export const navLinksSidebarTop: Route[] = [    
+
+export const navLinksSidebarTop: Route[] = [
     {
         id: 1,
         name: "Test",
@@ -86,7 +86,81 @@ export const navLinksSidebarTop: Route[] = [
         destination: "/profile"
     },
 ]
-export const navLinksSidebarBottom: Route[] = [    
+export const navLinksSidebarBottom: Route[] = [
+    {
+        id: 1,
+        name: "Test",
+        icon: <span className="textWhite"><span className="iconSetting">&#xe672;</span></span>,
+        destination: "/profile"
+    },
+    {
+        id: 2,
+        name: "Test",
+        icon: <span className="textWhite"><span className="iconSetting">&#xe66b;</span></span>,
+        destination: "/profile"
+    },
+    {
+        id: 4,
+        name: "Test",
+        icon: <span className="textWhite"><span className="iconSetting">&#xe7bc;</span></span>,
+        destination: "/profile"
+    },
+    {
+        id: 4,
+        name: "Test",
+        icon: <span className="textWhite"><span className="iconSetting">&#xe6d3;</span></span>,
+        destination: "/profile"
+    },
+]
+export const navLinksMobileFooter: Route[] = [
+
+     {
+         id: 5,
+         name: "Test",
+         icon: <span className="iconHantelMob"><img src="/images/hantel.svg" alt=""/></span>,
+         destination: "/profile"
+     },
+     {
+         id: 6,
+         name: "Test",
+         icon: <span className="iconPremiumMob">&#xe6dd;<div className="bulletAreaPremiumMob purpleBg2"></div></span>,
+         destination: "/profile"
+     },
+     {
+         id: 7,
+         name: "Test",
+         icon: <span className="iconProfileMob"><img src="/images/profile.svg" alt=""/></span>,
+         destination: "/profile"
+     },
+     {
+         id: 8,
+         name: "Test",
+         icon: <span className="iconSettingMob">&#xe672;</span>,
+         destination: "/profile"
+     },
+ ]
+
+export const navLinksSidebarTop: Route[] = [
+    {
+        id: 1,
+        name: "Test",
+        icon: <span><img src="images/hantel.svg" alt=""/></span>,
+        destination: "/profile"
+    },
+    {
+        id: 2,
+        name: "Test",
+        icon: <><span className="iconPremium">&#xe6dd;</span><div className="bulletAreaPremium purpleBg2"></div></>,
+        destination: "/profile"
+    },
+    {
+        id: 4,
+        name: "Test",
+        icon: <span className="btnProfileMenu"><img src="/images/profile.svg" alt=""/></span>,
+        destination: "/profile"
+    },
+]
+export const navLinksSidebarBottom: Route[] = [
     {
         id: 1,
         name: "Test",
