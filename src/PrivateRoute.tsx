@@ -4,8 +4,8 @@ import { AuthContext } from "./AuthProvider";
 import Fab from '@material-ui/core/Fab';
 import NavBarContainer from './NavBarContainer'
 import { BottomNavBarContainer } from './BottomNavBar'
-import Blog from './BlogPage'
 import ProfilePage from './ProfilePage'
+import DashboardPage from './DashboardPage'
 import PaymentPage from './PaymentPage'
 import CreateUserInformation from './CreateUserInformation'
 import TrainingPage from './TrainingPage'
@@ -68,6 +68,9 @@ const PrivateRoute = ({ ...rest }) => {
                                     </Route>
                                     <Route exact path="/profile">
                                         <ProfilePage />
+                                    </Route>
+									<Route exact path="/dashboard">
+                                        <DashboardPage />
                                     </Route>
                                     <Route exact path="/training">
                                         <TrainingPage />

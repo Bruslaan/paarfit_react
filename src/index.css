@@ -87,4 +87,97 @@ body {
     font-family: Logo;
     src: url(./assets/fonts/PaarfitLogo.ttf);
 }
+/*********************CUSTOM STYLE****************************/
+@font-face {
+  font-family: 'Linearicons';
+  src:url('assets/fonts/Linearicons.ttf') format('truetype'),
+       url('assets/fonts/linearicons-webfont.woff2') format('woff2'),
+       url('assets/fonts/linearicons-webfont.woff') format('woff'),
+       url('assets/fonts/linearicons-webfont.svg#lineariconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 
+} 
+@import url('https://use.typekit.net/xux6kwe.css');
+/*********************COLOR****************************/
+.purple1{
+    color:#5B58EE;
+  }
+  .textWhite{
+    color:#fff;
+  }
+  .gray1{
+    color:#64646E;
+  }
+  .gray2{
+    color:#C7CEDE;
+  }
+  .gray3{
+    color:#4B4B4B;
+  }
+  .gray4{
+    color:#8F8F8F;
+  }
+  .blue1{
+    color:#091E4A;
+  }
+  .yellow1{
+    color:#FFCD23;
+  }
+  .black{
+    color:#1E1E1E;
+  }
+  
+  /*********************BACKGROUND****************************/
+  .yellowBg{
+    background:#FFCD23;
+  }
+  .blueBg{
+    background:#1A2C70;
+  }
+  .blueBg2{
+    background:#5B58EE;
+  }
+  .whiteBg{
+    background:#fff;
+  }
+  .grayBg1{
+    background:#F1F4FD;
+  }
+  .grayBg2{
+    background:#C7CEDE;
+  }
+  .grayBg3{
+    background:#F0F0F0;
+  }
+  .purpleBg1{
+    background:#ADABF6;
+  }
+  .purpleBg2{
+    background:#9529F9;
+  }
+  .blackBg{
+    background:#1E1E1E;
+  }
+  
+  /*************************MARGIN RIGHT*****************************/
+  .marginRight25{
+    margin-right:25px;
+  }
+  /*************************MARGIN TOP*****************************/
+  .mt40{
+    margin-top:40px;
+  }
+  .mt10{
+    margin-top:10px;
+  }
+  /*************************PADDING BOTTOM*****************************/
+  .pb122{
+    padding-bottom:122px;
+  }
+  @media (max-width: 767px) {
+  .MuiGrid-spacing-xs-3 > .MuiGrid-item {
+    padding-top:0px!important;
+    padding-bottom:0px!important;
+  }
+}
