@@ -9,8 +9,10 @@ export default function NavBarContainer() {
 
 
     return (
-        <NavBar
-            itemLeft={<Logo name="PaarFit"></Logo>}
-            itemRight={<Menu links={navLinks} />} />
+        <div className="areaMenuTop"><NavBar
+            itemLeft='Paarfit'
+            itemRight='wir sind besser als ich' />
+        </div>
+        
     )
 }

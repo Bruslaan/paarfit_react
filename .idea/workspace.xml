@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9638da61-e6f3-4dba-82c6-bf0bd39f1d90" name="Default Changelist" comment="" />
+    <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="trainingpage" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1oyLwOgQt5nZvAkrmnuYpvKMJoY" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1optRQeDnKdmuOTbGR0KOw5pXSH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,6 +22,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -36,19 +33,20 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9638da61-e6f3-4dba-82c6-bf0bd39f1d90" name="Default Changelist" comment="" />
-      <created>1614254121638</created>
+      <changelist id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="" />
+      <created>1613995352956</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1614254121638</updated>
-      <workItem from="1614254125767" duration="1051000" />
+      <updated>1613995352956</updated>
+      <workItem from="1613995358715" duration="192000" />
+      <workItem from="1613995554384" duration="566000" />
     </task>
-    <task id="LOCAL-00001" summary="untracked files">
-      <created>1614255133252</created>
+    <task id="LOCAL-00001" summary="test">
+      <created>1613995500944</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1614255133252</updated>
+      <updated>1613995500945</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -66,9 +64,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="untracked files" />
-    <option name="LAST_COMMIT_MESSAGE" value="untracked files" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>

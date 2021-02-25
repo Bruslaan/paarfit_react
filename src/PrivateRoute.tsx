@@ -4,9 +4,10 @@ import { AuthContext } from "./AuthProvider";
 import Fab from '@material-ui/core/Fab';
 import NavBarContainer from './NavBarContainer'
 import { BottomNavBarContainer } from './BottomNavBar'
+import { SidebarNavTopContainer } from './sidebarNavTop'
+import { SidebarNavBottomContainer } from './sidebarNavBottom'
+import Dashboard from './DashboardPage'
 import ProfilePage from './ProfilePage'
-import DashboardPage from './DashboardPage'
-import PaymentPage from './PaymentPage'
 import CreateUserInformation from './CreateUserInformation'
 import TrainingPage from './TrainingPage'
 import TraningActive from './TrainingPage/TrainingActiveMaterial'
@@ -17,6 +18,8 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import DescriptionIcon from '@material-ui/icons/Description';
 import Drawer from './react-bottom-drawer'
 import Tagebuch from './Tagebuch'
+
+
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
 
@@ -60,31 +63,36 @@ const PrivateRoute = ({ ...rest }) => {
                     haveInformation ? (
                         <div>
                             <NavBarContainer />
+
                             <div className="spacer"></div>
-                            <div className="main__container">
-                                <Switch>
-                                    <Route exact path="/payment">
-                                        <PaymentPage />
-                                    </Route>
-                                    <Route exact path="/profile">
-                                        <ProfilePage />
-                                    </Route>
-									<Route exact path="/dashboard">
-                                        <DashboardPage />
-                                    </Route>
-                                    <Route exact path="/training">
-                                        <TrainingPage />
-                                    </Route>
-                                    <Route exact path="/training/overview">
-                                        <TrainingOverView />
-                                    </Route>
-                                    <Route exact path="/training/overview/active/:id">
-                                        <TraningActive />
-                                    </Route>
-                                    <Route exact path="/">
-                                        <TrainingPage />
-                                    </Route>
-                                </Switch>
+                            <div className="main__container mainContainerStyle">
+                                <div className="ctMenuLeft disable_on_mobile">
+                                    <SidebarNavTopContainer />
+                                    <SidebarNavBottomContainer/>
+                                </div>
+                                <div className="contentArea">
+                                    <Switch>
+                                        <Route exact path="/profile">
+                                            <ProfilePage />
+                                        </Route>
+                                        <Route exact path="/dashboard">
+                                            <Dashboard />
+                                        </Route>
+                                        <Route exact path="/training">
+                                            <TrainingPage />
+                                        </Route>
+                                        <Route exact path="/training/overview">
+                                            <TrainingOverView />
+                                        </Route>
+                                        <Route exact path="/training/overview/active/:id">
+                                            <TraningActive />
+                                        </Route>
+                                        <Route exact path="/">
+                                            <TrainingPage />
+                                        </Route>
+                                    </Switch>
+                                </div>
+
                             </div>
                             <BottomNavBarContainer />
 
