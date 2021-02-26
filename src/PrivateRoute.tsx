@@ -18,7 +18,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import DescriptionIcon from '@material-ui/icons/Description';
 import Drawer from './react-bottom-drawer'
 import Tagebuch from './Tagebuch'
-
+import Milestones from './MilestonesPage'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -90,6 +90,9 @@ const PrivateRoute = ({ ...rest }) => {
                                         <Route exact path="/">
                                             <TrainingPage />
                                         </Route>
+										<Route exact path="/milestones">
+											<Milestones />
+										</Route>
                                     </Switch>
                                 </div>
 
