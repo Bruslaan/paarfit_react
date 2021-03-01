@@ -6,8 +6,11 @@ import HeightComp from './HeightComp';
 import WeightComp from './WeightComp';
 
 const ProfileInfo = () => {
-  const userID = ['userA', 'userB'];
+  const genderArr = ['Male', 'Female', 'Diverse'];
+  const [genderA, setGenderA] = useState('');
+  const [genderB, setGenderB] = useState('');
 
+  console.log(genderA, genderB, 'are picked');
   return (
     <div className='profileInfo'>
       <div
@@ -81,7 +84,10 @@ const ProfileInfo = () => {
           <div className='profileAge'>31</div>
         </div>
         <div className='grid-item'>
-          <DropDownComp userID={userID[0]} />
+          <DropDownComp
+            genderArr={genderArr}
+            onValuePicked={(item: any) => setGenderA(item)}
+          />
         </div>
         <div className='grid-item'>
           <svg
@@ -101,10 +107,13 @@ const ProfileInfo = () => {
           </svg>
         </div>
         <div className='grid-item'>
-          <DropDownComp userID={userID[1]} />
+          <DropDownComp
+            genderArr={genderArr}
+            onValuePicked={(item: any) => setGenderB(item)}
+          />
         </div>
         <div className='grid-item'>
-          <HeightComp userID={userID[0]} />
+          <HeightComp />
         </div>
         <div className='grid-item'>
           <svg
@@ -124,10 +133,10 @@ const ProfileInfo = () => {
           </svg>
         </div>
         <div className='grid-item'>
-          <HeightComp userID={userID[1]} />
+          <HeightComp />
         </div>
         <div className='grid-item'>
-          <WeightComp userID={userID[0]} />
+          <WeightComp />
         </div>
         <div className='grid-item'>
           <svg
@@ -147,7 +156,7 @@ const ProfileInfo = () => {
           </svg>
         </div>
         <div className='grid-item'>
-          <WeightComp userID={userID[1]} />
+          <WeightComp />
         </div>
       </div>
     </div>

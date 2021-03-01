@@ -2,31 +2,24 @@ import React, { useState } from 'react';
 
 import './DropDownComp.css';
 
-const DropDownComp = ({ userID }: any) => {
-  const [genderA, setGenderA] = useState('');
-  const [genderB, setGenderB] = useState('');
-  const [key, setKey] = useState('');
-
-  const genderArr = ['Male', 'Female', 'Diverse'];
-
-  function myFunction() {
-    document
-      .getElementById(userID === 'userA' ? 'myDropdownA' : 'myDropDownB')!
-      .classList.toggle('show');
-  }
+const DropDownComp = ({ genderArr, onValuePicked }: any) => {
+  const [gender, setGender] = useState('');
+  const [showDropDown, setShowDropDown] = useState(false);
 
   function handleSetGender(item: any) {
-    userID === 'userA' ? setGenderA(item) : setGenderB(item);
+    setGender(item);
+    onValuePicked(item);
 
-    myFunction();
+    setShowDropDown(!showDropDown);
   }
 
   return (
     <div className='dropdown'>
-      <button onClick={myFunction} className='dropbtn'>
-        <div className='dropBtnTitle'>
-          {userID === 'userA' ? genderA : genderB}
-        </div>
+      <button
+        onClick={() => setShowDropDown(!showDropDown)}
+        className='dropbtn'
+      >
+        <div className='dropBtnTitle'>{gender}</div>
         <div className='dropDownIcnBG'>
           <svg
             className='dropDownIcn'
@@ -45,11 +38,12 @@ const DropDownComp = ({ userID }: any) => {
           </svg>
         </div>
       </button>
-      <div
-        id={userID === 'userA' ? 'myDropdownA' : 'myDropDownB'}
-        className='dropdown-content'
-      >
-        {genderArr.map((item) => (
+      <div className={`${showDropDown && 'show '} dropdown-content`}>
+        {/* <div
+          className='clickAwayOverlay'
+          onClick={() => setShowDropDown(false)}
+        /> */}
+        {genderArr.map((item: any) => (
           <div
             className='dropDownItem'
             key={item}

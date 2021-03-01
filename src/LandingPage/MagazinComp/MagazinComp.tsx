@@ -1,9 +1,11 @@
 import React from 'react';
 import './MagazinComp.css';
+import magImg from '../../assets/magImg.jpg';
 
 const MagazinComp = () => {
   return (
     <div className='magazinComp'>
+      <img src={magImg} alt='magImg' className='magImg2' />
       <div className='magImg' />
       <div className='magCompContent'>
         <div className='magTop'>
