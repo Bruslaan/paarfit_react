@@ -104,7 +104,7 @@ export default function VerticalLinearStepper() {
 
   async function fetchWorkouts() {
     setloading(true);
-    const link: string = ReturnLink(stage, schwierigkeitsgrad);
+    const link: string = ReturnLink(stage, schwierigkeitsgrad) as string;
     fetch(link)
       .then((response) => response.json())
       .then((data) => {
