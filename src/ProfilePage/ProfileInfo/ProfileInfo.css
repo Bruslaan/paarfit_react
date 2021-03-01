@@ -6,9 +6,9 @@
   color: rgb(30, 30, 30);
 
   height: 620px;
-  width: 400px;
+  max-width: 400px;
   border-radius: 15px;
-  align-items: center;
+  align-items: flex-start;
   margin: 20px 5px;
 }
 
@@ -26,8 +26,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  text-align: left;
+  width: fit-content;
   padding: 15px;
-  padding-right: 200px;
 }
 
 .profInfoPreTitle {
@@ -48,6 +49,10 @@
   position: absolute;
   right: -30px;
   top: 0px;
+}
+
+.profileInfoIcon:hover {
+  cursor: pointer;
 }
 
 hr {
@@ -94,6 +99,10 @@ hr {
   top: -15px;
 }
 
+.profGridIcn:hover {
+  cursor: pointer;
+}
+
 .profileAge {
   color: rgb(99 101 235);
   font-weight: normal;
@@ -101,4 +110,43 @@ hr {
 
 .profileInfoIconGrid {
   color: rgb(115, 115, 237);
+}
+
+@media only screen and (max-width: 412px) {
+  .profileInfo {
+    align-items: center;
+    margin: 20px 0px;
+  }
+
+  .profileInfoTop {
+    width: 50%;
+  }
+
+  .profileInfoIcon {
+    right: -30px;
+    top: 0px;
+  }
+
+  .profileInfoIconGrid {
+    width: 1em;
+    padding: 3px;
+  }
+
+  .gridContainer {
+    padding: 0px 5px;
+  }
+
+  .grid-itemTitle {
+    padding: 10px 0px;
+  }
+
+  .grid-item {
+    padding: 10px 0px;
+  }
+
+  .profGridIcn {
+    right: 50%;
+    top: -30px;
+    transform: translate(50%, 0);
+  }
 }

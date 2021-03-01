@@ -1,4 +1,4 @@
-.heightCompLeft {
+.heightCompA {
   display: flex;
   font-family: 'brandon-grotesque';
   cursor: pointer;
@@ -15,7 +15,7 @@
   width: 140px;
 }
 
-.heightCompLeft:hover {
+.heightCompA:hover {
   background-color: rgb(216, 222, 238);
 }
 
@@ -23,7 +23,8 @@
   position: relative;
 }
 
-.heightLabelL {
+.heightLabelA,
+.heightLabelB {
   color: rgb(133, 134, 136);
 
   position: absolute;

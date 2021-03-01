@@ -48,7 +48,7 @@ const BAComp = () => {
           position={50}
           style={{
             flexGrow: 1,
-            width: '380px',
+            width: 'inherit',
             height: '620px',
             borderRadius: '15px',
           }}

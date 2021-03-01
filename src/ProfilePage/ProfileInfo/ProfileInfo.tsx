@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProfileInfo.css';
 import profileImg from '../../assets/profileImg.jpeg';
 import DropDownComp from './DropDownComp';
@@ -6,6 +6,8 @@ import HeightComp from './HeightComp';
 import WeightComp from './WeightComp';
 
 const ProfileInfo = () => {
+  const userID = ['userA', 'userB'];
+
   return (
     <div className='profileInfo'>
       <div
@@ -79,7 +81,7 @@ const ProfileInfo = () => {
           <div className='profileAge'>31</div>
         </div>
         <div className='grid-item'>
-          <DropDownComp />
+          <DropDownComp userID={userID[0]} />
         </div>
         <div className='grid-item'>
           <svg
@@ -99,10 +101,10 @@ const ProfileInfo = () => {
           </svg>
         </div>
         <div className='grid-item'>
-          <DropDownComp />
+          <DropDownComp userID={userID[1]} />
         </div>
         <div className='grid-item'>
-          <HeightComp />
+          <HeightComp userID={userID[0]} />
         </div>
         <div className='grid-item'>
           <svg
@@ -122,10 +124,10 @@ const ProfileInfo = () => {
           </svg>
         </div>
         <div className='grid-item'>
-          <HeightComp />
+          <HeightComp userID={userID[1]} />
         </div>
         <div className='grid-item'>
-          <WeightComp />
+          <WeightComp userID={userID[0]} />
         </div>
         <div className='grid-item'>
           <svg
@@ -145,7 +147,7 @@ const ProfileInfo = () => {
           </svg>
         </div>
         <div className='grid-item'>
-          <WeightComp />
+          <WeightComp userID={userID[1]} />
         </div>
       </div>
     </div>

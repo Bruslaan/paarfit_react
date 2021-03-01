@@ -1,30 +1,48 @@
 import React, { useState } from 'react';
 import './HeightComp.css';
 
-const HeightComp = () => {
-  const [heightL, setHeightL] = useState('');
+const HeightComp = ({ userID }: any) => {
+  const [heightA, setHeightA] = useState(0);
+  const [heightB, setHeightB] = useState(0);
 
-  function handleHeightL(event: any) {
-    setHeightL(
-      (document.getElementById('heightLeft') as HTMLInputElement).value
-    );
+  function handleHeight(event: any) {
+    userID === 'userA'
+      ? setHeightA(
+          (document.getElementById('heightA') as HTMLInputElement).valueAsNumber
+        )
+      : setHeightB(
+          (document.getElementById('heightB') as HTMLInputElement).valueAsNumber
+        );
+
     event.preventDefault();
   }
 
+  console.log(heightA);
+
   return (
     <div>
-      <form name='heightL' onSubmit={(e) => handleHeightL(e)}>
+      <form action='' name='height' onSubmit={(e) => handleHeight(e)}>
         <div className='heightDiv'>
           <input
-            type='sumbit'
-            id='heightLeft'
-            name='heightLeft'
-            className='heightCompLeft'
-            placeholder='189 cm'
+            type='text'
+            id={userID === 'userA' ? 'heightA' : 'heightB'}
+            name={userID === 'userA' ? 'heightA' : 'heightB'}
+            className='heightCompA'
+            placeholder='0 cm'
+            value=''
+            // {
+            //   userID === 'userA'
+            //     ? heightA !== 0
+            //       ? heightA
+            //       : ''
+            //     : heightB !== 0
+            //     ? heightB
+            //     : ''
+            // }
+            // value={userID === 'userA' ? heightA + ' cm' : heightB + ' cm'}
+            autoComplete='off'
           />
-          <label className='heightLabelL' htmlFor='heightL'>
-            {heightL}
-          </label>
+          {/* <label className='heightLabelA'>{heightL}</label> */}
         </div>
       </form>
     </div>

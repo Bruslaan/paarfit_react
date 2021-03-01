@@ -1,14 +1,45 @@
 import React, { useState } from 'react';
 import './WeightComp.css';
 
-const WeightComp = () => {
-  const [weight, setWeight] = useState('');
+const WeightComp = ({ userID }: any) => {
+  const [weightA, setWeightA] = useState(0);
+  const [weightB, setWeightB] = useState(0);
+
+  function handleWeight(event: any) {
+    userID === 'userA'
+      ? setWeightA(
+          (document.getElementById('weightA') as HTMLInputElement).valueAsNumber
+        )
+      : setWeightB(
+          (document.getElementById('weightB') as HTMLInputElement).valueAsNumber
+        );
+
+    event.preventDefault();
+  }
+
+  function handleWeightDecrement(event: any) {
+    userID === 'userA'
+      ? weightA >= 1
+        ? setWeightA(weightA - 1)
+        : setWeightA(weightA)
+      : weightB >= 1
+      ? setWeightB(weightB - 1)
+      : setWeightB(weightB);
+
+    event.preventDefault();
+  }
+
+  function handleWeightIncrement(event: any) {
+    userID === 'userA' ? setWeightA(weightA + 1) : setWeightB(weightB + 1);
+
+    event.preventDefault();
+  }
 
   return (
     <div className='weightContainer'>
-      <form action=''>
+      <form name='weightForm' onSubmit={(e) => handleWeight(e)}>
         <div className='weightBtnContainer'>
-          <button className='weightM'>
+          <button className='weightM' onClick={(e) => handleWeightDecrement(e)}>
             <svg
               className='weightBtnIcon'
               width='1em'
@@ -27,11 +58,14 @@ const WeightComp = () => {
           </button>
           <input
             className='weightInput'
-            type='text'
-            name='weightInputLeft'
-            id='weightInputLeft'
+            type='string'
+            name='weightInput'
+            id={userID === 'userA' ? 'weightA' : 'weightB'}
+            placeholder='0 Kg'
+            autoComplete='off'
+            value={userID === 'userA' ? weightA + ' kg' : weightB + ' kg'}
           />
-          <button className='weightP'>
+          <button className='weightP' onClick={(e) => handleWeightIncrement(e)}>
             <svg
               className='weightBtnIcon'
               width='1em'

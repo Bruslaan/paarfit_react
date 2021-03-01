@@ -2,19 +2,21 @@ import React, { useState } from 'react';
 
 import './DropDownComp.css';
 
-const DropDownComp = () => {
-  const [genderleft, setGenderleft] = useState('');
-  const [genderright, setGenderright] = useState('');
+const DropDownComp = ({ userID }: any) => {
+  const [genderA, setGenderA] = useState('');
+  const [genderB, setGenderB] = useState('');
   const [key, setKey] = useState('');
 
   const genderArr = ['Male', 'Female', 'Diverse'];
 
   function myFunction() {
-    document.getElementById('myDropdown')!.classList.toggle('show');
+    document
+      .getElementById(userID === 'userA' ? 'myDropdownA' : 'myDropDownB')!
+      .classList.toggle('show');
   }
 
   function handleSetGender(item: any) {
-    setGenderleft(item);
+    userID === 'userA' ? setGenderA(item) : setGenderB(item);
 
     myFunction();
   }
@@ -22,7 +24,9 @@ const DropDownComp = () => {
   return (
     <div className='dropdown'>
       <button onClick={myFunction} className='dropbtn'>
-        <div className='dropBtnTitle'>{genderleft}</div>
+        <div className='dropBtnTitle'>
+          {userID === 'userA' ? genderA : genderB}
+        </div>
         <div className='dropDownIcnBG'>
           <svg
             className='dropDownIcn'
@@ -41,7 +45,10 @@ const DropDownComp = () => {
           </svg>
         </div>
       </button>
-      <div id='myDropdown' className='dropdown-content'>
+      <div
+        id={userID === 'userA' ? 'myDropdownA' : 'myDropDownB'}
+        className='dropdown-content'
+      >
         {genderArr.map((item) => (
           <div
             className='dropDownItem'
