@@ -1,0 +1,77 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  height: 620px;
+}
+
+.title {
+  font-family: 'brandon-grotesque';
+  font-size: 60px;
+  color: rgb(30, 30, 30);
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+
+span {
+  color: rgb(92, 93, 234);
+}
+
+.titleInline {
+  color: rgb(92, 93, 234);
+}
+
+.subtitle {
+  margin-left: 18%;
+  position: relative;
+  text-align: left;
+  font-family: 'brandon-grotesque';
+  font-size: large;
+  color: rgb(100, 100, 100);
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.navBtnIntro {
+  height: 38px;
+  width: 171px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 10px 20px;
+  font-family: 'brandon-grotesque';
+  font-size: large;
+  color: white;
+  border: none;
+  background-color: rgb(92, 93, 234);
+  border-radius: 15px;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+.navBtnIntro:hover {
+  color: rgb(92, 93, 234);
+  background-color: white;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.chatBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  color: white;
+  border: none;
+  background-color: rgb(148, 56, 245);
+  border-radius: 15px;
+  outline: none;
+  z-index: 99;
+}

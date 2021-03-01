@@ -1,0 +1,66 @@
+.weightContainer {
+  width: 140px;
+}
+
+.weightBtnContainer {
+  display: flex;
+  text-align: center;
+  position: relative;
+  margin: auto;
+
+  width: fit-content;
+}
+
+.weightInput {
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 70px;
+  height: 40px;
+  padding: 0px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(133, 134, 136);
+  background-color: rgb(241, 244, 253);
+}
+
+.weightInput:hover {
+  background-color: rgb(216, 222, 238);
+}
+
+.weightM {
+  position: absolute;
+  top: 0px;
+  left: -25px;
+  border: none;
+  color: rgb(148, 149, 152);
+  outline: none;
+  height: 100%;
+  width: 25px;
+  cursor: pointer;
+
+  background-color: rgb(250, 250, 250);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.weightP {
+  position: absolute;
+  top: 0px;
+  right: -25px;
+  border: none;
+  color: rgb(148, 149, 152);
+  outline: none;
+  height: 100%;
+  width: 25px;
+  cursor: pointer;
+
+  background-color: rgb(250, 250, 250);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  z-index: 10px;
+}
+
+.weightBtnIcon {
+  padding: 0px;
+}

@@ -1,0 +1,33 @@
+.heightCompLeft {
+  display: flex;
+  font-family: 'brandon-grotesque';
+  cursor: pointer;
+  outline: none;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(241, 244, 253);
+  color: rgb(133, 134, 136);
+  border-radius: 15px;
+  border: unset;
+  padding: 0px;
+  font-size: 16px;
+  height: 40px;
+  width: 140px;
+}
+
+.heightCompLeft:hover {
+  background-color: rgb(216, 222, 238);
+}
+
+.heightDiv {
+  position: relative;
+}
+
+.heightLabelL {
+  color: rgb(133, 134, 136);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,31 @@
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  font-family: 'brandon-grotesque';
+  color: rgb(30, 30, 30);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  height: fit-content;
+  text-align: center;
+}
+
+.infoItemTitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 33px;
+  color: black;
+  text-align: center;
+}
+
+.infoItemSubTitle {
+
+  color: rgb(92, 93, 234);
+  font-size: 25px;
+}
+
+.infoItemBody {
+  width: 300px;
+  color: rgb(100, 100, 100);
+}
