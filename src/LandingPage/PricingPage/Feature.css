@@ -1,0 +1,16 @@
+.pricingFeatures {
+  margin: 0px;
+  line-height: 3;
+  padding-inline-start: unset;
+}
+
+.featureComp {
+  display: flex;
+  align-content: center;
+}
+
+.featuresIcn {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}

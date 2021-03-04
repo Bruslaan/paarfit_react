@@ -1,0 +1,21 @@
+.reviewComp {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  padding: 20px 50px;
+  margin: 15px;
+  width: fit-content;
+  color: rgb(122, 122, 131);
+  font-size: 16px;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  color: rgb(148, 56, 245);
+}
+
+.customer {
+  color: rgb(92, 93, 234);
+}

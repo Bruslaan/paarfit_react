@@ -18,6 +18,7 @@ let App = () => {
           <Route exact path='/register' component={Register} />
           <Route exact path='/landing-page' component={LandingPage} />
           <Route exact path='/profile-page' component={Profile} />
+
           <Store>
             <PrivateRoute path='/' />
           </Store>

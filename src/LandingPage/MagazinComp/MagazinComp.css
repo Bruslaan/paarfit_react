@@ -1,0 +1,91 @@
+.magazinComp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  max-width: 400px;
+  max-height: 600px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.magImg2 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+  z-index: 1;
+  max-width: 400px;
+  max-height: 600px;
+}
+
+.magCompContent {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: max-content;
+  text-align: left;
+  padding: 15px;
+  background-color: rgba(128, 128, 128, 0.637);
+  z-index: 2;
+}
+
+.magTop {
+  position: relative;
+  top: 0px;
+  font-size: 10px;
+  margin-bottom: 180px;
+}
+
+.magazinTitle {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.solid {
+  border-top: 1px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  width: 100%;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 10px;
+}
+
+.bottomLeft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 80px;
+}
+
+.commentLink {
+  text-decoration: none;
+  color: white;
+}
+
+.bottomRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: fit-content;
+  padding-left: 20px;
+}
+
+.heartIcon {
+  width: 20px;
+  color: rgb(223, 80, 77);
+  padding-left: 10px;
+}

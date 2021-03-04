@@ -1,0 +1,145 @@
+.navBar {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  padding: 15px;
+}
+
+.navBarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+}
+
+.navBarLogo {
+  margin-right: 15px;
+}
+
+.navBarLogo:hover {
+  cursor: pointer;
+}
+
+.navMenus {
+  margin: 15px;
+  color: rgb(100, 100, 100);
+  text-decoration: none;
+  font-family: 'brandon-grotesque';
+  font-size: large;
+}
+
+.navLogin {
+  margin: 10px;
+  text-decoration: none;
+  font-family: 'brandon-grotesque';
+  font-size: large;
+  color: rgb(148, 56, 245);
+}
+
+.navBtn {
+  height: 38px;
+  width: 171px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 10px 20px;
+  font-family: 'brandon-grotesque';
+  font-size: large;
+  color: white;
+  border: none;
+  background-color: rgb(92, 93, 234);
+  border-radius: 15px;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+.navBtn:hover {
+  color: rgb(92, 93, 234);
+  background-color: white;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.menuIcn {
+  position: absolute;
+  right: 0px;
+  height: 44px;
+  width: 44px;
+  padding: 14px;
+  color: rgb(92, 93, 234);
+  border: none;
+  border-radius: 15px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  text-decoration: none;
+}
+
+.nav-links {
+  color: rgb(100, 100, 100);
+  text-decoration: none;
+  font-family: 'brandon-grotesque';
+  font-size: large;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navBtnComp {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  right: 0px;
+}
+
+@media screen and (max-width: 960px) {
+  .navBar {
+    height: 50px;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    right: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: rgb(92, 93, 234);
+    right: 0;
+    opacity: 0.97;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    text-decoration: none;
+    color: white;
+    font-family: 'brandon-grotesque';
+    font-size: x-large;
+    border-radius: 15px;
+
+    transition: all 0.2s ease;
+  }
+
+  .nav-links:hover {
+    background-color: #fff;
+    color: rgb(92, 93, 234);
+    border-radius: 15px;
+    transition: all 0.2s ease;
+  }
+}
