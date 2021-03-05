@@ -99,8 +99,9 @@ const Login = () => {
   return (
     <div style={{ maxWidth: '500px', margin: 'auto', padding: '10px' }}>
       <div className={classes.paper}>
-        <img className='PaarFit' src={logo} alt='PaarFit' width='200px' />
-
+        <a href='/landing-page'>
+          <img className='PaarFit' src={logo} alt='PaarFit' width='200px' />
+        </a>
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
           <CssTextField
             variant='outlined'
