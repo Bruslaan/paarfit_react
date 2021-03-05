@@ -4,7 +4,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
 import './NavBarMenu.css';
-import { handleLogout } from '../firebase';
+import { handleLogout } from '../../firebase';
 export default function NavBarMobileMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
 

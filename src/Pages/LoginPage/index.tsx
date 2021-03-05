@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 // import { User, auth } from "firebase";
-import firebase from '../firebase';
+import firebase from '../../firebase';
 import 'firebase/auth';
 import 'firebase/firestore';
-import { AuthContext } from '../AuthProvider';
+import { AuthContext } from '../../AuthProvider';
 import TextField from '@material-ui/core/TextField';
 
 import Button from '@material-ui/core/Button';
@@ -15,9 +15,7 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import logo from '../assets/wort_Bild_nebeneinander.svg';
-import { makeStyles } from '@material-ui/core/styles';
-import { Logo } from "../../Components/Logo"
+import logo from '../../assets/wort_Bild_nebeneinander.svg';
 
 const useStyles = makeStyles((theme) => ({
   paper: {

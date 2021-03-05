@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import { Menu } from '../Menu';
-import { navLinksSidebarBottom } from '../constants';
+import { navLinksSidebarBottom } from '../../constants';
 
 interface Props {
   items?: ReactNode;
