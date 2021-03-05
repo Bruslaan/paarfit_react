@@ -2,23 +2,23 @@ import React, { useContext, useState } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import { AuthContext } from './AuthProvider';
 import Fab from '@material-ui/core/Fab';
-import NavBarContainer from './Components/NavBarContainer'
-import { BottomNavBarContainer } from './Components/BottomNavBar'
-import { SidebarNavTopContainer } from './Components/sidebarNavTop'
-import { SidebarNavBottomContainer } from './Components/sidebarNavBottom'
-import Dashboard from './Pages/DashboardPage'
-import ProfilePage from './Pages/ProfilePage'
-import CreateUserInformation from './CreateUserInformation'
-import TrainingPage from './Pages/TrainingPage'
-import TraningActive from './Pages/TrainingPage/TrainingActiveMaterial'
-import TrainingOverView from './Pages/TrainingPage/TrainingOverview'
+import NavBarContainer from './Components/NavBarContainer';
+import { BottomNavBarContainer } from './Components/BottomNavBar';
+import { SidebarNavTopContainer } from './Components/sidebarNavTop';
+import { SidebarNavBottomContainer } from './Components/sidebarNavBottom';
+import Dashboard from './Pages/DashboardPage';
+import ProfilePage from './Pages/ProfilePage';
+import CreateUserInformation from './CreateUserInformation';
+import TrainingPage from './Pages/TrainingPage';
+import TraningActive from './Pages/TrainingPage/TrainingActiveMaterial';
+import TrainingOverView from './Pages/TrainingPage/TrainingOverview';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { Logo } from './Components/Logo'
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
+import { Logo } from './Components/Logo';
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import DescriptionIcon from '@material-ui/icons/Description';
-import Drawer from './Components/react-bottom-drawer'
-import Tagebuch from './Components/Tagebuch'
-import Milestones from './Pages/MilestonesPage'
+import Drawer from './Components/react-bottom-drawer';
+import Tagebuch from './Components/Tagebuch';
+import Milestones from './Pages/MilestonesPage';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -63,40 +63,37 @@ const PrivateRoute = ({ ...rest }) => {
             <div>
               <NavBarContainer />
 
-                            <div className="spacer"></div>
-                            <div className="main__container mainContainerStyle">
-                                <div className="ctMenuLeft disable_on_mobile">
-                                    <SidebarNavTopContainer />
-                                    <SidebarNavBottomContainer/>
-                                </div>
-                                <div className="contentArea">
-                                    <Switch>
-                                        <Route exact path="/profile">
-                                            <ProfilePage />
-                                        </Route>
-                                        <Route exact path="/dashboard">
-                                            <Dashboard />
-                                        </Route>
-                                        <Route exact path="/training">
-                                            <TrainingPage />
-                                        </Route>
-                                        <Route exact path="/training/overview">
-                                            <TrainingOverView />
-                                        </Route>
-                                        <Route exact path="/training/overview/active/:id">
-                                            <TraningActive />
-                                        </Route>
-                                        <Route exact path="/">
-                                            <TrainingPage />
-                                        </Route>
-										<Route exact path="/milestones">
-											<Milestones />
-										</Route>
-                                    </Switch>
-                                </div>
+              <div className='spacer'></div>
+              <div className='main__container mainContainerStyle'>
+                <div className='ctMenuLeft disable_on_mobile'>
+                  <SidebarNavTopContainer />
+                  <SidebarNavBottomContainer />
+                </div>
+                <div className='contentArea'>
+                  <Switch>
+                    <Route exact path='/profile'>
+                      <ProfilePage />
+                    </Route>
+                    <Route exact path='/'>
+                      <Dashboard />
+                    </Route>
+                    <Route exact path='/training'>
+                      <TrainingPage />
+                    </Route>
+                    <Route exact path='/training/overview'>
+                      <TrainingOverView />
+                    </Route>
+                    <Route exact path='/training/overview/active/:id'>
+                      <TraningActive />
+                    </Route>
 
-                            </div>
-                            <BottomNavBarContainer />
+                    <Route exact path='/milestones'>
+                      <Milestones />
+                    </Route>
+                  </Switch>
+                </div>
+              </div>
+              <BottomNavBarContainer />
 
               <Fab
                 onClick={openDrawer}

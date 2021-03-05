@@ -5,7 +5,7 @@ const Intro = () => {
   return (
     <div className='intro'>
       <div className='title'>
-        <span>Wir</span> &nbsp;sind besser als ich
+        <span className='landingPageSpan'>Wir</span> &nbsp;sind besser als ich
       </div>
       <div className='subtitle'>
         Sieh dir an, warum sich mehr als 10.000 Paare dafür entschieden zu

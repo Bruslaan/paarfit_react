@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { app } from '../../../firebase';
+
 import './BAComp.css';
 import {
   ReactCompareSlider,
@@ -8,6 +10,34 @@ import baImgB from '../../../assets/baImgB.jpeg';
 import baImgA from '../../../assets/baImgA.jpeg';
 
 const BAComp = () => {
+  const [afterImg, setAfterImg] = useState({});
+  const [beforeImg, setBeforeImg] = useState({});
+  const [arrImg, setArrImg] = useState([]);
+
+  const storageRef = app.storage().ref();
+  const outputRef = storageRef.child('Cup.jpg');
+
+  function fileUploadHandler(e: any) {
+    const inputFile = e.target.files[0];
+    const inputRef = storageRef.child(inputFile.name);
+    setBeforeImg(arrImg[1]);
+
+    inputRef.put(inputFile).then(() => {
+      setAfterImg(inputFile);
+    });
+  }
+  useEffect(() => {
+    storageRef.listAll().then(function (result) {
+      result.items.map((item) => {
+        setArrImg(arrImg.concat(item.location.path_));
+      });
+
+      console.log(arrImg);
+      // setAfterImg(arrImg[0]);
+      // setBeforeImg(arrImg[1]);
+    });
+  }, []);
+
   return (
     <div className='baContainer'>
       <div className='baTitle'>
@@ -15,6 +45,11 @@ const BAComp = () => {
         <div className='baSelectedTitle'>after</div>
       </div>
       <div className='baIconContainer'>
+        <input
+          type='file'
+          className='baInputBtn'
+          onChange={(e: any) => fileUploadHandler(e)}
+        />
         <svg
           className='baIcon'
           xmlns='http://www.w3.org/2000/svg'
@@ -39,10 +74,14 @@ const BAComp = () => {
       <div className='baComp'>
         <ReactCompareSlider
           itemOne={
-            <ReactCompareSliderImage src={baImgB} srcSet='' alt='Image one' />
+            <ReactCompareSliderImage
+              src={beforeImg}
+              srcSet=''
+              alt='Image one'
+            />
           }
           itemTwo={
-            <ReactCompareSliderImage src={baImgA} srcSet='' alt='Image two' />
+            <ReactCompareSliderImage src={afterImg} srcSet='' alt='Image two' />
           }
           onPositionChange={function noRefCheck() {}}
           position={50}

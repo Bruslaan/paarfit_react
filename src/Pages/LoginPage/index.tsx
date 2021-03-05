@@ -35,6 +35,25 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  root: {
+    '& label.Mui-focused': {
+      color: 'rgb(92,	93,	234	)',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'red',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'rgb(92,	93,	234)',
+      },
+      '&:hover fieldset': {
+        borderColor: 'rgb(148, 56, 245)',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'rgb(92,	93,	234)',
+      },
+    },
+  },
 }));
 
 interface UserData {
@@ -53,7 +72,7 @@ const Login = () => {
 
   const handleChange = (event: any) => {
     event.persist();
-    setValues((values) => ({
+    setValues((values: any) => ({
       ...values,
       [event.target.name]: event.target.value,
     }));
@@ -74,28 +93,6 @@ const Login = () => {
       });
   };
 
-  const CssTextField = withStyles({
-    root: {
-      '& label.Mui-focused': {
-        color: 'rgb(92,	93,	234	)',
-      },
-      '& .MuiInput-underline:after': {
-        borderBottomColor: 'red',
-      },
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': {
-          borderColor: 'rgb(92,	93,	234)',
-        },
-        '&:hover fieldset': {
-          borderColor: 'rgb(148, 56, 245)',
-        },
-        '&.Mui-focused fieldset': {
-          borderColor: 'rgb(92,	93,	234)',
-        },
-      },
-    },
-  })(TextField);
-
   return (
     <div style={{ maxWidth: '500px', margin: 'auto', padding: '10px' }}>
       <div className={classes.paper}>
@@ -103,7 +100,8 @@ const Login = () => {
           <img className='PaarFit' src={logo} alt='PaarFit' width='200px' />
         </a>
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
-          <CssTextField
+          <TextField
+            className={classes.root}
             variant='outlined'
             margin='normal'
             required
@@ -116,7 +114,8 @@ const Login = () => {
             value={values.email}
             onChange={handleChange}
           />
-          <CssTextField
+          <TextField
+            className={classes.root}
             variant='outlined'
             margin='normal'
             required

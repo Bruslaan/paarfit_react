@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import 'firebase/storage';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAPEP1AFFg111oeqeVSUcvjRvAorO06-Uc',
@@ -11,7 +12,7 @@ export const firebaseConfig = {
   measurementId: 'G-GBNWN1WNZ1',
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+export const app = firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 export const handleLogout = (event?: any, loggedOut?: () => void) => {
