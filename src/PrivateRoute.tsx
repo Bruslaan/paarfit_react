@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
-import { Route, Redirect, Switch } from "react-router-dom";
-import { AuthContext } from "./AuthProvider";
+import React, { useContext, useState } from 'react';
+import { Route, Redirect, Switch } from 'react-router-dom';
+import { AuthContext } from './AuthProvider';
 import Fab from '@material-ui/core/Fab';
 import NavBarContainer from './Components/NavBarContainer'
 import { BottomNavBarContainer } from './Components/BottomNavBar'
@@ -21,48 +21,47 @@ import Tagebuch from './Components/Tagebuch'
 import Milestones from './Pages/MilestonesPage'
 
 const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-
-        fab: {
-            position: 'fixed',
-            bottom: theme.spacing(10),
-            right: "10%",
-            zIndex: 10,
-        },
-
-    }),
+  createStyles({
+    fab: {
+      position: 'fixed',
+      bottom: theme.spacing(10),
+      right: '10%',
+      zIndex: 10,
+    },
+  })
 );
 
-
 const PrivateRoute = ({ ...rest }) => {
-    const customStyle = useStyles()
-    const { authenticated, loadingAuthState, haveInformation } = useContext(AuthContext);
-    const [drawerVisible, setdrawerVisible] = useState(false)
-    const openDrawer = () => {
-        console.log("hallo")
-        setdrawerVisible(true)
-    }
-    const closeDrawer = () => {
-        setdrawerVisible(false)
-    }
+  const customStyle = useStyles();
+  const { authenticated, loadingAuthState, haveInformation } = useContext(
+    AuthContext
+  );
+  const [drawerVisible, setdrawerVisible] = useState(false);
+  const openDrawer = () => {
+    console.log('hallo');
+    setdrawerVisible(true);
+  };
+  const closeDrawer = () => {
+    setdrawerVisible(false);
+  };
 
-    if (loadingAuthState) {
-        return (
-            <div className="center__all">
-                <Logo name="PaarFit" />
-                <CircularProgress />
-            </div>
-        );
-    }
-
+  if (loadingAuthState) {
     return (
-        <Route
-            {...rest}
-            render={routeProps =>
-                authenticated ? (
-                    haveInformation ? (
-                        <div>
-                            <NavBarContainer />
+      <div className='center__all'>
+        <Logo name='PaarFit' />
+        <CircularProgress />
+      </div>
+    );
+  }
+
+  return (
+    <Route
+      {...rest}
+      render={(routeProps) =>
+        authenticated ? (
+          haveInformation ? (
+            <div>
+              <NavBarContainer />
 
                             <div className="spacer"></div>
                             <div className="main__container mainContainerStyle">
@@ -99,26 +98,33 @@ const PrivateRoute = ({ ...rest }) => {
                             </div>
                             <BottomNavBarContainer />
 
-                            <Fab onClick={openDrawer} color="secondary" aria-label="add" className={customStyle.fab}>
-                                <DescriptionIcon />
-                            </Fab>
+              <Fab
+                onClick={openDrawer}
+                color='secondary'
+                aria-label='add'
+                className={customStyle.fab}
+              >
+                <DescriptionIcon />
+              </Fab>
 
-                            <Drawer isVisible={drawerVisible} onClose={closeDrawer}>
-                                Trainingstagebuch
-                                    <div style={{ }}>
-                                    <Tagebuch />
-                                </div>
-                            </Drawer>
-                        </div>
-                    ) : (
-                            <CreateUserInformation />
-                        )
-                ) : (
-                        <Redirect to={{ pathname: "/auth", state: { prevPath: rest.path } }} />
-                    )
-            }
-        />
-    );
-}
+              <Drawer isVisible={drawerVisible} onClose={closeDrawer}>
+                Trainingstagebuch
+                <div style={{}}>
+                  <Tagebuch />
+                </div>
+              </Drawer>
+            </div>
+          ) : (
+            <CreateUserInformation />
+          )
+        ) : (
+          <Redirect
+            to={{ pathname: '/auth', state: { prevPath: rest.path } }}
+          />
+        )
+      }
+    />
+  );
+};
 
-export default PrivateRoute
+export default PrivateRoute;
