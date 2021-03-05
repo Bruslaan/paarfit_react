@@ -3,8 +3,125 @@
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BlogCard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BlogCard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BlogPage/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BlogPage/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BlogPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BlogPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BottomNavBar/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BottomNavBar/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BottomNavBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BottomNavBar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateUserInformation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateUserInformation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DashboardPage/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/DashboardPage/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DashboardPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/DashboardPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Footer/Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Footer/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Info.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Info.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Info.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/InfoItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/InfoItem.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/InfoItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/InfoItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Intro.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Intro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Intro.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/LandingPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/LandingPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/LandingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/MagazinComp/Magazin.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/MagazinComp/Magazin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/MagazinComp/Magazin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/MagazinComp/Magazin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/MagazinComp/MagazinComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/MagazinComp/MagazinComp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/MagazinComp/MagazinComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/MagazinComp/MagazinComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Mid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Mid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Mid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Mid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/PricingPage/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/PricingPage/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/PricingPage/Feature.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Feature.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/PricingPage/Feature.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Feature.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/PricingPage/Pricing.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/PricingPage/Pricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/PricingPage/PricingComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/PricingComp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/PricingPage/PricingComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/PricingComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/ReviewComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/ReviewComp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/ReviewComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/ReviewComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Reviews.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Reviews.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Reviews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Reviews.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Top.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Top.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Top.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Top.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Video.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Video.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LandingPage/Video.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Video.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LoginPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/Logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Logo/Logo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Logo/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/Menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Menu/Menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Menu/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MilestonesPage/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MilestonesPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavBar/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavBar/NavBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavBar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavBarContainer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavBarContainer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavBarMenu/NavBarMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavBarMenu/NavBarMenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavBarMenu/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavBarMenu/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaymentPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/PaymentPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrivateRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrivateRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/B&amp;AComp/BAComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/BAComp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/B&amp;AComp/BAComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/BAComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/PointsComp/Piecart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/Piecart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/PointsComp/Piechart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/Piechart.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/PointsComp/PointsComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/PointsComp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/PointsComp/PointsComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/PointsComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/Profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/ProfileInfo/DropDownComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/DropDownComp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/ProfileInfo/DropDownComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/DropDownComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/ProfileInfo/HeightComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/HeightComp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/ProfileInfo/HeightComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/HeightComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/ProfileInfo/ProfileInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/ProfileInfo/WeightComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/WeightComp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/ProfileInfo/WeightComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/WeightComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ProfilePage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PulseButton/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PulseButton/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PulseButton/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PulseButton/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegisterPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tagebuch/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Tagebuch/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrainingPage/TrainingOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingOverview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrainingPage/WorkoutItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrainingPage/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrainingPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TrainingPage/trainingsUtils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/trainingsUtils.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxBadges/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxBadges/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxBadges/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxBadges/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxFlow/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxFlow/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxFlow/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxFlow/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxLevel/advanced_couple.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxLevel/advanced_couple.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxLevel/fitness_couple.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxLevel/fitness_couple.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxLevel/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxLevel/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxLevel/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxLevel/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxLevel/power_couple.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxLevel/power_couple.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxLevel/starter_couple.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxLevel/starter_couple.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxLevel/super_couple.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxLevel/super_couple.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxResults/fitness_couple.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxResults/fitness_couple.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxResults/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxResults/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxResults/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxResults/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxTrainingActivity/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxTrainingActivity/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxWeek/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxWeek/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boxWeek/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxWeek/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/dist/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/dist/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/dist/lib/hooks/useEscButton.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/dist/lib/hooks/useEscButton.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/dist/lib/hooks/useEscButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/dist/lib/hooks/useEscButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/dist/lib/hooks/useGlobalStyles.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/dist/lib/hooks/useGlobalStyles.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/dist/lib/hooks/useGlobalStyles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/dist/lib/hooks/useGlobalStyles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/dist/lib/hooks/usePreventScroll.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/dist/lib/hooks/usePreventScroll.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/dist/lib/hooks/usePreventScroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/dist/lib/hooks/usePreventScroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/dist/lib/styles.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/dist/lib/styles.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/dist/lib/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/dist/lib/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-bottom-drawer/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/react-bottom-drawer/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sidebarNavBottom/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/sidebarNavBottom/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sidebarNavTop/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/sidebarNavTop/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/thumbnail.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/thumbnail.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +131,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="julian" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,6 +158,13 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/src/Pages" />
+      <recent name="$PROJECT_DIR$/src/Components" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,7 +177,7 @@
       <workItem from="1613995554384" duration="566000" />
       <workItem from="1614534871219" duration="1152000" />
       <workItem from="1614588493193" duration="838000" />
-      <workItem from="1614881424064" duration="223000" />
+      <workItem from="1614881424064" duration="2661000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -83,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614588820775</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="stash">
+      <created>1614881757110</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614881757110</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +237,7 @@
     <MESSAGE value="untracked files" />
     <MESSAGE value="training merged into master" />
     <MESSAGE value="package lock on git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="package lock on git ignore" />
+    <MESSAGE value="stash" />
+    <option name="LAST_COMMIT_MESSAGE" value="stash" />
   </component>
 </project>

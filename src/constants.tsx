@@ -3,7 +3,7 @@ import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
 // import PersonRoundedIcon from '@material-ui/icons/PersonRounded';
 import FitnessCenterRoundedIcon from '@material-ui/icons/FitnessCenterRounded';
 import Avatar from '@material-ui/core/Avatar';
-import { Route } from './Menu'
+import { Route } from './Components/Menu'
 import React from 'react'
 import { Badge } from '@material-ui/core';
 

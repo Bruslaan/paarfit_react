@@ -2,23 +2,23 @@ import React, { useContext, useState } from "react";
 import { Route, Redirect, Switch } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import Fab from '@material-ui/core/Fab';
-import NavBarContainer from './NavBarContainer'
-import { BottomNavBarContainer } from './BottomNavBar'
-import { SidebarNavTopContainer } from './sidebarNavTop'
-import { SidebarNavBottomContainer } from './sidebarNavBottom'
-import Dashboard from './DashboardPage'
-import ProfilePage from './ProfilePage'
+import NavBarContainer from './Components/NavBarContainer'
+import { BottomNavBarContainer } from './Components/BottomNavBar'
+import { SidebarNavTopContainer } from './Components/sidebarNavTop'
+import { SidebarNavBottomContainer } from './Components/sidebarNavBottom'
+import Dashboard from './Pages/DashboardPage'
+import ProfilePage from './Pages/ProfilePage'
 import CreateUserInformation from './CreateUserInformation'
-import TrainingPage from './TrainingPage'
-import TraningActive from './TrainingPage/TrainingActiveMaterial'
-import TrainingOverView from './TrainingPage/TrainingOverview'
+import TrainingPage from './Pages/TrainingPage'
+import TraningActive from './Pages/TrainingPage/TrainingActiveMaterial'
+import TrainingOverView from './Pages/TrainingPage/TrainingOverview'
 import CircularProgress from '@material-ui/core/CircularProgress';
-import { Logo } from './Logo'
+import { Logo } from './Components/Logo'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import DescriptionIcon from '@material-ui/icons/Description';
-import Drawer from './react-bottom-drawer'
-import Tagebuch from './Tagebuch'
-import Milestones from './MilestonesPage'
+import Drawer from './Components/react-bottom-drawer'
+import Tagebuch from './Components/Tagebuch'
+import Milestones from './Pages/MilestonesPage'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({

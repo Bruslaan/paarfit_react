@@ -1,0 +1,60 @@
+
+
+
+
+
+
+@font-face {
+  font-family: 'Linearicons';
+  src:url('../../assets/fonts/Linearicons.ttf') format('truetype'),
+       url('../../assets/fonts/linearicons-webfont.woff2') format('woff2'),
+       url('../../assets/fonts/linearicons-webfont.woff') format('woff'),
+       url('../../assets/fonts/linearicons-webfont.svg#lineariconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@import url('https://use.typekit.net/xux6kwe.css');
+.left__section>* {
+  margin-bottom: 20px;
+}
+
+
+.left__section {
+  float: left;
+  max-width: 614px;
+  width: 100%;
+}
+
+
+.right__section {
+  max-width: 293px;
+  width: 100%;
+  top: 30px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+
+}
+:root{
+  --content-width: 100%;
+}
+
+body{
+  font-family: "brandon-grotesque";
+  color:#1E1E1E;
+
+}
+.content{
+  overflow:hidden;
+  padding:48px 0px 48px 0px;
+  max-width:1540px;
+  margin:0 auto;
+  font-family:"brandon-grotesque";
+}
+
+
+
+
+
+
