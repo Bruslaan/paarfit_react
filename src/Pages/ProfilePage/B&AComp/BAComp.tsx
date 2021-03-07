@@ -7,6 +7,8 @@ import {
   ReactCompareSlider,
   ReactCompareSliderImage,
 } from 'react-compare-slider';
+import defaultImgB from '../../../assets/baImgB.jpeg';
+import defaultImgA from '../../../assets/baImgA.jpeg';
 
 const BAComp = () => {
   const { user } = useContext(AuthContext);
@@ -65,9 +67,18 @@ const BAComp = () => {
         .get()
         .then((doc) => {
           if (doc.exists) {
+            if (
+              doc.data()!.beforeImgURL === '' &&
+              doc.data()!.afterImgURL === ''
+            ) {
+              setBeforeImg(defaultImgB);
+              setAfterImg(defaultImgA);
+            } else if (doc.data()!.beforeImgURL === '') {
+              setBeforeImg(defaultImgB);
+            }
+
             setBeforeImg(doc.data()!.beforeImgURL);
             setAfterImg(doc.data()!.afterImgURL);
-            console.log(beforeImg);
           } else {
             // doc.data() will be undefined in this case
             console.log('No such document!');
