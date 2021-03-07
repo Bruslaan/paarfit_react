@@ -49,7 +49,6 @@ export default function ProfilePage() {
       .get()
       .then((document: any) => {
         document.exists && setuserInformation(document.data());
-        console.log(document.data());
       })
       .catch((error: any) => {
         console.log('cannot load user information', error);

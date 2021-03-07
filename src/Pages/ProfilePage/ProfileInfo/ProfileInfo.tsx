@@ -10,7 +10,6 @@ const ProfileInfo = () => {
   const [genderA, setGenderA] = useState('');
   const [genderB, setGenderB] = useState('');
 
-  console.log(genderA, genderB, 'are picked');
   return (
     <div className='profileInfo'>
       <div

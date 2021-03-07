@@ -1,6 +1,5 @@
-
-import React, { useEffect, useState, createContext } from "react";
-import firebase from "../firebase";
+import React, { useEffect, useState, createContext } from 'react';
+import firebase from '../firebase';
 type ContextProps = {
   user: firebase.User | null;
   authenticated: boolean;
@@ -8,46 +7,40 @@ type ContextProps = {
   haveInformation: boolean;
   setUser: any;
   loadingAuthState: boolean;
-
 };
 
-
-interface Userinformation{
-  teamname: string
-  stufe: string
-  email: string
+interface Userinformation {
+  teamname: string;
+  stufe: string;
+  email: string;
 }
 
 export const AuthContext = createContext<Partial<ContextProps>>({});
 export const AuthProvider = ({ children }: any) => {
   const [user, setUser] = useState(null as firebase.User | null);
-  const db = firebase.firestore()
+  const db = firebase.firestore();
   const [loadingAuthState, setLoadingAuthState] = useState(true);
 
-  const [userInformation, setuserInformation]: any | null = useState(null)
+  const [userInformation, setuserInformation]: any | null = useState(null);
   useEffect(() => {
-
     firebase.auth().onAuthStateChanged((user: any) => {
       setUser(user);
-      setLoadingAuthState(true)
+      setLoadingAuthState(true);
 
       if (user) {
-        db.collection("users").doc(user?.uid).get().then(document => {
-
-          document.exists && setuserInformation(document.data())
-          console.log(document.data())
-          setLoadingAuthState(false);
-
-        }).catch(error => {
-          setLoadingAuthState(false);
-
-        })
+        db.collection('users')
+          .doc(user?.uid)
+          .get()
+          .then((document) => {
+            document.exists && setuserInformation(document.data());
+            setLoadingAuthState(false);
+          })
+          .catch((error) => {
+            setLoadingAuthState(false);
+          });
       } else {
         setLoadingAuthState(false);
       }
-
-
-
     });
   }, [db]);
   return (
@@ -59,9 +52,9 @@ export const AuthProvider = ({ children }: any) => {
         userInformation: userInformation,
         haveInformation: userInformation !== null,
         loadingAuthState,
-
-      }}>
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
-}
+};

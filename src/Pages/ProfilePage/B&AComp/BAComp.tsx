@@ -1,41 +1,83 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { app } from '../../../firebase';
+import { AuthContext } from '../../../AuthProvider/index';
 
 import './BAComp.css';
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,
 } from 'react-compare-slider';
-import baImgB from '../../../assets/baImgB.jpeg';
-import baImgA from '../../../assets/baImgA.jpeg';
 
 const BAComp = () => {
-  const [afterImg, setAfterImg] = useState({});
-  const [beforeImg, setBeforeImg] = useState({});
-  const [arrImg, setArrImg] = useState([]);
-
+  const { user } = useContext(AuthContext);
+  const uID = user?.uid;
+  const db = app.firestore();
   const storageRef = app.storage().ref();
-  const outputRef = storageRef.child('Cup.jpg');
 
-  function fileUploadHandler(e: any) {
-    const inputFile = e.target.files[0];
-    const inputRef = storageRef.child(inputFile.name);
-    setBeforeImg(arrImg[1]);
+  const [beforeImg, setBeforeImg] = useState('');
+  const [afterImg, setAfterImg] = useState('');
 
-    inputRef.put(inputFile).then(() => {
-      setAfterImg(inputFile);
+  // I. Upload file to storage, Set BImg & AImg on Upload, Add imageURLs to user  user data
+  // I1. If !BImg ? (setBImg(fileURL), db...set(beforeImgURL:fileURL)) : (setBImg(aImg) db...set(beforeImgURL:aImg)) setAImg(fileURL) db...set(afterImgURL:fileURL)))
+  const onFileChange = async (e: any) => {
+    // Upload File
+    const file = e.target.files[0];
+    const fileRef = storageRef.child(file.name);
+    await fileRef.put(file);
+
+    // Set uploaded file to either before or after
+    if (!beforeImg) {
+      setBeforeImg(await fileRef.getDownloadURL());
+      addBURLToUserData(await fileRef.getDownloadURL());
+    } else {
+      if (!afterImg) {
+        setAfterImg(await fileRef.getDownloadURL());
+        addAURLToUserData(await fileRef.getDownloadURL());
+      } else {
+        setBeforeImg(afterImg);
+        addBURLToUserData(afterImg);
+        setAfterImg(await fileRef.getDownloadURL());
+        addAURLToUserData(await fileRef.getDownloadURL());
+      }
+    }
+  };
+
+  const addBURLToUserData = async (url: any) => {
+    // Add file names to user data
+    await db.collection('users').doc(uID).update({
+      beforeImgURL: url,
     });
-  }
+  };
+
+  const addAURLToUserData = async (url: any) => {
+    // Add file names to user data
+    await db.collection('users').doc(uID).update({
+      afterImgURL: url,
+    });
+  };
+
+  // II. Set images on mount, refresh by getting user imageURLs
+  // II1. Using useEffect: setBImg(db...get(beforeImgURL)) setAImg(db...get(afterImgURL)), []
   useEffect(() => {
-    storageRef.listAll().then(function (result) {
-      result.items.map((item) => {
-        setArrImg(arrImg.concat(item.location.path_));
-      });
-
-      console.log(arrImg);
-      // setAfterImg(arrImg[0]);
-      // setBeforeImg(arrImg[1]);
-    });
+    const getFileName = async () => {
+      db.collection('users')
+        .doc(uID)
+        .get()
+        .then((doc) => {
+          if (doc.exists) {
+            setBeforeImg(doc.data()!.beforeImgURL);
+            setAfterImg(doc.data()!.afterImgURL);
+            console.log(beforeImg);
+          } else {
+            // doc.data() will be undefined in this case
+            console.log('No such document!');
+          }
+        })
+        .catch((error) => {
+          console.log('Error getting document:', error);
+        });
+    };
+    getFileName();
   }, []);
 
   return (
@@ -48,7 +90,7 @@ const BAComp = () => {
         <input
           type='file'
           className='baInputBtn'
-          onChange={(e: any) => fileUploadHandler(e)}
+          onChange={(e: any) => onFileChange(e)}
         />
         <svg
           className='baIcon'
