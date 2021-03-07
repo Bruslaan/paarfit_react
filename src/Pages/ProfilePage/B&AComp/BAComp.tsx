@@ -8,7 +8,6 @@ import {useBeforeAndAfterImage} from "./useBeforeAfter";
 
 const BAComp = () => {
 
-
     const [beforeImg, afterImg, onFileChange]:any = useBeforeAndAfterImage()
 
     return (

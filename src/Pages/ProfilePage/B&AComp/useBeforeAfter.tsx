@@ -30,6 +30,7 @@ export const useBeforeAndAfterImage = () => {
     };
 
 
+
     const addBURLToUserData = async (objectToStore: any) => {
         await db.collection('users').doc(uID).update(objectToStore);
     };
@@ -48,8 +49,6 @@ export const useBeforeAndAfterImage = () => {
 
             setAfterImg(afterImage)
             setBeforeImg(beforeImage)
-
-
         } else {
             console.log('No such document!');
         }

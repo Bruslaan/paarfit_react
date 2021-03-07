@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/useBeforeAfter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/BAComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/BAComp.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/BAComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/BAComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/useBeforeAfter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/useBeforeAfter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
       <workItem from="1614881424064" duration="2661000" />
       <workItem from="1614933889068" duration="601000" />
       <workItem from="1615117408031" duration="198000" />
-      <workItem from="1615131820082" duration="4882000" />
+      <workItem from="1615131820082" duration="6044000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -115,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614934506017</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactored BA">
+      <created>1615143608546</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1615143608546</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +148,7 @@
     <MESSAGE value="stash" />
     <MESSAGE value="all branches merged" />
     <MESSAGE value="julian-func merged" />
-    <option name="LAST_COMMIT_MESSAGE" value="julian-func merged" />
+    <MESSAGE value="refactored BA" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored BA" />
   </component>
 </project>
