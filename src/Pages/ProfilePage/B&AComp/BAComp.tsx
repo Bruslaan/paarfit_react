@@ -28,20 +28,17 @@ const BAComp = () => {
     await fileRef.put(file);
 
     // Set uploaded file to either before or after
-    if (!beforeImg) {
-      setBeforeImg(await fileRef.getDownloadURL());
-      addBURLToUserData(await fileRef.getDownloadURL());
-    } else {
-      if (!afterImg) {
-        setAfterImg(await fileRef.getDownloadURL());
-        addAURLToUserData(await fileRef.getDownloadURL());
-      } else {
-        setBeforeImg(afterImg);
-        addBURLToUserData(afterImg);
-        setAfterImg(await fileRef.getDownloadURL());
-        addAURLToUserData(await fileRef.getDownloadURL());
-      }
+    if (beforeImg !== 'defaultImgB' && afterImg !== 'defaultImgA') {
+      setBeforeImg(afterImg);
+      addBURLToUserData(afterImg);
+      setAfterImg(await fileRef.getDownloadURL());
+      addAURLToUserData(await fileRef.getDownloadURL());
+    } else if (beforeImg !== 'defaultImgB' && afterImg === 'defaultImgA') {
+      setAfterImg(await fileRef.getDownloadURL());
+      addAURLToUserData(await fileRef.getDownloadURL());
     }
+    setBeforeImg(await fileRef.getDownloadURL());
+    addBURLToUserData(await fileRef.getDownloadURL());
   };
 
   const addBURLToUserData = async (url: any) => {
@@ -68,17 +65,19 @@ const BAComp = () => {
         .then((doc) => {
           if (doc.exists) {
             if (
+              doc.data()!.beforeImgURL !== '' ||
+              doc.data()!.afterImgURL !== ''
+            ) {
+              setBeforeImg(doc.data()!.beforeImgURL);
+              setAfterImg(doc.data()!.afterImgURL);
+            } else if (
               doc.data()!.beforeImgURL === '' &&
               doc.data()!.afterImgURL === ''
             ) {
               setBeforeImg(defaultImgB);
               setAfterImg(defaultImgA);
-            } else if (doc.data()!.beforeImgURL === '') {
+            } else if (doc.data()!.beforeImgURL === '')
               setBeforeImg(defaultImgB);
-            }
-
-            setBeforeImg(doc.data()!.beforeImgURL);
-            setAfterImg(doc.data()!.afterImgURL);
           } else {
             // doc.data() will be undefined in this case
             console.log('No such document!');
