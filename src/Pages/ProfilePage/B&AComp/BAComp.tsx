@@ -28,17 +28,20 @@ const BAComp = () => {
     await fileRef.put(file);
 
     // Set uploaded file to either before or after
-    if (beforeImg !== 'defaultImgB' && afterImg !== 'defaultImgA') {
-      setBeforeImg(afterImg);
-      addBURLToUserData(afterImg);
-      setAfterImg(await fileRef.getDownloadURL());
-      addAURLToUserData(await fileRef.getDownloadURL());
-    } else if (beforeImg !== 'defaultImgB' && afterImg === 'defaultImgA') {
-      setAfterImg(await fileRef.getDownloadURL());
-      addAURLToUserData(await fileRef.getDownloadURL());
+    if (!beforeImg) {
+      setBeforeImg(await fileRef.getDownloadURL());
+      addBURLToUserData(await fileRef.getDownloadURL());
+    } else {
+      if (!afterImg) {
+        setAfterImg(await fileRef.getDownloadURL());
+        addAURLToUserData(await fileRef.getDownloadURL());
+      } else {
+        setBeforeImg(afterImg);
+        addBURLToUserData(afterImg);
+        setAfterImg(await fileRef.getDownloadURL());
+        addAURLToUserData(await fileRef.getDownloadURL());
+      }
     }
-    setBeforeImg(await fileRef.getDownloadURL());
-    addBURLToUserData(await fileRef.getDownloadURL());
   };
 
   const addBURLToUserData = async (url: any) => {
