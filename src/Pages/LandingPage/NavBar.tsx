@@ -28,8 +28,9 @@ const NavBar = () => {
 
   return (
     <div className='navBar'>
-      <img className='navBarLogo' src={logo} alt='PaarFit' width='160px' />
-
+      <a href='/landing-page' style={{ textDecoration: 'none' }}>
+        <img className='navBarLogo' src={logo} alt='PaarFit' width='160px' />
+      </a>
       <div className='navBarContent' onClick={handleClick}>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
@@ -63,27 +64,29 @@ const NavBar = () => {
         </ul>
         {button ? (
           <div className='navBtnComp'>
-            <a href='' className='navLogin'>
+            <a href='/auth' className='navLogin'>
               Login
             </a>
-            <button className='navBtn'>
-              Jetzt Anmelden
-              <svg
-                className='arroIcon'
-                height='20px'
-                fill='none'
-                stroke='currentColor'
-                viewBox='0 0 24 24'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  d='M9 5l7 7-7 7'
-                ></path>
-              </svg>
-            </button>
+            <a href='/register' style={{ textDecoration: 'none' }}>
+              <button className='navBtn'>
+                Jetzt Anmelden
+                <svg
+                  className='arroIcon'
+                  height='20px'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
+                    d='M9 5l7 7-7 7'
+                  ></path>
+                </svg>
+              </button>
+            </a>
           </div>
         ) : (
           <div className='menuIcn'>

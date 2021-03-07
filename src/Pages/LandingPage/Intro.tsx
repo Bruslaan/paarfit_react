@@ -11,24 +11,26 @@ const Intro = () => {
         Sieh dir an, warum sich mehr als 10.000 Paare dafür entschieden zu
         haben, mit Paarfit zu trainieren
       </div>
-      <button className='navBtnIntro'>
-        Jetzt Anmelden
-        <svg
-          className='arroIcon'
-          height='20px'
-          fill='none'
-          stroke='currentColor'
-          viewBox='0 0 24 24'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth='2'
-            d='M9 5l7 7-7 7'
-          ></path>
-        </svg>
-      </button>
+      <a href='/register' style={{ textDecoration: 'none' }}>
+        <button className='navBtnIntro'>
+          Jetzt Anmelden
+          <svg
+            className='arroIcon'
+            height='20px'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='2'
+              d='M9 5l7 7-7 7'
+            ></path>
+          </svg>
+        </button>
+      </a>
       <button className='chatBtn'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
