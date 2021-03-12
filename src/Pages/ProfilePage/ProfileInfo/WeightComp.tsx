@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import './WeightComp.css';
 
-const WeightComp = () => {
-  const [weight, setWeight] = useState(0);
-
+const WeightComp = ({ setUserWeight, weight }: any) => {
   return (
     <div className='weightContainer'>
       <div className='weightBtnContainer'>
         <button
           className='weightM'
-          onClick={() => weight > 0 && setWeight(weight - 1)}
+          onClick={() => weight > 0 && setUserWeight({ value: weight - 1 })}
         >
           <svg
             className='weightBtnIcon'
@@ -28,7 +26,9 @@ const WeightComp = () => {
           </svg>
         </button>
         <input
-          onChange={(e) => setWeight(Number.parseInt(e.target.value))}
+          onChange={(e) =>
+            setUserWeight({ value: Number.parseInt(e.target.value) })
+          }
           className='weightInput'
           type='string'
           name='weightInput'
@@ -36,7 +36,10 @@ const WeightComp = () => {
           autoComplete='off'
           value={weight}
         />
-        <button className='weightP' onClick={() => setWeight(weight + 1)}>
+        <button
+          className='weightP'
+          onClick={() => setUserWeight({ value: weight + 1 })}
+        >
           <svg
             className='weightBtnIcon'
             width='1em'

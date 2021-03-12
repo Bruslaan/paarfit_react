@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './HeightComp.css';
 
-const HeightComp = ({ userID }: any) => {
-  const [height, setHeight] = useState('');
-
+const HeightComp = ({ setUserHeight, height }: any) => {
   return (
     <div>
       <div className='heightDiv'>
         <input
-          onChange={(e) => setHeight(e.target.value)}
+          onChange={(e) => setUserHeight({ value: e.target.value })}
           type='text'
           className='heightCompA'
           placeholder='0 cm'

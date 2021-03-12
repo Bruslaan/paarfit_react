@@ -4,11 +4,10 @@ import profileImg from '../../../assets/profileImg.jpeg';
 import DropDownComp from './DropDownComp';
 import HeightComp from './HeightComp';
 import WeightComp from './WeightComp';
+import EditableLabel from './EditableLabel';
 
-const ProfileInfo = () => {
+const ProfileInfo = ({ setUserInfo, userInfo }: any) => {
   const genderArr = ['Male', 'Female', 'Diverse'];
-  const [genderA, setGenderA] = useState('');
-  const [genderB, setGenderB] = useState('');
 
   return (
     <div className='profileInfo'>
@@ -19,73 +18,48 @@ const ProfileInfo = () => {
       <div className='profileInfoTop'>
         <div className='profInfoPreTitle'>Starter-Couple</div>
         <div className='proInfoTitleBox'>
-          <div className='profInfoTitle'>Milau78</div>
-          <svg
-            className='profileInfoIcon'
-            width='1em'
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            stroke='currentColor'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              d='M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z'
-            />
-          </svg>
+          <EditableLabel
+            nameAgeEditableLabel={false}
+            setUserInfo={({ teamName, name, age }: any) => {
+              setUserInfo({ ...userInfo, teamName: teamName });
+            }}
+            teamName={userInfo.teamName}
+            name=''
+            age=''
+          />
         </div>
       </div>
       <hr />
       <div className='gridContainer'>
         <div className='grid-itemTitle'>
-          <div className='profGridName'>
-            Michael
-            <svg
-              className='profGridIcn'
-              width='0.9em'
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                d='M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z'
-              />
-            </svg>
-          </div>
-          <div className='profileAge'>35</div>
+          <EditableLabel
+            nameAgeEditableLabel={true}
+            setUserInfo={({ teamName, name, age }: any) => {
+              setUserInfo({ ...userInfo, nameA: name, ageA: age });
+            }}
+            teamName=''
+            name={userInfo.nameA}
+            age={userInfo.ageA}
+          />
         </div>
         <div className='grid-item'></div>
         <div className='grid-itemTitle'>
-          <div className='profGridName'>
-            Laura-Katarina
-            <svg
-              className='profGridIcn'
-              width='0.9em'
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                d='M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z'
-              />
-            </svg>
-          </div>
-          <div className='profileAge'>31</div>
+          <EditableLabel
+            nameAgeEditableLabel={true}
+            setUserInfo={({ teamName, name, age }: any) => {
+              setUserInfo({ ...userInfo, nameB: name, ageB: age });
+            }}
+            teamName=''
+            name={userInfo.nameB}
+            age={userInfo.ageB}
+          />
         </div>
         <div className='grid-item'>
           <DropDownComp
             genderArr={genderArr}
-            onValuePicked={(item: any) => setGenderA(item)}
+            onValuePicked={(item: any) =>
+              setUserInfo({ ...userInfo, genderA: item })
+            }
           />
         </div>
         <div className='grid-item'>
@@ -108,11 +82,18 @@ const ProfileInfo = () => {
         <div className='grid-item'>
           <DropDownComp
             genderArr={genderArr}
-            onValuePicked={(item: any) => setGenderB(item)}
+            onValuePicked={(item: any) =>
+              setUserInfo({ ...userInfo, genderA: item })
+            }
           />
         </div>
         <div className='grid-item'>
-          <HeightComp />
+          <HeightComp
+            setUserHeight={(value: any) => {
+              setUserInfo({ ...userInfo, heightA: value });
+            }}
+            height={userInfo.heightA}
+          />
         </div>
         <div className='grid-item'>
           <svg
@@ -132,10 +113,20 @@ const ProfileInfo = () => {
           </svg>
         </div>
         <div className='grid-item'>
-          <HeightComp />
+          <HeightComp
+            setUserHeight={(value: any) => {
+              setUserInfo({ ...userInfo, heightB: value });
+            }}
+            height={userInfo.heightB}
+          />
         </div>
         <div className='grid-item'>
-          <WeightComp />
+          <WeightComp
+            setUserWeight={(value: any) => {
+              setUserInfo({ ...userInfo, weightA: value });
+            }}
+            weight={userInfo.weightA}
+          />
         </div>
         <div className='grid-item'>
           <svg
@@ -155,7 +146,12 @@ const ProfileInfo = () => {
           </svg>
         </div>
         <div className='grid-item'>
-          <WeightComp />
+          <WeightComp
+            setUserWeight={(value: any) => {
+              setUserInfo({ ...userInfo, weightB: value });
+            }}
+            weight={userInfo.weightB}
+          />
         </div>
       </div>
     </div>
