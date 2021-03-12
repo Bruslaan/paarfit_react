@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ProfileInfo.css';
 import profileImg from '../../../assets/profileImg.jpeg';
 import DropDownComp from './DropDownComp';
@@ -6,9 +6,12 @@ import HeightComp from './HeightComp';
 import WeightComp from './WeightComp';
 import EditableLabel from './EditableLabel';
 
-const ProfileInfo = ({ setUserInfo, userInfo }: any) => {
+const ProfileInfo = ({ setUserInfo, userInfo, addUserInfoToUserData }: any) => {
   const genderArr = ['Male', 'Female', 'Diverse'];
 
+  useEffect(() => {
+    addUserInfoToUserData();
+  });
   return (
     <div className='profileInfo'>
       <div
@@ -20,12 +23,10 @@ const ProfileInfo = ({ setUserInfo, userInfo }: any) => {
         <div className='proInfoTitleBox'>
           <EditableLabel
             nameAgeEditableLabel={false}
-            setUserInfo={({ teamName, name, age }: any) => {
-              setUserInfo({ ...userInfo, teamName: teamName });
+            setUserInfo={({ teamname }: any) => {
+              setUserInfo({ ...userInfo, teamname: teamname });
             }}
-            teamName={userInfo.teamName}
-            name=''
-            age=''
+            teamname={userInfo.teamname}
           />
         </div>
       </div>
@@ -34,10 +35,14 @@ const ProfileInfo = ({ setUserInfo, userInfo }: any) => {
         <div className='grid-itemTitle'>
           <EditableLabel
             nameAgeEditableLabel={true}
-            setUserInfo={({ teamName, name, age }: any) => {
-              setUserInfo({ ...userInfo, nameA: name, ageA: age });
+            setUserInfo={({ name, age }: any) => {
+              setUserInfo({
+                ...userInfo,
+                nameA: name,
+                ageA: age,
+              });
             }}
-            teamName=''
+            teamname=''
             name={userInfo.nameA}
             age={userInfo.ageA}
           />
@@ -46,10 +51,14 @@ const ProfileInfo = ({ setUserInfo, userInfo }: any) => {
         <div className='grid-itemTitle'>
           <EditableLabel
             nameAgeEditableLabel={true}
-            setUserInfo={({ teamName, name, age }: any) => {
-              setUserInfo({ ...userInfo, nameB: name, ageB: age });
+            setUserInfo={({ name, age }: any) => {
+              setUserInfo({
+                ...userInfo,
+                nameB: name,
+                ageB: age,
+              });
             }}
-            teamName=''
+            teamname=''
             name={userInfo.nameB}
             age={userInfo.ageB}
           />
@@ -83,14 +92,14 @@ const ProfileInfo = ({ setUserInfo, userInfo }: any) => {
           <DropDownComp
             genderArr={genderArr}
             onValuePicked={(item: any) =>
-              setUserInfo({ ...userInfo, genderA: item })
+              setUserInfo({ ...userInfo, genderB: item })
             }
           />
         </div>
         <div className='grid-item'>
           <HeightComp
-            setUserHeight={(value: any) => {
-              setUserInfo({ ...userInfo, heightA: value });
+            setUserHeight={(height: any) => {
+              setUserInfo({ ...userInfo, heightA: height });
             }}
             height={userInfo.heightA}
           />
@@ -114,8 +123,8 @@ const ProfileInfo = ({ setUserInfo, userInfo }: any) => {
         </div>
         <div className='grid-item'>
           <HeightComp
-            setUserHeight={(value: any) => {
-              setUserInfo({ ...userInfo, heightB: value });
+            setUserHeight={(height: any) => {
+              setUserInfo({ ...userInfo, heightB: height });
             }}
             height={userInfo.heightB}
           />

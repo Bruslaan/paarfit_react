@@ -6,7 +6,7 @@ const HeightComp = ({ setUserHeight, height }: any) => {
     <div>
       <div className='heightDiv'>
         <input
-          onChange={(e) => setUserHeight({ value: e.target.value })}
+          onChange={(e) => setUserHeight({ height: e.target.value })}
           type='text'
           className='heightCompA'
           placeholder='0 cm'

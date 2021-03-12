@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider';
 import BAComp from './B&AComp/BAComp';
 import PointsComp from './PointsComp/PointsComp';
@@ -12,7 +12,7 @@ const Profile = () => {
   const db = app.firestore();
 
   const [userInfo, setUserInfo] = useState({
-    teamName: '',
+    teamname: '',
     nameA: '',
     ageA: '',
     nameB: '',
@@ -29,50 +29,43 @@ const Profile = () => {
   });
 
   const addUserInfoToUserData = async () => {
-    await db.collection('users').doc(uID).update(userInfo);
+    await db
+      .collection('users')
+      .doc(uID)
+      .update({ ...userInfo });
   };
 
-  const getUserInfo = async () => {
-    const doc = await db.collection('users').doc(uID).get();
-    if (doc.exists) {
-      const teamName = doc.data()?.teamName ?? '';
-      const nameA = doc.data()?.nameA ?? '';
-      const ageA = doc.data()?.ageA ?? '';
-      const nameB = doc.data()?.nameB ?? '';
-      const ageB = doc.data()?.ageB ?? '';
-      const genderA = doc.data()?.genderA ?? '';
-      const genderB = doc.data()?.genderB ?? '';
-      const heightA = doc.data()?.heightA ?? '';
-      const heightB = doc.data()?.heightB ?? '';
-      const weightA = doc.data()?.weightA ?? '';
-      const weightB = doc.data()?.weightB ?? '';
-      const points = doc.data()?.points ?? '';
-      const imageB = doc.data()?.imageB ?? '';
-      const imageA = doc.data()?.imageA ?? '';
+  useEffect(() => {
+    // writeUserData({ ...userInfo });
+    getUserInfo();
+  }, []);
 
-      setUserInfo({ ...userInfo, teamName: teamName });
-      setUserInfo({ ...userInfo, nameA: nameA });
-      setUserInfo({ ...userInfo, ageA: ageA });
-      setUserInfo({ ...userInfo, nameB: nameB });
-      setUserInfo({ ...userInfo, ageB: ageB });
-      setUserInfo({ ...userInfo, genderA: genderA });
-      setUserInfo({ ...userInfo, genderB: genderB });
-      setUserInfo({ ...userInfo, heightA: heightA });
-      setUserInfo({ ...userInfo, heightB: heightB });
-      setUserInfo({ ...userInfo, weightA: weightA });
-      setUserInfo({ ...userInfo, weightB: weightB });
-      setUserInfo({ ...userInfo, points: points });
-      setUserInfo({ ...userInfo, nameA: nameA });
-      setUserInfo({ ...userInfo, imageB: imageB });
-      setUserInfo({ ...userInfo, imageA: imageA });
-    } else {
-      console.log('No such document!');
-    }
+  const getUserInfo = async () => {
+    const docRef = await db.collection('users').doc(uID);
+    docRef
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          setUserInfo({ ...userInfo, teamname: doc.data()?.teamname });
+
+          console.log('Document data:', doc.data());
+        } else {
+          // doc.data() will be undefined in this case
+          console.log('No such document!');
+        }
+      })
+      .catch((error) => {
+        console.log('Error getting document:', error);
+      });
   };
 
   return (
     <div className='profile'>
-      <ProfileInfo setUserInfo={setUserInfo} userInfo={userInfo} />
+      <ProfileInfo
+        setUserInfo={setUserInfo}
+        userInfo={userInfo}
+        addUserInfoToUserData={addUserInfoToUserData}
+      />
       <PointsComp />
       <BAComp />
     </div>

@@ -4,13 +4,13 @@ import './EditableLabel.css';
 const EditableLabel = ({
   nameAgeEditableLabel,
   setUserInfo,
-  teamName,
+  teamname,
   name,
   age,
 }: any) => {
   const [editMode, setEditMode] = useState(false);
 
-  const onInfoChange = async () => {
+  const onInfoChange = () => {
     setEditMode(!editMode);
   };
 
@@ -23,6 +23,7 @@ const EditableLabel = ({
               <div className='editContainer'>
                 <input
                   onChange={(e) => setUserInfo({ name: e.target.value })}
+                  id='nameInput'
                   type='text'
                   className='nameInput'
                   placeholder='Name'
@@ -30,6 +31,7 @@ const EditableLabel = ({
                 />
                 <input
                   onChange={(e) => setUserInfo({ age: e.target.value })}
+                  id='ageInput'
                   type='text'
                   className='ageInput'
                   placeholder='Alter'
@@ -69,19 +71,19 @@ const EditableLabel = ({
               <div className='editContainer'>
                 <input
                   onChange={(e) => {
-                    setUserInfo({ teamName: e.target.value });
+                    setUserInfo({ teamname: e.target.value });
                   }}
                   type='text'
                   className='teamNameInput'
                   name=''
                   id=''
-                  value={teamName}
+                  value={teamname}
                 />
                 <div onClick={() => onInfoChange()} className='clickOutside' />
               </div>
             ) : (
               <>
-                <p className='text-info'>{teamName}</p>
+                <p className='text-info'>{teamname}</p>
               </>
             )}
           </label>
