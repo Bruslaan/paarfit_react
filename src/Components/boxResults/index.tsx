@@ -26,7 +26,6 @@ export default function BoxResults({
   percentage,
   userLvl,
 }: any) {
-  const classes = boxResultsStyles();
 
   return (
     <div className='areaUntilCol3 whiteBg'>
@@ -37,7 +36,7 @@ export default function BoxResults({
         </h2>
       </div>
 
-      <div className={lvlSystem[userLvl].cssStyle}>
+      <div >
         <div className='flipText'>
           <CircularProgressbar
             value={percentage}
@@ -58,12 +57,12 @@ export default function BoxResults({
           />
         </div>
         <p className='gray1'>
-          {userPoints}/{lvlSystem[userLvl].points}
+          {userPoints}/{lvlSystem[userLvl]?.points}
         </p>
       </div>
       <div className='textUntilCol3'>
-        <h3 className='purple1'>{lvlSystem[userLvl].title}</h3>
-        <p className='gray1'>{lvlSystem[userLvl].description}</p>
+        <h3 className='purple1'>{lvlSystem[userLvl]?.title}</h3>
+        <p className='gray1'>{lvlSystem[userLvl]?.description}</p>
       </div>
     </div>
   );
