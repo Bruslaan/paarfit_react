@@ -11,4 +11,15 @@
     margin-bottom: 10px;
     flex: 1;
     min-width: 300px;
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+
+    .flexItem{
+    margin-right: 10px;
+    }
+
 }

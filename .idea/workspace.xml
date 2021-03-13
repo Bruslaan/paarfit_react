@@ -4,15 +4,9 @@
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/BAComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/BAComp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/BAComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/BAComp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/Piecart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/Piecart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/Piechart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/Piechart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/PointsComp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/PointsComp.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/Profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/EditableLabel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/EditableLabel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +67,7 @@
       <workItem from="1614933889068" duration="601000" />
       <workItem from="1615117408031" duration="198000" />
       <workItem from="1615131820082" duration="6061000" />
-      <workItem from="1615587800469" duration="25450000" />
+      <workItem from="1615587800469" duration="26067000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -159,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615643405348</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Flex direction of profile view is responsive">
+      <created>1615656249571</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1615656249571</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +190,7 @@
     <MESSAGE value="Routing added" />
     <MESSAGE value="USer informaion changes api" />
     <MESSAGE value="Some Ui changes in Profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some Ui changes in Profile" />
+    <MESSAGE value="Flex direction of profile view is responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flex direction of profile view is responsive" />
   </component>
 </project>
