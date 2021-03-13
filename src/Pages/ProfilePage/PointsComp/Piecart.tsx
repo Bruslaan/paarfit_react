@@ -37,7 +37,6 @@ const Piecart = () => {
           <p className='gray1'>180/250</p>
         </div>
       </div>
-      <div className='piechartPreTitle'>180/250</div>
       <div className='piechartTitle'>Power-Couple</div>
     </div>
   );

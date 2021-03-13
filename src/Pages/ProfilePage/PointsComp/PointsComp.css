@@ -4,10 +4,11 @@
   align-content: center;
   align-items: center;
   text-align: center;
-  height: 620px;
+    height:100%;
   background-color: white;
-  margin: 20px 5px;
+  margin-right: 10px;
   border-radius: 15px;
+
 }
 
 .pointsTitle {
@@ -28,6 +29,8 @@
 
 .pointsDescription {
   color: rgb(133, 134, 136);
-  font-size: 12px;
-  width: 200px;
+  font-size: 18px;
+  width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
 }

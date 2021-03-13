@@ -17,7 +17,7 @@ const EditableLabel = ({payload, editMode, returnTheValues}: any) => {
         <div className='editableLabel'>
             <label htmlFor='name' id='userALbl' className='profInfoTitle'>
                 {editMode ? (
-                    <div style={{display:"flex", flexDirection:"column"}}>
+                    <div className="" style={{display:"flex", flexDirection:"column"}}>
                         {
                             payload.map((payLoadEntry: any, index: number) => <input key={index}
                                                                                      placeholder={payLoadEntry.playHolderName}

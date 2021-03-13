@@ -33,12 +33,12 @@ const ProfileInfo = ({}: any) => {
 
 
     return (
-        <div className='profileInfo'>
+        <div className='profileInfo '>
             <div
                 className='profileInfoImg'
                 style={{backgroundImage: `url(${profileImg})`}}
             />
-            <div className='profileInfoTop'>
+            <div className='profileInfoTop fullWidth'>
                 <div className='profInfoPreTitle'>Starter-Couple</div>
                 <div className='proInfoTitleBox'>
                     <EditableLabel editMode={editMode} payload={[
@@ -74,49 +74,52 @@ const ProfileInfo = ({}: any) => {
                     />
                 </svg>
             </div>
-            <div className='gridContainer'>
+            <div className='fullWidth'>
 
-                <div className='grid-itemTitle'>
-                    <EditableLabel editMode={editMode} payload={[
-                        {
-                            playHolderName: "Name",
-                            label: "nameA",
-                            value: allInformations?.nameA,
-                        },
-                        {
-                            playHolderName: "Alter",
-                            label: "ageA",
-                            value: allInformations?.ageA,
-                        },
-                    ]}
-                                   returnTheValues={(returnedValues: any) => setAllInformations({
-                                       ...allInformations,
-                                       ...returnedValues
-                                   })}/>
-                </div>
-                <div className='grid-item'/>
-                <div className='grid-itemTitle'>
-                    <EditableLabel
-                        editMode={editMode}
-                        payload={[
+                <div style={{display:"flex", flexWrap:"wrap", alignItems:"center", justifyContent:"space-between"}}>
+                    <div className='grid-itemTitle' style={{textAlign:"start"}}>
+                        <EditableLabel editMode={editMode} payload={[
                             {
                                 playHolderName: "Name",
-                                label: "nameB",
-                                value: allInformations?.nameB,
+                                label: "nameA",
+                                value: allInformations?.nameA,
                             },
                             {
                                 playHolderName: "Alter",
-                                label: "ageB",
-                                value: allInformations?.ageB,
+                                label: "ageA",
+                                value: allInformations?.ageA,
                             },
                         ]}
-                        returnTheValues={(returnedValues: any) =>
-                            setAllInformations({
-                                ...allInformations,
-                                ...returnedValues
-                            })}
-                    />
+                                       returnTheValues={(returnedValues: any) => setAllInformations({
+                                           ...allInformations,
+                                           ...returnedValues
+                                       })}/>
+                    </div>
+                    <div className='grid-itemTitvle textEnd' style={{textAlign:"end"}}>
+                        <EditableLabel
+                            editMode={editMode}
+                            payload={[
+                                {
+                                    playHolderName: "Name",
+                                    label: "nameB",
+                                    value: allInformations?.nameB,
+                                },
+                                {
+                                    playHolderName: "Alter",
+                                    label: "ageB",
+                                    value: allInformations?.ageB,
+                                },
+                            ]}
+                            returnTheValues={(returnedValues: any) =>
+                                setAllInformations({
+                                    ...allInformations,
+                                    ...returnedValues
+                                })}
+                        />
+                    </div>
                 </div>
+
+                <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-between"}}>
                 <div className='grid-item'>
                     <DropDownComp
                         editMode={editMode}
@@ -157,6 +160,8 @@ const ProfileInfo = ({}: any) => {
                         genderArr={genderArr}
                     />
                 </div>
+                </div>
+                <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-between"}}>
                 <div className='grid-item'>
                     <HeightComp
                         editMode={editMode}
@@ -167,6 +172,7 @@ const ProfileInfo = ({}: any) => {
                         })}
                     />
                 </div>
+
                 <div className='grid-item'>
                     <svg
                         className='profileInfoIconGrid'
@@ -194,6 +200,8 @@ const ProfileInfo = ({}: any) => {
                         })}
                     />
                 </div>
+                </div>
+                <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-between"}}>
                 <div className='grid-item'>
                     <WeightComp
                         editMode={editMode}
@@ -230,6 +238,7 @@ const ProfileInfo = ({}: any) => {
                             weightB
                         })}
                     />
+                </div>
                 </div>
             </div>
             {

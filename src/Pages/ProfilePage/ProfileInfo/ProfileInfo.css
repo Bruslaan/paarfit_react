@@ -6,10 +6,18 @@
     color: rgb(30, 30, 30);
     border-radius: 15px;
     align-items: flex-start;
-    margin: 20px 5px;
-    align-items: center;
+    margin-right: 10px;
     transition: all 0.5s ease-in;
+    box-sizing: border-box;
+   height:100%;
+}
 
+.fullWidth{
+    width: 100%;
+    max-width: 400px;
+    margin:auto;
+    padding:10px;
+    box-sizing: border-box;
 }
 
 .profileInfoImg {
@@ -19,6 +27,7 @@
     background-repeat: no-repeat;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    height:400px;
 }
 
 .profileInfoTop {
@@ -28,7 +37,9 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    padding: 15px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    padding:5px;
 }
 
 .profInfoPreTitle {
@@ -78,6 +89,9 @@ hr {
     width: fit-content;
 }
 
+.textEnd{
+    text-align: end !important;
+}
 .grid-itemTitle {
     /* border: 1px solid rgba(255, 255, 255, 0.8); */
     padding: 5px 5px;
