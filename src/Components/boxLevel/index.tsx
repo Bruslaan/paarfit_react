@@ -13,7 +13,7 @@ export default function BoxLevel({
 
 
     const getValue = () => {
-        const currentPoints = 500
+        const currentPoints = userInfo?.points
         if (!currentPoints) {
             return [0, 0, 0]
         }
@@ -30,6 +30,7 @@ export default function BoxLevel({
         const percent = restPercent * 100 / lvlSystem[niveau].points
         return [niveau, percent, restPercent]
     }
+
 
 
     const [niveau, percent, restPercent] = getValue()
@@ -85,9 +86,4 @@ export default function BoxLevel({
             ))}
         </div>
     );
-}
-
-
-export function addTwoValues(a: number, b: number) {
-    return a - b
 }

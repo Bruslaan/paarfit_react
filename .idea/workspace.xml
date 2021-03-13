@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/boxLevel/getValue.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/boxLevel/getValue.test.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/boxLevel/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxLevel/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,11 +179,28 @@
       <option name="project" value="LOCAL" />
       <updated>1615664332860</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="a test blbla">
+      <created>1615674009400</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1615674009400</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -209,6 +225,7 @@
     <MESSAGE value="refactored BA" />
     <MESSAGE value="Routing added" />
     <MESSAGE value="reducer added" />
-    <option name="LAST_COMMIT_MESSAGE" value="reducer added" />
+    <MESSAGE value="a test blbla" />
+    <option name="LAST_COMMIT_MESSAGE" value="a test blbla" />
   </component>
 </project>
