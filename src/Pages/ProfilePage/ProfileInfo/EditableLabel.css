@@ -6,13 +6,12 @@
   position: inherit;
   border: none;
   font-family: 'brandon-grotesque';
-  font-size: inherit;
+  font-size: 19px;
   background-color: rgb(241, 244, 253);
   border-radius: 15px;
-  width: 160px;
-  height: 40px;
-  padding: 5px;
-  margin: 2px;
+  width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
   outline: none;
   z-index: 61;
 }
@@ -77,8 +76,8 @@
 
 .profileInfoIcon {
   position: absolute;
-  right: -30px;
-  top: -10px;
+  right: 10px;
+    top:10px;
   z-index: 3;
 }
 

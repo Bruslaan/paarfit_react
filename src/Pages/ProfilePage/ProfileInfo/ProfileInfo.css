@@ -1,152 +1,150 @@
 .profileInfo {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(255, 255, 255);
-  color: rgb(30, 30, 30);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    color: rgb(30, 30, 30);
 
-  height: 620px;
-  max-width: 400px;
-  border-radius: 15px;
-  align-items: flex-start;
-  margin: 20px 5px;
+    max-width: 400px;
+    border-radius: 15px;
+    align-items: flex-start;
+    margin: 20px 5px;
 }
 
 .profileInfoImg {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .profileInfoTop {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: fit-content;
-  padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 15px;
 }
 
 .profInfoPreTitle {
-  font-size: 15px;
-  color: rgb(99 101 235);
+    font-size: 15px;
+    color: rgb(99 101 235);
 }
 
 .proInfoTitleBox {
-  position: relative;
+    position: relative;
 }
 
 .profInfoTitle {
-  font-size: 40px;
-  font-weight: bold;
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .profileInfoIcon {
-  position: absolute;
-  right: -30px;
-  top: 0px;
+    position: absolute;
+    right: -30px;
+    top: 0px;
 }
 
 .profileInfoIcon:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 hr {
-  border-top: 1px rgb(233 232 252);
-  border-radius: 2px;
-  width: 100%;
-  margin-bottom: 10px;
+    border-top: 1px rgb(233 232 252);
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .gridContainer {
-  justify-items: space-around;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 20px;
-  margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+    margin: auto;
 }
 
 .grid-item {
-  display: flex;
-  /* border: 1px solid rgba(255, 255, 255, 0.8); */
-  padding: 10px 5px;
-  font-size: 20px;
-  text-align: center;
-  width: fit-content;
+    display: flex;
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
+    padding: 10px 5px;
+    font-size: 20px;
+    text-align: center;
+    width: fit-content;
 }
 
 .grid-itemTitle {
-  /* border: 1px solid rgba(255, 255, 255, 0.8); */
-  padding: 10px 15px;
-  font-size: 20px;
-  font-weight: 500;
-  text-align: center;
-  width: fit-content;
-  margin: auto;
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
+    padding: 5px 5px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    width: fit-content;
 }
 
 .profGridName {
-  position: relative;
+    position: relative;
 }
 
 .profGridIcn {
-  position: absolute;
-  right: -30px;
-  top: -15px;
+    position: absolute;
+    right: -30px;
+    top: -15px;
 }
 
 .profGridIcn:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .profileAge {
-  color: rgb(99 101 235);
-  font-weight: normal;
+    color: rgb(99 101 235);
+    font-weight: normal;
 }
 
 .profileInfoIconGrid {
-  color: rgb(115, 115, 237);
+    color: rgb(115, 115, 237);
 }
 
 @media only screen and (max-width: 412px) {
-  .profileInfo {
-    align-items: center;
-    margin: 20px 0px;
-  }
+    .profileInfo {
+        align-items: center;
+        margin: 20px 0px;
+    }
 
-  .profileInfoTop {
-    width: 50%;
-  }
+    .profileInfoTop {
+        width: 50%;
+    }
 
-  .profileInfoIcon {
-    right: -30px;
-    top: 0px;
-  }
+    .profileInfoIcon {
+        top: 0px;
+    }
 
-  .profileInfoIconGrid {
-    width: 1em;
-    padding: 3px;
-  }
+    .profileInfoIconGrid {
+        width: 1em;
+        padding: 3px;
+    }
 
-  .gridContainer {
-    padding: 0px 5px;
-  }
+    .gridContainer {
+        padding: 0px 5px;
+    }
 
-  .grid-itemTitle {
-    padding: 10px 0px;
-  }
+    .grid-itemTitle {
+        padding: 10px 0px;
+    }
 
-  .grid-item {
-    padding: 10px 0px;
-  }
+    .grid-item {
+        padding: 10px 0px;
+    }
 
-  .profGridIcn {
-    right: 50%;
-    top: -30px;
-    transform: translate(50%, 0);
-  }
+    .profGridIcn {
+        right: 50%;
+        top: -30px;
+        transform: translate(50%, 0);
+    }
 }

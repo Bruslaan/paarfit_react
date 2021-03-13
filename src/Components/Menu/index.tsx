@@ -21,7 +21,7 @@ export const Menu: React.FC<Props> = (props) => {
     if (menuType === 'bottomMenu') {
         return (
             <div className="menu">
-                {links.map(link => <div className="bottomNavBarItemBox"><NavLink exact activeClassName="active__link"
+                {links.map((link:any, index) => <div key={index} className="bottomNavBarItemBox"><NavLink exact activeClassName="active__link"
                                                                                  key={link.id}
                                                                                  to={link.destination}>{link.icon}</NavLink>
                 </div>)}
@@ -30,14 +30,14 @@ export const Menu: React.FC<Props> = (props) => {
     } else if (menuType === 'sidebarMenuTopSt') {
         return (
             <ul>
-                {links.map(link => <li><NavLink exact activeClassName="active__link" key={link.id}
+                {links.map((link:any, index) => <li key={index}><NavLink exact activeClassName="active__link" key={link.id}
                                                 to={link.destination}>{link.icon}</NavLink></li>)}
             </ul>
         )
     } else if (menuType === 'sidebarMenuBottomSt') {
         return (
             <ul>
-                {links.map(link => <li><NavLink exact activeClassName="active__link" key={link.id}
+                {links.map((link:any, index) => <li key={index}><NavLink exact activeClassName="active__link" key={link.id}
                                                 to={link.destination}>{link.icon}</NavLink></li>)}
 
                 <li><a style={{cursor:"pointer"}}  onClick={()=>handleLogout()}><span className="textWhite"><span className="iconSetting">&#xe6d3;</span></span></a>

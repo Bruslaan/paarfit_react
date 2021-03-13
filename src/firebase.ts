@@ -35,4 +35,6 @@ export const heutigesDatum: string =
     '_' +
     todayTimestamp.getFullYear();
 
+export const db = firebase.firestore()
+
 export default firebase;
