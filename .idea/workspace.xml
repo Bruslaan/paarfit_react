@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/boxLevel/getValue.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/boxLevel/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxLevel/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/boxBadges/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxBadges/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/boxFlow/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxFlow/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615674009400</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Milestones solved">
+      <created>1615674297414</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1615674297414</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +234,8 @@
     <MESSAGE value="Routing added" />
     <MESSAGE value="reducer added" />
     <MESSAGE value="a test blbla" />
-    <option name="LAST_COMMIT_MESSAGE" value="a test blbla" />
+    <MESSAGE value="Milestones solved" />
+    <MESSAGE value="Milesstones  final version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Milesstones  final version" />
   </component>
 </project>

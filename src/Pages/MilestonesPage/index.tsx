@@ -118,73 +118,74 @@ export default function Dashboard() {
             nr: 1,
             title: 'drop',
             te: 1,
-            badgeIcn: '&#xe837;',
+            badgeIcn:  <div className='iconBadges textWhite'>&#xe837;</div>,
+
         },
         {
             nr: 2,
             title: 'rocket',
             te: 2,
-            badgeIcn: '&#xe638;',
+            badgeIcn:  <div className='iconBadges textWhite'>&#xe837;</div>
         },
         {
             nr: 3,
             title: 'on fire',
             te: 3,
-            badgeIcn: '&#xe638;',
+            badgeIcn: <div className='iconBadges textWhite'>&#xe638;</div>
         },
         {
             nr: 4,
             title: 'gifted',
             te: 5,
-            badgeIcn: '&#xe7ff;',
+            badgeIcn: <div className='iconBadges textWhite'>&#xe7ff;</div>
         },
         {
             nr: 5,
             title: 'star',
             te: 10,
-            badgeIcn: '&#xe68d;',
+            badgeIcn:  <div className='iconBadges textWhite'>&#xe68d;</div>
         },
         {
             nr: 6,
             title: 'loud',
             te: 15,
-            badgeIcn: '&#xe8ae;',
+            badgeIcn:   <div className='iconBadges textWhite'>&#xe8ae;</div>
         },
         {
             nr: 7,
             title: 'moon',
             te: 20,
-            badgeIcn: '&#xe649;',
+            badgeIcn:  <div className='iconBadges textWhite'>&#xe649;</div>
         },
         {
             nr: 8,
             title: 'pac-man',
             te: 25,
-            badgeIcn: '&#xe684;',
+            badgeIcn:  <div className='iconBadges textWhite'>&#xe684;</div>
         },
         {
             nr: 9,
             title: 'weights',
             te: 50,
-            badgeIcn: '&#xe861;',
+            badgeIcn:  <div className='iconBadges textWhite'>&#xe861;</div>
         },
         {
             nr: 10,
             title: 'circle',
             te: 75,
-            badgeIcn: '&#xe8d2;',
+            badgeIcn:  <div className='iconBadges textWhite'>&#xe8d2;</div>
         },
         {
             nr: 11,
             title: 'rain',
             te: 100,
-            badgeIcn: '&#xe641;',
+            badgeIcn:  <div className='iconBadges textWhite'>&#xe641;</div>
         },
         {
             nr: 12,
             title: 'diamond',
             te: 250,
-            badgeIcn: '&#xe807',
+            badgeIcn:  <div className='iconBadges textWhite'>&#xe807;</div>
         },
     ];
 
@@ -214,10 +215,8 @@ export default function Dashboard() {
                             nivea
                         />
                         <BoxFlow
-                            userTE={userInfo?.TE}
-                            userFlow={userInfo?.flow}
+                            userTE={userInfo}
                             badgeArr={badgeArr}
-                            userBadge={userInfo?.userBadge}
                         />
                     </Grid>
                 </Grid>
