@@ -16,8 +16,8 @@ let App = () => {
         <Switch>
           <Route exact path='/auth' component={Login} />
           <Route exact path='/register' component={Register} />
-          <Route exact path='/landing-page' component={LandingPage} />
-          <Route exact path='/profile-page' component={Profile} />
+          <Route exact path='/' component={LandingPage} />
+
           <Store>
             <PrivateRoute path='/' />
           </Store>

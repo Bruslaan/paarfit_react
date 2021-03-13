@@ -72,13 +72,13 @@ export const navLinksSidebarTop: Route[] = [
         id: 1,
         name: "Test",
         icon: <span><img src="images/hantel.svg" alt=""/></span>,
-        destination: "/profile"
+        destination: "/training"
     },
     {
         id: 2,
         name: "Test",
         icon: <><span className="iconPremium">&#xe6dd;</span><div className="bulletAreaPremium purpleBg2"></div></>,
-        destination: "/profile"
+        destination: "/milestones"
     },
     {
         id: 4,
@@ -101,15 +101,10 @@ export const navLinksSidebarBottom: Route[] = [
         destination: "/profile"
     },
     {
-        id: 4,
+        id: 3,
         name: "Test",
         icon: <span className="textWhite"><span className="iconSetting">&#xe7bc;</span></span>,
         destination: "/profile"
     },
-    {
-        id: 4,
-        name: "Test",
-        icon: <span className="textWhite"><span className="iconSetting">&#xe6d3;</span></span>,
-        destination: "/profile"
-    },
+
 ]

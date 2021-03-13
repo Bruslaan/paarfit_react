@@ -32,7 +32,6 @@ ReactDOM.render(
       <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>
-
     </AuthProvider>
   </React.StrictMode>,
   document.getElementById('root')
