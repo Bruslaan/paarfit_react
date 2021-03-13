@@ -38,7 +38,6 @@ type userInfo = {
     points: number
     TE: number
     flow: number
-    niveau: number
 }
 
 type Levels = {
@@ -63,7 +62,6 @@ export default function Dashboard() {
             points: data?.points,
             TE: data?.TE,
             flow: data?.flow,
-            niveau: data?.niveau
         })
     };
 
@@ -108,7 +106,7 @@ export default function Dashboard() {
         {
             id: 5,
             title: 'Super-Couple',
-            points: 4000,
+            points: 5000,
             cssStyle: 'ctSuperCouple',
             description:
                 'Als Power-Couple seid ihr unbesiegbar. Lorem ipsum dolor sit amet, consec',

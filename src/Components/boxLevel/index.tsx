@@ -5,15 +5,6 @@ import {CircularProgressbar} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import {userInfo} from "os";
 
-const boxLevelStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        paper: {
-            padding: theme.spacing(2),
-            textAlign: 'center',
-            color: theme.palette.text.secondary,
-        },
-    })
-);
 
 export default function BoxLevel({
                                      lvlSystem,
@@ -21,27 +12,35 @@ export default function BoxLevel({
                                  }: any) {
 
 
-    const getValue = (currentLvlSystem: any,) => {
-
-        if (currentLvlSystem.id > userInfo.niveau) {
-            return 0
+    const getValue = () => {
+        const currentPoints = 500
+        if (!currentPoints) {
+            return [0, 0, 0]
         }
-        const currentPoints = userInfo?.points
-
-
-        const totalPoints = lvlSystem.reduce((accumulator: any, currentValue: any) => {
-            if (userInfo.niveau === 1) {
-                return 250
+        let niveau = 0
+        let maxPointsNeeded = 0
+        let restPercent = currentPoints
+        lvlSystem.forEach((lv: any, index: number) => {
+            maxPointsNeeded += lv.points
+            if (currentPoints > maxPointsNeeded) {
+                niveau = lv.id
+                restPercent -= lv.points
             }
-            if (currentValue.id> userInfo.niveau-1) {
-                return accumulator
-            }
-            return accumulator + currentValue.points
-        }, 0)
+        })
+        const percent = restPercent * 100 / lvlSystem[niveau].points
+        return [niveau, percent, restPercent]
+    }
 
-        console.log(totalPoints)
 
-        return currentPoints >= currentLvlSystem.points ? 100 : (currentPoints-totalPoints) * 100 / currentLvlSystem.points
+    const [niveau, percent, restPercent] = getValue()
+
+
+    const getRestPercet = (item: any) => {
+        return niveau + 1 >= item?.id ? percent : 0
+    }
+
+    const getRestPoints = (item: any) => {
+        return niveau + 1 >= item?.id ? restPercent : 0
     }
 
     return (
@@ -53,14 +52,14 @@ export default function BoxLevel({
                 <div
                     key={index}
                     className={`areaStartCouple ${
-                        userInfo?.niveau >= item?.id ? '' : `inactiveLevel`
+                        niveau + 1 >= item?.id ? '' : `inactiveLevel`
                     }`}
                 >
                     <h3 className='purple1'>{item.title}</h3>
                     <div className={`${item.cssStyle}`}>
                         <div className='flipText'>
                             <CircularProgressbar
-                                value={getValue(item)}
+                                value={niveau >= item.id ? 100 : getRestPercet(item)}
                                 text=''
                                 styles={{
                                     path: {
@@ -79,11 +78,16 @@ export default function BoxLevel({
                         </div>
                     </div>
                     <p className='gray1'>
-                        {userInfo?.userPoints >= item?.points ? item?.points : userInfo?.userPoints}/
+                        {niveau >= item.id ? item.points : getRestPoints(item)}/
                         {item.points}
                     </p>
                 </div>
             ))}
         </div>
     );
+}
+
+
+export function addTwoValues(a: number, b: number) {
+    return a - b
 }

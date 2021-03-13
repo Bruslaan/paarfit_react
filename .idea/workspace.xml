@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/boxLevel/getValue.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/boxLevel/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxLevel/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/boxResults/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxResults/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +39,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -49,6 +50,40 @@
       <recent name="$PROJECT_DIR$/src/Pages" />
       <recent name="$PROJECT_DIR$/src/Components" />
     </key>
+  </component>
+  <component name="RunManager" selected="Jest.I am Testing the addTwovalues function">
+    <configuration name="I am Testing the addTwovalues function" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Components/boxLevel/getValue.test.js" />
+      <test-names>
+        <test-name value="I am Testing the addTwovalues function" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Returns about-us for english language" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/Components/boxLevel/getValue.test.js" />
+      <test-names>
+        <test-name value="Returns about-us for english language" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.I am Testing the addTwovalues function" />
+        <item itemvalue="Jest.Returns about-us for english language" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -138,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615597267861</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="reducer added">
+      <created>1615664332860</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1615664332860</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +208,7 @@
     <MESSAGE value="julian-func merged" />
     <MESSAGE value="refactored BA" />
     <MESSAGE value="Routing added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Routing added" />
+    <MESSAGE value="reducer added" />
+    <option name="LAST_COMMIT_MESSAGE" value="reducer added" />
   </component>
 </project>
