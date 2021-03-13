@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './DropDownComp.css';
 
-const DropDownComp = ({ genderArr, onValuePicked }: any) => {
+const DropDownComp = ({ genderArr, onValuePicked, pickedValue, editMode }: any) => {
   const [gender, setGender] = useState('');
   const [showDropDown, setShowDropDown] = useState(false);
 
@@ -13,13 +13,22 @@ const DropDownComp = ({ genderArr, onValuePicked }: any) => {
     setShowDropDown(!showDropDown);
   }
 
+
+    {
+        if(!editMode){
+            return (
+                    <p style={{textAlign:"center"}}>{pickedValue}</p>
+            )
+        }
+    }
+
   return (
     <div className='dropdown'>
       <button
         onClick={() => setShowDropDown(!showDropDown)}
         className='dropbtn'
       >
-        <div className='dropBtnTitle'>{gender}</div>
+        <div className='dropBtnTitle'>{gender || pickedValue}</div>
         <div className='dropDownIcnBG'>
           <svg
             className='dropDownIcn'

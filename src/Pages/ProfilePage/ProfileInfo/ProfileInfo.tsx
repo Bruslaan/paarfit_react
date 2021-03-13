@@ -12,61 +12,24 @@ import {AuthContext} from "../../../AuthProvider";
 const ProfileInfo = ({}: any) => {
     const genderArr = ['Male', 'Female', 'Diverse'];
     const [editMode, setEditMode] = useState(false);
-    const [allInformations, setAllInformations] = useState({});
+    const [allInformations, setAllInformations]: any = useState();
     const {user} = useContext(AuthContext);
 
     const onSavePressed = async () => {
         const succ = await updateUserInformaion(user?.uid, allInformations)
         succ && console.log("Erfolgreich gespichert")
+        setEditMode(false)
     }
 
     useEffect(() => {
-
         getUserInfoAndSetIt()
     }, []);
 
 
     const getUserInfoAndSetIt = async () => {
         const data = await getUserInfo(user?.uid)
-
-        console.log(data)
+        setAllInformations(data)
     }
-
-
-    const PartnerA = [
-        {
-            playHolderName: "Blabla",
-            label: "nameA",
-            value: "",
-
-        },
-        {
-            playHolderName: "Alter",
-            label: "ageA",
-            value: "35",
-        },
-
-    ]
-    const PartnerB = [
-        {
-            playHolderName: "Blabla",
-            label: "nameB",
-            value: "",
-        },
-        {
-            playHolderName: "Alter",
-            label: "ageB",
-            value: "35",
-        },
-    ]
-
-    const TeamName = [
-        {
-            playHolderName: "Team Name",
-            label: "teamname",
-            value: "",
-        },
-    ]
 
 
     return (
@@ -78,7 +41,13 @@ const ProfileInfo = ({}: any) => {
             <div className='profileInfoTop'>
                 <div className='profInfoPreTitle'>Starter-Couple</div>
                 <div className='proInfoTitleBox'>
-                    <EditableLabel editMode={editMode} payload={TeamName}
+                    <EditableLabel editMode={editMode} payload={[
+                        {
+                            playHolderName: "Team Name",
+                            label: "teamname",
+                            value: allInformations?.teamname,
+                        },
+                    ]}
                                    returnTheValues={(returnedValues: any) => setAllInformations({
                                        ...allInformations,
                                        ...returnedValues,
@@ -108,7 +77,18 @@ const ProfileInfo = ({}: any) => {
             <div className='gridContainer'>
 
                 <div className='grid-itemTitle'>
-                    <EditableLabel editMode={editMode} payload={PartnerA}
+                    <EditableLabel editMode={editMode} payload={[
+                        {
+                            playHolderName: "Name",
+                            label: "nameA",
+                            value: allInformations?.nameA,
+                        },
+                        {
+                            playHolderName: "Alter",
+                            label: "ageA",
+                            value: allInformations?.ageA,
+                        },
+                    ]}
                                    returnTheValues={(returnedValues: any) => setAllInformations({
                                        ...allInformations,
                                        ...returnedValues
@@ -118,7 +98,18 @@ const ProfileInfo = ({}: any) => {
                 <div className='grid-itemTitle'>
                     <EditableLabel
                         editMode={editMode}
-                        payload={PartnerB}
+                        payload={[
+                            {
+                                playHolderName: "Name",
+                                label: "nameB",
+                                value: allInformations?.nameB,
+                            },
+                            {
+                                playHolderName: "Alter",
+                                label: "ageB",
+                                value: allInformations?.ageB,
+                            },
+                        ]}
                         returnTheValues={(returnedValues: any) =>
                             setAllInformations({
                                 ...allInformations,
@@ -128,6 +119,12 @@ const ProfileInfo = ({}: any) => {
                 </div>
                 <div className='grid-item'>
                     <DropDownComp
+                        editMode={editMode}
+                        pickedValue={allInformations?.genderA}
+                        onValuePicked={(genderA: any) => setAllInformations({
+                            ...allInformations,
+                            genderA
+                        })}
                         genderArr={genderArr}
 
                     />
@@ -151,13 +148,23 @@ const ProfileInfo = ({}: any) => {
                 </div>
                 <div className='grid-item'>
                     <DropDownComp
+                        editMode={editMode}
+                        pickedValue={allInformations?.genderB}
+                        onValuePicked={(genderB: any) => setAllInformations({
+                            ...allInformations,
+                            genderB
+                        })}
                         genderArr={genderArr}
-
                     />
                 </div>
                 <div className='grid-item'>
                     <HeightComp
-
+                        editMode={editMode}
+                        height={allInformations?.heightA}
+                        setUserHeight={(heightA: any) => setAllInformations({
+                            ...allInformations,
+                            heightA
+                        })}
                     />
                 </div>
                 <div className='grid-item'>
@@ -179,12 +186,22 @@ const ProfileInfo = ({}: any) => {
                 </div>
                 <div className='grid-item'>
                     <HeightComp
-
+                        editMode={editMode}
+                        height={allInformations?.heightB}
+                        setUserHeight={(heightB: any) => setAllInformations({
+                            ...allInformations,
+                            heightB
+                        })}
                     />
                 </div>
                 <div className='grid-item'>
                     <WeightComp
-
+                        editMode={editMode}
+                        weight={allInformations?.weightA}
+                        setUserWeight={(weightA: any) => setAllInformations({
+                            ...allInformations,
+                            weightA
+                        })}
                     />
                 </div>
                 <div className='grid-item'>
@@ -206,7 +223,12 @@ const ProfileInfo = ({}: any) => {
                 </div>
                 <div className='grid-item'>
                     <WeightComp
-
+                        editMode={editMode}
+                        weight={allInformations?.weightB}
+                        setUserWeight={(weightB: any) => setAllInformations({
+                            ...allInformations,
+                            weightB
+                        })}
                     />
                 </div>
             </div>

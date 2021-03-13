@@ -2,10 +2,9 @@
     display: flex;
     position: relative;
     height: 620px;
-    max-width: 380px;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    margin: 20px 5px;
 }
 
 .baTitle {

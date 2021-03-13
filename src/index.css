@@ -175,6 +175,9 @@ body .mainContainerStyle {
 
 .contentArea {
     float: left;
+    padding:15px;
+    box-sizing: border-box;
+    margin-bottom: 100px;
 }
 
 .areaMenuLeftTop {

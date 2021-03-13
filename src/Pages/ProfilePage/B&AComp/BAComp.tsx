@@ -43,7 +43,7 @@ const BAComp = () => {
                     />
                 </svg>
             </div>
-            <div className='baComp'>
+            <div className='baComp' style={{width:"100%"}}>
                 <ReactCompareSlider
                     itemOne={
                         <ReactCompareSliderImage
@@ -60,7 +60,7 @@ const BAComp = () => {
                     position={50}
                     style={{
                         flexGrow: 1,
-                        width: 'inherit',
+                        width: '100%',
                         height: '620px',
                         borderRadius: '15px',
                     }}

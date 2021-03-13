@@ -17,7 +17,7 @@ const boxLevelStyles = makeStyles((theme: Theme) =>
 
 export default function BoxLevel() {
     const classes = boxLevelStyles();
-    const percentage = 63
+    const percentage = 90
     return (
         <div className="areaUntilLevel whiteBg">
             <div className="titleUntilLevel"><h2>niveau</h2></div>
@@ -46,7 +46,7 @@ export default function BoxLevel() {
                 <h3 className="purple1">Power-Couple</h3>
                 <div className="ctPowerCouple">
                     <div className="flipText">
-                    <CircularProgressbar value={0} text="" styles={{
+                    <CircularProgressbar value={20} text="" styles={{
                         path: {
                             strokeWidth: "8",
                             stroke: "#9529F9",

@@ -17,13 +17,14 @@ const EditableLabel = ({payload, editMode, returnTheValues}: any) => {
         <div className='editableLabel'>
             <label htmlFor='name' id='userALbl' className='profInfoTitle'>
                 {editMode ? (
-                    <div>
+                    <div style={{display:"flex", flexDirection:"column"}}>
                         {
                             payload.map((payLoadEntry: any, index: number) => <input key={index}
                                                                                      placeholder={payLoadEntry.playHolderName}
                                                                                      className="teamNameInput"
+                                                                                     style={{marginBottom:"10px"}}
                                                                                      onChange={(e) => setValues({[payLoadEntry.label]: e.target.value})}
-                                                                                     value={values[payLoadEntry.label]}
+                                                                                     value={payLoadEntry.value}
                                                                                      type="text"/>)
                         }
                     </div>
