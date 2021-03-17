@@ -211,7 +211,7 @@ body .mainContainerStyle {
 
 .btnProfileMenu img {
   filter: invert(34%) sepia(92%) saturate(896%) hue-rotate(215deg)
-    brightness(92%) contrast(104%);
+    brightness(92%) contrast(104%) !important;
 }
 
 .bulletAreaPremium {

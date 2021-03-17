@@ -24,7 +24,7 @@ export const Menu: React.FC<Props> = (props) => {
           <div key={index} className='bottomNavBarItemBox'>
             <NavLink
               exact
-              activeClassName='active__link'
+              activeClassName='btnProfileMenu'
               key={link.id}
               to={link.destination}
             >
@@ -41,7 +41,7 @@ export const Menu: React.FC<Props> = (props) => {
           <li key={index}>
             <NavLink
               exact
-              activeClassName='active__link'
+              activeClassName='btnProfileMenu'
               key={link.id}
               to={link.destination}
             >
@@ -58,7 +58,7 @@ export const Menu: React.FC<Props> = (props) => {
           <li key={index}>
             <NavLink
               exact
-              activeClassName='active__link'
+              activeClassName='btnProfileMenu'
               key={link.id}
               to={link.destination}
             >
@@ -82,7 +82,7 @@ export const Menu: React.FC<Props> = (props) => {
         {links.map((link) => (
           <NavLink
             exact
-            activeClassName='active__link'
+            activeClassName='btnProfileMenu'
             key={link.id}
             to={link.destination}
           >
