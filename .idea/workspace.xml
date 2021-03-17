@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/boxResults/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxResults/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/DashboardPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/DashboardPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/Piecart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/Piecart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrivateRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrivateRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615597267861</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="some chagnes">
+      <created>1616001997565</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616001997565</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +174,7 @@
     <MESSAGE value="julian-func merged" />
     <MESSAGE value="refactored BA" />
     <MESSAGE value="Routing added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Routing added" />
+    <MESSAGE value="some chagnes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some chagnes" />
   </component>
 </project>

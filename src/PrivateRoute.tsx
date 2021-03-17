@@ -78,9 +78,6 @@ const PrivateRoute = ({...rest}) => {
                                         <Route exact path='/'>
                                             <Dashboard/>
                                         </Route>
-                                        <Route exact path='/training'>
-                                            <Dashboard/>
-                                        </Route>
                                         <Route exact path='/training/overview'>
                                             <TrainingOverView/>
                                         </Route>
