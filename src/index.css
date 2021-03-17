@@ -211,6 +211,7 @@ body .mainContainerStyle {
 .iconPremium {
     font-family: 'Linearicons';
     font-size: 40px;
+    color:black;
 }
 
 .btnProfileMenu img {
