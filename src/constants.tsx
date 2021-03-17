@@ -72,7 +72,7 @@ export const navLinksSidebarTop: Route[] = [
         id: 1,
         name: "Test",
         icon: <span><img src="images/hantel.svg" alt=""/></span>,
-        destination: "/training"
+        destination: "/"
     },
     {
         id: 2,
