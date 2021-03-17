@@ -1,10 +1,8 @@
-
 .left__section {
   float: left;
   max-width: 614px;
   width: 100%;
 }
-
 
 .right__section {
   max-width: 293px;
@@ -13,131 +11,132 @@
   position: absolute;
   right: 0;
   width: 100%;
-
 }
-:root{
+:root {
   --content-width: 100%;
 }
 
-body{
-  background:#E9EFF2;
+body {
+  background: #e9eff2;
 }
 
-.areaUntilCol4{
-  overflow:hidden;
-  padding:20px 24px 20px 24px;
-  margin-bottom:24px;
-  text-align:center;
-  border-radius:25px;
+.areaUntilCol4 {
+  overflow: hidden;
+  padding: 20px 24px 20px 24px;
+  margin-bottom: 24px;
+  text-align: center;
+  border-radius: 25px;
 }
-.areaUntilCol4 h2{
-  text-transform:uppercase;
-  font-size:50px;
-  line-height:60px;
-  letter-spacing:1px;
-  margin-top:0px;
-  margin-bottom:20px;
-  text-align:left;
+.areaUntilCol4 h2 {
+  text-transform: uppercase;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: left;
 }
-.detUntilCol4{
-  overflow:hidden;
-  margin-top:53px;
-  display:table;
-  float:left;
+.detUntilCol4 {
+  overflow: hidden;
+  margin-top: 53px;
+  display: table;
+  float: left;
 }
-.boxtUntilCol4{
-  width:78px;
-  height:78px;
-  text-align:center;
-  position:relative;
-  border-radius:25px;
-  display:table-cell;
+.boxtUntilCol4 {
+  width: 78px;
+  height: 78px;
+  text-align: center;
+  position: relative;
+  border-radius: 25px;
+  display: table-cell;
   vertical-align: top;
 }
-.boxtUntilCol4 h2{
-  font-family: "brandon-grotesque";
-  font-size:60px;
-  font-weight:700;
-  text-align:center;
-  line-height:40px;
-  margin:0px;
-  padding-top:18px;
+.boxtUntilCol4 h2 {
+  font-family: 'brandon-grotesque';
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 40px;
+  margin: 0px;
+  padding-top: 18px;
 }
-.boxtUntilCol4 p{
-  font-family: "brandon-grotesque";
-  font-size:14px;
-  font-weight:400;
-  text-align:center;
-  margin:0px;
-  line-height:14px;
+.boxtUntilCol4 p {
+  font-family: 'brandon-grotesque';
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0px;
+  line-height: 14px;
 }
-.iconFireUntil{
+.iconFireUntil {
   font-family: 'Linearicons';
-  font-size:30px;
-  position:absolute;
+  font-size: 30px;
+  position: absolute;
   left: 50%;
-  top:50%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
-.arrowUntilCol4{
-  width:58px;
-  height:78px;
-  display:table-cell;
+.arrowUntilCol4 {
+  width: 58px;
+  height: 78px;
+  display: table-cell;
   vertical-align: middle;
-  text-align:center;
+  text-align: center;
 }
-.arrowUntilCol4 img{
-  width:40px;
-  filter: invert(30%) sepia(77%) saturate(1684%) hue-rotate(226deg) brightness(96%) contrast(94%);
+.arrowUntilCol4 img {
+  width: 40px;
+  filter: invert(30%) sepia(77%) saturate(1684%) hue-rotate(226deg)
+    brightness(96%) contrast(94%);
 }
-.boxtUntilCol4_2{
-  width:78px;
-  height:78px;
-  text-align:center;
-  position:relative;
-  border-radius:25px;
-  display:table-cell;
+.boxtUntilCol4_2 {
+  width: 78px;
+  height: 78px;
+  text-align: center;
+  position: relative;
+  border-radius: 25px;
+  display: table-cell;
   vertical-align: middle;
 }
-.iconGiftUntil{
+.iconGiftUntil {
   font-family: 'Linearicons';
-  font-size:30px;
-  color:#C8C8C8;
+  font-size: 30px;
+  color: #c8c8c8;
 }
-.textUntilCol4{
-  overflow:hidden;
-  margin-top:60px;
+.textUntilCol4 {
+  overflow: hidden;
+  margin-top: 60px;
 }
-.textUntilCol4 h2{
-  font-size:50px;
-  margin:0px;
-  font-weight:400;
-  text-align:right;
+.textUntilCol4 h2 {
+  font-size: 50px;
+  margin: 0px;
+  font-weight: 400;
+  text-align: right;
 }
-.descrUntilCol4{
-  width:100%;
-  overflow:hidden;
+.descrUntilCol4 {
+  width: 100%;
+  overflow: hidden;
 }
-.descrUntilCol4 p{
-  font-size:20px;
-  margin:0px;
-  text-align:right;
+.descrUntilCol4 p {
+  font-size: 20px;
+  margin: 0px;
+  text-align: right;
 }
+
 @media (max-width: 767px) {
-  .areaUntilCol4{
-    border-radius:25px 25px 25px 25px;
-    box-shadow: -1px -5px 15px 3px rgba(204,204,204,0.75);
-    -webkit-box-shadow: -1px -5px 15px 3px rgba(204,204,204,0.75);
-    -moz-box-shadow: -1px -5px 15px 3px rgba(204,204,204,0.75);
-    padding:0px;
-    padding-bottom:30px;
-    margin:0px;
-    padding-top:30px;
-    margin-top:-18px;
+  .areaUntilCol4 {
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: -1px -5px 15px 3px rgba(204, 204, 204, 0.75);
+    -webkit-box-shadow: -1px -5px 15px 3px rgba(204, 204, 204, 0.75);
+    -moz-box-shadow: -1px -5px 15px 3px rgba(204, 204, 204, 0.75);
+    padding: 0px;
+    padding-bottom: 30px;
+    margin: 0px;
+    padding-top: 30px;
+    margin-top: -18px;
   }
-  .ctUntilCol4{
-    overflow:hidden;
-    padding-left:15px;
-    padding-right:15px;
+  .ctUntilCol4 {
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
