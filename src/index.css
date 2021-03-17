@@ -697,6 +697,11 @@ background:#1E1E1E;
     filter: invert(34%) sepia(92%) saturate(896%) hue-rotate(215deg) brightness(92%) contrast(104%);
 }
 
+.btnProfileMenu * {
+    filter: invert(34%) sepia(92%) saturate(896%) hue-rotate(215deg) brightness(92%) contrast(104%);
+}
+
+
 .bulletAreaPremium {
     position: absolute;
     top: -5px;
