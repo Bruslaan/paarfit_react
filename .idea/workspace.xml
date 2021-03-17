@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Firebase/useProfileInformation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Menu/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Menu/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/EditableLabel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/EditableLabel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/EditableLabel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/EditableLabel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/boxResults/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxResults/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/DashboardPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/DashboardPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/MilestonesPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/Piecart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/PointsComp/Piecart.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

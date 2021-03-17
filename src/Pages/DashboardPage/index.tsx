@@ -44,8 +44,8 @@ export default function Dashboard() {
                         </Grid>
                     </Grid>
                     <Grid item xs={12} sm={12} lg={4}>
-                        <BoxResults></BoxResults>
-                        <BoxFlow></BoxFlow>
+                       {/* <BoxResults></BoxResults>*/}
+                     {/*   <BoxFlow></BoxFlow>*/}
                     </Grid>
                  </Grid>
             </div>
