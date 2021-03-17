@@ -1,132 +1,81 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import './index.css';
-import { createStyles, makeStyles, Paper, Theme, Grid } from '@material-ui/core'
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css"
+import { createStyles, makeStyles, Theme } from '@material-ui/core';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import { userInfo } from 'os';
 
-const boxLevelStyles = makeStyles((theme: Theme) =>
-    createStyles({
-            paper: {
-            padding: theme.spacing(2),
-            textAlign: 'center',
-            color: theme.palette.text.secondary,
-          },
+export default function BoxLevel({ lvlSystem, userInfo }: any) {
+  const getValue = () => {
+    const currentPoints = userInfo?.points;
+    if (!currentPoints) {
+      return [0, 0, 0];
+    }
+    let niveau = 0;
+    let maxPointsNeeded = 0;
+    let restPercent = currentPoints;
+    lvlSystem.forEach((lv: any, index: number) => {
+      maxPointsNeeded += lv.points;
+      if (currentPoints > maxPointsNeeded) {
+        niveau = lv.id;
+        restPercent -= lv.points;
+      }
+    });
+    const percent = (restPercent * 100) / lvlSystem[niveau].points;
+    return [niveau, percent, restPercent];
+  };
 
-    }),
-);
+  const [niveau, percent, restPercent] = getValue();
 
-export default function BoxLevel() {
-    const classes = boxLevelStyles();
-    const percentage = 90
-    return (
-        <div className="areaUntilLevel whiteBg">
-            <div className="titleUntilLevel"><h2>niveau</h2></div>
-            <div className="areaStartCouple">
-                <h3 className="purple1">Starter-Couple</h3>
-                <div className="ctStartCouple">
-                    <div className="flipText">
-                    <CircularProgressbar value={percentage} text="" styles={{
-                        path: {
-                            strokeWidth: "8",
-                            stroke: "#9529F9",
-                            strokeLinecap: 'round',
-                            transition: 'stroke-dashoffset 0.5s ease 0s',
-                        },
-                        trail: {
-                            strokeWidth: "4",
-                            stroke: "#EAEBEB",
-                            strokeLinecap: 'round',
-                        }
-                        }} />
-                    </div>
-                </div>
-                <p className="gray1">180/250</p>
+  const getRestPercet = (item: any) => {
+    return niveau + 1 >= item?.id ? percent : 0;
+  };
+
+  const getRestPoints = (item: any) => {
+    return niveau + 1 >= item?.id ? restPercent : 0;
+  };
+
+  return (
+    <div className='areaUntilLevel whiteBg'>
+      <div className='titleUntilLevel'>
+        <h2>niveau</h2>
+      </div>
+      {lvlSystem?.map((item: any, index: number) => (
+        <div
+          key={index}
+          className={`areaStartCouple ${
+            niveau + 1 >= item?.id ? '' : `inactiveLevel`
+          }`}
+        >
+          {console.log(item)}
+          <h3 className='purple1'>{item.title}</h3>
+          <div className={`${item.cssStyle}`}>
+            <div className='flipText'>
+              <CircularProgressbar
+                value={niveau >= item.id ? 100 : getRestPercet(item)}
+                text=''
+                styles={{
+                  path: {
+                    strokeWidth: '8',
+                    stroke: '#9529F9',
+                    strokeLinecap: 'round',
+                    transition: 'stroke-dashoffset 0.5s ease 0s',
+                  },
+                  trail: {
+                    strokeWidth: '4',
+                    stroke: '#EAEBEB',
+                    strokeLinecap: 'round',
+                  },
+                }}
+              />
             </div>
-            <div className="areaPowerCouple inactiveLevel">
-                <h3 className="purple1">Power-Couple</h3>
-                <div className="ctPowerCouple">
-                    <div className="flipText">
-                    <CircularProgressbar value={20} text="" styles={{
-                        path: {
-                            strokeWidth: "8",
-                            stroke: "#9529F9",
-                            strokeLinecap: 'round',
-                            transition: 'stroke-dashoffset 0.5s ease 0s',
-                        },
-                        trail: {
-                            strokeWidth: "4",
-                            stroke: "#EAEBEB",
-                            strokeLinecap: 'round',
-                        }
-                        }} />
-                    </div>
-                </div>
-                <p className="gray1">0/500</p>
-            </div>
-            <div className="areaFitnessCouple inactiveLevel">
-                <h3 className="purple1">Fitness-Couple</h3>
-                <div className="ctFitnessCouple">
-                    <div className="flipText">
-                    <CircularProgressbar value={0} text="" styles={{
-                        path: {
-                            strokeWidth: "8",
-                            stroke: "#9529F9",
-                            strokeLinecap: 'round',
-                            transition: 'stroke-dashoffset 0.5s ease 0s',
-                        },
-                        trail: {
-                            strokeWidth: "4",
-                            stroke: "#EAEBEB",
-                            strokeLinecap: 'round',
-                        }
-                        }} />
-                    </div>
-                </div>
-                <p className="gray1">0/1000</p>
-            </div>
-            <div className="areaAdvancedCouple inactiveLevel">
-                <h3 className="purple1">Advanced-Couple</h3>
-                <div className="ctAdvancedCouple">
-                    <div className="flipText">
-                    <CircularProgressbar value={0} text="" styles={{
-                        path: {
-                            strokeWidth: "8",
-                            stroke: "#9529F9",
-                            strokeLinecap: 'round',
-                            transition: 'stroke-dashoffset 0.5s ease 0s',
-                        },
-                        trail: {
-                            strokeWidth: "4",
-                            stroke: "#EAEBEB",
-                            strokeLinecap: 'round',
-                        }
-                        }} />
-                    </div>
-                </div>
-                <p className="gray1">0/2000</p>
-            </div>
-            <div className="areaSuperCouple inactiveLevel">
-                <h3 className="purple1">Super-Couple</h3>
-                <div className="ctSuperCouple">
-                    <div className="flipText">
-                    <CircularProgressbar value={0} text="" styles={{
-                        path: {
-                            strokeWidth: "8",
-                            stroke: "#9529F9",
-                            strokeLinecap: 'round',
-                            transition: 'stroke-dashoffset 0.5s ease 0s',
-                        },
-                        trail: {
-                            strokeWidth: "4",
-                            stroke: "#EAEBEB",
-                            strokeLinecap: 'round',
-                        }
-                        }} />
-                    </div>
-                </div>
-                <p className="gray1"></p>
-            </div>
+          </div>
+          <p className='gray1'>
+            {niveau >= item.id ? item.points : getRestPoints(item)}/
+            {item.points}
+          </p>
         </div>
-    )
+      ))}
+    </div>
+  );
 }
-
