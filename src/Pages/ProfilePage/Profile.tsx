@@ -6,6 +6,7 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 import { app } from '../../firebase';
 import BoxResults from '../../Components/boxResults/index';
 import { lvlSystem } from '../../constants';
+import { userInfo } from 'node:os';
 
 const Profile = () => {
   const { userInformation } = useContext(AuthContext);
@@ -13,7 +14,7 @@ const Profile = () => {
   return (
     <div className='profile'>
       <div className='flexItem'>
-        <ProfileInfo />
+        <ProfileInfo userInfo={userInformation} />
       </div>
       <div className='flexItem'>
         <BoxResults

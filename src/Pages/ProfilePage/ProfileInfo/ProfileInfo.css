@@ -19,16 +19,6 @@
   box-sizing: border-box;
 }
 
-.profileInfoImg {
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  height: 400px;
-}
-
 .profileInfoTop {
   width: 100%;
   box-sizing: border-box;

@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './ProfileInfo.css';
-import profileImg from '../../../assets/profileImg.jpeg';
 import DropDownComp from './DropDownComp';
 import HeightComp from './HeightComp';
 import WeightComp from './WeightComp';
@@ -10,8 +9,11 @@ import {
   updateUserInformaion,
 } from '../../../Firebase/useProfileInformation';
 import { AuthContext } from '../../../AuthProvider';
+import { useBeforeAndAfterImage } from '../B&AComp/useBeforeAfter';
+import { app } from '../../../firebase';
+import ProfileImage from './ProfileImage';
 
-const ProfileInfo = ({}: any) => {
+const ProfileInfo = (userInfo: any) => {
   const genderArr = ['Male', 'Female', 'Diverse'];
   const [editMode, setEditMode] = useState(false);
   const [allInformations, setAllInformations]: any = useState();
@@ -29,14 +31,16 @@ const ProfileInfo = ({}: any) => {
 
   const getUserInfoAndSetIt = async () => {
     const data = await getUserInfo(user?.uid);
+
     setAllInformations(data);
   };
 
   return (
     <div className='profileInfo '>
+      <ProfileImage />
       <div
         className='profileInfoImg'
-        style={{ backgroundImage: `url(${profileImg})` }}
+        style={{ backgroundImage: `url(${allInformations?.profileImage})` }}
       />
       <div className='profileInfoTop fullWidth'>
         <div
