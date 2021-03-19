@@ -55,8 +55,8 @@
   cursor: pointer;
 }
 
-hr {
-  border-top: 1px rgb(233 232 252);
+.profileInfoHR {
+  border-top: 1px rgb(233, 232, 252);
   border-radius: 2px;
   width: 100%;
   margin-bottom: 10px;
