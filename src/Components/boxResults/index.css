@@ -22,10 +22,12 @@ body {
 
 .areaUntilCol3 {
   overflow: hidden;
+  box-sizing: border-box;
   padding: 24px;
   margin-bottom: 24px;
   text-align: center;
   border-radius: 25px;
+  height: 100%;
 }
 .areaUntilCol3 h2 {
   text-transform: uppercase;

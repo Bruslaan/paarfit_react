@@ -92,7 +92,11 @@ body .mainContainerStyle {
 .makeStyles-paper-5 {
   color: #1e1e1e;
 }
-
+@media (min-width: 601px) {
+  .contentArea {
+    margin-bottom: 0px;
+  }
+}
 @media (max-width: 600px) {
   .disable_on_mobile {
     display: none;
@@ -173,7 +177,7 @@ body .mainContainerStyle {
   float: left;
   padding: 15px;
   box-sizing: border-box;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .areaMenuLeftTop {
@@ -204,9 +208,9 @@ body .mainContainerStyle {
 }
 
 .iconPremium {
-    font-family: 'Linearicons';
-    font-size: 40px;
-    color:black;
+  font-family: 'Linearicons';
+  font-size: 40px;
+  color: black;
 }
 
 .btnProfileMenu img {
@@ -692,9 +696,9 @@ body .mainContainerStyle {
 }
 
 .btnProfileMenu * {
-    filter: invert(34%) sepia(92%) saturate(896%) hue-rotate(215deg) brightness(92%) contrast(104%);
+  filter: invert(34%) sepia(92%) saturate(896%) hue-rotate(215deg)
+    brightness(92%) contrast(104%);
 }
-
 
 .bulletAreaPremium {
   position: absolute;

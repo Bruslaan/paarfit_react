@@ -48,12 +48,14 @@ export default function Dashboard() {
             </Grid>
           </Grid>
           <Grid item xs={12} sm={12} lg={4}>
-            <BoxResults
-              userInfo={userInformation}
-              userPoints={userInformation?.points}
-              lvlSystem={lvlSystem || []}
-              userLvl={userInformation?.level}
-            />
+            <div className='flexItems'>
+              <BoxResults
+                userInfo={userInformation}
+                userPoints={userInformation?.points}
+                lvlSystem={lvlSystem || []}
+                userLvl={userInformation?.level}
+              />
+            </div>
             <BoxFlow userTE={userInformation?.TE} badgeArr={badgeArr} />
           </Grid>
         </Grid>

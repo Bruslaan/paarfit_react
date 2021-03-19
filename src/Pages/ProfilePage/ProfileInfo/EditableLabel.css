@@ -9,8 +9,8 @@
   font-size: 19px;
   background-color: rgb(241, 244, 253);
   border-radius: 15px;
-    box-sizing: border-box;
-    padding: 10px;
+  box-sizing: border-box;
+  padding: 10px;
   outline: none;
   z-index: 61;
 }
@@ -76,8 +76,9 @@
 .profileInfoIcon {
   position: absolute;
   right: 10px;
-    top:10px;
+  top: 10px;
   z-index: 3;
+  background: white;
 }
 
 .editContainer {

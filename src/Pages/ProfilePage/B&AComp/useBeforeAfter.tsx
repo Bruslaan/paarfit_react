@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../AuthProvider';
-import { app } from '../../../firebase';
+import { app, uploadImage } from '../../../firebase';
 import defaultImgB from '../../../assets/baImgB.jpeg';
 import defaultImgA from '../../../assets/baImgA.jpeg';
 
@@ -15,10 +15,11 @@ export const useBeforeAndAfterImage = () => {
 
   const onFileChange = async (e: any) => {
     const file = e.target.files[0];
-    const fileRef = storageRef.child(file.name);
-    await fileRef.put(file);
-    const ImageURL = await fileRef.getDownloadURL();
 
+    const ImageURL = await uploadImage('BAImage', file);
+    if (!ImageURL) {
+      return;
+    }
     setBeforeImg(afterImg);
     addBURLToUserData({ beforeImgURL: afterImg });
     setAfterImg(ImageURL);

@@ -1,13 +1,43 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../../AuthProvider';
+import { db, uploadImage } from '../../../firebase';
 import './ProfileImage.css';
 
-const ProfileImage = () => {
-  const [values, setValues]: any = useState({});
+const ProfileImage = ({ onFileUploaded }: any) => {
+  const { user } = useContext(AuthContext);
+
+  const onFileChange = async (e: any) => {
+    const file = e.target.files[0];
+
+    console.log('1image successfully uploade:', file);
+
+    const ImageURL = await uploadImage('profileImage', file);
+    console.log('2image successfully uploade:', ImageURL);
+
+    if (!ImageURL) {
+      return;
+    }
+
+    await db
+      .collection('users')
+      .doc(user?.uid)
+      .update({ profileImgURL: ImageURL });
+
+    onFileUploaded(ImageURL);
+
+    console.log('3image successfully uploade:', ImageURL);
+  };
 
   return (
     <div>
       <div className='profileImgIconContainer baIcon'>
-        <input type='file' className='baInputBtn' />
+        <input
+          onChange={(e: any) => {
+            onFileChange(e);
+          }}
+          type='file'
+          className='baInputBtn'
+        />
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'

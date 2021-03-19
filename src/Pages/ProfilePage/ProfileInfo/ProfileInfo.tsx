@@ -37,10 +37,14 @@ const ProfileInfo = (userInfo: any) => {
 
   return (
     <div className='profileInfo '>
-      <ProfileImage />
+      <ProfileImage
+        onFileUploaded={(url: string) =>
+          setAllInformations({ ...allInformations, profileImgURL: url })
+        }
+      />
       <div
         className='profileInfoImg'
-        style={{ backgroundImage: `url(${allInformations?.profileImage})` }}
+        style={{ backgroundImage: `url(${allInformations?.profileImgURL})` }}
       />
       <div className='profileInfoTop fullWidth'>
         <div
