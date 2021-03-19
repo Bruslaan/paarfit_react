@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/LandingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +81,7 @@
       <workItem from="1616074751476" duration="91000" />
       <workItem from="1616088885934" duration="919000" />
       <workItem from="1616172267846" duration="608000" />
-      <workItem from="1616189979378" duration="1415000" />
+      <workItem from="1616189979378" duration="2955000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -200,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616190974137</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="New routing">
+      <created>1616191614539</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1616191614539</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,6 +254,7 @@
     <MESSAGE value="Active state bug fixed again" />
     <MESSAGE value="ruslan changes" />
     <MESSAGE value="Merged with julian landing page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged with julian landing page" />
+    <MESSAGE value="New routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="New routing" />
   </component>
 </project>
