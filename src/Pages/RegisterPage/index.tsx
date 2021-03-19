@@ -105,7 +105,7 @@ const Register = () => {
   return (
     <div style={{ maxWidth: '500px', margin: 'auto', padding: '10px' }}>
       <div className={classes.paper}>
-        <a href='/landing-page'>
+        <a href='/'>
           <img className='PaarFit' src={logo} alt='PaarFit' width='200px' />
         </a>
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import logo from '../../assets/wort_Bild_nebeneinander.svg';
 import './NavBar.css';
 
-const NavBar = () => {
+const NavBar = ({ url }: any) => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -11,6 +11,8 @@ const NavBar = () => {
     e.preventDefault();
     setClick(false);
   };
+
+  const doNothing = (e: any) => {};
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -28,39 +30,38 @@ const NavBar = () => {
 
   return (
     <div className='navBar'>
-      <a href='/landing-page' style={{ textDecoration: 'none' }}>
+      <a href='/' style={{ textDecoration: 'none' }}>
         <img className='navBarLogo' src={logo} alt='PaarFit' width='160px' />
       </a>
       <div className='navBarContent' onClick={handleClick}>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
-            <a href='/' className='nav-links' onClick={closeMobileMenu}>
-              Home
-            </a>
-          </li>
-          <li className='nav-item'>
             <a
-              href='/pakete&Preise'
+              href='/pricing'
               className='nav-links'
-              onClick={closeMobileMenu}
+              // onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
             >
               Pakete & Preise
             </a>
           </li>
           <li className='über'>
-            <a href='/' className='nav-links' onClick={closeMobileMenu}>
+            <a
+              href='/about'
+              className='nav-links'
+              // onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
+            >
               Über
             </a>
           </li>
-          <li className='nav-item'>
+          {/* <li className='nav-item'>
             <a
-              href='/paarFitMagazin'
+              href='/landing/magazin'
               className='nav-links'
-              onClick={closeMobileMenu}
+              onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
             >
               PaarFitMagazin
             </a>
-          </li>
+          </li> */}
         </ul>
         {button ? (
           <div className='navBtnComp'>

@@ -1,11 +1,10 @@
 .btn {
-  height: 38px;
-  width: 171px;
+  height: 50px;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
-  padding: 10px 20px;
   font-family: 'brandon-grotesque';
   font-size: large;
   font-weight: bold;
@@ -13,8 +12,8 @@
   border: none;
   background-color: rgb(92, 93, 234);
   color: white;
-  border: 1px solid rgb(255, 255, 255);
   border-radius: 15px;
+  box-sizing: border-box;
 
   outline: none;
   transition: all 0.5s ease;
@@ -28,4 +27,10 @@
 
   transition: all 0.5s ease;
   cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .btn {
+    width: 100%;
+  }
 }

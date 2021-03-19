@@ -70,7 +70,7 @@ const ProfileInfo = (userInfo: any) => {
         </div>
       </div>
 
-      <hr />
+      <hr className='profileInfoHR' />
 
       <div onClick={() => setEditMode(!editMode)}>
         <svg

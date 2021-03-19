@@ -18,6 +18,7 @@ let App = () => {
         return (
             <div className="loadingOverlay">
                 <div className="loader">
+
                 </div>
 
             </div>
@@ -35,7 +36,7 @@ let App = () => {
                             <Route exact path='/register' component={Register}/>
                             <Route exact path='/' component={LandingPage}/>
                             <Route exact path='/pricing' component={Pricing}/>
-                            <Redirect to='/'></Redirect>
+                            <Route path='/about' component={LandingPage} />
                         </Switch>
                         :
                         <Switch>
