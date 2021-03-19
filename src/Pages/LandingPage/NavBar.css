@@ -125,14 +125,14 @@ ul {
 
   .nav-links {
     text-align: center;
-    padding: 2rem;
+
     width: 100%;
-    display: table;
     text-decoration: none;
     color: white;
     font-family: 'brandon-grotesque';
     font-size: x-large;
     border-radius: 15px;
+    padding: 10px 20px;
 
     transition: all 0.2s ease;
   }

@@ -20,7 +20,6 @@
 }
 
 .infoItemSubTitle {
-
   color: rgb(92, 93, 234);
   font-size: 25px;
 }
@@ -28,4 +27,10 @@
 .infoItemBody {
   width: 300px;
   color: rgb(100, 100, 100);
+}
+
+@media (max-width: 400px) {
+  .infoItemTitle {
+    font-size: 20px;
+  }
 }

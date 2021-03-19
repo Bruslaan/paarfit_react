@@ -68,14 +68,18 @@
 
 @media (max-width: 550px) {
   .aboutCompImg {
-    width: 366px;
-    height: 243px;
+    width: 310px;
+    height: 204px;
   }
   .aboutTitle {
-    font-size: 50px;
+    font-size: 40px;
   }
   .aboutCompTitle {
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 20px;
+  }
+
+  .aboutHR {
+    width: 280px;
   }
 }

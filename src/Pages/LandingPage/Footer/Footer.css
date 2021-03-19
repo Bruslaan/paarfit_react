@@ -1,6 +1,7 @@
 .footer {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   background-color: rgb(255, 255, 255);
   padding: 5px 15px;
   align-items: center;

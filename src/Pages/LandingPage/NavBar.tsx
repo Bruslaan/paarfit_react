@@ -39,7 +39,7 @@ const NavBar = ({ url }: any) => {
             <a
               href='/pricing'
               className='nav-links'
-              onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
+              // onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
             >
               Pakete & Preise
             </a>
@@ -48,7 +48,7 @@ const NavBar = ({ url }: any) => {
             <a
               href='/about'
               className='nav-links'
-              onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
+              // onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
             >
               Über
             </a>
