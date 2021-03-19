@@ -3,9 +3,10 @@ import Store from './GlobalState/store';
 import Login from './Pages/LoginPage';
 import Register from './Pages/RegisterPage';
 import LandingPage from './Pages/LandingPage/LandingPage';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import {AuthContext} from "./AuthProvider";
+import Pricing from "./Pages/LandingPage/PricingPage/Pricing";
 
 
 let App = () => {
@@ -17,7 +18,6 @@ let App = () => {
         return (
             <div className="loadingOverlay">
                 <div className="loader">
-
                 </div>
 
             </div>
@@ -34,6 +34,8 @@ let App = () => {
                             <Route exact path='/auth' component={Login}/>
                             <Route exact path='/register' component={Register}/>
                             <Route exact path='/' component={LandingPage}/>
+                            <Route exact path='/pricing' component={Pricing}/>
+                            <Redirect to='/'></Redirect>
                         </Switch>
                         :
                         <Switch>
