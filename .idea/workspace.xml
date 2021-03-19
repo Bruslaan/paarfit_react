@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/LandingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/LandingPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +79,7 @@
       <workItem from="1616074751476" duration="91000" />
       <workItem from="1616088885934" duration="919000" />
       <workItem from="1616172267846" duration="608000" />
-      <workItem from="1616189979378" duration="816000" />
+      <workItem from="1616189979378" duration="1415000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -190,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616190087713</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Merged with julian landing page">
+      <created>1616190974137</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1616190974137</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +244,7 @@
     <MESSAGE value="Active state bug fixed" />
     <MESSAGE value="Active state bug fixed again" />
     <MESSAGE value="ruslan changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="ruslan changes" />
+    <MESSAGE value="Merged with julian landing page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged with julian landing page" />
   </component>
 </project>

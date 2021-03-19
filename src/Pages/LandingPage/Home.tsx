@@ -14,7 +14,6 @@ const Home = () => {
   return (
     <div className='home'>
       <div className='top' style={{ backgroundImage: `url(${bgImg})` }}>
-        <NavBar />
         <Intro />
       </div>
       <div className='mid'>
