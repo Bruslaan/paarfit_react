@@ -77,25 +77,38 @@ export const navLinksMobileFooter: Route[] = [
 ];
 
 export const navLinksSidebarTop: Route[] = [
-    {
-        id: 1,
-        name: "Test",
-        icon: <span><img src="images/hantel.svg" alt=""/></span>,
-        destination: "/"
-    },
-    {
-        id: 2,
-        name: "Test",
-        icon: <><span className="iconPremium">&#xe6dd;</span><div className="bulletAreaPremium purpleBg2"></div></>,
-        destination: "/milestones"
-    },
-    {
-        id: 4,
-        name: "Test",
-        icon: <span><img src="/images/profile.svg" alt=""/></span>,
-        destination: "/profile"
-    },
-]
+  {
+    id: 1,
+    name: 'Test',
+    icon: (
+      <span>
+        <img src='images/hantel.svg' alt='' />
+      </span>
+    ),
+    destination: '/',
+  },
+  {
+    id: 2,
+    name: 'Test',
+    icon: (
+      <>
+        <span className='iconPremium'>&#xe6dd;</span>
+        <div className='bulletAreaPremium purpleBg2'></div>
+      </>
+    ),
+    destination: '/milestones',
+  },
+  {
+    id: 4,
+    name: 'Test',
+    icon: (
+      <span>
+        <img src='/images/profile.svg' alt='' />
+      </span>
+    ),
+    destination: '/profile',
+  },
+];
 export const navLinksSidebarBottom: Route[] = [
   {
     id: 1,
@@ -105,7 +118,7 @@ export const navLinksSidebarBottom: Route[] = [
         <span className='iconSetting iconSettingInactive'>&#xe672;</span>
       </span>
     ),
-    destination: '',
+    destination: '/settings',
   },
   {
     id: 2,
@@ -115,7 +128,7 @@ export const navLinksSidebarBottom: Route[] = [
         <span className='iconSetting iconSettingInactive'>&#xe66b;</span>
       </span>
     ),
-    destination: '',
+    destination: '/privacy',
   },
   {
     id: 3,
@@ -125,7 +138,7 @@ export const navLinksSidebarBottom: Route[] = [
         <span className='iconSetting iconSettingInactive'>&#xe7bc;</span>
       </span>
     ),
-    destination: '',
+    destination: '/tipps',
   },
 ];
 
