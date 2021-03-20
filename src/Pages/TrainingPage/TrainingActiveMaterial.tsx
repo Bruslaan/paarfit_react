@@ -89,7 +89,7 @@ const useColorlibStepIconStyles = makeStyles({
     },
 });
 
-export default function VerticalLinearStepper({stageNumer}: any) {
+export default function VerticalLinearStepper({stageNumer: stageNumber}: any) {
     const classes = useStyles();
     const [activeStep, setActiveStep] = useState(0);
     const [loading, setloading] = useState(false);
@@ -99,8 +99,8 @@ export default function VerticalLinearStepper({stageNumer}: any) {
     const history = useHistory();
 
     let params: any = useParams();
-    let currentID: number = Number(params['id']);
-    let stage = sequenceState[stageNumer];
+    let currentMood: number = Number(params['id']);
+    let stage = sequenceState[stageNumber];
 
     let schwierigkeitsgrad: string = userInformation?.stufe;
 
@@ -154,9 +154,11 @@ export default function VerticalLinearStepper({stageNumer}: any) {
     const parseWorkoutInformation = (workout: any, kraft: boolean) => {
         const parseSets = workout?.sets?.split("-").map((element: any) => parseInt(element))
         const parseReps = workout?.reps?.split("-").map((element: any) => parseInt(element))
+        const pausePause = workout?.pause?.split("-").map((element: any) => parseInt(element))
         let newWorkout = {...workout}
-        newWorkout.set = moodBased(currentID, parseSets)
-        newWorkout.rep = kraft ? moodBased(currentID, parseReps) * 3 : moodBased(currentID, parseReps)
+        newWorkout.set = moodBased(currentMood, parseSets)
+        newWorkout.rep = kraft ? moodBased(currentMood, parseReps) * 3 : moodBased(currentMood, parseReps)
+        newWorkout.pause = moodBased(currentMood, pausePause)
         return newWorkout
     }
 
@@ -247,7 +249,7 @@ export default function VerticalLinearStepper({stageNumer}: any) {
                                 </StepLabel>
                                 <StepContent style={{padding: '0'}}>
                                     <div className='areaCtTrainingDet'>
-                                        <WorkoutItem workout={parseWorkoutInformation(workout, stageNumer === 1)}
+                                        <WorkoutItem workout={parseWorkoutInformation(workout, stageNumber === 1)}
                                                      stage={stage}/>
                                         <div className={classes.actionsContainer}>
                                             <div className='detTrainingBtn btnDspNone'>
@@ -276,7 +278,11 @@ export default function VerticalLinearStepper({stageNumer}: any) {
                                     </div>
                                     <div className='timeTrainingWork'>
                                         <div className='boxTimeTraining'>
-                                            <Timer onEndReached={() => setActiveStep(activeStep + 1)}/>
+                                            <Timer onEndReached={() => setActiveStep(activeStep + 1)}
+                                                   sets={parseWorkoutInformation(workout, stageNumber === 1).set}
+                                                   pause={parseWorkoutInformation(workout, stageNumber === 1).pause}
+                                                   trainingTime={parseWorkoutInformation(workout, stageNumber === 1).rep}
+                                            />
                                             <div className='detTrainingBtn btnDspNoneDesk'>
                                                 <Button
                                                     disabled={activeStep === 0}

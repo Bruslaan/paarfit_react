@@ -31,7 +31,7 @@ const MyItem: React.FC<any> = ({ onClick, children, visible, workout }) => (
                         <p>{workout.rep}</p>
                     </div>
                     <div className="rowPauseCategTraining">
-                        <h2 className="purple1">Pause</h2>
+                        <h2 className="purple1">Pause in Sek</h2>
                         <p>{workout.pause}</p>
                     </div>
                 </div>

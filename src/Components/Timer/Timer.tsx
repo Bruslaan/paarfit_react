@@ -1,14 +1,26 @@
 import React, {useEffect, useState} from 'react';
 import {CircularProgressbar} from 'react-circular-progressbar';
 
-const Timer = ({sets = 3, pause = 3, trainingTime = 5, onEndReached}: any) => {
+const Timer = ({sets, pause, trainingTime, onEndReached}: any) => {
 
-    const SequenceArray = ["Workout", "Pause", "Workout", "Pause", "Workout", "Pause"]
+
+    const createSequenceArray = () => {
+        let seqArray = []
+
+        for (let i = 0; i < sets; i++) {
+            seqArray.push("Workout")
+            seqArray.push("Pause")
+        }
+        return seqArray
+    }
+
+    const SequenceArray = createSequenceArray()
+
 
     const GetArraySet = () => {
         let setArray: string[] = []
         for (let i = 0; i < sets; i++) {
-            setArray.push("Set " + (i+1))
+            setArray.push("Set " + (i + 1))
         }
         return setArray
     }
@@ -51,7 +63,7 @@ const Timer = ({sets = 3, pause = 3, trainingTime = 5, onEndReached}: any) => {
             <div className='boxTimeProgressbar'>
                 <div className='flipText'>
                     <CircularProgressbar
-                        value={100}
+                        value={SequenceArray[currentSequenceIndex] === "Workout" ?timer*100/trainingTime : timer*100/pause}
                         text=''
                         styles={{
                             path: {
