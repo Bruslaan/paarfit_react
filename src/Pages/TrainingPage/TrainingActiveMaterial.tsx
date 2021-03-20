@@ -17,10 +17,9 @@ import {
     ReturnLink,
     HandleData,
     getPoints,
-    diff_minutes,
+    diff_minutes, sequenceState,
 } from './trainingsUtils';
-import {sequenceState} from './trainingsUtils';
-import {CircularProgressbar, buildStyles} from 'react-circular-progressbar';
+import {CircularProgressbar} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import './index.css';
 import Timer from '../../Components/Timer/Timer';
@@ -90,7 +89,7 @@ const useColorlibStepIconStyles = makeStyles({
     },
 });
 
-export default function VerticalLinearStepper() {
+export default function VerticalLinearStepper({stageNumer}: any) {
     const classes = useStyles();
     const [activeStep, setActiveStep] = useState(0);
     const [loading, setloading] = useState(false);
@@ -101,7 +100,7 @@ export default function VerticalLinearStepper() {
 
     let params: any = useParams();
     let currentID: number = Number(params['id']);
-    let stage = sequenceState[currentID];
+    let stage = sequenceState[stageNumer];
 
     let schwierigkeitsgrad: string = userInformation?.stufe;
 
@@ -138,6 +137,28 @@ export default function VerticalLinearStepper() {
     const handleBack = () => {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
+
+
+    const moodBased = (mood: number, [first, second]: any) => {
+        switch (mood) {
+            case 0:
+                return first
+            case 1:
+                const medianAmount = (first + second!) / 2
+                return Math.round(medianAmount)
+            case 2:
+                return second
+        }
+    }
+
+    const parseWorkoutInformation = (workout: any, kraft: boolean) => {
+        const parseSets = workout?.sets?.split("-").map((element: any) => parseInt(element))
+        const parseReps = workout?.reps?.split("-").map((element: any) => parseInt(element))
+        let newWorkout = {...workout}
+        newWorkout.set = moodBased(currentID, parseSets)
+        newWorkout.rep = kraft ? moodBased(currentID, parseReps) * 3 : moodBased(currentID, parseReps)
+        return newWorkout
+    }
 
     const uploadWorkoutTocloud = async () => {
         // upload
@@ -226,7 +247,8 @@ export default function VerticalLinearStepper() {
                                 </StepLabel>
                                 <StepContent style={{padding: '0'}}>
                                     <div className='areaCtTrainingDet'>
-                                        <WorkoutItem workout={workout} stage={stage}/>
+                                        <WorkoutItem workout={parseWorkoutInformation(workout, stageNumer === 1)}
+                                                     stage={stage}/>
                                         <div className={classes.actionsContainer}>
                                             <div className='detTrainingBtn btnDspNone'>
                                                 <Button

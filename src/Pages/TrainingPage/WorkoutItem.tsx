@@ -1,17 +1,13 @@
 import React from "react"
 
 
-const MyItem: React.FC<any> = ({ onClick, children, visible, workout, stage }) => (
+const MyItem: React.FC<any> = ({ onClick, children, visible, workout }) => (
     <div
         style={{
-
             marginLeft: "auto",
             objectFit: "cover",
             overflow: "hidden",
-            // background: "orange",
             position: "relative",
-
-
             cursor: visible ? 'default' : 'pointer',
         }}
         onClick={onClick}
@@ -28,11 +24,11 @@ const MyItem: React.FC<any> = ({ onClick, children, visible, workout, stage }) =
                    {/* <h2 style={{ marginBottom: "20px" }}>{workout.workoutname}</h2> */}
                     <div className="rowSetsCategTraining">
                         <h2 className="purple1">Sets</h2>
-                        <p>{workout.sets}</p>
+                        <p>{workout.set}</p>
                     </div>
                     <div className="rowRepetitionsCategTraining">
-                        <h2 className="purple1">Wiederholungen</h2>
-                        <p>{workout.reps}</p>
+                        <h2 className="purple1">Dauer in Sek</h2>
+                        <p>{workout.rep}</p>
                     </div>
                     <div className="rowPauseCategTraining">
                         <h2 className="purple1">Pause</h2>
@@ -42,10 +38,6 @@ const MyItem: React.FC<any> = ({ onClick, children, visible, workout, stage }) =
 
             </div>
         </div>
-        {/* <div style={{ padding: "20px", color: "gray" }}>
-            #{stage}
-        </div> */}
-
         {children}
     </div>
 );
