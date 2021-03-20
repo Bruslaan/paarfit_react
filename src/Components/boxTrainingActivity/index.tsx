@@ -36,7 +36,7 @@ export default function BoxTrainingActivity() {
                             <div className="iconGetStarted1"><img src="images/hantel.svg" alt=""/></div>
                             <div className="linkGetStarted">
                                 <div className="iconGetStarted2"><img src="images/iconArrow.png" alt=""/></div>
-                                <p  title="" className="textWhite">jetzt starten</p>
+                                <a  title="" className="textWhite">jetzt starten</a>
                             </div>
                         </div>
                         <div className="hereGoCol2"><a href="" title="" className="textWhite">los gehts</a></div>
