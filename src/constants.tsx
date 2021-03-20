@@ -82,7 +82,7 @@ export const navLinksSidebarTop: Route[] = [
     name: 'Test',
     icon: (
       <span>
-        <img src='images/hantel.svg' alt='' />
+        <img src='/images/hantel.svg' alt='' />
       </span>
     ),
     destination: '/',

@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import React, {useContext, useEffect, useState} from 'react';
+import {makeStyles, Theme, createStyles} from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
@@ -8,19 +8,18 @@ import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import WorkoutItem from './WorkoutItem';
-import { useHistory, useParams } from 'react-router';
-import { AuthContext } from '../../AuthProvider';
-import { CircularProgress } from '@material-ui/core';
-import { Prompt } from 'react-router';
-import firebase, { heutigesDatum } from '../../firebase';
+import {useHistory, useParams} from 'react-router';
+import {AuthContext} from '../../AuthProvider';
+import {CircularProgress} from '@material-ui/core';
+import {Prompt} from 'react-router';
+import firebase, {heutigesDatum} from '../../firebase';
 import {
     ReturnLink,
     HandleData,
     getPoints,
-    diff_minutes,
+    diff_minutes, sequenceState,
 } from './trainingsUtils';
-import { sequenceState } from './trainingsUtils';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import {CircularProgressbar} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import "./index.css"
 
@@ -53,7 +52,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function ColorlibStepIcon(props: any) {
     const classes = useColorlibStepIconStyles();
-    const { active, completed } = props;
+    const {active, completed} = props;
 
     return (
         <div
@@ -68,6 +67,7 @@ function ColorlibStepIcon(props: any) {
         </div>
     );
 }
+
 const useColorlibStepIconStyles = makeStyles({
     root: {
         backgroundColor: '#F8CD4E;',
@@ -88,18 +88,18 @@ const useColorlibStepIconStyles = makeStyles({
     },
 });
 
-export default function VerticalLinearStepper() {
+export default function VerticalLinearStepper({stageNumer}: any) {
     const classes = useStyles();
     const [activeStep, setActiveStep] = useState(0);
     const [loading, setloading] = useState(false);
     const [workouts, setworkouts]: any = useState([]);
-    const { user, userInformation } = useContext(AuthContext);
+    const {user, userInformation} = useContext(AuthContext);
     const [startTime, setstartTime]: any = useState(null);
     const history = useHistory();
 
     let params: any = useParams();
     let currentID: number = Number(params['id']);
-    let stage = sequenceState[currentID];
+    let stage = sequenceState[stageNumer];
 
     let schwierigkeitsgrad: string = userInformation?.stufe;
 
@@ -137,6 +137,28 @@ export default function VerticalLinearStepper() {
         setActiveStep((prevActiveStep) => prevActiveStep - 1);
     };
 
+
+    const moodBased = (mood: number, [first, second]: any) => {
+        switch (mood) {
+            case 0:
+                return first
+            case 1:
+                const medianAmount = (first + second!) / 2
+                return Math.round(medianAmount)
+            case 2:
+                return second
+        }
+    }
+
+    const parseWorkoutInformation = (workout: any, kraft: boolean) => {
+        const parseSets = workout?.sets?.split("-").map((element: any) => parseInt(element))
+        const parseReps = workout?.reps?.split("-").map((element: any) => parseInt(element))
+        let newWorkout = {...workout}
+        newWorkout.set = moodBased(currentID, parseSets)
+        newWorkout.rep = kraft ? moodBased(currentID, parseReps) * 3 : moodBased(currentID, parseReps)
+        return newWorkout
+    }
+
     const uploadWorkoutTocloud = async () => {
         // upload
         const workout: any = {};
@@ -160,7 +182,7 @@ export default function VerticalLinearStepper() {
             const storyRef = fireastore.collection('users').doc(user?.uid);
 
             // Update read count
-            await storyRef.update({ punkte: increment });
+            await storyRef.update({punkte: increment});
             console.log('Incremented');
             const doneWorkouts: any = {};
             const key: string = stage + '_workouts';
@@ -177,7 +199,7 @@ export default function VerticalLinearStepper() {
             await storyRef
                 .collection('pflicht_workouts')
                 .doc('workout_' + heutigesDatum)
-                .set(doneWorkouts, { merge: true });
+                .set(doneWorkouts, {merge: true});
             console.log('Pflich workouts set', doneWorkouts);
         }
 
@@ -186,7 +208,7 @@ export default function VerticalLinearStepper() {
             .doc(user?.uid)
             .collection('pflicht_workouts')
             .doc('workout_' + heutigesDatum)
-            .set(workout, { merge: true })
+            .set(workout, {merge: true})
             .then((doc) => {
                 console.log('Workout gespeichert ', doc);
                 history.push('/training/overview');
@@ -212,7 +234,7 @@ export default function VerticalLinearStepper() {
                     <Stepper
                         activeStep={activeStep}
                         orientation='vertical'
-                        style={{ width: '100%', padding: '0' }}
+                        style={{width: '100%', padding: '0'}}
                     >
                         {workouts.map((workout: any) => (
                             <Step key={workout['_id']}>
@@ -220,11 +242,12 @@ export default function VerticalLinearStepper() {
                                     className='titleTrainingStep'
                                     StepIconComponent={ColorlibStepIcon}
                                 >
-                                    <h3 style={{ marginLeft: '20px' }}>{workout.workoutname}</h3>
+                                    <h3 style={{marginLeft: '20px'}}>{workout.workoutname}</h3>
                                 </StepLabel>
-                                <StepContent style={{ padding: '0' }}>
+                                <StepContent style={{padding: '0'}}>
                                     <div className='areaCtTrainingDet'>
-                                        <WorkoutItem workout={workout} stage={stage} />
+                                        <WorkoutItem workout={parseWorkoutInformation(workout, stageNumer === 1)}
+                                                     stage={stage}/>
                                         <div className={classes.actionsContainer}>
                                             <div className='detTrainingBtn btnDspNone'>
                                                 <Button
@@ -315,8 +338,8 @@ export default function VerticalLinearStepper() {
 
                     {loading && (
                         <Paper square elevation={0} className={classes.resetContainer}>
-                            <p style={{ marginBottom: '20px' }}>Workouts werden geladen...</p>
-                            <CircularProgress />
+                            <p style={{marginBottom: '20px'}}>Workouts werden geladen...</p>
+                            <CircularProgress/>
                         </Paper>
                     )}
 
