@@ -17,7 +17,7 @@ const PricingComp = ({ type }: any) => {
       className={
         type.subPeriod === 'Jährlich'
           ? 'pricingComp recommended'
-          : 'pricingComp'
+          : 'pricingComp recommended'
       }
     >
       {type.subPeriod === 'Jährlich' ? (

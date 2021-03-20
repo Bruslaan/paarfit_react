@@ -3,6 +3,10 @@
   height: 50px;
   align-items: center;
   padding: 15px;
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
 
 }
 

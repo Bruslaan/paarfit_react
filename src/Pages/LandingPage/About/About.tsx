@@ -26,7 +26,7 @@ const About = () => {
           )}
           <div className='aboutCompTitle'>{item.title}</div>
           <div className='aboutCompBody'>{item.body}</div>
-          {item.hr ? <hr className='aboutHR' /> : ''}
+
         </div>
       ))}
     </div>

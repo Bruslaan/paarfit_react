@@ -3,7 +3,8 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  height: 620px;
+  height: 720px;
+    padding-top: 100px;
 }
 
 .title {

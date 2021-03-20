@@ -40,7 +40,7 @@
 .profileImgIconContainer::before {
   position: absolute;
   top: 0px;
-  right: -11px;
+  right: -10px;
   height: 10px;
   width: 10px;
 

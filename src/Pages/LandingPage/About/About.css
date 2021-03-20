@@ -10,7 +10,7 @@
   margin: auto;
   margin-top: 40px;
   margin-bottom: 50px;
-  padding: 0px 5px;
+  padding: 100px 5px;
 }
 
 .aboutTitle {
@@ -19,6 +19,7 @@
   font-weight: bold;
   text-transform: uppercase;
   font-size: 60px;
+
 }
 
 .aboutIntro {
@@ -38,6 +39,7 @@
 .aboutCompTitle {
   font-size: 50px;
   color: rgb(219, 116, 117);
+    margin-top: 100px;
 }
 
 .aboutCompImg {
