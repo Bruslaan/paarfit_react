@@ -214,9 +214,9 @@
 }
 .titleTimeProgressbar{
     position:absolute;
-    top:62px;
-    left:30px;
-    text-align:center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
 .titleTimeProgressbar h3{
     margin:0px 0px 0px 0px;
@@ -238,6 +238,10 @@
     display:table-cell;
     width:33.3%;
     text-align:center;
+}
+
+.setActive{
+    color:blue;
 }
 .titleTrainingStep.Mui-disabled .makeStyles-root-6 {
     background:none;

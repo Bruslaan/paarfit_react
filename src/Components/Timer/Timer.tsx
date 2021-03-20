@@ -1,49 +1,53 @@
 import React, {useEffect, useState} from 'react';
 import {CircularProgressbar} from 'react-circular-progressbar';
 
-const Timer = ({sets, pause = 3, trainingTime = 5}: any) => {
+const Timer = ({sets = 3, pause = 3, trainingTime = 5, onEndReached}: any) => {
 
+    const SequenceArray = ["Workout", "Pause", "Workout", "Pause", "Workout", "Pause"]
 
-    const SequenceArray = ["Workout", "Pause", "Workout", "Pause"]
+    const GetArraySet = () => {
+        let setArray: string[] = []
+        for (let i = 0; i < sets; i++) {
+            setArray.push("Set " + (i+1))
+        }
+        return setArray
+    }
+    const ArraySet = GetArraySet()
 
     const [timer, setTimer] = useState(0);
     const [currentSequenceIndex, setCurrentSequenceIndex] = useState(0);
-
-    const decreaseTimer = () => {
-        setTimer(timer - 1)
-    }
-
-    const mayDecreaseTimer = timer > 0
-    const mayIncreaseSequence = currentSequenceIndex < (SequenceArray.length - 1)
+    const sequenceEndReached = currentSequenceIndex === (SequenceArray.length - 1)
+    const currentSet = (currentSequenceIndex / 2)
 
     useEffect(() => {
         let initTimerWith = 0
-        if (SequenceArray[currentSequenceIndex] === "Workout") {
-            initTimerWith = trainingTime
-        } else {
-            initTimerWith = pause
-        }
+        SequenceArray[currentSequenceIndex] === "Workout" ? initTimerWith = trainingTime : initTimerWith = pause
         setTimer(initTimerWith)
     }, [currentSequenceIndex]);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            console.log("have to incrase the seq")
-            if (!timer && mayIncreaseSequence) {
-                console.log("have to incrase the seq")
+        const timoutTimer = setTimeout(() => {
+
+            if (sequenceEndReached && timer === 0) {
+                clearTimeout(timoutTimer);
+                onEndReached()
+                return
+            }
+
+            if (timer === 0 && !sequenceEndReached) {
                 setCurrentSequenceIndex(currentSequenceIndex + 1)
             } else {
-                mayDecreaseTimer && decreaseTimer()
+                setTimer(timer - 1)
             }
         }, 1000);
         // Clear timeout if the component is unmounted
-        return () => clearTimeout(timer);
+        return () => clearTimeout(timoutTimer);
     });
 
 
     return (
         <div>
-            <h2>{pause ? 'Workout' : 'Pause'}</h2>
+            <h2>{SequenceArray[currentSequenceIndex]}</h2>
             <div className='boxTimeProgressbar'>
                 <div className='flipText'>
                     <CircularProgressbar
@@ -68,15 +72,16 @@ const Timer = ({sets, pause = 3, trainingTime = 5}: any) => {
                     <h3>
                         {timer}
                     </h3>
-                    <p className='purple1'>{pause ? 'Go!' : 'Relax'}</p>
+                    <p className='purple1'>{SequenceArray[currentSequenceIndex] === "Workout" ? 'Go!' : 'Relax'}</p>
                 </div>
             </div>
             <div className='ctSetProgressbar'>
-                {/*            {ArraySet.map((set: any, index: number) => (
-                    <div key={index} className='boxSetProgressbar gray2'>
+                {ArraySet.map((set: any, index: number) => (
+                    <div key={index}
+                         className={`boxSetProgressbar gray2 ${currentSet === index ? "setActive" : ""}`}>
                         {set}
                     </div>
-                ))}*/}
+                ))}
             </div>
         </div>
     );

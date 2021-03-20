@@ -7,6 +7,8 @@
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616244480265</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Timer editted">
+      <created>1616257768631</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1616257768631</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +288,7 @@
     <MESSAGE value="Jetzt starten button vergrössert" />
     <MESSAGE value="unused code deleted" />
     <MESSAGE value="Training sets parser added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Training sets parser added" />
+    <MESSAGE value="Timer editted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Timer editted" />
   </component>
 </project>
