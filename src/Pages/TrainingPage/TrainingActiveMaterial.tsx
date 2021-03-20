@@ -195,7 +195,6 @@ export default function VerticalLinearStepper() {
                 console.log('Workout konnte nicht gespeichert werden ', error);
             });
     };
-    const percentage = 63;
     return (
         <div className='trainingStepperMob'>
             <div className='trainingStepperSt'>
@@ -317,7 +316,6 @@ export default function VerticalLinearStepper() {
                     {loading && (
                         <Paper square elevation={0} className={classes.resetContainer}>
                             <p style={{ marginBottom: '20px' }}>Workouts werden geladen...</p>
-
                             <CircularProgress />
                         </Paper>
                     )}
