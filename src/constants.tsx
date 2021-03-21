@@ -42,21 +42,21 @@ export const navLinksMobileFooter: Route[] = [
     id: 5,
     name: 'Test',
     icon: (
-      <span className='iconHantelMob'>
+      <span>
         <img src='/images/hantel.svg' alt='' />
       </span>
     ),
-    destination: '/profile',
+    destination: '/',
   },
   {
     id: 6,
     name: 'Test',
     icon: (
-      <span className='iconPremiumMob'>
-        &#xe6dd;<div className='bulletAreaPremiumMob purpleBg2'></div>
-      </span>
+      <>
+        <span className='iconPremium'>&#xe6dd;</span>
+      </>
     ),
-    destination: '/profile',
+    destination: '/milestones',
   },
   {
     id: 7,
@@ -72,7 +72,7 @@ export const navLinksMobileFooter: Route[] = [
     id: 8,
     name: 'Test',
     icon: <span className='iconSettingMob'>&#xe672;</span>,
-    destination: '/profile',
+    destination: '/',
   },
 ];
 

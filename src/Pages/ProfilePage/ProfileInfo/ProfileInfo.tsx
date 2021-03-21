@@ -75,7 +75,7 @@ const ProfileInfo = (userInfo: any) => {
       <div onClick={() => setEditMode(!editMode)}>
         <svg
           className='profileInfoIcon'
-          width='0.8em'
+          width='1.2em'
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
           viewBox='0 0 24 24'
