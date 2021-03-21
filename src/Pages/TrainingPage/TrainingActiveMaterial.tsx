@@ -19,7 +19,6 @@ import {
     getPoints,
     diff_minutes, sequenceState,
 } from './trainingsUtils';
-import {CircularProgressbar} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import './index.css';
 import Timer from '../../Components/Timer/Timer';
@@ -89,14 +88,16 @@ const useColorlibStepIconStyles = makeStyles({
     },
 });
 
-export default function VerticalLinearStepper({stageNumer: stageNumber}: any) {
+export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
     const classes = useStyles();
     const [activeStep, setActiveStep] = useState(0);
     const [loading, setloading] = useState(false);
     const [workouts, setworkouts]: any = useState([]);
     const {user, userInformation} = useContext(AuthContext);
+    const [timerEnabled, setTimerEnabled] = useState(false);
     const [startTime, setstartTime]: any = useState(null);
     const history = useHistory();
+
 
     let params: any = useParams();
     let currentMood: number = Number(params['id']);
@@ -127,11 +128,15 @@ export default function VerticalLinearStepper({stageNumer: stageNumber}: any) {
     }, []);
 
     const handleNext = () => {
+        if (activeStep === workouts.length - 1) {
+            handleFinish()
+        }
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
 
     const handleFinish = () => {
         uploadWorkoutTocloud();
+        onFinished()
     };
 
     const handleBack = () => {
@@ -164,61 +169,7 @@ export default function VerticalLinearStepper({stageNumer: stageNumber}: any) {
 
     const uploadWorkoutTocloud = async () => {
         // upload
-        const workout: any = {};
-        workout[stage] = true;
-        console.log('workout to upload', workout);
-        const fireastore = firebase.firestore();
-        const doneWorkouts = await fireastore
-            .collection('users')
-            .doc(user?.uid)
-            .collection('pflicht_workouts')
-            .doc('workout_' + heutigesDatum)
-            .get();
-        const data = doneWorkouts?.data()!;
-        const stageExists = doneWorkouts.exists && data[stage];
 
-        if (!stageExists) {
-            const increment = firebase.firestore.FieldValue.increment(
-                getPoints(stage)
-            );
-            // Document reference
-            const storyRef = fireastore.collection('users').doc(user?.uid);
-
-            // Update read count
-            await storyRef.update({punkte: increment});
-            console.log('Incremented');
-            const doneWorkouts: any = {};
-            const key: string = stage + '_workouts';
-            const EndTime = new Date();
-            const timeTaken = diff_minutes(EndTime, startTime);
-            doneWorkouts[key] = workouts.map((workout: any) => {
-                let newObject = {
-                    id: workout['_id'],
-                    workoutName: workout['workoutname'],
-                };
-                return newObject;
-            });
-            doneWorkouts['timeTaken'] = timeTaken;
-            await storyRef
-                .collection('pflicht_workouts')
-                .doc('workout_' + heutigesDatum)
-                .set(doneWorkouts, {merge: true});
-            console.log('Pflich workouts set', doneWorkouts);
-        }
-
-        fireastore
-            .collection('users')
-            .doc(user?.uid)
-            .collection('pflicht_workouts')
-            .doc('workout_' + heutigesDatum)
-            .set(workout, {merge: true})
-            .then((doc) => {
-                console.log('Workout gespeichert ', doc);
-                history.push('/training/overview');
-            })
-            .catch((error) => {
-                console.log('Workout konnte nicht gespeichert werden ', error);
-            });
     };
     return (
         <div className='trainingStepperMob'>
@@ -249,7 +200,9 @@ export default function VerticalLinearStepper({stageNumer: stageNumber}: any) {
                                 </StepLabel>
                                 <StepContent style={{padding: '0'}}>
                                     <div className='areaCtTrainingDet'>
-                                        <WorkoutItem workout={parseWorkoutInformation(workout, stageNumber === 1)}
+                                        <WorkoutItem onPaused={() => setTimerEnabled(true)}
+                                                     onPlaying={() => setTimerEnabled(false)}
+                                                     workout={parseWorkoutInformation(workout, stageNumber === 1)}
                                                      stage={stage}/>
                                         <div className={classes.actionsContainer}>
                                             <div className='detTrainingBtn btnDspNone'>
@@ -278,10 +231,12 @@ export default function VerticalLinearStepper({stageNumer: stageNumber}: any) {
                                     </div>
                                     <div className='timeTrainingWork'>
                                         <div className='boxTimeTraining'>
-                                            <Timer onEndReached={() => setActiveStep(activeStep + 1)}
-                                                   sets={parseWorkoutInformation(workout, stageNumber === 1).set}
-                                                   pause={parseWorkoutInformation(workout, stageNumber === 1).pause}
-                                                   trainingTime={parseWorkoutInformation(workout, stageNumber === 1).rep}
+                                            <Timer
+                                                enabled={timerEnabled}
+                                                onEndReached={() => handleNext()}
+                                                sets={parseWorkoutInformation(workout, stageNumber === 1).set}
+                                                pause={parseWorkoutInformation(workout, stageNumber === 1).pause}
+                                                trainingTime={parseWorkoutInformation(workout, stageNumber === 1).rep}
                                             />
                                             <div className='detTrainingBtn btnDspNoneDesk'>
                                                 <Button

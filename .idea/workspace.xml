@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/Intro.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Intro.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Intro.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/PricingComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/PricingComp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileImage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileImage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +87,7 @@
       <workItem from="1616088885934" duration="919000" />
       <workItem from="1616172267846" duration="608000" />
       <workItem from="1616189979378" duration="2955000" />
+      <workItem from="1616341215321" duration="3677000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -240,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616261984858</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Navbar changes">
+      <created>1616266496825</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1616266496825</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

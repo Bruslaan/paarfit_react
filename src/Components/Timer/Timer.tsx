@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {CircularProgressbar} from 'react-circular-progressbar';
 
-const Timer = ({sets, pause, trainingTime, onEndReached}: any) => {
+const Timer = ({sets, pause, trainingTime, onEndReached, enabled}: any) => {
 
 
     const createSequenceArray = () => {
@@ -38,14 +38,17 @@ const Timer = ({sets, pause, trainingTime, onEndReached}: any) => {
     }, [currentSequenceIndex]);
 
     useEffect(() => {
-        const timoutTimer = setTimeout(() => {
 
+        if (!enabled) {
+            return
+        }
+
+        const timoutTimer = setTimeout(() => {
             if (sequenceEndReached && timer === 0) {
                 clearTimeout(timoutTimer);
                 onEndReached()
                 return
             }
-
             if (timer === 0 && !sequenceEndReached) {
                 setCurrentSequenceIndex(currentSequenceIndex + 1)
             } else {
@@ -63,7 +66,7 @@ const Timer = ({sets, pause, trainingTime, onEndReached}: any) => {
             <div className='boxTimeProgressbar'>
                 <div className='flipText'>
                     <CircularProgressbar
-                        value={SequenceArray[currentSequenceIndex] === "Workout" ?timer*100/trainingTime : timer*100/pause}
+                        value={SequenceArray[currentSequenceIndex] === "Workout" ? timer * 100 / trainingTime : timer * 100 / pause}
                         text=''
                         styles={{
                             path: {
@@ -90,7 +93,7 @@ const Timer = ({sets, pause, trainingTime, onEndReached}: any) => {
             <div className='ctSetProgressbar'>
                 {ArraySet.map((set: any, index: number) => (
                     <div key={index}
-                         className={`boxSetProgressbar gray2 ${currentSet === index ? "setActive" : ""}`}>
+                         className={`boxSetProgressbar gray2 ${currentSet > index ? "workout_done" : ""} ${currentSet === index ? "setActive" : ""}`}>
                         {set}
                     </div>
                 ))}

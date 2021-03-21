@@ -243,6 +243,10 @@
 .setActive{
     color:blue;
 }
+
+.workout_done{
+    color:green;
+}
 .titleTrainingStep.Mui-disabled .makeStyles-root-6 {
     background:none;
 }
