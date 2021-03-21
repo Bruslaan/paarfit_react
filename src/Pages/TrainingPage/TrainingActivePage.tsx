@@ -54,9 +54,7 @@ export default function TraiingActivePage() {
                     TE: firebase.firestore.FieldValue.increment(1)
                 }, {merge: true})
             }
-
         }
-
     }
 
     return <div>
