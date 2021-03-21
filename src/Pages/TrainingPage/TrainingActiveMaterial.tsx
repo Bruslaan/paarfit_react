@@ -94,7 +94,7 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
     const [loading, setloading] = useState(false);
     const [workouts, setworkouts]: any = useState([]);
     const {user, userInformation} = useContext(AuthContext);
-    const [timerEnabled, setTimerEnabled] = useState(false);
+    const [timerEnabled, setTimerEnabled] = useState(true);
     const [startTime, setstartTime]: any = useState(null);
     const history = useHistory();
 
@@ -169,7 +169,14 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
 
     const uploadWorkoutTocloud = async () => {
         // upload
+        const db = firebase.firestore().collection("users").doc(user?.uid)
+        const document = await db.collection("last_workouts").doc(heutigesDatum).get()
+        if (document.exists && stageNumber <= document.data()!["last_done"]) {
+            return
+        }
 
+        await db.update({points: firebase.firestore.FieldValue.increment(15)})
+        await db.collection("last_workouts").doc(heutigesDatum).set({last_done: stageNumber}, {merge: true})
     };
     return (
         <div className='trainingStepperMob'>

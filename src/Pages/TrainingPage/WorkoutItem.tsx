@@ -18,7 +18,7 @@ const MyItem: React.FC<any> = ({onClick, children, visible, workout, onPaused, o
             onClick={onClick}
         >
             <div className="detTrainingStep">
-                <video className="noSelect" onPlaying={(e) => onPlaying()} onPause={() => onPaused()}
+                <video autoPlay={true} className="noSelect" onPlaying={(e) => onPlaying()} onPause={() => onPaused()}
                        preload="metadata" controls
                        style={{outline: "none", width: "100%", top: 0, objectFit: "contain"}} width="100%"
                        poster="">

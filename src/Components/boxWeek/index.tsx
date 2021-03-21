@@ -21,7 +21,7 @@ export default function BoxWeek() {
                                 <div className="detailsBoxProg">
                                     <div className="titleBoxProg">
                                          <h2 className="black">WOCHE</h2>
-                                         <h3 className="purple1">25.01. - 31.01.01.2021</h3>
+                                         <h3 className="purple1">25.01. - 31.01.2021</h3>
                                     </div>
                                     <div className="contentProg mt40">
                                         <div className="boxTimeSchedule">

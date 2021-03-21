@@ -27,7 +27,7 @@ export const handleLogout = (event?: any, loggedOut?: () => void) => {
     });
 };
 
-let todayTimestamp = firebase.firestore.Timestamp.now().toDate();
+export let todayTimestamp = firebase.firestore.Timestamp.now().toDate();
 export const heutigesDatum: string =
   todayTimestamp.getDate() +
   '_' +

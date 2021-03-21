@@ -13,6 +13,8 @@ export const useBeforeAndAfterImage = () => {
   const [beforeImg, setBeforeImg] = useState(defaultImgB);
   const [afterImg, setAfterImg] = useState(defaultImgA);
 
+
+
   const onFileChange = async (e: any) => {
     const file = e.target.files[0];
 
@@ -37,8 +39,8 @@ export const useBeforeAndAfterImage = () => {
   const getFileName = async () => {
     const doc = await db.collection('users').doc(uID).get();
     if (doc.exists) {
-      const beforeImage = doc.data()?.beforeImgURL ?? defaultImgB;
-      const afterImage = doc.data()?.afterImgURL ?? defaultImgA;
+      const beforeImage = doc.data()?.beforeImgURL || defaultImgB;
+      const afterImage = doc.data()?.afterImgURL || defaultImgA;
 
       setAfterImg(afterImage);
       setBeforeImg(beforeImage);

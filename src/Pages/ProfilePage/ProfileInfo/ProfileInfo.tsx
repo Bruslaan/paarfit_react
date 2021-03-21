@@ -4,6 +4,7 @@ import DropDownComp from './DropDownComp';
 import HeightComp from './HeightComp';
 import WeightComp from './WeightComp';
 import EditableLabel from './EditableLabel';
+import defaultImgA from '../../../assets/baImgA.jpeg';
 import {
   getUserInfo,
   updateUserInformaion,
@@ -44,7 +45,7 @@ const ProfileInfo = (userInfo: any) => {
       />
       <div
         className='profileInfoImg'
-        style={{ backgroundImage: `url(${allInformations?.profileImgURL})` }}
+        style={{ backgroundImage: `url(${allInformations?.profileImgURL || defaultImgA})` }}
       />
       <div className='profileInfoTop fullWidth'>
         <div

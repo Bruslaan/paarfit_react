@@ -6,11 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/boxWeek/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxWeek/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/useBeforeAfter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/B&amp;AComp/useBeforeAfter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingOverview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingOverview.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrivateRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrivateRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +92,7 @@
       <workItem from="1616088885934" duration="919000" />
       <workItem from="1616172267846" duration="608000" />
       <workItem from="1616189979378" duration="2955000" />
-      <workItem from="1616341215321" duration="3677000" />
+      <workItem from="1616341215321" duration="10326000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -243,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616266496825</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="on Workojt finished added">
+      <created>1616347299090</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1616347299090</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +306,7 @@
     <MESSAGE value="unused code deleted" />
     <MESSAGE value="Small changes to the progress bar" />
     <MESSAGE value="Navbar changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navbar changes" />
+    <MESSAGE value="on Workojt finished added" />
+    <option name="LAST_COMMIT_MESSAGE" value="on Workojt finished added" />
   </component>
 </project>

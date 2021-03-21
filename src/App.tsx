@@ -7,13 +7,9 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    useRouteMatch, Redirect,
 } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import {AuthContext} from './AuthProvider';
-import Pricing from './Pages/LandingPage/PricingPage/Pricing';
-import NavBar from "./Pages/LandingPage/NavBar";
-import Footer from "./Pages/LandingPage/Footer/Footer";
 
 let App = () => {
     const {authenticated, loadingAuthState, haveInformation} = useContext(

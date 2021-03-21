@@ -14,9 +14,6 @@ import TrainingOverView from './Pages/TrainingPage/TrainingOverview';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {Logo} from './Components/Logo';
 import {makeStyles, Theme, createStyles} from '@material-ui/core/styles';
-import DescriptionIcon from '@material-ui/icons/Description';
-import Drawer from './Components/react-bottom-drawer';
-import Tagebuch from './Components/Tagebuch';
 import Milestones from './Pages/MilestonesPage';
 import Profile from './Pages/ProfilePage/Profile';
 
@@ -32,18 +29,9 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const PrivateRoute = ({...rest}) => {
-    const customStyle = useStyles();
     const {authenticated, loadingAuthState, haveInformation} = useContext(
         AuthContext
     );
-    const [drawerVisible, setdrawerVisible] = useState(false);
-    const openDrawer = () => {
-        console.log('hallo');
-        setdrawerVisible(true);
-    };
-    const closeDrawer = () => {
-        setdrawerVisible(false);
-    };
 
     if (loadingAuthState) {
         return (
@@ -93,21 +81,6 @@ const PrivateRoute = ({...rest}) => {
                             </div>
                             <BottomNavBarContainer/>
 
-                            <Fab
-                                onClick={openDrawer}
-                                color='secondary'
-                                aria-label='add'
-                                className={customStyle.fab}
-                            >
-                                <DescriptionIcon/>
-                            </Fab>
-
-                            <Drawer isVisible={drawerVisible} onClose={closeDrawer}>
-                                Trainingstagebuch
-                                <div style={{}}>
-                                    <Tagebuch/>
-                                </div>
-                            </Drawer>
                         </div>
                     ) : (
                         <CreateUserInformation/>
