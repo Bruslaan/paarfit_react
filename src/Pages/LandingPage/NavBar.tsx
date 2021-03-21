@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/wort_Bild_nebeneinander.svg';
 import './NavBar.css';
 
@@ -36,31 +37,50 @@ const NavBar = ({ url }: any) => {
       <div className='navBarContent' onClick={handleClick}>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
-            <a
-              href='/pricing'
+            <NavLink
+              exact
+              key='/pricing'
+              to='/pricing'
               className='nav-links'
+              activeStyle={{
+                fontWeight: 'bold',
+                color: 'rgb(93,	98,	231)',
+              }}
+
               // onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
             >
               Pakete & Preise
-            </a>
+            </NavLink>
           </li>
           <li className='über'>
-            <a
-              href='/about'
+            <NavLink
+              exact
+              key='/about'
+              to='/about'
               className='nav-links'
+              activeStyle={{
+                fontWeight: 'bold',
+                color: 'rgb(93,	98,	231)',
+              }}
               // onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
             >
               Über
-            </a>
+            </NavLink>
           </li>
           {/* <li className='nav-item'>
-            <a
-              href='/landing/magazin'
+            <NavLink
+            exact
+                          key='/about'
+              to='/landing/magazin'
               className='nav-links'
+              activeStyle={{
+                fontWeight: 'bold',
+                color: 'rgb(93,	98,	231)',
+              }}
               onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
             >
               PaarFitMagazin
-            </a>
+            </NavLink>
           </li> */}
         </ul>
         {button ? (

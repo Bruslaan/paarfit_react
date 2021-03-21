@@ -22,9 +22,13 @@
   width: 2rem !important;
 }
 
-.active__link > svg {
+.btnProfileMenu {
   color: rgb(148, 56, 245) !important;
 }
+
+.active__link > svg {
+  color: black !important;
+}
 .active__link {
-  color: rgb(148, 56, 245) !important;
+  color: black !important;
 }

@@ -1,0 +1,49 @@
+.trainingOverview {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.OverviewCardContainter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.cardStyle {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 200px;
+  background: rgb(27, 46, 110);
+  border-radius: 25px;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.trainingOverviewTitle {
+  font-size: 40px;
+}
+
+.trainingOverviewDes {
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.cardStyle:hover {
+  background: rgba(27, 46, 110, 0.394);
+  color: rgb(27, 46, 110);
+  transition: all 0.2s ease-in-out;
+}
