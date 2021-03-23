@@ -64,6 +64,7 @@ const UserInformation = () => {
         userId: user?.uid,
         afterImgURL: '',
         beforeImgURL: '',
+        points: 0,
       })
       .then(function (docRef) {
         window.location.reload();

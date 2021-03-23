@@ -19,7 +19,6 @@
   font-weight: bold;
   text-transform: uppercase;
   font-size: 60px;
-
 }
 
 .aboutIntro {
@@ -39,7 +38,7 @@
 .aboutCompTitle {
   font-size: 50px;
   color: rgb(219, 116, 117);
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .aboutCompImg {
@@ -49,7 +48,7 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 40px;
+  border-radius: 15px;
 }
 
 .aboutCompBody {

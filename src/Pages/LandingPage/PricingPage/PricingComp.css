@@ -9,8 +9,8 @@
   margin: 15px;
   max-width: 400px;
 
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .recommended {

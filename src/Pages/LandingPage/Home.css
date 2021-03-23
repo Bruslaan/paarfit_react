@@ -9,8 +9,8 @@
   flex-direction: column;
   margin: unset;
   box-shadow: black;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   box-shadow: 0px 10px 10px #0000002c;
 
   background-position: center center;
