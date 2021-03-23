@@ -56,10 +56,7 @@ export default function BoxResults({ userInfo, userPoints, lvlSystem }: any) {
         <h2>
           noch{' '}
           <span className='purple1'>
-            {userPoints === 0
-              ? userPoints
-              : lvlSystem?.[niveau].points - userPoints}{' '}
-            P.
+            {lvlSystem?.[niveau]?.points - getRestPoints(lvlSystem[niveau])} P.
           </span>
           <br /> bis zum
         </h2>
