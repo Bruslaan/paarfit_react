@@ -155,6 +155,7 @@ export const lvlSystem: Array<Levels> = [
     id: 1,
     title: 'Starter-Couple',
     points: 250,
+
     cssStyle: 'ctStartCouple',
     description:
       'Als Power-Couple seid ihr unbesiegbar. Lorem ipsum dolor sit amet, consec',
