@@ -31,16 +31,17 @@ export default function BoxResults({ userInfo, userPoints, lvlSystem }: any) {
     let restPercent = currentPoints;
     lvlSystem.forEach((lv: any, index: number) => {
       maxPointsNeeded += lv.points;
-      if (currentPoints > maxPointsNeeded) {
+      if (currentPoints > maxPointsNeeded && lv.id !== lvlSystem.length) {
         niveau = lv.id;
         restPercent -= lv.points;
       }
     });
+
     const percent = (restPercent * 100) / lvlSystem[niveau].points;
-    return [niveau, percent, restPercent];
+    return [niveau, percent, restPercent, maxPointsNeeded];
   };
 
-  const [niveau, percent, restPercent] = getValue();
+  const [niveau, percent, restPercent, maxPointsNeeded] = getValue();
 
   const getRestPercet = (item: any) => {
     return niveau + 1 >= item?.id ? percent : 0;
@@ -56,7 +57,10 @@ export default function BoxResults({ userInfo, userPoints, lvlSystem }: any) {
         <h2>
           noch{' '}
           <span className='purple1'>
-            {lvlSystem?.[niveau]?.points - getRestPoints(lvlSystem[niveau])} P.
+            {userPoints <= maxPointsNeeded
+              ? lvlSystem?.[niveau]?.points - getRestPoints(lvlSystem[niveau])
+              : lvlSystem[niveau].points}
+            P.
           </span>
           <br /> bis zum
         </h2>
@@ -87,9 +91,11 @@ export default function BoxResults({ userInfo, userPoints, lvlSystem }: any) {
           />
         </div>
         <p className='gray1'>
-          {niveau >= lvlSystem[niveau]?.id
-            ? lvlSystem[niveau]?.points
-            : getRestPoints(lvlSystem[niveau])}
+          {userPoints <= maxPointsNeeded
+            ? niveau >= lvlSystem[niveau]?.id
+              ? lvlSystem[niveau]?.points
+              : getRestPoints(lvlSystem[niveau])
+            : lvlSystem[niveau].points}
           /{lvlSystem[niveau]?.points}
         </p>
       </div>

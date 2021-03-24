@@ -16,7 +16,7 @@ export default function BoxLevel({ lvlSystem, userInfo }: any) {
     let restPercent = currentPoints;
     lvlSystem.forEach((lv: any, index: number) => {
       maxPointsNeeded += lv.points;
-      if (currentPoints > maxPointsNeeded) {
+      if (currentPoints > maxPointsNeeded && lv.id !== lvlSystem.length) {
         niveau = lv.id;
         restPercent -= lv.points;
       }
