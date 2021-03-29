@@ -161,9 +161,12 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
         const parseReps = workout?.reps?.split("-").map((element: any) => parseInt(element))
         const pausePause = workout?.pause?.split("-").map((element: any) => parseInt(element))
         let newWorkout = {...workout}
-        newWorkout.set = moodBased(currentMood, parseSets)
+
+        const pause = moodBased(currentMood, pausePause)
+        newWorkout.set = isNaN(pause) ? moodBased(currentMood, parseSets) * 2 : moodBased(currentMood, parseSets)
         newWorkout.rep = kraft ? moodBased(currentMood, parseReps) * 3 : moodBased(currentMood, parseReps)
-        newWorkout.pause = moodBased(currentMood, pausePause)
+        newWorkout.pause = isNaN(pause) ? 5 : pause
+        newWorkout.alternate = isNaN(pause)
         return newWorkout
     }
 
@@ -243,6 +246,7 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
                                                 onEndReached={() => handleNext()}
                                                 sets={parseWorkoutInformation(workout, stageNumber === 1).set}
                                                 pause={parseWorkoutInformation(workout, stageNumber === 1).pause}
+                                                alternate={parseWorkoutInformation(workout, stageNumber === 1).alternate}
                                                 trainingTime={parseWorkoutInformation(workout, stageNumber === 1).rep}
                                             />
                                             <div className='detTrainingBtn btnDspNoneDesk'>

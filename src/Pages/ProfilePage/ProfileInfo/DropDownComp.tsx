@@ -17,7 +17,7 @@ const DropDownComp = ({ genderArr, onValuePicked, pickedValue, editMode }: any) 
     {
         if(!editMode){
             return (
-                    <p style={{textAlign:"center"}}>{pickedValue}</p>
+                    <p style={{}}>{pickedValue}</p>
             )
         }
     }

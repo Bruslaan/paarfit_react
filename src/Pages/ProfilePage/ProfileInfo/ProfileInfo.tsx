@@ -13,6 +13,7 @@ import { AuthContext } from '../../../AuthProvider';
 import { useBeforeAndAfterImage } from '../B&AComp/useBeforeAfter';
 import { app } from '../../../firebase';
 import ProfileImage from './ProfileImage';
+import {MenuItem, Select} from "@material-ui/core";
 
 const ProfileInfo = (userInfo: any) => {
   const genderArr = ['Male', 'Female', 'Diverse'];
@@ -68,6 +69,19 @@ const ProfileInfo = (userInfo: any) => {
               })
             }
           />
+          <br/>
+            <DropDownComp
+                editMode={editMode}
+                pickedValue={allInformations?.stufe}
+                onValuePicked={(stufe: any) =>
+                    setAllInformations({
+                        ...allInformations,
+                        stufe,
+                    })
+                }
+
+                genderArr={["Anfänger","Fortgeschrittene", "Profis"]}
+            />
         </div>
       </div>
 

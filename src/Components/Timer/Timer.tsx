@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {CircularProgressbar} from 'react-circular-progressbar';
 
-const Timer = ({sets, pause, trainingTime, onEndReached, enabled}: any) => {
+const Timer = ({sets, pause, trainingTime, onEndReached, enabled, alternate}: any) => {
 
 
     const createSequenceArray = () => {
@@ -60,6 +60,8 @@ const Timer = ({sets, pause, trainingTime, onEndReached, enabled}: any) => {
     });
 
 
+    const RelaxOrPartnerChange = alternate ? "Wächsel" : "Entspannen"
+
     return (
         <div>
             <h2>{SequenceArray[currentSequenceIndex]}</h2>
@@ -68,10 +70,22 @@ const Timer = ({sets, pause, trainingTime, onEndReached, enabled}: any) => {
                     <CircularProgressbar
                         value={SequenceArray[currentSequenceIndex] === "Workout" ? timer * 100 / trainingTime : timer * 100 / pause}
                         text=''
-                        styles={{
+                        styles={SequenceArray[currentSequenceIndex] === "Workout" ?{
                             path: {
                                 strokeWidth: '8',
                                 stroke: '#9529F9',
+                                strokeLinecap: 'round',
+                                transition: 'stroke-dashoffset 0.5s ease 0s',
+                            },
+                            trail: {
+                                strokeWidth: '4',
+                                stroke: '#EAEBEB',
+                                strokeLinecap: 'round',
+                            },
+                        }:{
+                            path: {
+                                strokeWidth: '8',
+                                stroke: "#F8CD4E",
                                 strokeLinecap: 'round',
                                 transition: 'stroke-dashoffset 0.5s ease 0s',
                             },
@@ -87,7 +101,7 @@ const Timer = ({sets, pause, trainingTime, onEndReached, enabled}: any) => {
                     <h3>
                         {timer}
                     </h3>
-                    <p className='purple1'>{SequenceArray[currentSequenceIndex] === "Workout" ? 'Go!' : 'Relax'}</p>
+                    <p className='purple1'>{SequenceArray[currentSequenceIndex] === "Workout" ? 'Go!' : RelaxOrPartnerChange}</p>
                 </div>
             </div>
             <div className='ctSetProgressbar'>
