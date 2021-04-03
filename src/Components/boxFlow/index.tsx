@@ -63,8 +63,8 @@ export default function BoxFlow({ userTE, badgeArr }: any) {
           />
         </div>
         <div className='detUntilCol4'>
-          <div className='boxtUntilCol4 blackBg'>
-            <h2 className='gray3'>
+          <div className='boxtUntilCol4 yellowBg'>
+            <h2 className='white'>
               {!userTE ? '0' : badgeArr[niveau - 1]?.nr}
             </h2>
             <p className='gray4'>
@@ -81,9 +81,10 @@ export default function BoxFlow({ userTE, badgeArr }: any) {
         </div>
         <div className='textUntilCol4'>
           <h2>{userTE} TE</h2>
+          <div className='descrUntilCol5'>(Trainingseinheit/en)</div>
         </div>
         <div className='descrUntilCol4'>
-          <p>am optimalen Tag trainiert</p>
+          <p>Trainingsplanung eingehalten</p>
         </div>
       </div>
     </div>

@@ -575,6 +575,9 @@ body .mainContainerStyle {
 .black {
   color: #1e1e1e;
 }
+.white {
+  color: #ffffff;
+}
 
 /*********************BACKGROUND****************************/
 .yellowBg {
@@ -609,6 +612,9 @@ body .mainContainerStyle {
 }
 .blackBg {
   background: #1e1e1e;
+}
+.whiteBg {
+  background: #ffffff;
 }
 
 /*************************MARGIN RIGHT*****************************/

@@ -116,6 +116,10 @@ body {
   width: 100%;
   overflow: hidden;
 }
+
+.descrUntilCol5 {
+  text-align: right;
+}
 .descrUntilCol4 p {
   font-size: 20px;
   margin: 0px;
