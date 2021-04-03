@@ -16,8 +16,8 @@ const Info = () => {
         <InfoItem content={infoItemContent3} />
       </div>
       <a href='/register' style={{ textDecoration: 'none' }}>
-        <button className='infoBtnIntro'>
-          Jetzt Anmelden
+        <button className='paarfit_button'>
+          Kostenlos testen
           <svg
             className='arroIcon'
             height='20px'

@@ -19,7 +19,7 @@
   color: white;
   border: none;
   background-color: rgb(148, 56, 245);
-  border-radius: 15px;
+  border-radius: 10px;
   outline: none;
   transform: translate(0%, -50%);
 }

@@ -12,18 +12,19 @@ a:focus {
   outline: 0;
 }
 
-.paarfi_button {
+.paarfit_button {
   height: 38px;
-  width: 171px;
+  width: max-content;
   display: flex;
   align-items: center;
+  margin: 10px;
   padding: 10px 20px;
   font-family: 'brandon-grotesque';
   font-size: large;
   color: white;
   border: none;
   background-color: rgb(92, 93, 234);
-  border-radius: 15px;
+  border-radius: 10px;
   outline: none;
   transition: all 0.5s ease;
 }

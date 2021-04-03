@@ -19,8 +19,8 @@ const Reviews = () => {
           <ReviewComp />
         </div>
         <a href='/register' style={{ textDecoration: 'none' }}>
-          <button className='navBtn'>
-            Jetzt Anmelden
+          <button className='paarfit_button'>
+            Kostenlos testen
             <svg
               className='arroIcon'
               height='20px'

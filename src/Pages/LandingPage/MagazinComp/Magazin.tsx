@@ -7,8 +7,8 @@ const Magazin = () => {
     <div className='magazin'>
       <div className='magTitle'>Paarfit MAGAZIN</div>
       <div className='magSubTitle'>
-        Bleibt immer auf dem Laufenden. Tipps zur Ernährung, zu Paar-Aktivitäten
-        und zum optimalen Trainingsflow.
+        Bleibt auf dem Laufenden! Spannendes zu körperlicher und geistiger
+        Gesundheit, Ernährungs- und Trainingstipps
       </div>
       <div className='magCompContainer'>
         <MagazinComp />

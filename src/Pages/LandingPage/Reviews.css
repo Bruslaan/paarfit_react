@@ -31,38 +31,16 @@
   align-items: center;
   background-color: rgb(250, 250, 250);
   border-radius: 20px;
-  height: 630px;
+  height: 100%;
   width: fit-content;
+  padding: 30px 0px;
 }
 
 .reviewsComp {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-}
-
-.navBtn {
-  height: 38px;
-  width: 171px;
-  display: flex;
-  align-items: center;
-  margin: 10px;
-  padding: 10px 20px;
-  font-family: 'brandon-grotesque';
-  font-size: large;
-  color: white;
-  border: none;
-  background-color: rgb(92, 93, 234);
-  border-radius: 15px;
-  outline: none;
-  transition: all 0.5s ease;
-}
-
-.navBtn:hover {
-  color: rgb(92, 93, 234);
-  background-color: white;
-  transition: all 0.5s ease;
-  cursor: pointer;
+  margin-bottom: 15px;
 }
 
 @media screen and (max-width: 960px) {

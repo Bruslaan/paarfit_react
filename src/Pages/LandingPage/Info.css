@@ -4,7 +4,7 @@
   align-items: center;
   height: fit-content;
 
-  margin-bottom: 100px;
+  margin: 50px auto;
 }
 
 .infoComps {
@@ -12,30 +12,7 @@
   justify-content: space-evenly;
 
   width: 100%;
-}
-
-.infoBtnIntro {
-  height: 38px;
-  width: 171px;
-  display: flex;
-  align-items: center;
-  margin: 10px;
-  padding: 10px 20px;
-  font-family: 'brandon-grotesque';
-  font-size: large;
-  color: white;
-  border: none;
-  background-color: rgb(92, 93, 234);
-  border-radius: 15px;
-  outline: none;
-  transition: all 0.5s ease;
-}
-
-.infoBtnIntro:hover {
-  color: rgb(92, 93, 234);
-  background-color: white;
-  transition: all 0.5s ease;
-  cursor: pointer;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 960px) {

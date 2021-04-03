@@ -4,8 +4,8 @@ import './Intro.css';
 const Intro = () => {
   return (
     <div className='intro'>
-        <br/>
-        <br/>
+      <br />
+      <br />
       <div className='title'>
         <span className='landingPageSpan'>Wir</span> &nbsp;sind besser als ich
       </div>
@@ -15,8 +15,8 @@ const Intro = () => {
         haben, mit Paarfit zu trainieren
       </div>
       <a href='/register' style={{ textDecoration: 'none' }}>
-        <button className='navBtnIntro'>
-          Jetzt Anmelden
+        <button className='paarfit_button'>
+          Kostenlos testen
           <svg
             className='arroIcon'
             height='20px'
