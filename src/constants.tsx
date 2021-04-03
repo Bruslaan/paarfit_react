@@ -342,3 +342,9 @@ export const motQuoteArr = [
   'Werdet die beste Version von euch selbst!',
   'Ein Schritt weiter Richtung Ziel!',
 ];
+
+export const trainingMoods = [
+  { title: 'ausgelaugt', description: 'lockeres Training' },
+  { title: 'etwas erschöpft', description: 'moderates Training' },
+  { title: 'volle Energie', description: 'wir geben heute alles' },
+];

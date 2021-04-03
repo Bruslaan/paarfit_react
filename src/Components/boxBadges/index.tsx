@@ -28,7 +28,7 @@ export default function BoxBadges({ userTE, badgeArr }: any) {
   return (
     <div className='areaUntilBadges whiteBg'>
       <div className='ctUntilBadges'>
-        <h2>BADGES </h2>
+        <h2>Abzeichen</h2>
         <div className='detUntilBadges'>
           {badgeArr.map((item: any, index: number) => (
             <div
