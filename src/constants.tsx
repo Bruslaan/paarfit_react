@@ -271,22 +271,28 @@ export const badgeArr = [
 
 export const pricingPackage = [
   {
-    subPeriod: 'Jährlich',
-    price: '99 €',
-    priceSubTitle: 'Pro Jahr',
+    subPeriod: 'Jahres-Sparabo',
+    price: '135 € / Monat',
+    priceSubTitle: '2,81€/ pro Woche',
     advice: 'Bestes Preis-Leistungs-Verhältnis',
-    testTitle: '10 Tage kostenlos testen',
-    body:
-      'Effizientes Partnertraining ohne Geräte Auf Ihr Fitness-Niveau abgestimmt Ausgewogenes Ganzkörpertraining Über 15 % Ersparnis gegenüber monatlicher Zahlung',
+    testTitle: '14 Tage kostenlos testen',
+    body: [
+      'Individuell zugeschnittenes Partnertraining',
+      'Alltagstauglich und ohne Geräte',
+      'Ganzheitliche Fitness & Stressabbau',
+    ],
   },
   {
-    subPeriod: 'Monatlich',
-    price: '10 €',
-    priceSubTitle: 'Pro Monat',
+    subPeriod: 'flexibles Monatsabo',
+    price: '15 €/ Monat',
+    priceSubTitle: '3,75€/ pro Woche',
     advice: 'Monatlich kündbar',
-    testTitle: '10 Tage kostenlos testen',
-    body:
-      'Effizientes Partnertraining ohne Geräte Auf Ihr Fitness-Niveau abgestimmt Ausgewogenes Ganzkörpertraining',
+    testTitle: '14 Tage kostenlos testen',
+    body: [
+      'Individuell zugeschnittenes Partnertraining',
+      'Alltagstauglich und ohne Geräte',
+      'Ganzheitliche Fitness & Stressabbau',
+    ],
   },
 ];
 

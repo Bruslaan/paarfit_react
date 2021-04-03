@@ -5,9 +5,15 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='footerLeft'>
-        <div className='impressum'>Impressum</div>
-        <div className='datenschutz'>Datenschutz</div>
-        <div className='agb'>AGB</div>
+        <a href='/impressum' className='footerLink'>
+          Impressum
+        </a>
+        <a href='/datenschutz' className='footerLink'>
+          Datenschutz
+        </a>
+        <a href='/agb' className='footerLink'>
+          AGB
+        </a>
       </div>
     </div>
   );

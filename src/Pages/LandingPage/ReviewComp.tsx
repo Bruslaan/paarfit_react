@@ -1,6 +1,6 @@
 import React from 'react';
 import './ReviewComp.css';
-import reviewCompImg from '../../assets/baImgA.jpeg';
+import reviewCompImg from '../../assets/profileImg.jpeg';
 
 const ReviewComp = () => {
   return (

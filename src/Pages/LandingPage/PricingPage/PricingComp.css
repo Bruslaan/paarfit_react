@@ -37,6 +37,7 @@
   flex-direction: column;
   font-weight: bold;
   text-align: center;
+  align-items: center;
 
   font-size: 35px;
   margin-top: 20px;
@@ -58,9 +59,11 @@
   padding: 10px;
   color: rgba(65, 64, 66, 0.75);
 }
-.body {
-  margin: 30px 0px;
-  text-align: center;
+.pricingCompBody {
+  margin: 30px;
+  text-align: left;
+  list-style-type: disc;
+  line-height: 40px;
 }
 
 .pricingHR {
