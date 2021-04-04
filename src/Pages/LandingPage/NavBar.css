@@ -3,18 +3,17 @@
   height: 50px;
   align-items: center;
   padding: 15px;
-    position: absolute;
-    top:0;
-    right:0;
-    left:0;
-
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .navBarContent {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  max-width: 200px;
+  max-width: 350px;
   margin-left: 20px;
 }
 
@@ -42,30 +41,6 @@
   color: rgb(148, 56, 245);
 }
 
-.navBtn {
-  height: 38px;
-  width: 171px;
-  display: flex;
-  align-items: center;
-  margin: 10px;
-  padding: 10px 20px;
-  font-family: 'brandon-grotesque';
-  font-size: large;
-  color: white;
-  border: none;
-  background-color: rgb(92, 93, 234);
-  border-radius: 15px;
-  outline: none;
-  transition: all 0.5s ease;
-}
-
-.navBtn:hover {
-  color: rgb(92, 93, 234);
-  background-color: white;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
 .menuIcn {
   position: absolute;
   right: 0px;
@@ -81,7 +56,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 450px;
+  width: 350px;
   text-decoration: none;
 }
 

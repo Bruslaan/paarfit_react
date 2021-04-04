@@ -107,7 +107,7 @@ const Login = () => {
             required
             fullWidth
             id='email'
-            label='Email Address'
+            label='E-Mail'
             name='email'
             autoComplete='email'
             autoFocus
@@ -121,7 +121,7 @@ const Login = () => {
             required
             fullWidth
             name='password'
-            label='Password'
+            label='Passwort'
             type='password'
             id='password'
             autoComplete='current-password'
@@ -138,7 +138,7 @@ const Login = () => {
                 }}
               />
             }
-            label='Remember me'
+            label='merken'
           />
           <Button
             type='submit'
@@ -163,7 +163,7 @@ const Login = () => {
                 variant='body2'
                 style={{ color: 'rgb(148,	56,	245	)' }}
               >
-                Forgot password?
+                Passwort vergessen?
               </Link>
             </Grid>
             <Grid item>
@@ -172,15 +172,12 @@ const Login = () => {
                 variant='body2'
                 style={{ color: 'rgb(148,	56,	245	)' }}
               >
-                {"Don't have an account? Sign Up"}
+                {'Noch nicht registriert? Jetzt kostenlos testen!'}
               </Link>
             </Grid>
           </Grid>
         </form>
       </div>
-      <Box mt={8}>
-        <Copyright />
-      </Box>
     </div>
   );
 };

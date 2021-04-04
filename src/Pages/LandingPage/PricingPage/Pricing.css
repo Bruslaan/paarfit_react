@@ -1,13 +1,11 @@
 .pricing {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   padding-top: 100px;
   background: rgb(233, 239, 242);
-  margin-bottom: 50px;
-
+  margin-bottom: 30px;
 }
 
 .pricingCompContainer {
@@ -15,14 +13,12 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
-  margin-bottom: 30px;
 }
 
 .pricingTitle {
   font-size: 50px;
   color: black;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 960px) {
@@ -32,6 +28,6 @@
     align-items: center;
   }
   .pricingTitle {
-    font-size: 40px;
+    font-size: 30px;
   }
 }

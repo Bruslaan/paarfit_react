@@ -13,7 +13,7 @@ import { AuthContext } from '../../../AuthProvider';
 import { useBeforeAndAfterImage } from '../B&AComp/useBeforeAfter';
 import { app } from '../../../firebase';
 import ProfileImage from './ProfileImage';
-import {MenuItem, Select} from "@material-ui/core";
+import { MenuItem, Select } from '@material-ui/core';
 
 const ProfileInfo = (userInfo: any) => {
   const genderArr = ['Male', 'Female', 'Diverse'];
@@ -46,7 +46,11 @@ const ProfileInfo = (userInfo: any) => {
       />
       <div
         className='profileInfoImg'
-        style={{ backgroundImage: `url(${allInformations?.profileImgURL || defaultImgA})` }}
+        style={{
+          backgroundImage: `url(${
+            allInformations?.profileImgURL || defaultImgA
+          })`,
+        }}
       />
       <div className='profileInfoTop fullWidth'>
         <div
@@ -69,19 +73,18 @@ const ProfileInfo = (userInfo: any) => {
               })
             }
           />
-          <br/>
-            <DropDownComp
-                editMode={editMode}
-                pickedValue={allInformations?.stufe}
-                onValuePicked={(stufe: any) =>
-                    setAllInformations({
-                        ...allInformations,
-                        stufe,
-                    })
-                }
-
-                genderArr={["Anfänger","Fortgeschrittene", "Profis"]}
-            />
+          <br />
+          <DropDownComp
+            editMode={editMode}
+            pickedValue={allInformations?.stufe}
+            onValuePicked={(stufe: any) =>
+              setAllInformations({
+                ...allInformations,
+                stufe,
+              })
+            }
+            genderArr={['Anfänger', 'Fortgeschrittene', 'Profis']}
+          />
         </div>
       </div>
 
@@ -122,11 +125,6 @@ const ProfileInfo = (userInfo: any) => {
                   label: 'nameA',
                   value: allInformations?.nameA,
                 },
-                {
-                  playHolderName: 'Alter',
-                  label: 'ageA',
-                  value: allInformations?.ageA,
-                },
               ]}
               returnTheValues={(returnedValues: any) =>
                 setAllInformations({
@@ -144,11 +142,6 @@ const ProfileInfo = (userInfo: any) => {
                   playHolderName: 'Name',
                   label: 'nameB',
                   value: allInformations?.nameB,
-                },
-                {
-                  playHolderName: 'Alter',
-                  label: 'ageB',
-                  value: allInformations?.ageB,
                 },
               ]}
               returnTheValues={(returnedValues: any) =>
@@ -322,7 +315,7 @@ const ProfileInfo = (userInfo: any) => {
             justifyContent: 'center',
           }}
         >
-          <button className='paarfi_button' style={{ marginTop: '10px' }}>
+          <button className='paarfit_button' style={{ marginTop: '10px' }}>
             Speichern
           </button>
         </div>

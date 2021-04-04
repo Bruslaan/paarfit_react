@@ -4,7 +4,7 @@
   text-align: center;
   align-items: center;
   height: 720px;
-    padding-top: 100px;
+  padding-top: 100px;
 }
 
 .title {
@@ -36,30 +36,6 @@
   color: rgb(100, 100, 100);
   max-width: 400px;
   margin-bottom: 20px;
-}
-
-.navBtnIntro {
-  height: 38px;
-  width: 171px;
-  display: flex;
-  align-items: center;
-  margin: 10px;
-  padding: 10px 20px;
-  font-family: 'brandon-grotesque';
-  font-size: large;
-  color: white;
-  border: none;
-  background-color: rgb(92, 93, 234);
-  border-radius: 15px;
-  outline: none;
-  transition: all 0.5s ease;
-}
-
-.navBtnIntro:hover {
-  color: rgb(92, 93, 234);
-  background-color: white;
-  transition: all 0.5s ease;
-  cursor: pointer;
 }
 
 .chatBtn {

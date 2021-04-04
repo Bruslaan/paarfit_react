@@ -153,44 +153,40 @@ type Levels = {
 export const lvlSystem: Array<Levels> = [
   {
     id: 1,
-    title: 'Starter-Couple',
+    title: 'Durchstarter',
     points: 250,
 
     cssStyle: 'ctStartCouple',
-    description:
-      'Als Power-Couple seid ihr unbesiegbar. Lorem ipsum dolor sit amet, consec',
+    description: 'Das Geheimnis des Erfolgs ist anzufangen. (Mark Twain) ',
   },
   {
     id: 2,
-    title: 'Power-Couple',
+    title: 'Sportkanonen',
     points: 500,
     cssStyle: 'ctPowerCouple',
-    description:
-      'Als Power-Couple seid ihr unbesiegbar. Lorem ipsum dolor sit amet, consec',
+    description: 'Der Anfang ist die Hälfte des Ganzen (Aristoteles)',
   },
   {
     id: 3,
-    title: 'Fitness-Couple',
+    title: 'Gewinnerteam',
     points: 1000,
     cssStyle: 'ctFitnessCouple',
-    description:
-      'Als Power-Couple seid ihr unbesiegbar. Lorem ipsum dolor sit amet, consec',
+    description: 'Das W in gewinnen steht für Wir.',
   },
   {
     id: 4,
-    title: 'Advanced-Couple',
+    title: 'Überflieger',
     points: 2000,
     cssStyle: 'ctAdvancedCouple',
-    description:
-      'Als Power-Couple seid ihr unbesiegbar. Lorem ipsum dolor sit amet, consec',
+    description: 'In einem gesunden Körper wohnt ein gesunder Geist. (Juvenal)',
   },
   {
     id: 5,
-    title: 'Super-Couple',
+    title: 'Spitzensportler',
     points: 5000,
     cssStyle: 'ctSuperCouple',
     description:
-      'Als Power-Couple seid ihr unbesiegbar. Lorem ipsum dolor sit amet, consec',
+      'Die Belohnung erfolgreichen Tuns ist, es vollbracht zu haben. (R. W. Emerson)',
   },
 ];
 
@@ -271,22 +267,28 @@ export const badgeArr = [
 
 export const pricingPackage = [
   {
-    subPeriod: 'Jährlich',
-    price: '99 €',
-    priceSubTitle: 'Pro Jahr',
+    subPeriod: 'Jahres-Sparabo',
+    price: '135 € / Monat',
+    priceSubTitle: '2,60€/ pro Woche',
     advice: 'Bestes Preis-Leistungs-Verhältnis',
-    testTitle: '10 Tage kostenlos testen',
-    body:
-      'Effizientes Partnertraining ohne Geräte Auf Ihr Fitness-Niveau abgestimmt Ausgewogenes Ganzkörpertraining Über 15 % Ersparnis gegenüber monatlicher Zahlung',
+    testTitle: '14 Tage kostenlos testen',
+    body: [
+      'Individuell zugeschnittenes Partnertraining',
+      'Alltagstauglich und ohne Geräte',
+      'Ganzheitliche Fitness & Stressabbau',
+    ],
   },
   {
-    subPeriod: 'Monatlich',
-    price: '10 €',
-    priceSubTitle: 'Pro Monat',
+    subPeriod: 'flexibles Monatsabo',
+    price: '15 €/ Monat',
+    priceSubTitle: '3,75€/ pro Woche',
     advice: 'Monatlich kündbar',
-    testTitle: '10 Tage kostenlos testen',
-    body:
-      'Effizientes Partnertraining ohne Geräte Auf Ihr Fitness-Niveau abgestimmt Ausgewogenes Ganzkörpertraining',
+    testTitle: '14 Tage kostenlos testen',
+    body: [
+      'Individuell zugeschnittenes Partnertraining',
+      'Alltagstauglich und ohne Geräte',
+      'Ganzheitliche Fitness & Stressabbau',
+    ],
   },
 ];
 
@@ -329,4 +331,20 @@ export const aboutComps = [
       'Wer gemeinsam Sport macht, lacht und sich gegenseitig berührt, bringt eine ganz neue Ebene der Körperlichkeit in die Beziehung. Also lasst euch auf die luftig-leichte Erotik ein, die das Partnertraining mit sich bringt und genießt die kribbelnde Anziehung.',
     hr: false,
   },
+];
+
+export const motQuoteArr = [
+  'Schön, dass ihr da seid!',
+  'Toll, euch zu sehen!',
+  'Jedes Training macht euch stärker!',
+  'Ein Trainingstag ist ein gewonnener Tag!',
+  'Ihr zwei seid großartig!',
+  'Werdet die beste Version von euch selbst!',
+  'Ein Schritt weiter Richtung Ziel!',
+];
+
+export const trainingMoods = [
+  { title: 'ausgelaugt', description: 'lockeres Training' },
+  { title: 'etwas erschöpft', description: 'moderates Training' },
+  { title: 'volle Energie', description: 'wir geben heute alles' },
 ];

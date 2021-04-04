@@ -1,12 +1,11 @@
 .footer {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(255, 255, 255);
   padding: 5px 15px;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  height: max-content;
 
   font-family: 'brandon-grotesque';
   color: rgb(107, 107, 117);
@@ -14,56 +13,12 @@
 
 .footerLeft {
   display: flex;
-  padding-left: 20px;
-}
-
-.impressum {
-  padding-right: 60px;
-}
-
-.socialM {
-  position: absolute;
-  display: flex;
+  width: 400px;
   justify-content: space-between;
-  width: fit-content;
-  bottom: 50px;
-  right: 20px;
 }
 
-.facebook {
-  position: relative;
-
-  height: 35px;
-  width: 35px;
-  margin: 10px;
-  color: white;
-  border: none;
-  background-color: rgb(92, 93, 234);
-  border-radius: 10px;
-}
-.instagram {
-  position: relative;
-
-  height: 35px;
-  width: 35px;
-  margin: 10px;
-  color: white;
-  border: none;
-  background-color: rgb(148, 56, 245);
-  border-radius: 10px;
-}
-.youtube {
-  position: relative;
-
-  height: 35px;
-  width: 35px;
-  margin: 10px;
-  color: white;
-  border: none;
-  background-color: rgb(219, 10, 22);
-  border-radius: 10px;
-}
-
-.followUs {
-  padding-right: 20px;
+.footerLink {
+  text-decoration: none;
+  margin: 15px;
+  color: rgb(107, 107, 117);
 }

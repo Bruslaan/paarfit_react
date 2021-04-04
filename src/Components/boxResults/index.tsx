@@ -57,7 +57,9 @@ export default function BoxResults({ userInfo, userPoints, lvlSystem }: any) {
         <h2>
           noch{' '}
           <span className='purple1'>
-            {userPoints <= maxPointsNeeded
+            {!userPoints
+              ? '0'
+              : userPoints <= maxPointsNeeded
               ? lvlSystem?.[niveau]?.points - getRestPoints(lvlSystem[niveau])
               : lvlSystem[niveau].points}
             P.

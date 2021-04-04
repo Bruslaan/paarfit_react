@@ -12,8 +12,8 @@ const BAComp = () => {
   return (
     <div className='baContainer'>
       <div className='baTitle'>
-        <div className='bTitle'>before</div>
-        <div className='baSelectedTitle'>after</div>
+        <div className='bTitle'>vorher</div>
+        <div className='baSelectedTitle'>nachher</div>
       </div>
       <div className='baIconContainer baIcon'>
         <input
