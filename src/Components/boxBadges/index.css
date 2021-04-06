@@ -63,7 +63,7 @@
   text-align: center;
   margin: 0px;
   padding-top: 30px;
-  opacity: 0.3;
+  opacity: 0.75;
 }
 
 .boxtUntilBadges h2.minSizeBadges {
@@ -76,7 +76,7 @@
   font-weight: 300;
   text-align: center;
   margin: 0px;
-  opacity: 0.5;
+  opacity: 0.75;
 }
 .contentBadges h3 {
   font-family: 'brandon-grotesque';
@@ -94,6 +94,11 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+.noSelectBadges {
+  opacity: 0.3;
+}
+
 .noSelectBadges .boxtUntilBadges {
   background: #f0f0f0;
 }

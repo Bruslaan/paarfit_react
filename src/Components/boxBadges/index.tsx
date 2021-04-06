@@ -43,7 +43,7 @@ export default function BoxBadges({ userTE, badgeArr }: any) {
                   style={{
                     fontSize: '65px',
                     fontWeight: 'bold',
-                    color: 'grey',
+                    color: 'white',
                   }}
                 >
                   {item.te}
