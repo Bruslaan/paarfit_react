@@ -5,14 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Payment/payment.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.firebaserc" beforeDir="false" afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/SuccModal/SuccModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/SuccModal/succModal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/trophy.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/functions/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Payment/payment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Payment/payment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/boxWeek/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxWeek/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/DashboardPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/DashboardPage/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -62,7 +70,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/Components/SuccModal" />
       <recent name="$PROJECT_DIR$/src/assets" />
       <recent name="$PROJECT_DIR$/src/Pages" />
       <recent name="$PROJECT_DIR$/src/Components" />
@@ -93,7 +106,8 @@
       <workItem from="1616508610576" duration="349000" />
       <workItem from="1616522363951" duration="3519000" />
       <workItem from="1617023243727" duration="4038000" />
-      <workItem from="1617436040273" duration="13448000" />
+      <workItem from="1617436040273" duration="26642000" />
+      <workItem from="1617632117327" duration="7085000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -284,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617561413634</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Payment added">
+      <created>1617609925486</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1617609925486</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,8 +334,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="training merged into master" />
-    <MESSAGE value="package lock on git ignore" />
     <MESSAGE value="stash" />
     <MESSAGE value="all branches merged" />
     <MESSAGE value="julian-func merged" />
@@ -338,6 +357,8 @@
     <MESSAGE value="current changes" />
     <MESSAGE value="Some Changes" />
     <MESSAGE value="firebase roots changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="firebase roots changed" />
+    <MESSAGE value="Payment added" />
+    <MESSAGE value="Ruslan Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ruslan Changes" />
   </component>
 </project>

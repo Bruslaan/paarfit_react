@@ -25,7 +25,7 @@ app.post("/checkout", async (req, res) => {
     let result
     try {
         result = await gateway.customer.create({
-            firstName: "Charity3",
+            firstName: "Charity5",
             lastName: "Smith3",
             paymentMethodNonce: nonceFromTheClient,
         })

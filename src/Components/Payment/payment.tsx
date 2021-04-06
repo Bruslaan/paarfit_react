@@ -31,9 +31,11 @@ function PaymentComponent() {
             }, function (err: any, instance: any) {
 
                 button?.addEventListener('click', function () {
-                    instance.requestPaymentMethod(async function (err: any, payload: any) {
+                    if(!instance){
+                        return
+                    }
+                    instance?.requestPaymentMethod(async function (err: any, payload: any) {
                         // Submit payload.nonce to your server
-                        console.log("Called")
                         const response = await fetch("http://localhost:5001/ruslantests/us-central1/payment/checkout", {
                             method: 'POST', // *GET, POST, PUT, DELETE, etc.
                             headers: {
@@ -57,7 +59,6 @@ function PaymentComponent() {
     return (
         <div>
             <div id="dropin-container"></div>
-            <button id="submit-button" className="button button--small button--green">Purchase</button>
         </div>
     )
 }

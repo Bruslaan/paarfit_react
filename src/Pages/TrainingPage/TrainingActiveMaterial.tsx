@@ -22,6 +22,7 @@ import {
 import 'react-circular-progressbar/dist/styles.css';
 import './index.css';
 import Timer from '../../Components/Timer/Timer';
+import SuccModal from "../../Components/SuccModal/SuccModal";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -171,6 +172,7 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
     }
 
     const uploadWorkoutTocloud = async () => {
+
         // upload
         const db = firebase.firestore().collection("users").doc(user?.uid)
         const document = await db.collection("last_workouts").doc(heutigesDatum).get()
@@ -184,6 +186,7 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
     return (
         <div className='trainingStepperMob'>
             <div className='trainingStepperSt'>
+
                 <div
                     className='detTrainingWork'
                     style={{

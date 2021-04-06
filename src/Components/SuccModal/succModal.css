@@ -1,0 +1,13 @@
+.modalBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 20px !important;
+    text-align: center;
+}
+
+.gamificationCounter{
+    font-size: 30px;
+    font-weight: bold;
+}

@@ -60,6 +60,7 @@ interface UserData {
     email: string;
     password: string;
     passwordrepeat: string;
+    name: string;
 }
 
 const Register = () => {
@@ -72,6 +73,7 @@ const Register = () => {
         email: '',
         password: '',
         passwordrepeat: '',
+        name: '',
     } as UserData);
 
     const handleChange = (event: any) => {
@@ -154,6 +156,23 @@ const Register = () => {
                         onChange={handleChange}
                     />
 
+                    <TextField
+                        className={classes.root}
+                        variant='outlined'
+                        margin='normal'
+                        required
+                        fullWidth
+                        id='name'
+                        label='Name'
+                        name='name'
+                        autoComplete='name'
+                        autoFocus
+                        value={values.name}
+                        onChange={handleChange}
+                    />
+
+                    <br/>
+                    <br/>
                     <PaymentComponent/>
                     {error !== '' && <p style={{color: 'red'}}>{error}</p>}
                     <Button
@@ -161,6 +180,7 @@ const Register = () => {
                         fullWidth
                         variant='outlined'
                         color='primary'
+                        id="submit-button"
                         className={classes.submit}
                         style={{
                             borderRadius: 15,

@@ -2,15 +2,18 @@ import React, {useContext, useEffect, useState} from "react"
 import firebase, {db, heutigesDatum, todayTimestamp} from '../../firebase';
 import VerticalLinearStepper from "./TrainingActiveMaterial"
 import {AuthContext} from "../../AuthProvider";
+import SuccModal from "../../Components/SuccModal/SuccModal";
+import {useHistory} from "react-router-dom"
 
 
 export default function TraiingActivePage() {
 
+    const history = useHistory()
     const minimalNeededWorkouts = 2
     const [currentWorkoutIndex, setCurrentWorkoutIndex] = useState(0);
     const Workouts = ["Aufwärmen", "Kraft", "Ausdauer"]
     const {user, userInformation} = useContext(AuthContext);
-
+    const [showSuccModal, setShowSuccModal] = useState(false);
 
     useEffect(() => {
         calculateWorkoutStage()
@@ -30,6 +33,11 @@ export default function TraiingActivePage() {
 
 
     const onWorkoutFinished = async () => {
+        if (currentWorkoutIndex >= Workouts.length - 1) {
+            setShowSuccModal(true)
+        }
+
+
         setCurrentWorkoutIndex(currentWorkoutIndex + 1)
         if (currentWorkoutIndex === minimalNeededWorkouts) {
 
@@ -73,5 +81,7 @@ export default function TraiingActivePage() {
                     <br/><br/>
                 </div>)
         })}
+
+        <SuccModal open={showSuccModal} onClosed={()=>history.push("/")}/>
     </div>
 }

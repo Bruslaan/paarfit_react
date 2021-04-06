@@ -1,20 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './index.css';
 import {
-  CircularProgress,
   createStyles,
   makeStyles,
-  Paper,
   Theme,
   Grid,
 } from '@material-ui/core';
-import { Typography } from '@material-ui/core';
 
 import BoxWeek from '../../Components/boxWeek';
 import BoxTrainingActivity from '../../Components/boxTrainingActivity';
 import BoxResults from '../../Components/boxResults';
 import BoxFlow from '../../Components/boxFlow';
-import { AuthContext, AuthProvider } from '../../AuthProvider/index';
+import { AuthContext } from '../../AuthProvider/index';
 import { badgeArr, lvlSystem } from '../../constants';
 
 const useStyles = makeStyles((theme: Theme) =>
