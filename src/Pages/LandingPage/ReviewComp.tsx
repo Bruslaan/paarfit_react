@@ -25,7 +25,7 @@ const ReviewComp = () => {
             />
           </svg>
         </div>
-        <p className='content'>
+        <p className='reviewCompContent'>
           Wir sind beruflich eingespannt und freuen uns, dass wir dank PaarFit
           den gemeinsamen Sport als Quality time in unseren Alltag einbinden
           können. Die Rezepte sind unaufwendig und lecker – perfekt, wenn man
