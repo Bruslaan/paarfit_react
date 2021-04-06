@@ -28,8 +28,8 @@ const PricingComp = ({ type }: any) => {
       </div>
       <hr className='pricingHR' />
       <ul className='pricingCompBody'>
-        {type.body.map((item: any) => (
-          <li>{item}</li>
+        {type.body.map((item: any, index: number) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
     </div>

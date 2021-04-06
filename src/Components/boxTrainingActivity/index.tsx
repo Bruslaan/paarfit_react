@@ -77,8 +77,7 @@ export default function BoxTrainingActivity() {
             </div>
             <div className='hereGoCol2'>
               <a href='' title='' className='textWhite'>
-                egal, ob spazieren gehen, schwim-
-                <br /> men oder Gartenarbeit
+                egal, ob spazieren gehen, schwimmen oder Gartenarbeit
               </a>
             </div>
           </div>

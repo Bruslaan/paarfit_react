@@ -67,21 +67,6 @@ const NavBar = ({ url }: any) => {
               PaarFit Philosophie
             </NavLink>
           </li>
-          {/* <li className='nav-item'>
-            <NavLink
-            exact
-                          key='/about'
-              to='/landing/magazin'
-              className='nav-links'
-              activeStyle={{
-                fontWeight: 'bold',
-                color: 'rgb(93,	98,	231)',
-              }}
-              onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
-            >
-              PaarFitMagazin
-            </NavLink>
-          </li> */}
         </ul>
         {button ? (
           <div className='navBtnComp'>

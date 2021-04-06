@@ -7,8 +7,8 @@ const Info = () => {
   return (
     <div className='info'>
       <div className='infoComps'>
-        {infoItems.map((item: any, key: number) => (
-          <InfoItem content={item} index={key} />
+        {infoItems.map((item: any, index: number) => (
+          <InfoItem content={item} key={index} />
         ))}
       </div>
       <a href='/registrieren' style={{ textDecoration: 'none' }}>
