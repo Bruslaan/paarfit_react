@@ -75,8 +75,11 @@ export default function BoxFlow({ userTE, badgeArr }: any) {
           <div className='arrowUntilCol4'>
             <img src='images/kleiner_pfeil.svg' alt='' />
           </div>
-          <div className='boxtUntilCol4_2 grayBg3'>
-            {!userTE ? badgeArr[niveau]?.badgeIcn : badgeArr[niveau]?.badgeIcn}
+          <div
+            className='boxtUntilCol4_2 grayBg3'
+            style={{ fontSize: '60px', fontWeight: 'bold', color: 'grey' }}
+          >
+            {badgeArr[niveau]?.badgeIcn}
           </div>
         </div>
         <div className='textUntilCol4'>

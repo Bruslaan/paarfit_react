@@ -13,12 +13,12 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  max-width: 350px;
+  max-width: 300px;
   margin-left: 20px;
 }
 
 .navBarLogo {
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 .navBarLogo:hover {

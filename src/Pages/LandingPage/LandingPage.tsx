@@ -20,8 +20,8 @@ const LandingPage = ({ path }: any) => {
         <NavBar />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/pricing' component={Pricing} />
-          <Route exact path='/about' component={About} />
+          <Route exact path='/pakete_&_preise' component={Pricing} />
+          <Route exact path='/paarfit_philosophie' component={About} />
           <Redirect to='/'></Redirect>
           {/* <Route exact path='/pricing' component={Magazin} /> */}
         </Switch>

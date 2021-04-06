@@ -7,14 +7,14 @@ const Intro = () => {
       <br />
       <br />
       <div className='title'>
-        <span className='landingPageSpan'>Wir</span> &nbsp;sind besser als ich
+        <span className='landingPageSpan'>Wir </span>sind besser als ich
       </div>
 
       <div className='subtitle'>
         Sieh dir an, warum sich mehr als 10.000 Paare dafür entschieden zu
         haben, mit Paarfit zu trainieren
       </div>
-      <a href='/register' style={{ textDecoration: 'none' }}>
+      <a href='/registrieren' style={{ textDecoration: 'none' }}>
         <button className='paarfit_button'>
           Kostenlos testen
           <svg

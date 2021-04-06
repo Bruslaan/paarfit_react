@@ -6,10 +6,7 @@ const Reviews = () => {
   return (
     <div className='reviews'>
       <div className='reviewsBG'>
-        <div className='reviewTitle'>
-          <div className='reviewTitleInline'>...</div>
-          UND WAS SAGEN UNSERE MITGLIEDER?
-        </div>
+        <div className='reviewTitle'>...UND WAS SAGEN UNSERE MITGLIEDER?</div>
         <p className='reviewSubtitle'>
           Echte Erfahrungen und beeindruckende Resultate
         </p>
@@ -18,7 +15,7 @@ const Reviews = () => {
           <ReviewComp />
           <ReviewComp />
         </div>
-        <a href='/register' style={{ textDecoration: 'none' }}>
+        <a href='/registrieren' style={{ textDecoration: 'none' }}>
           <button className='paarfit_button'>
             Kostenlos testen
             <svg

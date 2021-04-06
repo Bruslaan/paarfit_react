@@ -37,10 +37,25 @@ export default function BoxBadges({ userTE, badgeArr }: any) {
                 niveau >= item.nr ? '' : `noSelectBadges`
               }`}
             >
-              <div className='boxtUntilBadges blueBg2'>
-                <h2 className='textWhite'>{item.nr}</h2>
-                <p className='textWhite'>{item.title}</p>
-                {item.badgeIcn}
+              <div className='boxtUntilBadges blueBg2 '>
+                <h2
+                  className='textWhite'
+                  style={{
+                    fontSize: '65px',
+                    fontWeight: 'bold',
+                    color: 'grey',
+                  }}
+                >
+                  {item.te}
+                </h2>
+                <p
+                  className='textWhite'
+                  style={{ fontSize: '12px', fontWeight: 'bold' }}
+                >
+                  {item.nr === 1
+                    ? 'Tag PaarFit Training'
+                    : 'Tage PaarFit Training'}
+                </p>
               </div>
               <h3>{`${item.te} TE`}</h3>
             </div>

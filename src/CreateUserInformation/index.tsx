@@ -8,7 +8,7 @@ import TextField from '@material-ui/core/TextField';
 
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import { Logo } from '../Components/Logo';
+import logo from '../assets/wort_Bild_nebeneinander.svg';
 import { FormControl, InputLabel, MenuItem, Select } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,9 +25,45 @@ const useStyles = makeStyles((theme) => ({
   form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
+    '& label.Mui-focused': {
+      color: 'rgb(92,	93,	234	)',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'red',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'rgb(92,	93,	234)',
+      },
+      '&:hover fieldset': {
+        borderColor: 'rgb(148, 56, 245)',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'rgb(92,	93,	234)',
+      },
+    },
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+  },
+  root: {
+    '& label.Mui-focused': {
+      color: 'rgb(92,	93,	234	)',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'red',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'rgb(92,	93,	234)',
+      },
+      '&:hover fieldset': {
+        borderColor: 'rgb(148, 56, 245)',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'rgb(92,	93,	234)',
+      },
+    },
   },
 }));
 
@@ -77,10 +113,13 @@ const UserInformation = () => {
   return (
     <div style={{ maxWidth: '500px', margin: 'auto', padding: '10px' }}>
       <div className={classes.paper}>
-        <Logo name='PaarFit'></Logo>
+        <a href='/'>
+          <img className='PaarFit' src={logo} alt='PaarFit' width='200px' />
+        </a>
 
         <form onSubmit={handleSubmit} className={classes.form} noValidate>
           <TextField
+            className={classes.root}
             variant='outlined'
             margin='normal'
             required
@@ -97,6 +136,7 @@ const UserInformation = () => {
               Schwierigkeits Stufe
             </InputLabel>
             <Select
+              className={classes.root}
               required
               labelId='demo-simple-select-outlined-label'
               value={values.stufe}
@@ -117,6 +157,13 @@ const UserInformation = () => {
             variant='contained'
             color='primary'
             className={classes.submit}
+            style={{
+              borderRadius: 10,
+              backgroundColor: 'rgb(92,	93,	234)',
+              color: 'white',
+              borderColor: 'unset',
+              padding: '10px 20px',
+            }}
           >
             Speichern{' '}
           </Button>

@@ -28,8 +28,8 @@ let App = () => {
       <Router>
         {!authenticated ? (
           <Switch>
-            <Route exact path='/auth' component={Login} />
-            <Route exact path='/register' component={Register} />
+            <Route exact path='/einloggen' component={Login} />
+            <Route exact path='/registrieren' component={Register} />
             <Route exact path='/impressum' component={Impressum} />
             <Route exact path='/datenschutz' component={Datenschutz} />
             <Route exact path='/agb' component={AGB} />

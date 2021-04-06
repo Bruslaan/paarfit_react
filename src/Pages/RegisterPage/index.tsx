@@ -159,7 +159,7 @@ const Register = () => {
             color='primary'
             className={classes.submit}
             style={{
-              borderRadius: 15,
+              borderRadius: 10,
               backgroundColor: 'rgb(92,	93,	234)',
               color: 'white',
               borderColor: 'unset',

@@ -26,11 +26,7 @@ const PricingComp = ({ type }: any) => {
 
         <Button />
       </div>
-      <hr
-        className={
-          type.subPeriod === 'Jährlich' ? 'pricingHR' : 'pricingHR white'
-        }
-      />
+      <hr className='pricingHR' />
       <ul className='pricingCompBody'>
         {type.body.map((item: any) => (
           <li>{item}</li>

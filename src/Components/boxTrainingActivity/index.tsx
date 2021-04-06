@@ -63,7 +63,7 @@ export default function BoxTrainingActivity() {
           </div>
         </div>
         <div className='ctActivitateCol2 whiteBg'>
-          <div className='detailsActivCol2 purpleBg2'>
+          <div className='detailsActivCol2 purpleBg2 big__button'>
             <h2 className='textWhite'>aktivität</h2>
             <div className='ctAddCol2'>
               <div className='iconAddCol2'>

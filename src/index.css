@@ -493,6 +493,10 @@ body .mainContainerStyle {
   transform: rotateX(180deg);
 }
 
+a :hover {
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   .contentTopLeft {
     width: 100%;
