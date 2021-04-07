@@ -371,7 +371,7 @@ export const motQuoteArr = [
 ];
 
 export const trainingMoods = [
-  { title: 'ausgelaugt', description: 'lockeres Training' },
-  { title: 'etwas erschöpft', description: 'moderates Training' },
-  { title: 'volle Energie', description: 'wir geben heute alles' },
+  { title: 'Ausgelaugt', description: 'Lockeres Training' },
+  { title: 'Etwas erschöpft', description: 'Moderates Training' },
+  { title: 'Voller Energie', description: 'Wir geben heute alles' },
 ];

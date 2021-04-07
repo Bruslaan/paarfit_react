@@ -6,8 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SuccModal/SuccModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SuccModal/SuccModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/boxWeek/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxWeek/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AGB/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AGB/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Datenschutz/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Datenschutz/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Datenschutz/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Datenschutz/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/InfoItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/InfoItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/MagazinComp/Magazin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/MagazinComp/Magazin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/ReviewComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/ReviewComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/Reviews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Reviews.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/Video.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Video.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/Video.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Video.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/trainingsUtils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/trainingsUtils.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +112,7 @@
       <workItem from="1617023243727" duration="4038000" />
       <workItem from="1617436040273" duration="26642000" />
       <workItem from="1617632117327" duration="12510000" />
-      <workItem from="1617793655759" duration="5494000" />
+      <workItem from="1617793655759" duration="10387000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -328,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617824986280</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Aufwärmen aus pool 1 und 2">
+      <created>1617826871139</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1617826871139</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +381,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Routing added" />
     <MESSAGE value="some chagnes" />
     <MESSAGE value="Routing" />
     <MESSAGE value="Active state of icons" />
@@ -382,6 +405,7 @@
     <MESSAGE value="training ist nun wiederholbar" />
     <MESSAGE value="training ist nun wiederholbar mit realtime listener" />
     <MESSAGE value="Vorbereitungszeit mit Dave geadded" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vorbereitungszeit mit Dave geadded" />
+    <MESSAGE value="Aufwärmen aus pool 1 und 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aufwärmen aus pool 1 und 2" />
   </component>
 </project>

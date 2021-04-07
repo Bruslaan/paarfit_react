@@ -18,14 +18,6 @@ const About = () => {
       </div>
       {aboutComps.map((item: any) => (
         <div className='aboutComp'>
-          {!item.image ? (
-            ''
-          ) : (
-            <div
-              className='aboutCompImg'
-              style={{ backgroundImage: `url(${item.image})` }}
-            />
-          )}
           <div className='aboutCompBot'>
             <div className='aboutCompTitle'>{item.title}</div>
             <div className='aboutCompBody'>{item.body}</div>

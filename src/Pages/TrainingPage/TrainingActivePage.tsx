@@ -13,13 +13,13 @@ export default function TraiingActivePage() {
     const history = useHistory()
     const minimalNeededWorkouts = 2
     const [currentWorkoutIndex, setCurrentWorkoutIndex] = useState(0);
-    const Workouts = ["Aufwärmen", "Kraft", "Ausdauer"]
+    const Workouts = ["Aufwärmen", "Kraft", "Ausdauer", "Dehnen"]
     const {user, userInformation} = useContext(AuthContext);
     const [showSuccModal, setShowSuccModal] = useState(false);
 
 
     const retryTraining = () => {
-        if (userInformation.lastWorkoutDone &&moment(userInformation.lastWorkoutDone?.toDate()).isSame(moment(), "day")) {
+        if (userInformation.lastWorkoutDone && moment(userInformation.lastWorkoutDone?.toDate()).isSame(moment(), "day")) {
             return true
         }
         return false
@@ -51,13 +51,15 @@ export default function TraiingActivePage() {
 
     const onWorkoutFinished = async () => {
 
-        if (retryTraining()) {
-            setCurrentWorkoutIndex(currentWorkoutIndex + 1)
-            return
-        }
 
         if (currentWorkoutIndex >= Workouts.length - 1) {
             setShowSuccModal(true)
+        }
+
+
+        if (retryTraining()) {
+            setCurrentWorkoutIndex(currentWorkoutIndex + 1)
+            return
         }
 
 

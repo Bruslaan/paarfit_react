@@ -2,13 +2,13 @@ import React from 'react';
 import './ReviewComp.css';
 import reviewCompImg from '../../assets/profileImg.jpeg';
 
-const ReviewComp = () => {
+const ReviewComp = ({name, text}:any) => {
   return (
     <div className='reviewComp'>
-      <div
+  {/*    <div
         className='reviewCompImg'
         style={{ backgroundImage: `url(${reviewCompImg})` }}
-      />
+      />*/}
       <div className='reviewCompBot'>
         <div className='icon'>
           <svg
@@ -26,13 +26,9 @@ const ReviewComp = () => {
           </svg>
         </div>
         <p className='reviewCompContent'>
-          Wir sind beruflich eingespannt und freuen uns, dass wir dank PaarFit
-          den gemeinsamen Sport als Quality time in unseren Alltag einbinden
-          können. Die Rezepte sind unaufwendig und lecker – perfekt, wenn man
-          nicht stunden- lang in der Küche stehen und trotzdem was Gesundes
-          essen will!
+            {text}
         </p>
-        <p className='customer'>Thomas & Susann</p>
+        <p className='customer'>{name}</p>
       </div>
     </div>
   );

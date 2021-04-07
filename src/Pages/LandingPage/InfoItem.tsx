@@ -15,6 +15,7 @@ const InfoItem = ({ content }: any) => {
           alt='PaarFit'
           width='160px'
         />
+        <br/>
         <p className='infoItemSubTitle'></p>
         <p className='infoItemBody'>{content.body}</p>
       </div>

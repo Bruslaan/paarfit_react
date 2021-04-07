@@ -2,13 +2,16 @@ export const sequenceState: { [key: number]: string; } = {
     0: "Aufwärmen",
     1: "Kraft",
     2: "Ausdauer/Fettverbrennung",
-    3: "Yoga",
-    4: "Dehnen"
+    3: "Dehnen",
+    4: "Yoga",
+
 }
 
 export const ReturnLink = (stage: string, level: string) => {
 
     let workoutsLevel = `&&workoutlevels.levelname=${level}`
+
+    console.log(stage)
 
     switch (stage) {
         case "Kraft":
@@ -27,6 +30,8 @@ export const ReturnLink = (stage: string, level: string) => {
 }
 export const HandleData = (stage: string, level: string, data: Array<any>) => {
 
+
+    console.log("Das sind meine Übungen: ", data)
     switch (stage) {
         case "Kraft":
             return CreateWorkouts(data)

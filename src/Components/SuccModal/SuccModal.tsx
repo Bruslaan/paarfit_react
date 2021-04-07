@@ -25,7 +25,7 @@ export default function SuccModal({open, onClosed}: any) {
                 <br/>
                 <br/>
                 <p id="simple-modal-description" style={{maxWidth: '300px'}}>
-                    blabla
+                    Macht weiter so!
                 </p>
                 <br/>
                 <div className="gamificationCounter">+10 P</div>

@@ -50,7 +50,7 @@ export default function BoxWeek() {
         let days = []
         const currentDate = moment();
         const lastWorkoutDay = userInformation?.lastWorkoutDone
-        let nextWorkout = moment(lastWorkoutDay?.toDate()).add(2, "days")
+        let nextWorkout = moment(lastWorkoutDay?.toDate()).add(3, "days")
         const weekStart = currentDate.clone().startOf('isoWeek');
         const weekEnd = currentDate.clone().endOf('isoWeek');
 

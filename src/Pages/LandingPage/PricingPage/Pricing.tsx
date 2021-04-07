@@ -11,6 +11,11 @@ const Pricing = () => {
         Jetzt 14 Tage&nbsp;<span className='landingPageSpan'>kostenlos</span>
         &nbsp;testen!
       </div>
+        <br/>
+        <br/>
+
+
+
       <div className='pricingCompContainer'>
         {pricingPackage.map((type: any, key: any) => (
           <PricingComp type={type} key={key} />

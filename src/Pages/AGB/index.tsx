@@ -42,8 +42,7 @@ const index = () => {
           2.3. Die Vertragsbestimmungen werden von PaarFit nicht für den Nutzer
           gespeichert. Im Zuge der Registrierung sind die AGB durch den Nutzer
           zu bestätigen. Die AGB werden per E-Mail im Registrierungsprozess an
-          den Nutzer versendet und sind jederzeit unter www.PaarFit.de/AGB [LINK
-          EINFÜGEN] einsehbar.{' '}
+          den Nutzer versendet und sind jederzeit unter www.PaarFit.de/agb einsehbar.{' '}
         </p>
         <p>2.4. Der Nutzer muss volljährig und voll geschäftsfähig sein. </p>
         <p>

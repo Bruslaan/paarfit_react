@@ -100,7 +100,7 @@ ul {
   }
 
   .nav-menu.active {
-    background: rgb(92, 93, 234);
+    background: rgba(92, 93, 234,0.9);
     right: 0;
     transition: all 0.5s ease;
     z-index: 1;
