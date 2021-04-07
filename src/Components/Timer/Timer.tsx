@@ -12,7 +12,7 @@ const Timer = ({
                }: any) => {
     const createSequenceArray = () => {
         let seqArray = ["Vorbereitung"];
-        let partnerArray = ["Macht euch bereit"]
+        let partnerArray = ["Macht euch bereit!"]
 
         for (let i = 0; i < sets; i++) {
             if (alternate) {

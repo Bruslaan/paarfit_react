@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/firebase-debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/firestore-debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/functions/firestore-debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthProvider/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthProvider/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LoginPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LoginPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/trainingsUtils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/trainingsUtils.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +95,7 @@
       <workItem from="1617023243727" duration="4038000" />
       <workItem from="1617436040273" duration="26642000" />
       <workItem from="1617632117327" duration="12510000" />
-      <workItem from="1617793655759" duration="3754000" />
+      <workItem from="1617793655759" duration="5494000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -332,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617792116367</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Vorbereitungszeit mit Dave geadded">
+      <created>1617824986280</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1617824986280</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +357,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactored BA" />
     <MESSAGE value="Routing added" />
     <MESSAGE value="some chagnes" />
     <MESSAGE value="Routing" />
@@ -386,6 +381,7 @@
     <MESSAGE value="some shit here" />
     <MESSAGE value="training ist nun wiederholbar" />
     <MESSAGE value="training ist nun wiederholbar mit realtime listener" />
-    <option name="LAST_COMMIT_MESSAGE" value="training ist nun wiederholbar mit realtime listener" />
+    <MESSAGE value="Vorbereitungszeit mit Dave geadded" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vorbereitungszeit mit Dave geadded" />
   </component>
 </project>

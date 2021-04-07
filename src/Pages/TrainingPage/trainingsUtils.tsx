@@ -1,4 +1,3 @@
-
 export const sequenceState: { [key: number]: string; } = {
     0: "Aufwärmen",
     1: "Kraft",
@@ -19,7 +18,7 @@ export const ReturnLink = (stage: string, level: string) => {
         case "Yoga":
             return `https://paarfit-strapi.herokuapp.com/workouts?workoutcategories.categoryname=${stage}`
         case "Aufwärmen":
-            return `https://paarfit-strapi.herokuapp.com/workouts?workoutbodyparts.bodypart=Aufw%C3%A4rmen%20Anf%C3%A4nger%20Pool%20` + 1
+            return `https://paarfit-strapi.herokuapp.com/workouts?workoutcategories.categoryname=${stage}`
         case "Dehnen":
             return `https://paarfit-strapi.herokuapp.com/workouts?workoutbodyparts.bodypart=Dehnpool%20Anf%C3%A4nger/Fortgeschrittene/Profis`
         default:
@@ -28,21 +27,46 @@ export const ReturnLink = (stage: string, level: string) => {
 }
 export const HandleData = (stage: string, level: string, data: Array<any>) => {
 
-
     switch (stage) {
         case "Kraft":
             return CreateWorkouts(data)
         case "Ausdauer/Fettverbrennung":
-            return data
+            return getRandom(data, 2)
         case "Yoga":
             return getRandom(data, 1)
         case "Aufwärmen":
-            return getRandom(data, 2)
+            return GetAufwärmVideos(data, level)
         case "Dehnen":
             return getRandom(data, 2)
         default:
             break;
     }
+
+}
+
+const GetAufwärmVideos = (object: Array<any>, level: string) => {
+
+    let workoutsAusPool1;
+    let workoutsAusPool2;
+
+    console.log(object, "das sind die Workouts")
+
+    switch (level) {
+        case "Anfänger":
+            workoutsAusPool1 = object.filter(workout => workout.workoutbodyparts[0]?.bodypart === "Aufwärmen Anfänger Pool 1")
+            workoutsAusPool2 = object.filter(workout => workout.workoutbodyparts[0]?.bodypart === "Aufwärmen Anfänger Pool 2")
+            break
+        case "Fortgeschrittene":
+            workoutsAusPool1 = object.filter(workout => workout.workoutbodyparts[0]?.bodypart === "Aufwärmen Fortgeschrittene Pool 1")
+            workoutsAusPool2 = object.filter(workout => workout.workoutbodyparts[0]?.bodypart === "Aufwärmen Fortgeschrittene Pool 2")
+            break
+        case "Profis":
+            workoutsAusPool1 = object.filter(workout => workout.workoutbodyparts[0]?.bodypart === "Aufwärmen Profis Pool 1")
+            workoutsAusPool2 = object.filter(workout => workout.workoutbodyparts[0]?.bodypart === "Aufwärmen Profis Pool 2")
+            break
+    }
+
+    return [...getRandom(workoutsAusPool1, 2), ...getRandom(workoutsAusPool2, 1)]
 
 }
 
@@ -81,7 +105,6 @@ export function getRandom(arr: any, n: number) {
     }
     return result;
 }
-
 
 
 export const getPoints = (stage: string) => {
