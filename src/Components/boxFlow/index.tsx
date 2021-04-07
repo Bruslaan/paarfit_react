@@ -63,20 +63,25 @@ export default function BoxFlow({ userTE, badgeArr }: any) {
           />
         </div>
         <div className='detUntilCol4'>
-          <div className='boxtUntilCol4 yellowBg'>
-            <h2 className='white'>
-              {!userTE ? '0' : badgeArr[niveau - 1]?.nr}
-            </h2>
-            <p className='gray4'>
-              {!userTE ? '' : badgeArr[niveau - 1]?.title}
-            </p>
-            {!userTE ? '' : badgeArr[niveau - 1]?.badgeIcn}
+          <div
+            className='boxtUntilCol4 yellowBg textWhite'
+            style={{ fontSize: '50px', fontWeight: 'bold', padding: '5px' }}
+          >
+            {!userTE ? '0' : badgeArr[niveau - 1]?.te}
           </div>
           <div className='arrowUntilCol4'>
             <img src='images/kleiner_pfeil.svg' alt='' />
           </div>
-          <div className='boxtUntilCol4_2 grayBg3'>
-            {!userTE ? badgeArr[niveau]?.badgeIcn : badgeArr[niveau]?.badgeIcn}
+          <div
+            className='boxtUntilCol4_2 grayBg3'
+            style={{
+              fontSize: '50px',
+              fontWeight: 'bold',
+              color: 'grey',
+              padding: '5px',
+            }}
+          >
+            {badgeArr[niveau]?.te}
           </div>
         </div>
         <div className='textUntilCol4'>

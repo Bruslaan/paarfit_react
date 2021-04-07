@@ -63,7 +63,7 @@ export default function BoxTrainingActivity() {
           </div>
         </div>
         <div className='ctActivitateCol2 whiteBg'>
-          <div className='detailsActivCol2 purpleBg2'>
+          <div className='detailsActivCol2 purpleBg2 big__button'>
             <h2 className='textWhite'>aktivität</h2>
             <div className='ctAddCol2'>
               <div className='iconAddCol2'>
@@ -77,8 +77,7 @@ export default function BoxTrainingActivity() {
             </div>
             <div className='hereGoCol2'>
               <a href='' title='' className='textWhite'>
-                egal, ob spazieren gehen, schwim-
-                <br /> men oder Gartenarbeit
+                egal, ob spazieren gehen, schwimmen oder Gartenarbeit
               </a>
             </div>
           </div>

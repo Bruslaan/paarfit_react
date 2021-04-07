@@ -26,14 +26,10 @@ const PricingComp = ({ type }: any) => {
 
         <Button />
       </div>
-      <hr
-        className={
-          type.subPeriod === 'Jährlich' ? 'pricingHR' : 'pricingHR white'
-        }
-      />
+      <hr className='pricingHR' />
       <ul className='pricingCompBody'>
-        {type.body.map((item: any) => (
-          <li>{item}</li>
+        {type.body.map((item: any, index: number) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
     </div>

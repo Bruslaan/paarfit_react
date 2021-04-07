@@ -18,10 +18,14 @@
   font-size: large;
   color: white;
   border: none;
-  background-color: rgb(148, 56, 245);
+  background-color: rgb(92, 93, 234);
   border-radius: 10px;
   outline: none;
   transform: translate(0%, -50%);
+}
+
+.playIcn:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 960px) {

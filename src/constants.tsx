@@ -6,6 +6,10 @@ import { Route } from './Components/Menu';
 import React from 'react';
 import { Badge } from '@material-ui/core';
 
+import img1 from './assets/MilestoneIcons/Milestone_1_neu_het.svg';
+import img2 from './assets/MilestoneIcons/Milestone_2_neu.svg';
+import img3 from './assets/MilestoneIcons/Milestone_3_neu.svg';
+
 export const navLinks: Route[] = [
   {
     id: 1,
@@ -142,12 +146,42 @@ export const navLinksSidebarBottom: Route[] = [
   },
 ];
 
+export const infoItems = [
+  {
+    title_1: 'ABWECHSLUNGSREICH',
+    title_2: 'MOTIVIEREND',
+    img: img1,
+    subTitle: 'Power-Couple',
+    body:
+      'Unterstützt euch gegenseitig und erreicht eure Ziele mit abwechslungsreichen Partnerübungen für maximalen Trainingsspaß.',
+  },
+
+  {
+    title_1: 'INDIVIDUELL',
+    title_2: 'ALLTAGSTAUGLICH',
+    img: img2,
+    subTitle: 'Power-Couple',
+    body:
+      'Passt das Trainingskonzept euren Bedürfnissen an: Ihr bestimmt, wie intensiv das Training ist – jederzeit und überall, ohne Geräte.',
+  },
+
+  {
+    title_1: 'Ganzheitlich',
+    title_2: 'Effizient',
+    img: img3,
+    subTitle: 'Power-Couple',
+    body:
+      'Gestaltet eure gemeinsame Zeit und steigert dabei gleichzeitig euer Wohlbefinden für mehr Leistung und Vitalität im Alltag.',
+  },
+];
+
 type Levels = {
   id: number;
   title: string;
   points: number;
   cssStyle: string;
   description: string;
+  subdescription: string;
 };
 
 export const lvlSystem: Array<Levels> = [
@@ -157,7 +191,8 @@ export const lvlSystem: Array<Levels> = [
     points: 250,
 
     cssStyle: 'ctStartCouple',
-    description: 'Das Geheimnis des Erfolgs ist anzufangen. (Mark Twain) ',
+    description: 'Das Geheimnis des Erfolgs ist anzufangen. (Mark Twain)',
+    subdescription: 'Bleibt dran!',
   },
   {
     id: 2,
@@ -165,6 +200,7 @@ export const lvlSystem: Array<Levels> = [
     points: 500,
     cssStyle: 'ctPowerCouple',
     description: 'Der Anfang ist die Hälfte des Ganzen (Aristoteles)',
+    subdescription: '- ihr habt einen grandiosen Start hingelegt!',
   },
   {
     id: 3,
@@ -172,6 +208,7 @@ export const lvlSystem: Array<Levels> = [
     points: 1000,
     cssStyle: 'ctFitnessCouple',
     description: 'Das W in gewinnen steht für Wir.',
+    subdescription: 'Wir sind besser als ich – Weiter so!',
   },
   {
     id: 4,
@@ -179,6 +216,7 @@ export const lvlSystem: Array<Levels> = [
     points: 2000,
     cssStyle: 'ctAdvancedCouple',
     description: 'In einem gesunden Körper wohnt ein gesunder Geist. (Juvenal)',
+    subdescription: 'Eure Reise ist beeindruckend!',
   },
   {
     id: 5,
@@ -187,81 +225,70 @@ export const lvlSystem: Array<Levels> = [
     cssStyle: 'ctSuperCouple',
     description:
       'Die Belohnung erfolgreichen Tuns ist, es vollbracht zu haben. (R. W. Emerson)',
+    subdescription: 'Ihr seid ein unschlagbares Team!',
   },
 ];
 
 export const badgeArr = [
   {
     nr: 1,
-    title: 'drop',
     te: 1,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe641;</div>,
+    badgeIcn: '1',
   },
   {
     nr: 2,
-    title: 'rocket',
     te: 2,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe837;</div>,
+    badgeIcn: '3',
   },
   {
     nr: 3,
-    title: 'on fire',
     te: 3,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe638;</div>,
+    badgeIcn: '9',
   },
   {
     nr: 4,
-    title: 'gifted',
     te: 5,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe7ff;</div>,
+    badgeIcn: '15',
   },
   {
     nr: 5,
-    title: 'star',
-    te: 10,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe68d;</div>,
+    te: 7,
+    badgeIcn: '21',
   },
   {
     nr: 6,
-    title: 'loud',
-    te: 15,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe8ae;</div>,
+    te: 10,
+    badgeIcn: '30',
   },
   {
     nr: 7,
-    title: 'moon',
-    te: 20,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe649;</div>,
+    te: 15,
+    badgeIcn: '45',
   },
   {
     nr: 8,
-    title: 'pac-man',
-    te: 25,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe684;</div>,
+    te: 20,
+    badgeIcn: '60',
   },
   {
     nr: 9,
-    title: 'weights',
-    te: 50,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe861;</div>,
+    te: 25,
+    badgeIcn: '75',
   },
   {
     nr: 10,
-    title: 'circle',
-    te: 75,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe8d2;</div>,
+    te: 50,
+    badgeIcn: '150',
   },
   {
     nr: 11,
-    title: 'rain',
-    te: 100,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe641;</div>,
+    te: 75,
+    badgeIcn: '225',
   },
   {
     nr: 12,
-    title: 'diamond',
-    te: 250,
-    badgeIcn: <div className='iconBadges textWhite'>&#xe807;</div>,
+    te: 100,
+    badgeIcn: '300',
   },
 ];
 

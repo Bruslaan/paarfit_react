@@ -40,7 +40,7 @@ const NavBar = ({ url }: any) => {
             <NavLink
               exact
               key='/pricing'
-              to='/pricing'
+              to='/pakete_&_preise'
               className='nav-links'
               activeStyle={{
                 fontWeight: 'bold',
@@ -56,7 +56,7 @@ const NavBar = ({ url }: any) => {
             <NavLink
               exact
               key='/about'
-              to='/about'
+              to='/paarfit_philosophie'
               className='nav-links'
               activeStyle={{
                 fontWeight: 'bold',
@@ -67,28 +67,13 @@ const NavBar = ({ url }: any) => {
               PaarFit Philosophie
             </NavLink>
           </li>
-          {/* <li className='nav-item'>
-            <NavLink
-            exact
-                          key='/about'
-              to='/landing/magazin'
-              className='nav-links'
-              activeStyle={{
-                fontWeight: 'bold',
-                color: 'rgb(93,	98,	231)',
-              }}
-              onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
-            >
-              PaarFitMagazin
-            </NavLink>
-          </li> */}
         </ul>
         {button ? (
           <div className='navBtnComp'>
-            <a href='/auth' className='navLogin'>
+            <a href='/einloggen' className='navLogin'>
               Login
             </a>
-            <a href='/register' style={{ textDecoration: 'none' }}>
+            <a href='/registrieren' style={{ textDecoration: 'none' }}>
               <button className='paarfit_button'>
                 Kostenlos testen
                 <svg

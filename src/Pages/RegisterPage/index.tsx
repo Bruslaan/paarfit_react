@@ -113,103 +113,83 @@ const Register = () => {
                     <img className='PaarFit' src={logo} alt='PaarFit' width='200px'/>
                 </a>
 
-                <form onSubmit={handleSubmit} className={classes.form} noValidate>
-                    <TextField
-                        className={classes.root}
-                        variant='outlined'
-                        margin='normal'
-                        required
-                        fullWidth
-                        id='email'
-                        label='Email Address'
-                        name='email'
-                        autoComplete='email'
-                        autoFocus
-                        value={values.email}
-                        onChange={handleChange}
-                    />
-                    <TextField
-                        className={classes.root}
-                        variant='outlined'
-                        margin='normal'
-                        required
-                        fullWidth
-                        name='password'
-                        label='Password'
-                        type='password'
-                        id='password'
-                        autoComplete='current-password'
-                        value={values.password}
-                        onChange={handleChange}
-                    />
-                    <TextField
-                        className={classes.root}
-                        variant='outlined'
-                        margin='normal'
-                        required
-                        fullWidth
-                        name='passwordrepeat'
-                        label='Repeat Password'
-                        type='password'
-                        id='password2'
-                        value={values.passwordrepeat}
-                        onChange={handleChange}
-                    />
-
-                    <TextField
-                        className={classes.root}
-                        variant='outlined'
-                        margin='normal'
-                        required
-                        fullWidth
-                        id='name'
-                        label='Name'
-                        name='name'
-                        autoComplete='name'
-                        autoFocus
-                        value={values.name}
-                        onChange={handleChange}
-                    />
-
-                    <br/>
-                    <br/>
-                    <PaymentComponent/>
-                    {error !== '' && <p style={{color: 'red'}}>{error}</p>}
-                    <Button
-                        type='submit'
-                        fullWidth
-                        variant='outlined'
-                        color='primary'
-                        id="submit-button"
-                        className={classes.submit}
-                        style={{
-                            borderRadius: 15,
-                            backgroundColor: 'rgb(92,	93,	234)',
-                            color: 'white',
-                            borderColor: 'unset',
-                            padding: '10px 20px',
-                        }}
-                    >
-                        Register
-                    </Button>
-                    <Grid container>
-                        <Grid item>
-                            <Link
-                                href='/auth'
-                                variant='body2'
-                                style={{color: 'rgb(148,	56,	245	)'}}
-                            >
-                                {'Have an account? Sign In'}
-                            </Link>
-                        </Grid>
-                    </Grid>
-                </form>
-            </div>
-            <Box mt={8}>
-                <Copyright/>
-            </Box>
-        </div>
-    );
+        <form onSubmit={handleSubmit} className={classes.form} noValidate>
+          <TextField
+            className={classes.root}
+            variant='outlined'
+            margin='normal'
+            required
+            fullWidth
+            id='email'
+            label='Email Address'
+            name='email'
+            autoComplete='email'
+            autoFocus
+            value={values.email}
+            onChange={handleChange}
+          />
+          <TextField
+            className={classes.root}
+            variant='outlined'
+            margin='normal'
+            required
+            fullWidth
+            name='password'
+            label='Password'
+            type='password'
+            id='password'
+            autoComplete='current-password'
+            value={values.password}
+            onChange={handleChange}
+          />
+          <TextField
+            className={classes.root}
+            variant='outlined'
+            margin='normal'
+            required
+            fullWidth
+            name='passwordrepeat'
+            label='Repeat Password'
+            type='password'
+            id='password2'
+            value={values.passwordrepeat}
+            onChange={handleChange}
+          />
+          {error !== '' && <p style={{ color: 'red' }}>{error}</p>}
+          <Button
+            type='submit'
+            fullWidth
+            variant='outlined'
+            color='primary'
+            className={classes.submit}
+            style={{
+              borderRadius: 10,
+              backgroundColor: 'rgb(92,	93,	234)',
+              color: 'white',
+              borderColor: 'unset',
+              padding: '10px 20px',
+            }}
+          >
+            Register
+          </Button>
+          <Grid container>
+            <Grid item>
+              <Link
+                href='/auth'
+                variant='body2'
+                style={{ color: 'rgb(148,	56,	245	)' }}
+              >
+                {'Have an account? Sign In'}
+              </Link>
+            </Grid>
+          </Grid>
+        </form>
+      </div>
+      <Box mt={8}>
+        <Copyright />
+      </Box>
+    </div>
+  );
 };
 
 function Copyright() {

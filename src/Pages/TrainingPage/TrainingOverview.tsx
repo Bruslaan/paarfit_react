@@ -11,7 +11,7 @@ const TrainingOverview = () => {
 
   return (
     <div className='trainingOverview'>
-      <h1>Wie möchtest du heute trainieren?</h1>
+      <h1>Wie fühlt ihr euch heute?</h1>
       <div className='OverviewCardContainter'>
         {trainingMoods.map((mood: any, index: number) => (
           <div

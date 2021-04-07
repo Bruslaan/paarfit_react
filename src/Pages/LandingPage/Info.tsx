@@ -1,21 +1,17 @@
 import React from 'react';
 import './Info.css';
 import InfoItem from './InfoItem';
-import {
-  infoItemContent1,
-  infoItemContent2,
-  infoItemContent3,
-} from '../../assets/Data';
+import { infoItems } from '../../constants';
 
 const Info = () => {
   return (
     <div className='info'>
       <div className='infoComps'>
-        <InfoItem content={infoItemContent1} />
-        <InfoItem content={infoItemContent2} />
-        <InfoItem content={infoItemContent3} />
+        {infoItems.map((item: any, index: number) => (
+          <InfoItem content={item} key={index} />
+        ))}
       </div>
-      <a href='/register' style={{ textDecoration: 'none' }}>
+      <a href='/registrieren' style={{ textDecoration: 'none' }}>
         <button className='paarfit_button'>
           Kostenlos testen
           <svg

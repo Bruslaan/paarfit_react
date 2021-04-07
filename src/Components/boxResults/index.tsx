@@ -61,7 +61,7 @@ export default function BoxResults({ userInfo, userPoints, lvlSystem }: any) {
               ? '0'
               : userPoints <= maxPointsNeeded
               ? lvlSystem?.[niveau]?.points - getRestPoints(lvlSystem[niveau])
-              : lvlSystem[niveau].points}
+              : lvlSystem[niveau].points}{' '}
             P.
           </span>
           <br /> bis zum
@@ -104,6 +104,7 @@ export default function BoxResults({ userInfo, userPoints, lvlSystem }: any) {
       <div className='textUntilCol3'>
         <h3 className='purple1'>{lvlSystem[niveau]?.title}</h3>
         <p className='gray1'>{lvlSystem[niveau]?.description}</p>
+        <p className='gray1'>{lvlSystem[niveau]?.subdescription}</p>
       </div>
     </div>
   );

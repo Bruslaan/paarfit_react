@@ -6,7 +6,6 @@
   font-size: 20px;
   color: rgb(65, 64, 66);
   padding: 15px;
-  margin: 15px;
   max-width: 400px;
 
   border-bottom-left-radius: 15px;
@@ -46,11 +45,11 @@
 .pricingCompTitle {
   color: rgb(65, 64, 66);
   font-size: 20px;
-  padding: 10px;
+  padding: 5px;
 }
 
 .price {
-  font-size: 60px;
+  font-size: 50px;
   margin: 15px;
 }
 
@@ -60,16 +59,17 @@
   color: rgba(65, 64, 66, 0.75);
 }
 .pricingCompBody {
-  margin: 30px;
+  margin: 0px 30px;
   text-align: left;
   list-style-type: disc;
   line-height: 40px;
 }
 
 .pricingHR {
-  border-top: 1px solid rgb(233, 239, 242);
+  border-top: 1px solid rgba(65, 64, 66, 0.75);
   border-radius: 0px;
   width: 100%;
+  margin: 20px 0px;
 }
 
 .white {
