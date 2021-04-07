@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import {
   createStyles,
@@ -22,11 +22,18 @@ const BoxTrainingActivityStyles = makeStyles((theme: Theme) =>
 
 export default function BoxTrainingActivity() {
   const history = useHistory();
+  const [rng, setRng] = useState(Number);
   const startWorkout = () => {
     history.push('/training/overview');
   };
 
   const classes = BoxTrainingActivityStyles();
+
+  // const schedule = require('node-schedule');
+  // const rngTimer = schedule.scheduleJob('* 10 * * * *', function () {
+  //   setRng(Math.floor(Math.random() * motQuoteArr.length));
+  // });
+
   return (
     <Paper className={classes.paper}>
       <div className='areaHomeCol2'>
