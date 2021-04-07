@@ -66,6 +66,9 @@
   text-decoration: none;
   font-family: 'brandon-grotesque';
   font-size: large;
+  border-radius: 15px;
+  height: max-content;
+  width: 300px;
 }
 
 ul {
@@ -105,10 +108,10 @@ ul {
 
   .nav-links {
     text-align: center;
-
-    width: 100%;
+    background: #e9eff2;
+    color: rgb(92, 93, 234);
+    width: 300px;
     text-decoration: none;
-    color: white;
     font-family: 'brandon-grotesque';
     font-size: x-large;
     border-radius: 15px;

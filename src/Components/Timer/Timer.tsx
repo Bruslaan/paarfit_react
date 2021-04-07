@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
+import { isConstructorDeclaration } from 'typescript';
 
 const Timer = ({
   sets,
@@ -52,6 +53,7 @@ const Timer = ({
       if (sequenceEndReached && timer === 0) {
         clearTimeout(timoutTimer);
         onEndReached();
+        console.log('Start break sound effects');
         return;
       }
       if (timer === 0 && !sequenceEndReached) {

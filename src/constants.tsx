@@ -6,9 +6,9 @@ import { Route } from './Components/Menu';
 import React from 'react';
 import { Badge } from '@material-ui/core';
 
-import img1 from './assets/MilestoneIcons/Milestone_1_neu_het.svg';
-import img2 from './assets/MilestoneIcons/Milestone_2_neu.svg';
-import img3 from './assets/MilestoneIcons/Milestone_3_neu.svg';
+import img1 from './assets/MilestoneIcons/Durchstarter.svg';
+import img2 from './assets/MilestoneIcons/Gewinnerteam_grls.svg';
+import img3 from './assets/MilestoneIcons/Spitzensportler_bys.svg';
 
 export const navLinks: Route[] = [
   {
@@ -190,7 +190,7 @@ export const lvlSystem: Array<Levels> = [
     title: 'Durchstarter',
     points: 250,
 
-    cssStyle: 'ctStartCouple',
+    cssStyle: 'ctDurchstarter',
     description: 'Das Geheimnis des Erfolgs ist anzufangen. (Mark Twain)',
     subdescription: 'Bleibt dran!',
   },
@@ -198,7 +198,7 @@ export const lvlSystem: Array<Levels> = [
     id: 2,
     title: 'Sportkanonen',
     points: 500,
-    cssStyle: 'ctPowerCouple',
+    cssStyle: 'ctSportkanonen',
     description: 'Der Anfang ist die Hälfte des Ganzen (Aristoteles)',
     subdescription: '- ihr habt einen grandiosen Start hingelegt!',
   },
@@ -206,7 +206,7 @@ export const lvlSystem: Array<Levels> = [
     id: 3,
     title: 'Gewinnerteam',
     points: 1000,
-    cssStyle: 'ctFitnessCouple',
+    cssStyle: 'ctGewinnerteam',
     description: 'Das W in gewinnen steht für Wir.',
     subdescription: 'Wir sind besser als ich – Weiter so!',
   },
@@ -214,7 +214,7 @@ export const lvlSystem: Array<Levels> = [
     id: 4,
     title: 'Überflieger',
     points: 2000,
-    cssStyle: 'ctAdvancedCouple',
+    cssStyle: 'ctÜberflieger',
     description: 'In einem gesunden Körper wohnt ein gesunder Geist. (Juvenal)',
     subdescription: 'Eure Reise ist beeindruckend!',
   },
@@ -222,7 +222,7 @@ export const lvlSystem: Array<Levels> = [
     id: 5,
     title: 'Spitzensportler',
     points: 5000,
-    cssStyle: 'ctSuperCouple',
+    cssStyle: 'ctSpitzensportler',
     description:
       'Die Belohnung erfolgreichen Tuns ist, es vollbracht zu haben. (R. W. Emerson)',
     subdescription: 'Ihr seid ein unschlagbares Team!',
