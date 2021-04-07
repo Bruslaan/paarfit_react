@@ -37,7 +37,7 @@ export const HandleData = (stage: string, level: string, data: Array<any>) => {
         case "Yoga":
             return getRandom(data, 1)
         case "Aufwärmen":
-            return data
+            return getRandom(data, 2)
         case "Dehnen":
             return getRandom(data, 2)
         default:

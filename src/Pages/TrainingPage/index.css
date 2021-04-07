@@ -181,8 +181,8 @@
 }
 .boxTimeTraining{
     width:100%;
-    max-width:300px;
-    margin-left:40px;
+    max-width:400px;
+    margin-left:20px;
     background:#fff;
     border-radius:25px;
     padding:25px;
@@ -236,7 +236,6 @@
 }
 .boxSetProgressbar{
     display:table-cell;
-    width:33.3%;
     text-align:center;
 }
 

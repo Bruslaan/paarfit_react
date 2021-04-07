@@ -158,16 +158,20 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
     }
 
     const parseWorkoutInformation = (workout: any, kraft: boolean) => {
+
+
+        const proPerson = workout?.sets?.includes("pro")
+
         const parseSets = workout?.sets?.split("-").map((element: any) => parseInt(element))
         const parseReps = workout?.reps?.split("-").map((element: any) => parseInt(element))
         const pausePause = workout?.pause?.split("-").map((element: any) => parseInt(element))
         let newWorkout = {...workout}
 
         const pause = moodBased(currentMood, pausePause)
-        newWorkout.set = isNaN(pause) ? moodBased(currentMood, parseSets) * 2 : moodBased(currentMood, parseSets)
+        newWorkout.set = proPerson ? moodBased(currentMood, parseSets) * 2 : moodBased(currentMood, parseSets)
         newWorkout.rep = kraft ? moodBased(currentMood, parseReps) * 3 : moodBased(currentMood, parseReps)
-        newWorkout.pause = isNaN(pause) ? 5 : pause
-        newWorkout.alternate = isNaN(pause)
+        newWorkout.pause = proPerson ? 10 : pause
+        newWorkout.alternate = proPerson
         return newWorkout
     }
 

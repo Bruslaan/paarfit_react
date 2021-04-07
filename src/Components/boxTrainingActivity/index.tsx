@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import './index.css';
 import {
     createStyles,
@@ -23,11 +23,20 @@ const BoxTrainingActivityStyles = makeStyles((theme: Theme) =>
 );
 
 export default function BoxTrainingActivity() {
-  const history = useHistory();
-  const [rng, setRng] = useState(Number);
-  const startWorkout = () => {
-    history.push('/training/overview');
-  };
+
+    const startWorkout = () => {
+        history.push('/training/overview');
+    };
+    const history = useHistory();
+
+    const {userInformation} = useContext(AuthContext);
+    const retryTraining = () => {
+
+        if (userInformation.lastWorkoutDone && moment(userInformation.lastWorkoutDone?.toDate()).isSame(moment(), "day")) {
+            return true
+        }
+        return false
+    }
 
   const classes = BoxTrainingActivityStyles();
 
@@ -60,7 +69,7 @@ export default function BoxTrainingActivity() {
                   <img src='images/iconArrow.png' alt='' />
                 </div>
                 <a title='' className='textWhite'>
-                  jetzt starten
+                    {retryTraining() ? "jetzt wiederholen" : "jetzt starten"}
                 </a>
               </div>
             </div>

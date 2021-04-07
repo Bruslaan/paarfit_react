@@ -168,7 +168,7 @@ const Login = () => {
             </Grid>
             <Grid item>
               <Link
-                href='/register'
+                href='/registrieren'
                 variant='body2'
                 style={{ color: 'rgb(148,	56,	245	)' }}
               >

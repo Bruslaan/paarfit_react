@@ -295,7 +295,7 @@ export const badgeArr = [
 export const pricingPackage = [
   {
     subPeriod: 'Jahres-Sparabo',
-    price: '135 € / Monat',
+    price: '135 € / Jahr',
     priceSubTitle: '2,60€/ pro Woche',
     advice: 'Bestes Preis-Leistungs-Verhältnis',
     testTitle: '14 Tage kostenlos testen',

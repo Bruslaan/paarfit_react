@@ -25,6 +25,7 @@ export const AuthProvider = ({children}: any) => {
     const [userInformation, setuserInformation]: any | null = useState(null);
     useEffect(() => {
         let unsubscribe:any
+        fetch(`https://paarfit-strapi.herokuapp.com/workouts?workoutbodyparts.bodypart=Ausdauer%20Pool%20Anf%C3%A4nger`)
         firebase.auth().onAuthStateChanged((user: any) => {
             setUser(user);
             setLoadingAuthState(true);
