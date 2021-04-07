@@ -43,8 +43,8 @@ const NavBar = ({ url }: any) => {
               to='/pakete_&_preise'
               className='nav-links'
               activeStyle={{
-                fontWeight: 'bold',
                 color: 'rgb(93,	98,	231)',
+                opacity: '0.5',
               }}
 
               // onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
@@ -59,8 +59,8 @@ const NavBar = ({ url }: any) => {
               to='/paarfit_philosophie'
               className='nav-links'
               activeStyle={{
-                fontWeight: 'bold',
                 color: 'rgb(93,	98,	231)',
+                opacity: '0.5',
               }}
               // onClick={window.innerWidth <= 960 ? closeMobileMenu : doNothing}
             >

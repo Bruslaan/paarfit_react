@@ -7,8 +7,8 @@ import React from 'react';
 import { Badge } from '@material-ui/core';
 
 import img1 from './assets/MilestoneIcons/Durchstarter.svg';
-import img2 from './assets/MilestoneIcons/Sportkanonen.svg';
-import img3 from './assets/MilestoneIcons/Gewinnerteam.svg';
+import img2 from './assets/MilestoneIcons/Gewinnerteam_grls.svg';
+import img3 from './assets/MilestoneIcons/Spitzensportler_bys.svg';
 
 export const navLinks: Route[] = [
   {

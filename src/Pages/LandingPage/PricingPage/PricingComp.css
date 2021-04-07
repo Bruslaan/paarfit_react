@@ -7,6 +7,7 @@
   color: rgb(65, 64, 66);
   padding: 15px;
   max-width: 400px;
+  margin-bottom: 50px;
 
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -83,4 +84,10 @@
 
 .btncontainer {
   margin: 0px auto;
+}
+
+@media screen and (max-width: 960px) {
+  .pricingComp {
+    margin-bottom: 50px;
+  }
 }
