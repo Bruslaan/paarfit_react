@@ -41,7 +41,7 @@ export default function Dashboard() {
           <Grid item xs={12} sm={12} lg={8}>
             <Grid container direction='row-reverse' spacing={3}>
               <Grid item xs={12} sm={12} lg={6}>
-                <BoxTrainingActivity></BoxTrainingActivity>
+                <BoxTrainingActivity ></BoxTrainingActivity>
               </Grid>
               <Grid item xs={12} sm={12} lg={6}>
                 <BoxWeek></BoxWeek>

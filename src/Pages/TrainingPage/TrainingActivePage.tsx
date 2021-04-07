@@ -4,9 +4,11 @@ import VerticalLinearStepper from "./TrainingActiveMaterial"
 import {AuthContext} from "../../AuthProvider";
 import SuccModal from "../../Components/SuccModal/SuccModal";
 import {useHistory} from "react-router-dom"
+import moment from "moment";
 
 
 export default function TraiingActivePage() {
+
 
     const history = useHistory()
     const minimalNeededWorkouts = 2
@@ -15,12 +17,27 @@ export default function TraiingActivePage() {
     const {user, userInformation} = useContext(AuthContext);
     const [showSuccModal, setShowSuccModal] = useState(false);
 
+
+    const retryTraining = () => {
+        if (moment(userInformation.lastWorkoutDone?.toDate()).isSame(moment(), "day")) {
+            return true
+        }
+        return false
+    }
+
+
     useEffect(() => {
         calculateWorkoutStage()
     }, []);
 
 
     const calculateWorkoutStage = async () => {
+
+        if (retryTraining()) {
+            setCurrentWorkoutIndex(0)
+            return
+        }
+
         const document = await db.collection("users").doc(user?.uid).collection("last_workouts").doc(heutigesDatum).get()
         if (!document.exists) {
             setCurrentWorkoutIndex(0)
@@ -33,6 +50,12 @@ export default function TraiingActivePage() {
 
 
     const onWorkoutFinished = async () => {
+
+        if (retryTraining()) {
+            setCurrentWorkoutIndex(currentWorkoutIndex + 1)
+            return
+        }
+
         if (currentWorkoutIndex >= Workouts.length - 1) {
             setShowSuccModal(true)
         }
@@ -82,6 +105,6 @@ export default function TraiingActivePage() {
                 </div>)
         })}
 
-        <SuccModal open={showSuccModal} onClosed={()=>history.push("/")}/>
+        <SuccModal open={showSuccModal} onClosed={() => history.push("/")}/>
     </div>
 }
