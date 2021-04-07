@@ -7,8 +7,8 @@
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AuthProvider/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthProvider/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/DashboardPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/DashboardPage/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +96,7 @@
       <workItem from="1616522363951" duration="3519000" />
       <workItem from="1617023243727" duration="4038000" />
       <workItem from="1617436040273" duration="26642000" />
-      <workItem from="1617632117327" duration="10074000" />
+      <workItem from="1617632117327" duration="10998000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -308,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617708160326</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="training ist nun wiederholbar">
+      <created>1617791157466</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1617791157466</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +344,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="all branches merged" />
     <MESSAGE value="julian-func merged" />
     <MESSAGE value="refactored BA" />
     <MESSAGE value="Routing added" />
@@ -362,6 +368,7 @@
     <MESSAGE value="Payment added" />
     <MESSAGE value="Ruslan Changes" />
     <MESSAGE value="some shit here" />
-    <option name="LAST_COMMIT_MESSAGE" value="some shit here" />
+    <MESSAGE value="training ist nun wiederholbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="training ist nun wiederholbar" />
   </component>
 </project>

@@ -31,7 +31,8 @@ export default function BoxTrainingActivity() {
 
     const {userInformation} = useContext(AuthContext);
     const retryTraining = () => {
-        if (moment(userInformation.lastWorkoutDone?.toDate()).isSame(moment(), "day")) {
+
+        if (userInformation.lastWorkoutDone && moment(userInformation.lastWorkoutDone?.toDate()).isSame(moment(), "day")) {
             return true
         }
         return false
