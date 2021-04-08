@@ -5,26 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SuccModal/SuccModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SuccModal/SuccModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/boxWeek/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxWeek/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AGB/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AGB/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Datenschutz/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Datenschutz/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Datenschutz/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Datenschutz/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/InfoItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/InfoItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/MagazinComp/Magazin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/MagazinComp/Magazin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/ReviewComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/ReviewComp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/Reviews.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Reviews.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/Video.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Video.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/Video.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Video.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/trainingsUtils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/trainingsUtils.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +100,9 @@
       <workItem from="1617023243727" duration="4038000" />
       <workItem from="1617436040273" duration="26642000" />
       <workItem from="1617632117327" duration="12510000" />
-      <workItem from="1617793655759" duration="10387000" />
+      <workItem from="1617793655759" duration="10615000" />
+      <workItem from="1617903259030" duration="200000" />
+      <workItem from="1617909733639" duration="2780000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -352,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617826871139</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Trailer video added and pausable">
+      <created>1617832557253</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1617832557253</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +378,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="some chagnes" />
     <MESSAGE value="Routing" />
     <MESSAGE value="Active state of icons" />
     <MESSAGE value="Active state bug fixed" />
@@ -406,6 +402,7 @@
     <MESSAGE value="training ist nun wiederholbar mit realtime listener" />
     <MESSAGE value="Vorbereitungszeit mit Dave geadded" />
     <MESSAGE value="Aufwärmen aus pool 1 und 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aufwärmen aus pool 1 und 2" />
+    <MESSAGE value="Trailer video added and pausable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trailer video added and pausable" />
   </component>
 </project>

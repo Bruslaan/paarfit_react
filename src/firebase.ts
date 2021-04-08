@@ -16,39 +16,39 @@ export const app = firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 export const handleLogout = (event?: any, loggedOut?: () => void) => {
-  // event.preventDefault();
-  console.log('logging out ');
-  firebase
-    .auth()
-    .signOut()
-    .then((res) => {
-      // loggedOut()
-      console.log('Logged Out');
-    });
+    // event.preventDefault();
+    console.log('logging out ');
+    firebase
+        .auth()
+        .signOut()
+        .then((res) => {
+            // loggedOut()
+            console.log('Logged Out');
+        });
 };
 
 export let todayTimestamp = firebase.firestore.Timestamp.now().toDate();
 export const heutigesDatum: string =
-  todayTimestamp.getDate() +
-  '_' +
-  todayTimestamp.getMonth() +
-  '_' +
-  todayTimestamp.getFullYear();
+    todayTimestamp.getDate() +
+    '_' +
+    (todayTimestamp.getMonth() + 1) +
+    '_' +
+    todayTimestamp.getFullYear();
 
 export const db = firebase.firestore();
 
 export const uploadImage = async (prefix: string, file: any) => {
-  let imageURL = '';
-  try {
-    const storageRef = app.storage().ref();
-    const fileRef = storageRef.child(prefix + file.name);
-    await fileRef.put(file);
-    imageURL = await fileRef.getDownloadURL();
-  } catch (error) {
-    console.log('Cannot upload file:', error);
-  }
+    let imageURL = '';
+    try {
+        const storageRef = app.storage().ref();
+        const fileRef = storageRef.child(prefix + file.name);
+        await fileRef.put(file);
+        imageURL = await fileRef.getDownloadURL();
+    } catch (error) {
+        console.log('Cannot upload file:', error);
+    }
 
-  return imageURL;
+    return imageURL;
 };
 
 export default firebase;

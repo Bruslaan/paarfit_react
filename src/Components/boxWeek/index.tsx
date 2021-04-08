@@ -9,6 +9,7 @@ import {
     Grid,
 } from '@material-ui/core';
 import {AuthContext} from '../../AuthProvider';
+import {db, heutigesDatum} from "../../firebase";
 
 const boxWeekStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -23,7 +24,7 @@ const boxWeekStyles = makeStyles((theme: Theme) =>
 const DAYS = ["SO", "MO", "DI", "MI", "DO", "FR", "SA"]
 export default function BoxWeek() {
 
-    const {userInformation} = useContext(
+    const {userInformation, user} = useContext(
         AuthContext
     );
 
@@ -46,13 +47,21 @@ export default function BoxWeek() {
         week()
     }, []);
 
-    const week = () => {
+    const week = async () => {
         let days = []
+        let last7Workouts: any = []
         const currentDate = moment();
         const lastWorkoutDay = userInformation?.lastWorkoutDone
         let nextWorkout = moment(lastWorkoutDay?.toDate()).add(3, "days")
         const weekStart = currentDate.clone().startOf('isoWeek');
         const weekEnd = currentDate.clone().endOf('isoWeek');
+
+        const documentSnapshots = await db.collection("users").doc(user?.uid).collection("last_workouts").orderBy("workoutDoneOn").limitToLast(7).get()
+        documentSnapshots.forEach((document) => {
+            last7Workouts.push(document.data().workoutDoneOn)
+        })
+
+        console.log(last7Workouts[0].toDate())
 
 
         for (let i = 0; i <= 6; i++) {
@@ -61,12 +70,20 @@ export default function BoxWeek() {
             const newDate = moment(weekStart).add(i, 'days')
 
 
+            const theWorkoutWasDone = last7Workouts.filter((workout: any) => newDate.isSame(workout.toDate(), "day"))
+
+
+            if (theWorkoutWasDone.length > 0) {
+                days.push(<Erledigt day={newDate}></Erledigt>)
+                continue
+            }
+
             if (isToday(moment(weekStart).add(i, 'days'))) {
                 if (mustTraingToday()) {
                     days.push(<AktivTraining day={newDate}/>)
                     continue
                 } else {
-                    days.push(<Pause day={newDate}/>)
+                    days.push(<Pause day={newDate} active={true}/>)
                     continue
                 }
             }
@@ -77,7 +94,6 @@ export default function BoxWeek() {
                 nextWorkout = nextWorkout.add(2, "days")
                 continue
             }
-
 
 
             days.push(<Pause day={newDate}/>);
@@ -111,7 +127,7 @@ export default function BoxWeek() {
     );
 }
 
-const Pause = ({day}: any) => {
+const Pause = ({day, active}: any) => {
     return (
         <div className='tableTimeSchedule'>
             <div className='calendarLeft'>
@@ -124,7 +140,7 @@ const Pause = ({day}: any) => {
                 <div className='ctBoxLine whiteBg'>
                     <div className='borderBoxLine'>
                         <div className='borderLineIns whiteBg'>
-                            <div className='dotLineCalendar grayBg2'></div>
+                            <div className={`dotLineCalendar ${active ? "purpleBg1": "grayBg2"}`}></div>
                         </div>
                     </div>
                 </div>
@@ -154,7 +170,7 @@ const DoneTraining = ({day}: any) => {
                 <div className='ctBoxLine whiteBg'>
                     <div className='borderBoxLine grayBg2'>
                         <div className='borderLineIns whiteBg'>
-                            <div className='dotLineCalendar grayBg2'></div>
+                            <div className='dotLineCalendar purpleBg1'></div>
                         </div>
                     </div>
                 </div>
@@ -163,6 +179,35 @@ const DoneTraining = ({day}: any) => {
                 <div className='detTrainingBtnSm'>
                     <a href='' title='' className='purpleBg1 textWhite'>
                         <h2>PaarFit-Training</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const Erledigt = ({day}: any) => {
+    return (
+        <div className='tableTimeSchedule'>
+            <div className='calendarLeft'>
+                <div className='calendarLeftDate'>
+                    <h2 className='gray2'>{day.date()}</h2>
+                    <h3 className='blue1'>{DAYS[day.day()]}</h3>
+                </div>
+            </div>
+            <div className='lineTimeSchedule'>
+                <div className='ctBoxLine whiteBg'>
+                    <div className='borderBoxLine grayBg2'>
+                        <div className='borderLineIns whiteBg'>
+                            <div className='dotLineCalendar purpleBg1'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='detTrainingRight'>
+                <div className='detTrainingBtnSm'>
+                    <a href='' title='' className='yellowBg textWhite'>
+                        <h2>Training wurde erfolgreich absolviert</h2>
                     </a>
                 </div>
             </div>
@@ -196,7 +241,7 @@ const AktivTraining = ({day}: any) => {
                             <div className='lineBtn whiteBg'></div>
                             <div className='detailsBtnLg'>
                                 <h3>Training</h3>
-                                <h4>+ 115 / 140 P.</h4>
+                                <h4>+ 100 P.</h4>
                             </div>
                             <div className='detailsBtnLg'>
                                 <h3>Aktivitäten</h3>

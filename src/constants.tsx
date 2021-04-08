@@ -196,11 +196,11 @@ export const lvlSystem: Array<Levels> = [
   },
   {
     id: 2,
-    title: 'Sportkanonen',
+    title: 'Sportskanonen',
     points: 500,
     cssStyle: 'ctSportkanonen',
-    description: 'Der Anfang ist die Hälfte des Ganzen (Aristoteles)',
-    subdescription: '- ihr habt einen grandiosen Start hingelegt!',
+    description: 'Der Anfang ist die Hälfte des Ganzen. (Aristoteles)',
+    subdescription: ' Ihr habt einen grandiosen Start hingelegt!',
   },
   {
     id: 3,

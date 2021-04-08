@@ -53,6 +53,9 @@ export default function TraiingActivePage() {
 
 
         if (currentWorkoutIndex >= Workouts.length - 1) {
+            await db.collection("users").doc(user?.uid).collection("last_workouts").doc(heutigesDatum).set({
+                workoutDoneOn: todayTimestamp
+            }, {merge: true})
             setShowSuccModal(true)
         }
 
@@ -71,6 +74,8 @@ export default function TraiingActivePage() {
                     lastWorkoutDone: todayTimestamp,
                     TE: 1
                 }, {merge: true})
+
+                return
             }
 
             const diffTime = Math.abs(userInformation?.lastWorkoutDone?.toDate()?.valueOf() - todayTimestamp.valueOf());

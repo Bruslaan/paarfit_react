@@ -24,7 +24,6 @@ const MyItem: React.FC<any> = ({
         >
             <div className='detTrainingStep'>
                 <video
-                    muted={true}
                     autoPlay={true}
                     className='noSelect'
                     onPlaying={(e) => onPlaying()}
