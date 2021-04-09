@@ -188,7 +188,7 @@ export const lvlSystem: Array<Levels> = [
   {
     id: 1,
     title: 'Durchstarter',
-    points: 250,
+    points: 1500,
 
     cssStyle: 'ctDurchstarter',
     description: 'Das Geheimnis des Erfolgs ist anzufangen. (Mark Twain)',
@@ -197,7 +197,7 @@ export const lvlSystem: Array<Levels> = [
   {
     id: 2,
     title: 'Sportskanonen',
-    points: 500,
+    points: 3000,
     cssStyle: 'ctSportkanonen',
     description: 'Der Anfang ist die Hälfte des Ganzen. (Aristoteles)',
     subdescription: ' Ihr habt einen grandiosen Start hingelegt!',
@@ -205,7 +205,7 @@ export const lvlSystem: Array<Levels> = [
   {
     id: 3,
     title: 'Gewinnerteam',
-    points: 1000,
+    points: 4500,
     cssStyle: 'ctGewinnerteam',
     description: 'Das W in gewinnen steht für Wir.',
     subdescription: 'Wir sind besser als ich – Weiter so!',
@@ -213,7 +213,7 @@ export const lvlSystem: Array<Levels> = [
   {
     id: 4,
     title: 'Überflieger',
-    points: 2000,
+    points: 6000,
     cssStyle: 'ctÜberflieger',
     description: 'In einem gesunden Körper wohnt ein gesunder Geist. (Juvenal)',
     subdescription: 'Eure Reise ist beeindruckend!',
@@ -221,7 +221,7 @@ export const lvlSystem: Array<Levels> = [
   {
     id: 5,
     title: 'Spitzensportler',
-    points: 5000,
+    points: 10000,
     cssStyle: 'ctSpitzensportler',
     description:
       'Die Belohnung erfolgreichen Tuns ist, es vollbracht zu haben. (R. W. Emerson)',

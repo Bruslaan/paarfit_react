@@ -230,21 +230,6 @@ const AktivTraining = ({day}: any) => {
                 <div className='detTrainingBtnLg'>
                     <a href='' title='' className='blueBg textWhite'>
                         <h2>PaarFit-Training</h2>
-                        <div className='contentBtnLg'>
-                            <div className='lineBtn whiteBg'></div>
-                            <div className='detailsBtnLg'>
-                                <h3>Training</h3>
-                                <h4>+ 100 P.</h4>
-                            </div>
-                            <div className='detailsBtnLg'>
-                                <h3>Aktivitäten</h3>
-                                <h4>+90 P.</h4>
-                            </div>
-                        </div>
-                        <div className='iconWeightBtnLg yellowBg'>
-                            <img src='images/hantel.svg' alt=''/>
-                        </div>
-                        <div className='iconAddBtnLg purpleBg2 textWhite'>+</div>
                     </a>
                 </div>
             </div>

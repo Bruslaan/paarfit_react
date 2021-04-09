@@ -1,15 +1,17 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useContext, useEffect, useRef} from 'react'
 import {makeStyles, Theme, createStyles} from '@material-ui/core/styles'
 import Modal from '@material-ui/core/Modal'
 import trophy from '../../assets/trophy.gif'
 import "./succModal.css"
+import {db, heutigesDatum} from "../../firebase";
+import {AuthContext} from "../../AuthProvider";
 
 
 export default function SuccModal({open, onClosed}: any) {
     const classes = useStyles()
     // getModalStyle is not a pure function, we roll the style only on the first render
     const [modalStyle] = React.useState(getModalStyle)
-
+    const {user, userInformation} = useContext(AuthContext);
     const handleClose = () => {
         //setOpen(false)
         onClosed()
@@ -28,7 +30,7 @@ export default function SuccModal({open, onClosed}: any) {
                     Macht weiter so!
                 </p>
                 <br/>
-                <div className="gamificationCounter">+10 P</div>
+                <div className="gamificationCounter">+100 P</div>
                 <br/>
                 <button className="paarfit_button" onClick={() => onClosed()} >
                     Beenden

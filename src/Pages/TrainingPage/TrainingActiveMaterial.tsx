@@ -182,6 +182,23 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
         return newWorkout
     }
 
+
+    const getPunkte: any = () => {
+
+        console.log(stage)
+        switch (stage) {
+            case "Aufwärmen":
+                return 15
+            case "Kraft":
+                return 40
+            case "Dehnen":
+                return 15
+            case "Ausdauer/Fettverbrennung":
+                return 30
+            default:
+                return 10
+        }
+    }
     const uploadWorkoutTocloud = async () => {
 
         // upload
@@ -190,9 +207,13 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
         if (document.exists && stageNumber <= document.data()!["last_done"]) {
             return
         }
+        await db.collection("last_workouts").doc(heutigesDatum).set({
+            last_done: stageNumber,
+            punkte: firebase.firestore.FieldValue.increment(getPunkte())
+        }, {merge: true})
 
-        await db.update({points: firebase.firestore.FieldValue.increment(15)})
-        await db.collection("last_workouts").doc(heutigesDatum).set({last_done: stageNumber}, {merge: true})
+        await db.update({points: firebase.firestore.FieldValue.increment(getPunkte())})
+
     };
     return (
         <div className='trainingStepperMob'>
