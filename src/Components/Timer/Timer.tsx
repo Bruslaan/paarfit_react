@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {CircularProgressbar} from 'react-circular-progressbar';
-import {isConstructorDeclaration} from 'typescript';
+
 
 const Timer = ({
                    sets,
@@ -21,13 +21,20 @@ const Timer = ({
                 partnerArray.push('Partnerwechsel');
             }
             seqArray.push('Workout');
-            seqArray.push('Pause');
+
+            if (i+1 === sets) {
+                seqArray.push('Cooldown');
+            } else {
+                seqArray.push('Pause');
+            }
 
 
         }
+
         return [seqArray, partnerArray];
     };
-
+    const pauseAudio = new Audio("https://res.cloudinary.com/do4y3j1hu/video/upload/v1617987184/SF_Countdown_Sekunde_dzrzug.mp3");
+    const workoutStartSound = new Audio("https://res.cloudinary.com/do4y3j1hu/video/upload/v1617987488/SF_Workout-Satz-Start_cycbnn.mp3")
     const [SequenceArray, partnerArray] = createSequenceArray();
 
     const GetArraySet = () => {
@@ -44,7 +51,7 @@ const Timer = ({
     const sequenceEndReached = currentSequenceIndex === SequenceArray.length - 1;
     const currentSet = currentSequenceIndex / 2;
 
-    const getSequenceTime:any = () => {
+    const getSequenceTime: any = () => {
 
         switch (SequenceArray[currentSequenceIndex]) {
             case "Workout":
@@ -53,6 +60,8 @@ const Timer = ({
                 return (timer * 100) / pause
             case "Vorbereitung":
                 return (timer * 100) / 10
+            case "Cooldown":
+                return (timer * 100) / 20
         }
 
     }
@@ -62,6 +71,8 @@ const Timer = ({
 
         if (SequenceArray[currentSequenceIndex] === 'Vorbereitung') {
             initTimerWith = 10
+        } else if (SequenceArray[currentSequenceIndex] === 'Cooldown') {
+            initTimerWith = 20
         } else {
             SequenceArray[currentSequenceIndex] === 'Workout'
                 ? (initTimerWith = trainingTime)
@@ -77,6 +88,17 @@ const Timer = ({
         }
 
         const timoutTimer = setTimeout(() => {
+
+
+            if (timer <= 5 && timer >= 1) {
+                pauseAudio.play();
+            }
+
+            if (timer === 0) {
+                workoutStartSound.play();
+            }
+
+
             if (sequenceEndReached && timer === 0) {
                 clearTimeout(timoutTimer);
                 onEndReached();
@@ -96,7 +118,7 @@ const Timer = ({
 
     // @ts-ignore
     return (
-        <div >
+        <div>
             <h1>{partnerArray[currentSequenceIndex]}</h1>
             {partnerArray[currentSequenceIndex] ? <h3>{SequenceArray[currentSequenceIndex]}</h3> :
                 <h2>{SequenceArray[currentSequenceIndex]}</h2>}

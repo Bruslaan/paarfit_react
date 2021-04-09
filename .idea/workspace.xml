@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/sounds/SF_Countdown_Sekunde.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/SuccModal/SuccModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SuccModal/SuccModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/boxWeek/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxWeek/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/EditableLabel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/EditableLabel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileImage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileImage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/MilestoneIcons/Sportkanonen.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/MilestoneIcons/Sportkanonen.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +63,11 @@
       <recent name="$PROJECT_DIR$/src/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/sounds" />
       <recent name="$PROJECT_DIR$/src/assets/MilestoneIcons" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/Components/SuccModal" />
       <recent name="$PROJECT_DIR$/src/assets" />
-      <recent name="$PROJECT_DIR$/src/Pages" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -104,7 +99,7 @@
       <workItem from="1617632117327" duration="12510000" />
       <workItem from="1617793655759" duration="10615000" />
       <workItem from="1617903259030" duration="200000" />
-      <workItem from="1617909733639" duration="12507000" />
+      <workItem from="1617909733639" duration="15189000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -365,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617983289165</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Profile edit mode set as default">
+      <created>1617986412104</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1617986412104</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +396,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Active state bug fixed" />
     <MESSAGE value="Active state bug fixed again" />
     <MESSAGE value="ruslan changes" />
     <MESSAGE value="Merged with julian landing page" />
@@ -419,6 +420,7 @@
     <MESSAGE value="Trailer video added and pausable" />
     <MESSAGE value="Training absolviert im kalander" />
     <MESSAGE value="Training Bugs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Training Bugs fixed" />
+    <MESSAGE value="Profile edit mode set as default" />
+    <option name="LAST_COMMIT_MESSAGE" value="Profile edit mode set as default" />
   </component>
 </project>

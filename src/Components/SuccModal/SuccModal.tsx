@@ -17,6 +17,17 @@ export default function SuccModal({open, onClosed}: any) {
         onClosed()
     }
 
+
+    useEffect(() => {
+
+        const succSound = new Audio("https://res.cloudinary.com/do4y3j1hu/video/upload/v1617987624/SF_Workout-abgeschlossen-Belohnung_u2kldd.mp3")
+        if (open) {
+            succSound.play()
+        }
+
+    }, [open]);
+
+
     // @ts-ignore
     const body = (
         <div style={modalStyle} className={classes.paper}>
@@ -32,7 +43,7 @@ export default function SuccModal({open, onClosed}: any) {
                 <br/>
                 <div className="gamificationCounter">+100 P</div>
                 <br/>
-                <button className="paarfit_button" onClick={() => onClosed()} >
+                <button className="paarfit_button" onClick={() => onClosed()}>
                     Beenden
                 </button>
             </div>
