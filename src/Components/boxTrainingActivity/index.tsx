@@ -30,77 +30,72 @@ export default function BoxTrainingActivity() {
     const history = useHistory();
 
     const {userInformation} = useContext(AuthContext);
-    const retryTraining = () => {
+    const isPflichtWorkout = userInformation.lastWorkoutDone ? moment().isAfter(moment(userInformation.lastWorkoutDone?.toDate()).add(2, "days"), "day") : true
 
-        if (userInformation.lastWorkoutDone && moment(userInformation.lastWorkoutDone?.toDate()).isSame(moment(), "day")) {
-            return true
-        }
-        return false
-    }
+    console.log(isPflichtWorkout)
+    const classes = BoxTrainingActivityStyles();
 
-  const classes = BoxTrainingActivityStyles();
+    // const schedule = require('node-schedule');
+    // const rngTimer = schedule.scheduleJob('* 10 * * * *', function () {
+    //   setRng(Math.floor(Math.random() * motQuoteArr.length));
+    // });
 
-  // const schedule = require('node-schedule');
-  // const rngTimer = schedule.scheduleJob('* 10 * * * *', function () {
-  //   setRng(Math.floor(Math.random() * motQuoteArr.length));
-  // });
-
-  return (
-    <Paper className={classes.paper}>
-      <div className='areaHomeCol2'>
-        <div className='ctHomeCol2'>
-          <div className='titleCol2 textWhite'>
-            {motQuoteArr[Math.floor(Math.random() * motQuoteArr.length)]}
-          </div>
-          <div className='subTitleCol2 yellow1'>Willkommen zurück!</div>
-        </div>
-        <div className='ctTrainingCol2 whiteBg'>
-          <div
-            onClick={startWorkout}
-            className='detailsTrainingCol2 blueBg2 big__button'
-          >
-            <h2 className='textWhite'>training</h2>
-            <div className='ctGetStartedCol2'>
-              <div className='iconGetStarted1'>
-                <img src='images/hantel.svg' alt='' />
-              </div>
-              <div className='linkGetStarted'>
-                <div className='iconGetStarted2'>
-                  <img src='images/iconArrow.png' alt='' />
+    return (
+        <Paper className={classes.paper}>
+            <div className='areaHomeCol2'>
+                <div className='ctHomeCol2'>
+                    <div className='titleCol2 textWhite'>
+                        {motQuoteArr[Math.floor(Math.random() * motQuoteArr.length)]}
+                    </div>
+                    <div className='subTitleCol2 yellow1'>Willkommen zurück!</div>
                 </div>
-                <a title='' className='textWhite'>
-                    {retryTraining() ? "jetzt wiederholen" : "jetzt starten"}
-                </a>
-              </div>
+                <div className='ctTrainingCol2 whiteBg'>
+                    <div
+                        onClick={startWorkout}
+                        className='detailsTrainingCol2 blueBg2 big__button'
+                    >
+                        <h2 className='textWhite'>training</h2>
+                        <div className='ctGetStartedCol2'>
+                            <div className='iconGetStarted1'>
+                                <img src='images/hantel.svg' alt=''/>
+                            </div>
+                            <div className='linkGetStarted'>
+                                <div className='iconGetStarted2'>
+                                    <img src='images/iconArrow.png' alt=''/>
+                                </div>
+                                <a title='' className='textWhite'>
+                                    {isPflichtWorkout ? "jetzt starten" : "jetzt wiederholen"}
+                                </a>
+                            </div>
+                        </div>
+                        <div className='hereGoCol2'>
+                            <a href='' title='' className='textWhite'>
+                                los geht's
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className='ctActivitateCol2 whiteBg'>
+                    <div className='detailsActivCol2 purpleBg2 big__button'>
+                        <h2 className='textWhite'>aktivität</h2>
+                        <div className='ctAddCol2'>
+                            <div className='iconAddCol2'>
+                                <img src='images/aktivitäten.svg' alt=''/>
+                            </div>
+                            <div className='linkAddCol2'>
+                                <a href='' title='' className='textWhite'>
+                                    +hinzufügen
+                                </a>
+                            </div>
+                        </div>
+                        <div className='hereGoCol2'>
+                            <a href='' title='' className='textWhite'>
+                                egal, ob spazieren gehen, schwimmen oder Gartenarbeit
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className='hereGoCol2'>
-              <a href='' title='' className='textWhite'>
-                los geht's
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className='ctActivitateCol2 whiteBg'>
-          <div className='detailsActivCol2 purpleBg2 big__button'>
-            <h2 className='textWhite'>aktivität</h2>
-            <div className='ctAddCol2'>
-              <div className='iconAddCol2'>
-                <img src='images/aktivitäten.svg' alt='' />
-              </div>
-              <div className='linkAddCol2'>
-                <a href='' title='' className='textWhite'>
-                  +hinzufügen
-                </a>
-              </div>
-            </div>
-            <div className='hereGoCol2'>
-              <a href='' title='' className='textWhite'>
-                egal, ob spazieren gehen, schwimmen oder Gartenarbeit
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Paper>
-  );
+        </Paper>
+    );
 }

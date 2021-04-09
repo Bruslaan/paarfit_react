@@ -11,19 +11,15 @@ export default function TraiingActivePage() {
 
 
     const history = useHistory()
-    const minimalNeededWorkouts = 2
+    const minimalNeededWorkouts = 3
     const [currentWorkoutIndex, setCurrentWorkoutIndex] = useState(0);
     const Workouts = ["Aufwärmen", "Kraft", "Ausdauer", "Dehnen"]
     const {user, userInformation} = useContext(AuthContext);
     const [showSuccModal, setShowSuccModal] = useState(false);
+    const [isPflicht, setIsPflichtTraining] = useState(false);
 
 
-    const retryTraining = () => {
-        if (userInformation.lastWorkoutDone && moment(userInformation.lastWorkoutDone?.toDate()).isSame(moment(), "day")) {
-            return true
-        }
-        return false
-    }
+    const isPflichtTraining = userInformation.lastWorkoutDone ? moment().isAfter(moment(userInformation.lastWorkoutDone?.toDate()).add(2, "days"), "day") : true
 
 
     useEffect(() => {
@@ -33,7 +29,9 @@ export default function TraiingActivePage() {
 
     const calculateWorkoutStage = async () => {
 
-        if (retryTraining()) {
+        setIsPflichtTraining(isPflichtTraining)
+
+        if (!isPflichtTraining) {
             setCurrentWorkoutIndex(0)
             return
         }
@@ -52,19 +50,16 @@ export default function TraiingActivePage() {
     const onWorkoutFinished = async () => {
 
 
+        if (!isPflicht) {
+            setCurrentWorkoutIndex(currentWorkoutIndex + 1)
+            return
+        }
         if (currentWorkoutIndex >= Workouts.length - 1) {
             await db.collection("users").doc(user?.uid).collection("last_workouts").doc(heutigesDatum).set({
                 workoutDoneOn: todayTimestamp
             }, {merge: true})
             setShowSuccModal(true)
         }
-
-
-        if (retryTraining()) {
-            setCurrentWorkoutIndex(currentWorkoutIndex + 1)
-            return
-        }
-
 
         setCurrentWorkoutIndex(currentWorkoutIndex + 1)
         if (currentWorkoutIndex === minimalNeededWorkouts) {

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 import {makeStyles, Theme, createStyles} from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Stepper from '@material-ui/core/Stepper';
@@ -23,6 +23,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import './index.css';
 import Timer from '../../Components/Timer/Timer';
 import SuccModal from "../../Components/SuccModal/SuccModal";
+import moment from "moment";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -97,7 +98,6 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
     const {user, userInformation} = useContext(AuthContext);
     const [timerEnabled, setTimerEnabled] = useState(true);
     const [startTime, setstartTime]: any = useState(null);
-    const history = useHistory();
 
 
     let params: any = useParams();
@@ -135,8 +135,15 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
 
+
+    const isPflichtTraining = userInformation.lastWorkoutDone ? moment().isAfter(moment(userInformation.lastWorkoutDone?.toDate()).add(2, "days"), "day") : true
+
+
     const handleFinish = () => {
-        uploadWorkoutTocloud();
+        if (isPflichtTraining) {
+            uploadWorkoutTocloud();
+        }
+
         onFinished()
     };
 

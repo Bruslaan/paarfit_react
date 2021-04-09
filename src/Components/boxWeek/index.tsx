@@ -32,12 +32,8 @@ export default function BoxWeek() {
     const [state, setState] = useState("Loading");
 
 
-    const mustTraingToday = () => {
-        if (!userInformation?.lastWorkoutDone) {
-            return true
-        }
-        return moment() >= moment(userInformation?.lastWorkoutDone.toDate()).add(1, "days")
-    }
+    const mustTraingToday = userInformation.lastWorkoutDone ? moment().isAfter(moment(userInformation.lastWorkoutDone?.toDate()).add(2, "days"), "day") : true
+
 
     const isToday = (day: any) => {
         return moment().isSame(day, "day")
@@ -61,9 +57,6 @@ export default function BoxWeek() {
             last7Workouts.push(document.data().workoutDoneOn)
         })
 
-        console.log(last7Workouts[0].toDate())
-
-
         for (let i = 0; i <= 6; i++) {
 
 
@@ -79,7 +72,7 @@ export default function BoxWeek() {
             }
 
             if (isToday(moment(weekStart).add(i, 'days'))) {
-                if (mustTraingToday()) {
+                if (mustTraingToday) {
                     days.push(<AktivTraining day={newDate}/>)
                     continue
                 } else {
@@ -140,7 +133,7 @@ const Pause = ({day, active}: any) => {
                 <div className='ctBoxLine whiteBg'>
                     <div className='borderBoxLine'>
                         <div className='borderLineIns whiteBg'>
-                            <div className={`dotLineCalendar ${active ? "purpleBg1": "grayBg2"}`}></div>
+                            <div className={`dotLineCalendar ${active ? "purpleBg1" : "grayBg2"}`}></div>
                         </div>
                     </div>
                 </div>

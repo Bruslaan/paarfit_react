@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {CircularProgressbar} from 'react-circular-progressbar';
 import {isConstructorDeclaration} from 'typescript';
 
@@ -44,6 +44,19 @@ const Timer = ({
     const sequenceEndReached = currentSequenceIndex === SequenceArray.length - 1;
     const currentSet = currentSequenceIndex / 2;
 
+    const getSequenceTime:any = () => {
+
+        switch (SequenceArray[currentSequenceIndex]) {
+            case "Workout":
+                return (timer * 100) / trainingTime
+            case "Pause":
+                return (timer * 100) / pause
+            case "Vorbereitung":
+                return (timer * 100) / 10
+        }
+
+    }
+
     useEffect(() => {
         let initTimerWith = 0;
 
@@ -80,20 +93,19 @@ const Timer = ({
         return () => clearTimeout(timoutTimer);
     });
 
-    const RelaxOrPartnerChange = alternate ? 'Wechsel' : 'Entspannen';
 
+    // @ts-ignore
     return (
-        <div>
+        <div >
             <h1>{partnerArray[currentSequenceIndex]}</h1>
-            {partnerArray[currentSequenceIndex] ? <h3>{SequenceArray[currentSequenceIndex]}</h3> :<h2>{SequenceArray[currentSequenceIndex]}</h2> }
+            {partnerArray[currentSequenceIndex] ? <h3>{SequenceArray[currentSequenceIndex]}</h3> :
+                <h2>{SequenceArray[currentSequenceIndex]}</h2>}
 
             <div className='boxTimeProgressbar'>
                 <div className='flipText'>
                     <CircularProgressbar
                         value={
-                            SequenceArray[currentSequenceIndex] === 'Workout'
-                                ? (timer * 100) / trainingTime
-                                : (timer * 100) / pause
+                            getSequenceTime()
                         }
                         text=''
                         styles={
@@ -124,8 +136,7 @@ const Timer = ({
                                         strokeLinecap: 'round',
                                     },
                                 }
-                        }
-                    />
+                        }/>
                 </div>
                 <div className='titleTimeProgressbar'>
                     <h3>{timer}</h3>

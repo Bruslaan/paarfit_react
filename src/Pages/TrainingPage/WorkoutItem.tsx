@@ -1,4 +1,5 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
+
 
 const MyItem: React.FC<any> = ({
                                    onClick,
@@ -8,11 +9,22 @@ const MyItem: React.FC<any> = ({
                                    onPaused,
                                    onPlaying,
                                }) => {
-    const video: any = useRef();
-    console.log(video);
+    function scrollToTargetAdjusted() {
+
+        window.scrollTo({
+            top: 300,
+            behavior: "smooth"
+        });
+    }
+
+    useEffect(() => {
+        // scrollToTargetAdjusted()
+    }, []);
+
 
     return (
         <div
+
             style={{
                 marginLeft: 'auto',
                 objectFit: 'cover',
@@ -24,6 +36,7 @@ const MyItem: React.FC<any> = ({
         >
             <div className='detTrainingStep'>
                 <video
+
                     autoPlay={true}
                     className='noSelect'
                     onPlaying={(e) => onPlaying()}
