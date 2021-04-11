@@ -189,7 +189,6 @@ const Register = () => {
                 <Copyright/>
             </Box>
 
-            <Footer/>
         </div>
     );
 };

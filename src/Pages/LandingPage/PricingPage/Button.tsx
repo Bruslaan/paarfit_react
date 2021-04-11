@@ -2,7 +2,7 @@ import React from 'react';
 import './Button.css';
 
 const Button = () => {
-  return <div className='btn'>Jetzt starten</div>;
+  return <a className='btn' href="/registrieren">Jetzt starten</a>;
 };
 
 export default Button;

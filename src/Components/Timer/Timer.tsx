@@ -18,7 +18,12 @@ const Timer = ({
             if (alternate) {
                 const zahl = i % 2 === 0 ? "Partner 1" : "Partner 2"
                 partnerArray.push(zahl);
-                partnerArray.push('Partnerwechsel');
+                if (i+1 === sets) {
+                    partnerArray.push('Cooldown');
+                } else {
+                    partnerArray.push('Partnerwechsel');
+                }
+
             }
             seqArray.push('Workout');
 

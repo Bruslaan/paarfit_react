@@ -30,7 +30,7 @@ const ProfileImage = ({ onFileUploaded }: any) => {
 
   return (
     <div>
-      <div className='profileImgIconContainer baIcon'>
+      <div className='baIconContainer baIcon'>
         <input
           onChange={(e: any) => {
             onFileChange(e);

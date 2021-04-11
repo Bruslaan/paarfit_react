@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from '../NavBar';
 import './Pricing.css';
 import PricingComp from './PricingComp';
 import { pricingPackage } from '../../../constants';
@@ -13,8 +12,6 @@ const Pricing = () => {
       </div>
         <br/>
         <br/>
-
-
 
       <div className='pricingCompContainer'>
         {pricingPackage.map((type: any, key: any) => (

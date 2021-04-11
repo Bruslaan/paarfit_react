@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/sounds/SF_Countdown_Sekunde.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SuccModal/SuccModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SuccModal/SuccModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/boxBadges/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxBadges/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/boxBadges/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxBadges/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +105,8 @@
       <workItem from="1617632117327" duration="12510000" />
       <workItem from="1617793655759" duration="10615000" />
       <workItem from="1617903259030" duration="200000" />
-      <workItem from="1617909733639" duration="15189000" />
+      <workItem from="1617909733639" duration="15482000" />
+      <workItem from="1618158474459" duration="2941000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -367,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617986412104</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="sound usw">
+      <created>1617989522570</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1617989522570</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +410,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Active state bug fixed again" />
     <MESSAGE value="ruslan changes" />
     <MESSAGE value="Merged with julian landing page" />
     <MESSAGE value="New routing" />
@@ -421,6 +434,7 @@
     <MESSAGE value="Training absolviert im kalander" />
     <MESSAGE value="Training Bugs fixed" />
     <MESSAGE value="Profile edit mode set as default" />
-    <option name="LAST_COMMIT_MESSAGE" value="Profile edit mode set as default" />
+    <MESSAGE value="sound usw" />
+    <option name="LAST_COMMIT_MESSAGE" value="sound usw" />
   </component>
 </project>

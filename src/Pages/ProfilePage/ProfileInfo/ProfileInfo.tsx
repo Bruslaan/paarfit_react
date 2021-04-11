@@ -16,7 +16,7 @@ import ProfileImage from './ProfileImage';
 import {MenuItem, Select} from '@material-ui/core';
 
 const ProfileInfo = (userInfo: any) => {
-    const genderArr = ['Male', 'Female', 'Diverse'];
+    const genderArr = ['Mann', 'Frau', 'Divers'];
     const [editMode, setEditMode] = useState(true);
     const [allInformations, setAllInformations]: any = useState();
     const {user} = useContext(AuthContext);
