@@ -91,6 +91,7 @@ export default function TraiingActivePage() {
     }
 
     return <div>
+
         {Workouts.map((workout: any, index: number) => {
             return (
                 <div key={index}>
@@ -106,7 +107,6 @@ export default function TraiingActivePage() {
                     <br/><br/>
                 </div>)
         })}
-
         <SuccModal open={showSuccModal} onClosed={() => history.push("/")}/>
     </div>
 }

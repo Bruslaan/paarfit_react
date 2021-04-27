@@ -22,7 +22,7 @@ const index = () => {
 
 <p class="font_8" style="font-size:12px;"><span style="font-family:poppins-extralight,poppins,sans-serif;"><span style="font-size:12px;"><span style="color:#414042;">80337&nbsp;München</span></span></span></p>
 
-<p class="font_8" style="font-size:12px;"><span style="font-family:poppins-extralight,poppins,sans-serif;"><span style="font-size:12px;"><span style="color:#414042;">E-Mail:&nbsp;<span style="text-decoration:underline;"><a href="mailto:service@gymondo.de" target="_self" data-content="service@gymondo.de" data-type="mail">datenschutz@PaarFit.de</a></span></span></span></span></p>
+<p class="font_8" style="font-size:12px;"><span style="font-family:poppins-extralight,poppins,sans-serif;"><span style="font-size:12px;"><span style="color:#414042;">E-Mail:&nbsp;<span style="text-decoration:underline;"><a href="mailto:service@gymondo.de" target="_self" data-content="service@gymondo.de" data-type="mail">info@paarfit.de</a></span></span></span></span></p>
 
 <p class="font_8" style="font-size:12px;"><span style="font-family:poppins-extralight,poppins,sans-serif;"><span style="font-size:12px;"><span style="color:#414042;">Weitere Angaben zu unserem Unternehmen sowie Kontaktmöglichkeiten stellen wir Ihnen in unserem Impressum bereit.</span></span></span></p>
 

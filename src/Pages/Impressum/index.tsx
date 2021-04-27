@@ -27,10 +27,7 @@ const index = () => {
         <span>USt-ID Nr. DE337284392</span>
         <br />
         <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2>
-        <br />
-        <span>David Niedermayr</span>
-        <span>Meidinger Straße 6</span>
-        <span>84028 Landshut</span>
+
         <br />
         <h2>Informationen zur Online-Streitbeilegung:</h2>
         <br />

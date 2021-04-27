@@ -1,5 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {CircularProgressbar} from 'react-circular-progressbar';
+import Button from "@material-ui/core/Button";
+import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 
 
 const Timer = ({
@@ -10,6 +12,16 @@ const Timer = ({
                    enabled,
                    alternate,
                }: any) => {
+
+
+    const [paused, setPaused] = useState(false);
+
+    useEffect(() => {
+
+        setPaused(enabled)
+
+    }, [enabled]);
+
     const createSequenceArray = () => {
         let seqArray = ["Vorbereitung"];
         let partnerArray = ["Macht euch bereit!"]
@@ -18,7 +30,7 @@ const Timer = ({
             if (alternate) {
                 const zahl = i % 2 === 0 ? "Partner 1" : "Partner 2"
                 partnerArray.push(zahl);
-                if (i+1 === sets) {
+                if (i + 1 === sets) {
                     partnerArray.push('Cooldown');
                 } else {
                     partnerArray.push('Partnerwechsel');
@@ -27,7 +39,7 @@ const Timer = ({
             }
             seqArray.push('Workout');
 
-            if (i+1 === sets) {
+            if (i + 1 === sets) {
                 seqArray.push('Cooldown');
             } else {
                 seqArray.push('Pause');
@@ -52,6 +64,7 @@ const Timer = ({
     const ArraySet = GetArraySet();
 
     const [timer, setTimer] = useState(0);
+    const classes = useStyles();
     const [currentSequenceIndex, setCurrentSequenceIndex] = useState(0);
     const sequenceEndReached = currentSequenceIndex === SequenceArray.length - 1;
     const currentSet = currentSequenceIndex / 2;
@@ -88,7 +101,7 @@ const Timer = ({
     }, [currentSequenceIndex]);
 
     useEffect(() => {
-        if (!enabled) {
+        if (!paused) {
             return;
         }
 
@@ -96,11 +109,12 @@ const Timer = ({
 
 
             if (timer <= 5 && timer >= 1) {
-                pauseAudio.play();
+                pauseAudio.play().then().catch(() => console.log("cannot play sound"));
             }
 
             if (timer === 0) {
-                workoutStartSound.play();
+                workoutStartSound.play().then().catch(() => console.log("cannot play sound"));
+                ;
             }
 
 
@@ -182,8 +196,48 @@ const Timer = ({
                     </div>
                 ))}
             </div>
+            <br/>
+
+            <Button
+                variant='contained'
+
+                onClick={() => setPaused(!paused)}
+                className={classes.button}
+            >
+                {!paused ? "Training Weiterführen" : "Training Pausieren"}
+            </Button>
+
         </div>
     );
 };
 
 export default Timer;
+
+const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+        root: {
+            width: '100%',
+        },
+        button: {
+            marginTop: theme.spacing(1),
+            marginRight: theme.spacing(1),
+            backgroundColor: '#F8CD4E;',
+            color: "white",
+        },
+        actionsContainer: {
+            marginBottom: theme.spacing(2),
+            display: 'flex',
+            width: '100%',
+            justifyContent: 'center',
+        },
+        resetContainer: {
+            // padding: theme.spacing(3),
+
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '10px',
+        },
+    })
+);

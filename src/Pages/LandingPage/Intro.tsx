@@ -11,8 +11,7 @@ const Intro = () => {
       </div>
 
       <div className='subtitle'>
-        Sieh dir an, warum sich mehr als 10.000 Paare dafür entschieden zu
-        haben, mit Paarfit zu trainieren
+          PaarFit ist das erste Trainingsprogramm, das speziell für euch als Paar zusammengestellt ist.
       </div>
       <a href='/registrieren' style={{ textDecoration: 'none' }}>
         <button className='paarfit_button'>

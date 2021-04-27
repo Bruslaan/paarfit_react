@@ -6,16 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_04_21,_00_26_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_05_04_21__00_26__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_04_21,_11_41_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_04_21,_20_09_[Default_Changelist]/firestore-debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_04_21,_20_09_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_04_21__11_41__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_04_21__20_09__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/boxBadges/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxBadges/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/boxBadges/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxBadges/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/About/About.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Pricing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileImage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ProfilePage/ProfileInfo/ProfileInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/RegisterPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Datenschutz/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Datenschutz/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Impressum/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Impressum/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/Intro.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/Intro.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActivePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +113,9 @@
       <workItem from="1617793655759" duration="10615000" />
       <workItem from="1617903259030" duration="200000" />
       <workItem from="1617909733639" duration="15482000" />
-      <workItem from="1618158474459" duration="2941000" />
+      <workItem from="1618158474459" duration="4497000" />
+      <workItem from="1618956642342" duration="427000" />
+      <workItem from="1619534643319" duration="3443000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -381,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617989522570</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Bug fixes">
+      <created>1618164317995</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1618164317996</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +426,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ruslan changes" />
     <MESSAGE value="Merged with julian landing page" />
     <MESSAGE value="New routing" />
     <MESSAGE value="training is active now" />
@@ -435,6 +450,7 @@
     <MESSAGE value="Training Bugs fixed" />
     <MESSAGE value="Profile edit mode set as default" />
     <MESSAGE value="sound usw" />
-    <option name="LAST_COMMIT_MESSAGE" value="sound usw" />
+    <MESSAGE value="Bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes" />
   </component>
 </project>

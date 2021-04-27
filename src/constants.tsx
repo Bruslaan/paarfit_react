@@ -301,7 +301,7 @@ export const pricingPackage = [
     testTitle: '14 Tage kostenlos testen',
     body: [
       'Individuell zugeschnittenes Partnertraining',
-      'Alltagstauglich und ohne Geräte',
+      'Alltagstauglich & ohne Geräte',
       'Ganzheitliche Fitness & Stressabbau',
     ],
   },
@@ -313,7 +313,7 @@ export const pricingPackage = [
     testTitle: '14 Tage kostenlos testen',
     body: [
       'Individuell zugeschnittenes Partnertraining',
-      'Alltagstauglich und ohne Geräte',
+      'Alltagstauglich & ohne Geräte',
       'Ganzheitliche Fitness & Stressabbau',
     ],
   },
