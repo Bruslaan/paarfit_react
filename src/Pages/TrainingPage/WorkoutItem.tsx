@@ -42,6 +42,12 @@ const MyItem: React.FC<any> = ({
                     onPlaying={(e) => onPlaying()}
                     onPause={() => onPaused()}
                     preload='metadata'
+                    onEnded={(e) => {
+
+                        const video = e.target as HTMLMediaElement
+                        video.currentTime = 5
+                    }
+                    }
                     controls
                     style={{
                         outline: 'none',
@@ -52,8 +58,8 @@ const MyItem: React.FC<any> = ({
                     width='100%'
                     poster=''
                 >
-                    <source src={workout.video?.url + '#t=0.5'} type='video/mp4'/>
-                    <source src={workout.video?.url + '#t=0.5'} type='video/mp4'/>
+                    <source src={workout.video?.url + '#t=1.5'} type='video/mp4'/>
+                    <source src={workout.video?.url + '#t=1.5'} type='video/mp4'/>
                     Your browser does not support the video tag.
                 </video>
 

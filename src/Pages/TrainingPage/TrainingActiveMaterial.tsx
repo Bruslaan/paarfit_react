@@ -96,7 +96,7 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
     const [loading, setloading] = useState(false);
     const [workouts, setworkouts]: any = useState([]);
     const {user, userInformation} = useContext(AuthContext);
-    const [timerEnabled, setTimerEnabled] = useState(true);
+    const [timerEnabled, setTimerEnabled] = useState(false);
     const [startTime, setstartTime]: any = useState(null);
 
 
