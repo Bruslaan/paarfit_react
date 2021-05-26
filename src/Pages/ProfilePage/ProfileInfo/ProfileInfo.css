@@ -1,0 +1,146 @@
+.profileInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  color: rgb(30, 30, 30);
+  border-radius: 25px;
+  align-items: flex-start;
+  transition: all 0.5s ease-in;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.fullWidth {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.profileInfoTop {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.profInfoPreTitle {
+  font-size: 15px;
+  color: rgb(99 101 235);
+}
+
+.proInfoTitleBox {
+  position: relative;
+    padding-left: 10px;
+}
+
+.profInfoTitle {
+  width: 100%;
+  font-size: 30px;
+}
+
+.profileInfoIcon {
+  position: absolute;
+  right: -30px;
+  top: 0px;
+}
+
+.profileInfoIcon:hover {
+  cursor: pointer;
+}
+
+.profileInfoHR {
+  border-top: 1px rgb(233, 232, 252);
+  border-radius: 2px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: auto;
+}
+
+.grid-item {
+  display: flex;
+  /* border: 1px solid rgba(255, 255, 255, 0.8); */
+  padding: 10px 5px;
+  font-size: 20px;
+  text-align: center;
+  width: fit-content;
+}
+
+.textEnd {
+  text-align: end !important;
+}
+.grid-itemTitle {
+  /* border: 1px solid rgba(255, 255, 255, 0.8); */
+  padding: 5px 5px;
+  font-size: 20px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.profGridName {
+  position: relative;
+}
+
+.profGridIcn {
+  position: absolute;
+  right: -30px;
+  top: -15px;
+}
+
+.profGridIcn:hover {
+  cursor: pointer;
+}
+
+.profileAge {
+  color: rgb(99 101 235);
+  font-weight: normal;
+}
+
+.profileInfoIconGrid {
+  color: rgb(115, 115, 237);
+}
+
+@media only screen and (max-width: 412px) {
+  .profileInfoTop {
+    width: 50%;
+  }
+
+  .profileInfoIcon {
+    top: 0px;
+  }
+
+  .profileInfoIconGrid {
+    width: 1em;
+    padding: 3px;
+  }
+
+  .gridContainer {
+    padding: 0px 5px;
+  }
+
+  .grid-itemTitle {
+    padding: 10px 0px;
+  }
+
+  .grid-item {
+    padding: 10px 0px;
+  }
+
+  .profGridIcn {
+    right: 50%;
+    top: -30px;
+    transform: translate(50%, 0);
+  }
+}

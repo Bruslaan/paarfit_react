@@ -1,0 +1,93 @@
+.pricingComp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: 'brandon-grotesque';
+  font-size: 20px;
+  color: rgb(65, 64, 66);
+  padding: 15px;
+  max-width: 400px;
+  margin-bottom: 50px;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.recommended {
+  background: linear-gradient(rgb(233, 239, 242), white);
+  box-shadow: 0px 10px 10px #00000011;
+}
+
+.mostPop {
+  position: absolute;
+  top: 0px;
+  right: 5%;
+  /* transform: translate(50%, 0%); */
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(92, 93, 234);
+  color: rgb(255, 255, 255);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.pricingTop {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+.pricingCompTitle {
+  color: rgb(65, 64, 66);
+  font-size: 20px;
+  padding: 5px;
+}
+
+.price {
+  font-size: 50px;
+  margin: 15px;
+}
+
+.pricingTest {
+  font-size: 20px;
+  padding: 10px;
+  color: rgba(65, 64, 66, 0.75);
+}
+.pricingCompBody {
+  margin: 0px 30px;
+  text-align: left;
+  list-style-type: disc;
+  line-height: 40px;
+}
+
+.pricingHR {
+  border-top: 1px solid rgba(65, 64, 66, 0.75);
+  border-radius: 0px;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.white {
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+.pricingFeatures {
+  list-style-type: none;
+  padding: 0px 20px;
+}
+
+.btncontainer {
+  margin: 0px auto;
+}
+
+@media screen and (max-width: 960px) {
+  .pricingComp {
+    margin-bottom: 50px;
+  }
+}

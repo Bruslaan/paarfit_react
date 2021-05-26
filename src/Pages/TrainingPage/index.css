@@ -1,0 +1,375 @@
+.trainings__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.overlay {
+    position: absolute;
+    /* Sit on top of the page content */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+}
+
+
+.relative {
+    position: relative;
+}
+.customStepperIcon_ins1{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#fff;
+    margin:3px;
+}
+.customStepperIcon_ins2{
+    width:32px;
+    height:32px;
+    background:#883EF0;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+    margin:3px;
+    border-radius:50%;
+    line-height:32px;
+    text-align:center;
+}
+.makeStyles-active-7 .customStepperIcon_ins2{
+    background:#F8CD4E;
+}
+.Mui-disabled .customStepperIcon_ins2{
+    background:#F8CD4E;
+}
+.MuiStepConnector-vertical,
+.MuiStepContent-root{
+    margin-left:20px!important;
+
+}
+.trainingStepperSt .MuiPaper-root{
+    background:none;
+    margin-top:40px;
+}
+.trainingStepperSt .MuiStepContent-root {
+    border-left: 3px solid #C8C8C8;
+}
+.trainingStepperSt .MuiStepConnector-line {
+    border-left: 3px solid #C8C8C8;
+}
+.trainingStepperSt .MuiCollapse-wrapper{
+    overflow:hidden;
+    width:100%;
+    display:inline-block;
+}
+.trainingStepperSt .MuiCollapse-wrapperInner{
+    margin-left:40px;
+    width:auto;
+}
+.trainingStepperSt .MuiCollapse-wrapperInner video{
+    border-radius:25px 25px 0px 0px;
+}
+.areaCtTrainingDet{
+    overflow:hidden;
+    width:50%;
+    display:inline-block;
+    background:#fff;
+    border-radius:25px;
+}
+
+.detTrainingWorkSets{
+    margin-top:-5px;
+    padding:30px!important;
+}
+.areaCategTraining{
+    overflow:hidden;
+    width:100%;
+    display:table;
+}
+.areaCategTraining h2{
+    font-size:26px;
+    font-weight:400;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+.areaCategTraining p{
+    font-size:26px;
+    font-weight:500;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+.rowSetsCategTraining{
+    display:table-cell;
+    width:33.3%;
+}
+.rowRepetitionsCategTraining{
+    display:table-cell;
+    width:33.3%;
+    text-align:center;
+}
+.rowPauseCategTraining{
+    display:table-cell;
+    width:33.3%;
+    text-align:right;
+}
+.detTrainingBtn{
+    overflow:hidden;
+    padding-bottom:30px;
+    width:100%;
+    text-align:center;
+}
+.detTrainingBtn .MuiButton-contained {
+    background:#F8CD4E;
+    display:inline-block;
+    color:#fff;
+    text-align:center;
+    font-size:14px;
+    text-transform:none;
+    margin:0px 10px 0px 10px;
+    padding: 10px 0px 10px 0px;
+    border-radius:15px;
+    width:43%;
+    box-shadow:none;;
+}
+.detTrainingBtn .MuiButton-text {
+    background:#C8C8C8;
+    display:inline-block;
+    color:#fff;
+    text-align:center;
+    font-size:14px;
+    text-transform:none;
+    margin:0px 10px 0px 10px;
+    padding: 10px 0px 10px 0px;
+    border-radius:15px;
+    width:43%;
+    box-shadow:none;;
+}
+.detTrainingBtn .MuiButton-root.Mui-disabled {
+    color:#fff;
+    background:#C8C8C8!important;
+}
+.titleTrainingStep .MuiStepLabel-label.MuiStepLabel-active h3{
+    color:#585CE5;
+    font-size:24px;
+    font-weight:400!important;
+    font-family: "brandon-grotesque"!important;
+}
+.titleTrainingStep .MuiStepLabel-label.MuiStepLabel-completed h3{
+    font-size:26px;
+    font-weight:600;
+    font-family: "brandon-grotesque"!important;
+    text-transform:uppercase;
+}
+.detTrainingBtn .MuiButton-root:hover{
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+    background-color: #d5d5d5;
+}
+.timeTrainingWork{
+    overflow:hidden;
+    width:50%;
+    display:inline-block;
+    vertical-align: top;
+}
+.boxTimeTraining{
+    width:100%;
+    max-width:400px;
+    margin-left:20px;
+    background:#fff;
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    overflow:hidden;
+    box-sizing: border-box;
+}
+.boxTimeTraining h2{
+    margin:0px 0px 20px 0px;
+    padding:0px 0px 0px 0px;
+    font-size:40px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+.boxTimeProgressbar{
+    width:180px;
+    height:180px;
+    margin:0 auto;
+    text-align:center;
+    position:relative;
+}
+.lineProgressbar{
+    width:40px;
+    height:9px;
+    border-radius:15px;
+    margin:0 auto;
+    text-align:center;
+    margin-bottom:7px;
+}
+.titleTimeProgressbar{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.titleTimeProgressbar h3{
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    font-size:50px;
+    font-weight:500;
+    line-height:50px;
+    letter-spacing:-4px;
+}
+.ctSetProgressbar{
+    overflow:hidden;
+    width:100%;
+    display:table;
+    margin:0 auto;
+    text-align:center;
+    margin-top:40px;
+}
+.boxSetProgressbar{
+    display:table-cell;
+    text-align:center;
+}
+
+.setActive{
+    color:blue;
+}
+
+.workout_done{
+    color:green;
+}
+.titleTrainingStep.Mui-disabled .makeStyles-root-6 {
+    background:none;
+}
+.btnDspNoneDesk{
+    display:none;
+}
+.titleTrainingStep.Mui-disabled .makeStyles-root-6 .customStepperIcon_ins1 {
+    background:none;
+}
+
+@media (max-width: 1100px) {
+    .boxTimeTraining{
+        margin:0px;
+    }
+    .areaCtTrainingDet{
+        width:auto;
+    }
+    .trainingStepperSt .MuiPaper-root{
+        margin-top:40px;
+        margin-bottom:40px;
+    }
+    .detTrainingWork{
+        width:auto!important;
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .trainingStepperSt .MuiCollapse-wrapperInner {
+        margin-left: 0px;
+    }
+    .MuiStepConnector-vertical, .MuiStepContent-root {
+        margin-left: 0px!important;
+    }
+    .trainingStepperSt .MuiStepContent-root {
+        border-left:0px;
+    }
+    .areaCategTraining{
+        display:block;
+    }
+    .rowSetsCategTraining{
+        display:inline-block;
+        width:50%;
+        margin-bottom:15px;
+    }
+    .rowRepetitionsCategTraining{
+        display:inline-block;
+        width:50%;
+        text-align:right;
+        margin-bottom:15px;
+    }
+    .rowPauseCategTraining{
+        display:inline-block;
+        width:50%;
+        text-align:left;
+        margin-bottom:15px;
+    }
+    .detTrainingWorkSets{
+        padding:15px 15px 0px 15px!important;
+    }
+    .areaCategTraining h2 {
+        font-size:20px;
+    }
+    .areaCategTraining p {
+        font-size:20px;
+    }
+    .btnDspNone{
+        display:none;
+    }
+    .timeTrainingWork{
+        width:100%;
+        display:block;
+        border-top:1px solid #9529F9;
+    }
+    .boxTimeTraining{
+        max-width:100%;
+        width:100%;
+        border-radius:0px 0px 25px 25px;
+        padding:15px;
+    }
+    .areaCtTrainingDet{
+        width:auto;
+        display:block;
+        border-radius:25px 25px 0px 0px;
+    }
+    .trainingStepperSt .MuiStepConnector-line {
+        border-left: 2px solid #C8C8C8;
+        margin-left:20px;
+    }
+    .btnDspNoneDesk{
+        display:block;
+    }
+    .detTrainingBtn{
+        padding-bottom:0px;
+        margin-top:30px;
+    }
+    .detTrainingBtn .MuiButton-text{
+        margin: 0px 5px 0px 0px;
+        width:48%;
+    }
+    .detTrainingBtn .MuiButton-contained {
+        margin: 0px 0px 0px 5px;
+        width:48%;
+    }
+    body .mainContainerStyle{
+        background:#fff;
+    }
+    .trainingStepperMob{
+        /*background:#1A2C70;
+        padding-top:10px;
+        border-radius:0px 25px 25px 0px;*/
+    }
+    .trainingStepperSt{
+       background:#fff;
+       border-radius:25px 0px 0px 0px;
+    }
+}
+@media (max-width: 600px) {
+    .trainingStepperSt .MuiPaper-root{
+        margin-top:40px;
+        margin-bottom:80px;
+    }
+}
+@media (max-height: 800px) {
+    .trainingStepperSt .MuiPaper-root{
+        margin-top:40px;
+        margin-bottom:80px;
+    }
+}

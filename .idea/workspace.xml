@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +15,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="trainingpage" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1optRQeDnKdmuOTbGR0KOw5pXSH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -21,20 +37,36 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/sounds" />
+      <recent name="$PROJECT_DIR$/src/assets/MilestoneIcons" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/Components/SuccModal" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -46,6 +78,29 @@
       <updated>1613995352956</updated>
       <workItem from="1613995358715" duration="192000" />
       <workItem from="1613995554384" duration="566000" />
+      <workItem from="1614534871219" duration="1152000" />
+      <workItem from="1614588493193" duration="838000" />
+      <workItem from="1614881424064" duration="2661000" />
+      <workItem from="1614933889068" duration="601000" />
+      <workItem from="1615117408031" duration="198000" />
+      <workItem from="1615131820082" duration="6061000" />
+      <workItem from="1615587800469" duration="14858000" />
+      <workItem from="1616074751476" duration="91000" />
+      <workItem from="1616088885934" duration="919000" />
+      <workItem from="1616172267846" duration="608000" />
+      <workItem from="1616189979378" duration="2955000" />
+      <workItem from="1616341215321" duration="11733000" />
+      <workItem from="1616508610576" duration="349000" />
+      <workItem from="1616522363951" duration="3519000" />
+      <workItem from="1617023243727" duration="4038000" />
+      <workItem from="1617436040273" duration="26642000" />
+      <workItem from="1617632117327" duration="12510000" />
+      <workItem from="1617793655759" duration="10615000" />
+      <workItem from="1617903259030" duration="200000" />
+      <workItem from="1617909733639" duration="15482000" />
+      <workItem from="1618158474459" duration="4497000" />
+      <workItem from="1618956642342" duration="427000" />
+      <workItem from="1619534643319" duration="4066000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -61,11 +116,294 @@
       <option name="project" value="LOCAL" />
       <updated>1614256844606</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="training merged into master">
+      <created>1614257207542</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614257207542</updated>
+    </task>
+    <task id="LOCAL-00004" summary="package lock on git ignore">
+      <created>1614588820775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614588820775</updated>
+    </task>
+    <task id="LOCAL-00005" summary="stash">
+      <created>1614881757110</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614881757110</updated>
+    </task>
+    <task id="LOCAL-00006" summary="all branches merged">
+      <created>1614933925651</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614933925651</updated>
+    </task>
+    <task id="LOCAL-00007" summary="julian-func merged">
+      <created>1614934506017</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614934506017</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactored BA">
+      <created>1615143608546</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1615143608546</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactored BA">
+      <created>1615149864682</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1615149864682</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Routing added">
+      <created>1615597267861</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1615597267861</updated>
+    </task>
+    <task id="LOCAL-00011" summary="some chagnes">
+      <created>1616001997565</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616001997565</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Routing">
+      <created>1616003402793</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1616003402793</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Active state of icons">
+      <created>1616009811877</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1616009811877</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Active state bug fixed">
+      <created>1616009883790</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1616009883790</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Active state bug fixed again">
+      <created>1616024038356</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1616024038356</updated>
+    </task>
+    <task id="LOCAL-00016" summary="ruslan changes">
+      <created>1616190087713</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1616190087713</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Merged with julian landing page">
+      <created>1616190974137</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1616190974137</updated>
+    </task>
+    <task id="LOCAL-00018" summary="New routing">
+      <created>1616191614539</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1616191614539</updated>
+    </task>
+    <task id="LOCAL-00019" summary="training is active now">
+      <created>1616196503880</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1616196503880</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Jetzt starten button vergrössert">
+      <created>1616232956247</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1616232956247</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Small changes to the progress bar">
+      <created>1616261984858</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1616261984858</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Navbar changes">
+      <created>1616266496825</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1616266496825</updated>
+    </task>
+    <task id="LOCAL-00023" summary="on Workojt finished added">
+      <created>1616347299090</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1616347299090</updated>
+    </task>
+    <task id="LOCAL-00024" summary="TE and last workout is persitend now">
+      <created>1616356076254</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1616356076254</updated>
+    </task>
+    <task id="LOCAL-00025" summary="current changes">
+      <created>1616358571316</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1616358571316</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Some Changes">
+      <created>1617028796799</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1617028796799</updated>
+    </task>
+    <task id="LOCAL-00027" summary="firebase roots changed">
+      <created>1617561413633</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1617561413634</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Payment added">
+      <created>1617609925486</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1617609925486</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Ruslan Changes">
+      <created>1617708113999</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1617708113999</updated>
+    </task>
+    <task id="LOCAL-00030" summary="some shit here">
+      <created>1617708160326</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1617708160326</updated>
+    </task>
+    <task id="LOCAL-00031" summary="training ist nun wiederholbar">
+      <created>1617791157466</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1617791157466</updated>
+    </task>
+    <task id="LOCAL-00032" summary="training ist nun wiederholbar mit realtime listener">
+      <created>1617792116367</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1617792116367</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Vorbereitungszeit mit Dave geadded">
+      <created>1617824986280</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1617824986280</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Aufwärmen aus pool 1 und 2">
+      <created>1617826871139</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1617826871139</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Trailer video added and pausable">
+      <created>1617832557253</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1617832557253</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Training absolviert im kalander">
+      <created>1617915171580</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1617915171580</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Training Bugs fixed">
+      <created>1617983289165</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1617983289165</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Profile edit mode set as default">
+      <created>1617986412104</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1617986412104</updated>
+    </task>
+    <task id="LOCAL-00039" summary="sound usw">
+      <created>1617989522570</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1617989522570</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Bug fixes">
+      <created>1618164317995</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1618164317996</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Pause function added">
+      <created>1619545673559</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1619545673559</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -80,8 +418,31 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test" />
-    <MESSAGE value="untracked files" />
-    <option name="LAST_COMMIT_MESSAGE" value="untracked files" />
+    <MESSAGE value="New routing" />
+    <MESSAGE value="training is active now" />
+    <MESSAGE value="Jetzt starten button vergrössert" />
+    <MESSAGE value="unused code deleted" />
+    <MESSAGE value="Small changes to the progress bar" />
+    <MESSAGE value="Navbar changes" />
+    <MESSAGE value="on Workojt finished added" />
+    <MESSAGE value="TE and last workout is persitend now" />
+    <MESSAGE value="current changes" />
+    <MESSAGE value="Some Changes" />
+    <MESSAGE value="firebase roots changed" />
+    <MESSAGE value="Payment added" />
+    <MESSAGE value="Ruslan Changes" />
+    <MESSAGE value="some shit here" />
+    <MESSAGE value="training ist nun wiederholbar" />
+    <MESSAGE value="training ist nun wiederholbar mit realtime listener" />
+    <MESSAGE value="Vorbereitungszeit mit Dave geadded" />
+    <MESSAGE value="Aufwärmen aus pool 1 und 2" />
+    <MESSAGE value="Trailer video added and pausable" />
+    <MESSAGE value="Training absolviert im kalander" />
+    <MESSAGE value="Training Bugs fixed" />
+    <MESSAGE value="Profile edit mode set as default" />
+    <MESSAGE value="sound usw" />
+    <MESSAGE value="Bug fixes" />
+    <MESSAGE value="Pause function added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pause function added" />
   </component>
 </project>

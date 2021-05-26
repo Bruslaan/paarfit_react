@@ -1,0 +1,34 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 0 20px; */
+  width: 100%;
+  height: 100%;
+}
+
+.menu > a {
+  margin-right: 20px;
+  color: gray;
+  display: flex !important;
+  height: 100% !important;
+  width: 100% !important;
+  place-items: center;
+  justify-content: center;
+}
+
+.menu > a > svg {
+  height: 2rem !important;
+  width: 2rem !important;
+}
+
+.btnProfileMenu {
+  color: rgb(148, 56, 245) !important;
+}
+
+.active__link > svg {
+  color: black !important;
+}
+.active__link {
+  color: black !important;
+}

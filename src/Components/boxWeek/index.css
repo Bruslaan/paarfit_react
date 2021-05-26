@@ -1,0 +1,306 @@
+.left__section > * {
+  margin-bottom: 20px;
+}
+
+.left__section {
+  float: left;
+  max-width: 614px;
+  width: 100%;
+}
+
+.right__section {
+  max-width: 293px;
+  width: 100%;
+  top: 30px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+:root {
+  --content-width: 100%;
+}
+
+body {
+  background: #e9eff2;
+  font-family: 'brandon-grotesque';
+  color: #1e1e1e;
+}
+.boxContent {
+}
+.detailsBoxProg {
+  overflow: hidden;
+  padding: 40px 24px 0px 24px;
+  background: #fff;
+  border-radius: 25px;
+  text-align: left;
+}
+.titleBoxProg {
+  overflow: hidden;
+}
+.titleBoxProg h2 {
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+.titleBoxProg h3 {
+  margin-top: 0px;
+  font-size: 20px;
+}
+.boxTimeSchedule {
+  margin-top: 40px;
+  width: 100%;
+  display: table-row;
+}
+.calendarLeft {
+  display: table-cell;
+  width: 52px;
+  vertical-align: top;
+}
+.calendarLeftDate {
+  text-align: center;
+  width: 32px;
+}
+.calendarLeft h2 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.calendarLeft h3 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.lineTimeSchedule {
+  display: table-cell;
+  height: auto;
+  width: 24px;
+  /* background: url("/images/lineTimeSchedule.jpg") repeat-y center; */
+  padding-top: 0px;
+  vertical-align: top;
+}
+.ctBoxLine {
+  width: 24px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.borderBoxLine {
+  overflow: hidden;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+}
+.borderLineIns {
+  overflow: hidden;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1.5px;
+}
+.dotLineCalendar {
+  overflow: hidden;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3px;
+}
+.detTrainingRight {
+  display: table-cell;
+  padding-left: 15px;
+  width: 330px;
+}
+.detTrainingBtnSm {
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.detTrainingBtnSm a {
+  display: block;
+  padding: 11px 23px 11px 23px;
+  font-size: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+}
+.detTrainingBtnSm a h2 {
+  float: left;
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+.detTrainingBtnSm a h3 {
+  float: right;
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 900;
+  padding-left: 10px;
+}
+.detTrainingBtnLg {
+  margin-bottom: 18px;
+  position: relative;
+}
+.detTrainingBtnLg a {
+  display: block;
+  padding: 12px 23px 12px 23px;
+  font-size: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+}
+.detTrainingBtnLg a h2 {
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  width: 100%;
+}
+.detTrainingBtnLg a h3 {
+  float: right;
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+}
+.contentBtnLg {
+  overflow: hidden;
+}
+.detailsBtnLg {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.detTrainingBtnLg .detailsBtnLg h3 {
+  float: left;
+  font-size: 16px;
+  font-weight: 400;
+}
+.detailsBtnLg h4 {
+  float: right;
+  font-size: 16px;
+  font-weight: 500;
+  padding-right: 20px;
+}
+.lineBtn {
+  width: 17px;
+  height: 2px;
+  margin: 14px 0px 24px 0px;
+}
+.iconWeightBtnLg {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  position: absolute;
+  top: 70px;
+  right: -15px;
+  z-index: 1;
+  text-align: center;
+  line-height: 36px;
+}
+.iconWeightBtnLg img {
+  text-align: center;
+  width: 25px;
+  filter: invert(99%) sepia(3%) saturate(136%) hue-rotate(313deg)
+    brightness(115%) contrast(100%);
+  margin-top: 5px;
+}
+.iconAddBtnLg {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  position: absolute;
+  top: 113px;
+  right: -15px;
+  z-index: 1;
+  text-align: center;
+  line-height: 36px;
+  font-weight: 700;
+}
+.contentProg .boxTimeSchedule:first-child .lineTimeSchedule .ctBoxLine {
+  padding-top: 10px;
+  margin-top: 0px;
+}
+
+@media (max-width: 1300px) {
+  .detTrainingBtnSm a h2 {
+    font-size: 16px;
+  }
+  .detTrainingBtnSm a h3 {
+    font-size: 16px;
+  }
+  .detTrainingBtnLg a h2 {
+    font-size: 16px;
+  }
+  .detTrainingBtnLg .detailsBtnLg h3 {
+    font-size: 14px;
+  }
+  .detailsBtnLg h4 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .boxContent {
+  }
+  .detailsBoxProg {
+    padding: 30px 0px 0px 0px;
+    border-radius: 0px;
+  }
+  .titleBoxProg {
+    padding-bottom: 20px;
+    border-radius: 0px 0px 25px 25px;
+    box-shadow: -1px 5px 15px 3px rgba(204, 204, 204, 0.75);
+    -webkit-box-shadow: -1px 5px 15px 3px rgba(204, 204, 204, 0.75);
+    -moz-box-shadow: -1px 5px 15px 3px rgba(204, 204, 204, 0.75);
+  }
+  .titleBoxProg h2 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .titleBoxProg h3 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .contentProg {
+    padding: 0px 30px 0px 15px;
+  }
+  .detTrainingBtnSm a h2 {
+    font-size: 14px;
+  }
+  .detTrainingBtnSm a h3 {
+    font-size: 14px;
+  }
+  .detTrainingBtnLg a h2 {
+    font-size: 14px;
+  }
+  .detailsBtnLg h4 {
+    font-size: 14px;
+  }
+  .detTrainingBtnLg .detailsBtnLg h3 {
+    font-size: 14px;
+  }
+  .calendarLeft {
+    width: 33px;
+  }
+  .calendarLeft h2 {
+    font-size: 16px;
+  }
+  .calendarLeft h3 {
+    font-size: 16px;
+  }
+  .lineTimeSchedule.pb122 {
+    padding-bottom: 50px;
+  }
+  .iconWeightBtnLg {
+    top: 63px;
+  }
+  .iconAddBtnLg {
+    top: 103px;
+  }
+}

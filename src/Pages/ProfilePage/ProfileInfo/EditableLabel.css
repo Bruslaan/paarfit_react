@@ -1,0 +1,100 @@
+.editableLabel {
+  position: relative;
+}
+
+.teamNameInput {
+  position: inherit;
+  border: none;
+  font-family: 'brandon-grotesque';
+  background-color: rgb(241, 244, 253);
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 10px;
+  outline: none;
+}
+
+.namelabel {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+}
+
+.ageLabel {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(115, 115, 237);
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+}
+
+.nameInput {
+  position: inherit;
+  border: none;
+  font-family: 'brandon-grotesque';
+  font-size: 20px;
+  text-align: center;
+  background-color: rgb(241, 244, 253);
+  border-radius: 15px;
+  width: 120px;
+  height: 25px;
+  padding: 2px 5px;
+  outline: none;
+  z-index: 61;
+}
+
+.ageInput {
+  position: inherit;
+  border: none;
+  font-family: 'brandon-grotesque';
+  font-size: 20px;
+  text-align: center;
+  background-color: rgb(241, 244, 253);
+  color: rgb(115, 115, 237);
+  border-radius: 15px;
+  width: 40px;
+  height: 25px;
+  padding: 0px 5px;
+  margin-top: 2px;
+  outline: none;
+  z-index: 61;
+}
+
+.clickOutside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+}
+
+.profileInfoIcon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 3;
+  background: white;
+}
+
+.editContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ageLabel {
+  color: rgb(115, 115, 237);
+}
+
+.profileInfoIcon {
+  border-radius: 5px;
+  color: rgb(115, 115, 237);
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.151);
+  z-index: 61;
+}

@@ -1,0 +1,25 @@
+.profile {
+  font-family: 'brandon-grotesque';
+  background-color: rgb(233, 239, 242);
+    display:flex;
+    flex-wrap: wrap;
+
+}
+
+.flexItem{
+    flex-grow: 1;
+    margin-bottom: 10px;
+    flex: 1;
+    min-width: 300px;
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+
+    .flexItem{
+    margin-right: 10px;
+    }
+
+}
