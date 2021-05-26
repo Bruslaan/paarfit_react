@@ -51,9 +51,9 @@ const ProfileInfo = (userInfo: any) => {
                     })`,
                 }}
             />
-            <div className='profileInfoTop fullWidth'>
+            <div className='profileInfoTop fullWidth customTopFormAreaStyle'>
                 <div
-                    className='proInfoTitleBox'
+                    className='proInfoTitleBox customTopFormStyle'
                     style={{color: 'rgb(92 94 235)', fontWeight: 'bold'}}
                 >
                     <p>Team Name</p>
@@ -93,8 +93,8 @@ const ProfileInfo = (userInfo: any) => {
             <hr className='profileInfoHR'/>
 
 
-            <div className='fullWidth '>
-                <div
+            <div className='fullWidth customTableMainFormStyle'>
+                <div className="customTableFormStyle"
                     style={{
                         display: 'flex',
                         flexWrap: 'wrap',
@@ -103,7 +103,7 @@ const ProfileInfo = (userInfo: any) => {
                         color: 'rgb(92 94 235)', fontWeight: 'bold'
                     }}
                 >
-                    <div className='grid-itemTitle' style={{textAlign: 'start'}}>
+                    <div className='grid-itemTitle customTableColFormStyle1' style={{textAlign: 'start'}}>
                         <p>Partner 1</p><br/>
                         <EditableLabel
                             editMode={editMode}
@@ -122,7 +122,8 @@ const ProfileInfo = (userInfo: any) => {
                             }
                         />
                     </div>
-                    <div className='grid-itemTitle' style={{textAlign: 'end'}}>
+                    <div className='grid-itemTitle customTableColFormStyle2'><div className="customTableColFormStyleSp"></div></div>
+                    <div className='grid-itemTitle customTableColFormStyle3' style={{textAlign: 'end'}}>
                         <p>Partner 2</p>
                         <br/>
                         <EditableLabel
@@ -144,14 +145,14 @@ const ProfileInfo = (userInfo: any) => {
                     </div>
                 </div>
 
-                <div
+                <div className="customTableFormStyle2"
                     style={{
                         display: 'flex',
                         flexWrap: 'wrap',
                         justifyContent: 'space-between',
                     }}
                 >
-                    <div className='grid-item'>
+                    <div className='grid-item customTableColFormStyle1'>
                         <DropDownComp
                             editMode={editMode}
                             pickedValue={allInformations?.genderA}
@@ -164,7 +165,7 @@ const ProfileInfo = (userInfo: any) => {
                             genderArr={genderArr}
                         />
                     </div>
-                    <div className='grid-item'>
+                    <div className='grid-item customTableColFormStyle2'>
                         <svg
                             className='profileInfoIconGrid'
                             width='1.2em'
@@ -181,7 +182,7 @@ const ProfileInfo = (userInfo: any) => {
                             />
                         </svg>
                     </div>
-                    <div className='grid-item'>
+                    <div className='grid-item customTableColFormStyle3'>
                         <DropDownComp
                             editMode={editMode}
                             pickedValue={allInformations?.genderB}
@@ -195,14 +196,14 @@ const ProfileInfo = (userInfo: any) => {
                         />
                     </div>
                 </div>
-                <div
+                <div className="customTableFormStyle2"
                     style={{
                         display: 'flex',
                         flexWrap: 'wrap',
                         justifyContent: 'space-between',
                     }}
                 >
-                    <div className='grid-item'>
+                    <div className='grid-item customTableColFormStyle1'>
                         <HeightComp
                             editMode={editMode}
                             height={allInformations?.heightA}
@@ -215,7 +216,7 @@ const ProfileInfo = (userInfo: any) => {
                         />
                     </div>
 
-                    <div className='grid-item'>
+                    <div className='grid-item customTableColFormStyle2'>
                         <svg
                             className='profileInfoIconGrid'
                             width='1.2em'
@@ -232,7 +233,7 @@ const ProfileInfo = (userInfo: any) => {
                             />
                         </svg>
                     </div>
-                    <div className='grid-item'>
+                    <div className='grid-item customTableColFormStyle3'>
                         <HeightComp
                             editMode={editMode}
                             height={allInformations?.heightB}
@@ -245,14 +246,14 @@ const ProfileInfo = (userInfo: any) => {
                         />
                     </div>
                 </div>
-                <div
+                <div className="customTableFormStyle2"
                     style={{
                         display: 'flex',
                         flexWrap: 'wrap',
                         justifyContent: 'space-between',
                     }}
                 >
-                    <div className='grid-item'>
+                    <div className='grid-item customTableColFormStyle1'>
                         <WeightComp
                             editMode={editMode}
                             weight={allInformations?.weightA}
@@ -264,7 +265,7 @@ const ProfileInfo = (userInfo: any) => {
                             }
                         />
                     </div>
-                    <div className='grid-item'>
+                    <div className='grid-item customTableColFormStyle2'>
                         <svg
                             className='profileInfoIconGrid'
                             width='1.2em'
@@ -281,7 +282,7 @@ const ProfileInfo = (userInfo: any) => {
                             />
                         </svg>
                     </div>
-                    <div className='grid-item'>
+                    <div className='grid-item customTableColFormStyle3'>
                         <WeightComp
                             editMode={editMode}
                             weight={allInformations?.weightB}

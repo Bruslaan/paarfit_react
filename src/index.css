@@ -181,9 +181,14 @@ body .mainContainerStyle {
   float: left;
   padding: 15px;
   box-sizing: border-box;
-  margin-bottom: 50px;
+  /*margin-bottom: 50px;*/
+  padding-bottom:0px;
 }
-
+@media only screen and (max-width: 600px) {
+  .contentArea {
+    padding-bottom:60px;
+  }
+}
 .areaMenuLeftTop {
   overflow: hidden;
   border-radius: 25px 0px 0px 25px;

@@ -209,3 +209,32 @@
     font-size: 20px;
   }
 }
+/**************************************/
+@media (max-width: 400px) {
+  .ctStartCouple,
+  .ctPowerCouple,
+  .ctFitnessCouple,
+  .ctAdvancedCouple,
+  .ctSuperCouple{
+    width: 120px;
+    height: 120px;
+  }
+  .areaStartCouple .ctSpitzensportler,
+  .areaStartCouple .ctÜberflieger,
+  .areaStartCouple .ctGewinnerteam,
+  .areaStartCouple .ctSportkanonen,
+  .areaStartCouple .ctDurchstarter{
+    width: 120px;
+    height: 120px;
+  }
+  .areaUntilLevel h3 {
+    font-size: 17px;
+  }
+  .areaStartCouple p,
+  .areaPowerCouple p,
+  .areaFitnessCouple p,
+  .areaAdvancedCouple p,
+  .areaSuperCouple p{
+    font-size: 20px;
+  }
+}

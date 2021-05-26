@@ -90,7 +90,7 @@ export default function TraiingActivePage() {
         }
     }
 
-    return <div>
+    return <div className="contentTrainingActive">
 
         {Workouts.map((workout: any, index: number) => {
             return (

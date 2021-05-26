@@ -47,3 +47,12 @@
   color: rgb(27, 46, 110);
   transition: all 0.2s ease-in-out;
 }
+/***************************************************/
+.trainingOverview{
+  padding: 48px 0px 48px 0px;
+}
+@media only screen and (max-width: 767px) {
+  .trainingOverview{
+    padding: 24px 0px 0px 0px;  
+  }
+}

@@ -55,6 +55,7 @@ const BAComp = () => {
           }
           onPositionChange={function noRefCheck() {}}
           position={50}
+          onlyHandleDraggable={true}
           style={{
             flexGrow: 1,
             width: '100%',
