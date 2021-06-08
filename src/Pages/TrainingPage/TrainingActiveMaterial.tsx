@@ -251,11 +251,11 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
                                     <div className='areaCtTrainingDet'>
                                         <WorkoutItem
                                             firstVideo={index === 0 && stageNumber === 0}
-
                                             onPaused={() => setTimerEnabled(true)}
                                             onPlaying={() => setTimerEnabled(false)}
                                             workout={parseWorkoutInformation(workout, stageNumber === 1)}
                                             stage={stage}/>
+
                                         <div className={classes.actionsContainer}>
                                             <div className='detTrainingBtn btnDspNone'>
                                                 <Button

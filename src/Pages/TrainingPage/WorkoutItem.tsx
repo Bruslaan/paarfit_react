@@ -1,5 +1,5 @@
-import React, {useEffect, useRef} from 'react';
-
+import React, {useEffect, useRef, useState} from 'react';
+import Button from '@material-ui/core/Button';
 
 const MyItem: React.FC<any> = ({
                                    onClick,
@@ -18,11 +18,11 @@ const MyItem: React.FC<any> = ({
         });
     }
 
-    useEffect(() => {
-        // scrollToTargetAdjusted()
-    }, []);
+    const video: any = useRef()
 
+    const [workoutStarted, setWorkoutStarted] = useState(false);
 
+    console.log(video)
     return (
         <div
 
@@ -33,13 +33,16 @@ const MyItem: React.FC<any> = ({
                 position: 'relative',
                 cursor: visible ? 'default' : 'pointer',
             }}
+
             onClick={onClick}
         >
             <div className='detTrainingStep'>
-                <video
 
+
+                <video
                     autoPlay={!firstVideo}
                     className='noSelect'
+                    ref={video}
                     onPlaying={(e) => onPlaying()}
                     onPause={() => onPaused()}
                     preload='metadata'
@@ -55,10 +58,12 @@ const MyItem: React.FC<any> = ({
                         width: '100%',
                         top: 0,
                         objectFit: 'contain',
+                        position: "relative"
                     }}
                     width='100%'
                     poster=''
                 >
+
                     <source src={workout.video?.url + '#t=1.5'} type='video/mp4'/>
                     <source src={workout.video?.url + '#t=1.5'} type='video/mp4'/>
                     Your browser does not support the video tag.
@@ -71,9 +76,34 @@ const MyItem: React.FC<any> = ({
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
+                        position: "relative"
                     }}
                 >
-                    <div className='areaCategTraining'>
+
+
+                    <div className='areaCategTraining' style={{position: "relative"}}>
+
+                        {
+                            firstVideo && !workoutStarted &&
+                            <div style={{
+                                top: 0,
+                                right: 0,
+                                left: 0,
+                                bottom: 0,
+                                position: "absolute",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                background: "white",
+                            }}>
+                                <Button variant='contained' style={{
+                                    backgroundColor: '#F8CD4E',
+                                    color: "white",
+                                }} onClick={() => {
+                                    setWorkoutStarted(true)
+                                    video.current.play()
+                                }}>Workout Starten</Button>
+                            </div>}
                         {/* <h2 style={{ marginBottom: "20px" }}>{workout.workoutname}</h2> */}
                         <div className='rowSetsCategTraining'>
                             <h2 className='purple1'>Sätze</h2>

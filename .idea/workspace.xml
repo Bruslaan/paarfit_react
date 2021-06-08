@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/favicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/NavBar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/NavBar/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" afterDir="false" />
     </list>
@@ -104,7 +102,7 @@
       <workItem from="1618956642342" duration="427000" />
       <workItem from="1619534643319" duration="4066000" />
       <workItem from="1622275037476" duration="189000" />
-      <workItem from="1623171306334" duration="1047000" />
+      <workItem from="1623171306334" duration="3694000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -400,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622031626403</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Some changes and merges">
+      <created>1623172452828</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1623172452828</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +434,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="training is active now" />
     <MESSAGE value="Jetzt starten button vergrössert" />
     <MESSAGE value="unused code deleted" />
     <MESSAGE value="Small changes to the progress bar" />
@@ -454,6 +458,7 @@
     <MESSAGE value="Bug fixes" />
     <MESSAGE value="Pause function added" />
     <MESSAGE value="version increase moment" />
-    <option name="LAST_COMMIT_MESSAGE" value="version increase moment" />
+    <MESSAGE value="Some changes and merges" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some changes and merges" />
   </component>
 </project>
