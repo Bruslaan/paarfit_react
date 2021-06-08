@@ -8,6 +8,7 @@ const MyItem: React.FC<any> = ({
                                    workout,
                                    onPaused,
                                    onPlaying,
+                                   firstVideo
                                }) => {
     function scrollToTargetAdjusted() {
 
@@ -37,7 +38,7 @@ const MyItem: React.FC<any> = ({
             <div className='detTrainingStep'>
                 <video
 
-                    autoPlay={true}
+                    autoPlay={!firstVideo}
                     className='noSelect'
                     onPlaying={(e) => onPlaying()}
                     onPause={() => onPaused()}

@@ -126,10 +126,10 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
         const now = new Date();
         setstartTime(now);
         fetchWorkouts();
-         /*console.log(document.getElementsByClassName('makeStyles-active-15').offsetTop);
-        window.scrollTo({
-            top: document.getElementsByClassName('makeStyles-active-15').offsetTop           
-        });*/
+        /*console.log(document.getElementsByClassName('makeStyles-active-15').offsetTop);
+       window.scrollTo({
+           top: document.getElementsByClassName('makeStyles-active-15').offsetTop
+       });*/
     }, [activeStep]);
 
     const handleNext = () => {
@@ -239,7 +239,7 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
                         orientation='vertical'
                         style={{width: '100%', padding: '0'}}
                     >
-                        {workouts.map((workout: any) => (
+                        {workouts.map((workout: any, index: number) => (
                             <Step key={workout['_id']}>
                                 <StepLabel
                                     className='titleTrainingStep'
@@ -249,10 +249,13 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
                                 </StepLabel>
                                 <StepContent style={{padding: '0'}}>
                                     <div className='areaCtTrainingDet'>
-                                        <WorkoutItem onPaused={() => setTimerEnabled(true)}
-                                                     onPlaying={() => setTimerEnabled(false)}
-                                                     workout={parseWorkoutInformation(workout, stageNumber === 1)}
-                                                     stage={stage}/>
+                                        <WorkoutItem
+                                            firstVideo={index === 0 && stageNumber === 0}
+
+                                            onPaused={() => setTimerEnabled(true)}
+                                            onPlaying={() => setTimerEnabled(false)}
+                                            workout={parseWorkoutInformation(workout, stageNumber === 1)}
+                                            stage={stage}/>
                                         <div className={classes.actionsContainer}>
                                             <div className='detTrainingBtn btnDspNone'>
                                                 <Button
