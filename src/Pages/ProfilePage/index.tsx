@@ -55,7 +55,7 @@ export default function ProfilePage() {
       });
   }, []);
   return (
-    <div>
+    <div className="contentProfile">
       <Profile />
     </div>
   );

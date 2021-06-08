@@ -144,3 +144,120 @@
     transform: translate(50%, 0);
   }
 }
+
+/***********************custom style**************************/
+.proInfoTitleBox{
+  padding-right:10px;  
+}
+.customTableFormStyle{
+  width:100%;
+  display:table!important;
+}
+.customTableFormStyle .customTableColFormStyle1{
+  float:none;
+  display:table-cell;
+  vertical-align: middle;
+  width:43%;
+}
+.customTableFormStyle .customTableColFormStyle2{
+  float:none;
+  display:table-cell;
+  vertical-align: middle;
+  width:14%;
+}
+.customTableFormStyle .customTableColFormStyle3{
+  float:none;
+  display:table-cell;
+  vertical-align: middle;
+  width:43%;
+}
+.customTableFormStyle2{
+  width:100%;
+  display:table!important;
+}
+.customTableFormStyle2 .customTableColFormStyle1{
+  float:none;
+  display:table-cell;
+  vertical-align: middle;
+  width:43%;
+}
+.customTableFormStyle2 .customTableColFormStyle2{
+  float:none;
+  display:table-cell;
+  vertical-align: middle;
+  width:14%;
+}
+
+.customTableFormStyle2 .customTableColFormStyle2 .profileInfoIconGrid{
+  margin-top:10px;
+}
+.customTableFormStyle2 .customTableColFormStyle3{
+  float:none;
+  display:table-cell;
+  vertical-align: middle;
+  width:43%;
+}
+.customTopFormStyle .customDropdownFormStyle .dropbtn,
+.customTableFormStyle .customDropdownFormStyle .dropbtn,
+.customTableFormStyle2 .customDropdownFormStyle .dropbtn{
+  width:100%;
+  min-width:50px;
+}
+.customTopFormStyle .customDropdownFormStyle .dropdown-content,
+.customTableFormStyle .customDropdownFormStyle .dropdown-content,
+.customTableFormStyle2 .customDropdownFormStyle .dropdown-content{
+  width:auto;
+  min-width: 100px;
+}
+.customTableFormStyle .heightCompA,
+.customTableFormStyle2 .heightCompA,
+.customTableFormStyle .teamNameInput,
+.customTableFormStyle2 .teamNameInput{
+  width:100%;
+  
+}
+.customTableFormStyle2 .weightContainer{
+  width:100%;
+  position: relative;
+    box-sizing: border-box;
+}
+.customTableFormStyle2 .weightBtnContainer{
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  display:block;
+}
+.customTableFormStyle2 .weightBtnContainer .weightM{
+  left:0px;
+}
+.customTableFormStyle2 .weightBtnContainer .weightP{
+  right:0px;
+}
+.customTableFormStyle2 .weightBtnContainer .weightInput{
+  width:100%;
+  padding:0px;
+}
+.contentProfile{
+  overflow: hidden;
+  padding: 48px 0px 48px 0px;
+  max-width: 1540px;
+  margin: 0 auto;
+  font-family: 'brandon-grotesque';
+}
+@media only screen and (max-width: 767px) {
+  .contentProfile{
+    overflow: hidden;
+    padding: 24px 0px 24px 0px;
+    max-width: 1540px;
+    margin: 0 auto;
+    font-family: 'brandon-grotesque';
+  }
+}
+
+@media only screen and (max-width: 412px){
+  .customTopFormAreaStyle {
+      width: 100%;
+  }
+}

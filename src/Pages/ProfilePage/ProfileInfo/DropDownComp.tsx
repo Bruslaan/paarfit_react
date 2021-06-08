@@ -23,7 +23,7 @@ const DropDownComp = ({ genderArr, onValuePicked, pickedValue, editMode }: any) 
     }
 
   return (
-    <div className='dropdown'>
+    <div className='dropdown customDropdownFormStyle'>
       <button
         onClick={() => setShowDropDown(!showDropDown)}
         className='dropbtn'
