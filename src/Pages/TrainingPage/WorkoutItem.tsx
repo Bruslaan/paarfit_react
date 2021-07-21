@@ -19,10 +19,6 @@ const MyItem: React.FC<any> = ({
     }
 
     const video: any = useRef()
-
-    const [workoutStarted, setWorkoutStarted] = useState(false);
-
-    console.log(video)
     return (
         <div
 
@@ -83,27 +79,6 @@ const MyItem: React.FC<any> = ({
 
                     <div className='areaCategTraining' style={{position: "relative"}}>
 
-                        {
-                            firstVideo && !workoutStarted &&
-                            <div style={{
-                                top: 0,
-                                right: 0,
-                                left: 0,
-                                bottom: 0,
-                                position: "absolute",
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                background: "white",
-                            }}>
-                                <Button variant='contained' style={{
-                                    backgroundColor: '#F8CD4E',
-                                    color: "white",
-                                }} onClick={() => {
-                                    setWorkoutStarted(true)
-                                    video.current.play()
-                                }}>Workout Starten</Button>
-                            </div>}
                         {/* <h2 style={{ marginBottom: "20px" }}>{workout.workoutname}</h2> */}
                         <div className='rowSetsCategTraining'>
                             <h2 className='purple1'>Sätze</h2>
