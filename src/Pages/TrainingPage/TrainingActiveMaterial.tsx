@@ -181,7 +181,7 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
 
         const pause = moodBased(currentMood, pausePause)
         newWorkout.set = proPerson ? moodBased(currentMood, parseSets) * 2 : moodBased(currentMood, parseSets)
-        newWorkout.rep = (kraft ? moodBased(currentMood, parseReps) * 3 : moodBased(currentMood, parseReps))*multiplicator
+        newWorkout.rep = Math.ceil((kraft ? moodBased(currentMood, parseReps) * 3 : moodBased(currentMood, parseReps)) * multiplicator)
         newWorkout.pause = proPerson ? 20 : pause
         newWorkout.alternate = proPerson
         return newWorkout

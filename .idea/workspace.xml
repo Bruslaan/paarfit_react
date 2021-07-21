@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/WorkoutItem.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +104,7 @@
       <workItem from="1623171306334" duration="4670000" />
       <workItem from="1623361704335" duration="271000" />
       <workItem from="1626116843704" duration="604000" />
-      <workItem from="1626882081592" duration="875000" />
+      <workItem from="1626882081592" duration="1000000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1613995500944</created>
@@ -416,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623175033180</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Multiplicator added">
+      <created>1626883064769</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1626883064769</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +450,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="unused code deleted" />
     <MESSAGE value="Small changes to the progress bar" />
     <MESSAGE value="Navbar changes" />
     <MESSAGE value="on Workojt finished added" />
@@ -470,6 +474,7 @@
     <MESSAGE value="version increase moment" />
     <MESSAGE value="Some changes and merges" />
     <MESSAGE value="workout start" />
-    <option name="LAST_COMMIT_MESSAGE" value="workout start" />
+    <MESSAGE value="Multiplicator added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiplicator added" />
   </component>
 </project>
