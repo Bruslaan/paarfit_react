@@ -1797,6 +1797,77 @@
     "mkdirp" "^1.0.4"
     "rimraf" "^3.0.2"
 
+"@paypal/checkout-components@^5.0.172":
+  "integrity" "sha512-K0IoliblQ0RJPr5/Glu6iDkkG9CtTdNQn1Z5pIMQ6brvkktkCwo+jTwXcYkU6V1ZYnojetKdby8FOZCN5bDhKw=="
+  "resolved" "https://registry.npmjs.org/@paypal/checkout-components/-/checkout-components-5.0.172.tgz"
+  "version" "5.0.172"
+  dependencies:
+    "@paypal/common-components" "^1.0.16"
+    "@paypal/funding-components" "^1.0.17"
+    "@paypal/sdk-client" "^4.0.156"
+    "@paypal/sdk-constants" "^1.0.107"
+    "@paypal/sdk-logos" "^1.0.26"
+    "belter" "^1.0.2"
+    "cross-domain-utils" "^2.0.1"
+    "jsx-pragmatic" "^2"
+    "post-robot" "^10.0.0"
+    "zalgo-promise" "^1.0.10"
+    "zoid" "^9.0.0"
+
+"@paypal/common-components@^1.0.16":
+  "integrity" "sha512-pimzVBdsgtfuZxiNG/E4fGQd9IE4mLYtaV4zdhWrimb4l4DuABvIOIkvTOmRSrprGm72P0SlqEPCtRj7BPodzg=="
+  "resolved" "https://registry.npmjs.org/@paypal/common-components/-/common-components-1.0.20.tgz"
+  "version" "1.0.20"
+  dependencies:
+    "@paypal/sdk-client" "^4.0.0"
+    "@paypal/sdk-constants" "^1.0.1"
+    "@paypal/sdk-logos" "^1.0.1"
+    "belter" "^1.0.2"
+    "jsx-pragmatic" "^2"
+    "post-robot" "^10.0.0"
+    "zalgo-promise" "^1.0.10"
+    "zoid" "^9.0.0"
+
+"@paypal/funding-components@^1.0.17":
+  "integrity" "sha512-kddCq2vds14+OhQa8oMShCCz91wNTIsOW/rfHz1oHHsG06KRkAoKwCzNSwbwWK76YPe3kWJZMg+BaDwQJ9zYVQ=="
+  "resolved" "https://registry.npmjs.org/@paypal/funding-components/-/funding-components-1.0.22.tgz"
+  "version" "1.0.22"
+  dependencies:
+    "@paypal/sdk-client" "^4.0.122"
+    "@paypal/sdk-constants" "^1.0.57"
+    "belter" "^1.0.16"
+    "cross-domain-utils" "^2.0.27"
+
+"@paypal/sdk-client@^4.0.0", "@paypal/sdk-client@^4.0.122", "@paypal/sdk-client@^4.0.156":
+  "integrity" "sha512-owP2r1Cs6kpuXSh+Fzz0BsKAlFwzbKWhuqzZZ+HNkE2j27GhB1I9XDMQlU56Bo8C+3An9/qGNgtFipaG2HH8ww=="
+  "resolved" "https://registry.npmjs.org/@paypal/sdk-client/-/sdk-client-4.0.158.tgz"
+  "version" "4.0.158"
+  dependencies:
+    "@paypal/sdk-constants" "^1.0.94"
+    "beaver-logger" "^4.0.0"
+    "belter" "^1.0.146"
+    "bowser" "^2.0.0"
+    "jsx-pragmatic" "^2"
+    "zalgo-promise" "^1.0.46"
+
+"@paypal/sdk-constants@^1.0.1", "@paypal/sdk-constants@^1.0.107", "@paypal/sdk-constants@^1.0.11", "@paypal/sdk-constants@^1.0.57", "@paypal/sdk-constants@^1.0.94":
+  "integrity" "sha512-b/F6zz9hwZ4//XjH8uKQksPQY5m9VQ0Zgi+5J6Zb2ys5LzQu9w1VxH++jdChUNEcYa2Nm3u4QwaJCGSyBsSprA=="
+  "resolved" "https://registry.npmjs.org/@paypal/sdk-constants/-/sdk-constants-1.0.107.tgz"
+  "version" "1.0.107"
+  dependencies:
+    "cross-domain-utils" "^2.0.10"
+    "hi-base32" "^0.5.0"
+    "zalgo-promise" "^1.0.28"
+
+"@paypal/sdk-logos@^1.0.1", "@paypal/sdk-logos@^1.0.26":
+  "integrity" "sha512-7a5Go6NlpIBJr856+/odXEmu8ihejExh8fW7MwoKia9PIv2Gh6E/vQalAgLrJW5unJdroClXMCvzOqZxdC700g=="
+  "resolved" "https://registry.npmjs.org/@paypal/sdk-logos/-/sdk-logos-1.0.37.tgz"
+  "version" "1.0.37"
+  dependencies:
+    "@paypal/sdk-constants" "^1.0.11"
+    "belter" "^1.0.45"
+    "jsx-pragmatic" "^2"
+
 "@pmmmwh/react-refresh-webpack-plugin@0.4.3":
   "integrity" "sha512-br5Qwvh8D2OQqSXpd1g/xqXKnK0r+Jz6qVKBbWmpUcrbGOxUrf39V5oZ1876084CGn18uMdR5uvPqBv9UqtBjQ=="
   "resolved" "https://registry.npmjs.org/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.4.3.tgz"
@@ -3346,6 +3417,23 @@
   dependencies:
     "tweetnacl" "^0.14.3"
 
+"beaver-logger@^4.0.0":
+  "integrity" "sha512-I/IRoQtz8sxvyu1eACnE4fQH6i+GrQ9HPynrQgBX+jOcEu/BX6Uw9XW9a53WJDo8n5qizH+vlLtZ00ypK0XmpQ=="
+  "resolved" "https://registry.npmjs.org/beaver-logger/-/beaver-logger-4.0.28.tgz"
+  "version" "4.0.28"
+  dependencies:
+    "belter" "^1.0.17"
+    "zalgo-promise" "^1.0.26"
+
+"belter@^1.0.123", "belter@^1.0.146", "belter@^1.0.16", "belter@^1.0.17", "belter@^1.0.2", "belter@^1.0.41", "belter@^1.0.45":
+  "integrity" "sha512-wmUVEQR0igzKKO1yHT6ouGLCwzoeXFf1OsHeAk8DcCOgYtdBU8NiUlV94qx8NLFnahuwbpDqLBETfHUGXQOL8Q=="
+  "resolved" "https://registry.npmjs.org/belter/-/belter-1.0.173.tgz"
+  "version" "1.0.173"
+  dependencies:
+    "cross-domain-safe-weakmap" "^1"
+    "cross-domain-utils" "^2"
+    "zalgo-promise" "^1"
+
 "bfj@^7.0.2":
   "integrity" "sha512-+e/UqUzwmzJamNF50tBV6tZPTORow7gQ96iFow+8b562OdMpEK0BcJEq2OSPEDmAbSMBQ7PKZ87ubFkgxpYWgw=="
   "resolved" "https://registry.npmjs.org/bfj/-/bfj-7.0.2.tgz"
@@ -3446,6 +3534,16 @@
   "resolved" "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
   "version" "1.0.0"
 
+"bowser@^1.9.4":
+  "integrity" "sha512-9IdMmj2KjigRq6oWhmwv1W36pDuA4STQZ8q6YO9um+x07xgYNCD3Oou+WP/3L1HNz7iqythGet3/p4wvc8AAwQ=="
+  "resolved" "https://registry.npmjs.org/bowser/-/bowser-1.9.4.tgz"
+  "version" "1.9.4"
+
+"bowser@^2.0.0":
+  "integrity" "sha512-AlcaJBi/pqqJBIQ8U9Mcpc9i8Aqxn88Skv5d+xBX006BY5u8N3mGLHa5Lgppa7L/HfwgwLgZ6NYs+Ag6uUmJRA=="
+  "resolved" "https://registry.npmjs.org/bowser/-/bowser-2.11.0.tgz"
+  "version" "2.11.0"
+
 "brace-expansion@^1.1.7":
   "integrity" "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA=="
   "resolved" "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz"
@@ -3498,7 +3596,7 @@
     "braintree-web" "3.76.4"
     "promise-polyfill" "8.2.0"
 
-"braintree-web@^3.76.1", "braintree-web@3.76.4":
+"braintree-web@^3.76.4", "braintree-web@3.76.4":
   "integrity" "sha512-tN5dUzgCeUGHTivHP1q+1bj2XirVpzs/JlxwC2q63BBpYECxHZk6QqE9R+KHEKjfEg2t7lhR5Rr0zqTacSFoEA=="
   "resolved" "https://registry.npmjs.org/braintree-web/-/braintree-web-3.76.4.tgz"
   "version" "3.76.4"
@@ -3628,6 +3726,11 @@
   "version" "2.1.1"
   dependencies:
     "node-int64" "^0.4.0"
+
+"buffer-crc32@^0.2.3":
+  "integrity" "sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI="
+  "resolved" "https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.13.tgz"
+  "version" "0.2.13"
 
 "buffer-equal-constant-time@1.0.1":
   "integrity" "sha1-+OcRMvf/5uAaXJaXpMbz5I1cyBk="
@@ -4378,6 +4481,20 @@
   dependencies:
     "is-nan" "^1.3.2"
     "luxon" "^1.26.0"
+
+"cross-domain-safe-weakmap@^1", "cross-domain-safe-weakmap@^1.0.1", "cross-domain-safe-weakmap@^1.0.19":
+  "integrity" "sha512-VLoUgf2SXnf3+na8NfeUFV59TRZkIJqCIATaMdbhccgtnTlSnHXkyTRwokngEGYdQXx8JbHT9GDYitgR2sdjuA=="
+  "resolved" "https://registry.npmjs.org/cross-domain-safe-weakmap/-/cross-domain-safe-weakmap-1.0.29.tgz"
+  "version" "1.0.29"
+  dependencies:
+    "cross-domain-utils" "^2.0.0"
+
+"cross-domain-utils@^2", "cross-domain-utils@^2.0.0", "cross-domain-utils@^2.0.1", "cross-domain-utils@^2.0.10", "cross-domain-utils@^2.0.27", "cross-domain-utils@^2.0.3", "cross-domain-utils@^2.0.33":
+  "integrity" "sha512-UYrm3t5GB8ATFSqYeikR1yqY6vEFvPU0slvGW6PLkW2yzVAg13/tytww7ylu6C9J8aZCpEho4WgxhV3uZeEw0g=="
+  "resolved" "https://registry.npmjs.org/cross-domain-utils/-/cross-domain-utils-2.0.35.tgz"
+  "version" "2.0.35"
+  dependencies:
+    "zalgo-promise" "^1.0.11"
 
 "cross-spawn@^6.0.0":
   "integrity" "sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ=="
@@ -6515,6 +6632,11 @@
   "resolved" "https://registry.npmjs.org/hex-color-regex/-/hex-color-regex-1.1.0.tgz"
   "version" "1.1.0"
 
+"hi-base32@^0.5.0":
+  "integrity" "sha512-EmBBpvdYh/4XxsnUybsPag6VikPYnN30td+vQk+GI3qpahVEG9+gTkG0aXVxTjBqQ5T6ijbWIu77O+C5WFWsnA=="
+  "resolved" "https://registry.npmjs.org/hi-base32/-/hi-base32-0.5.1.tgz"
+  "version" "0.5.1"
+
 "history@^4.9.0":
   "integrity" "sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew=="
   "resolved" "https://registry.npmjs.org/history/-/history-4.10.1.tgz"
@@ -8122,6 +8244,16 @@
     "array-includes" "^3.1.2"
     "object.assign" "^4.1.2"
 
+"jsx-pragmatic@^1.0.11", "jsx-pragmatic@^1.0.4", "jsx-pragmatic@^1.0.7":
+  "integrity" "sha512-YFyd1coNboBOmUYAsCj6JSLEtlM/+NDIaLuZURjGvTV/OsqNDe3+3cy0FMrqn8vo0PT2ygJCxuSIuEWGr+CeCA=="
+  "resolved" "https://registry.npmjs.org/jsx-pragmatic/-/jsx-pragmatic-1.0.14.tgz"
+  "version" "1.0.14"
+
+"jsx-pragmatic@^2":
+  "integrity" "sha512-PH+QE1beWIB9CfYBbmwGCo54Ys7SeSKVe4RrAkbBHXy3dL2CYUqbE7A6OOPOH5oWdY9iabzHoEKElfYMu2iMEA=="
+  "resolved" "https://registry.npmjs.org/jsx-pragmatic/-/jsx-pragmatic-2.0.20.tgz"
+  "version" "2.0.20"
+
 "jwa@^2.0.0":
   "integrity" "sha512-jrZ2Qx916EA+fq9cEAeCROWPTfCwi1IVHqT2tapuqLEVVDKFDENFw1oL+MwrTvH6msKxsd1YTDVw6uKEcsrLEA=="
   "resolved" "https://registry.npmjs.org/jwa/-/jwa-2.0.0.tgz"
@@ -9541,6 +9673,66 @@
   "resolved" "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz"
   "version" "4.0.0"
 
+"paypal-braintree-web-client@^4.0.0":
+  "integrity" "sha512-PBPxexJJvFRlDErlZHQs1ZLErwDXrWYx6Sinc3Fi0LERCkfF50PaWMkIRsZ/RQMoC423TQxAdskae08V5uX2VA=="
+  "resolved" "https://registry.npmjs.org/paypal-braintree-web-client/-/paypal-braintree-web-client-4.0.42.tgz"
+  "version" "4.0.42"
+  dependencies:
+    "beaver-logger" "^4.0.0"
+    "belter" "^1.0.16"
+    "bowser" "^1.9.4"
+    "jsx-pragmatic" "^1.0.11"
+    "paypal-sdk-constants" "^1.0.12"
+    "zalgo-promise" "^1.0.22"
+
+"paypal-checkout-components@^4.1.35":
+  "integrity" "sha512-ZyR6RebX3IXKNqfoUN+TJPncZ97pKoUIteIfwz3nzZYdmqBT6xPzUfDsZikUY0nQuFn8xY8qrypNIvJtefemaA=="
+  "resolved" "https://registry.npmjs.org/paypal-checkout-components/-/paypal-checkout-components-4.1.35.tgz"
+  "version" "4.1.35"
+  dependencies:
+    "belter" "^1.0.2"
+    "cross-domain-utils" "^2.0.1"
+    "jsx-pragmatic" "^1.0.4"
+    "paypal-braintree-web-client" "^4.0.0"
+    "paypal-sdk-constants" "^1.0.1"
+    "paypal-sdk-logos" "^1.0.1"
+    "post-robot" "^9.0.0"
+    "zalgo-promise" "^1.0.10"
+    "zoid" "^7.0.0"
+
+"paypal-rest-sdk@^1.8.1":
+  "integrity" "sha512-Trj2GuPn10GqpICAxQh5wjxuDT7rq7DMOkvyatz05wI5xPGmqXN7UC0WfDSF9WSBs4YdcWZP0g+nY+sOdaFggw=="
+  "resolved" "https://registry.npmjs.org/paypal-rest-sdk/-/paypal-rest-sdk-1.8.1.tgz"
+  "version" "1.8.1"
+  dependencies:
+    "buffer-crc32" "^0.2.3"
+    "semver" "^5.0.3"
+
+"paypal-sdk-constants@^1.0.1", "paypal-sdk-constants@^1.0.11", "paypal-sdk-constants@^1.0.12":
+  "integrity" "sha512-lZ8jVsIVhZLskfqzY1Q4RQlrT9HvA6ylAyGbSskRlKvhL/Spd3Tu3LgBdgHHPDQdfFLlR6b3CN7taW3BNhlXtg=="
+  "resolved" "https://registry.npmjs.org/paypal-sdk-constants/-/paypal-sdk-constants-1.0.16.tgz"
+  "version" "1.0.16"
+  dependencies:
+    "cross-domain-utils" "^2.0.10"
+    "hi-base32" "^0.5.0"
+    "zalgo-promise" "^1.0.28"
+
+"paypal-sdk-logos@^1.0.1":
+  "integrity" "sha512-jPnCVxSuby1GERNN8uhWdJmdTBStzHr5VS38AgMGOGWdbGUBQvKCklUYYECxhC8uvaO0aOdRc5fxwtgh0cWVQQ=="
+  "resolved" "https://registry.npmjs.org/paypal-sdk-logos/-/paypal-sdk-logos-1.0.3.tgz"
+  "version" "1.0.3"
+  dependencies:
+    "belter" "^1.0.45"
+    "jsx-pragmatic" "^1.0.7"
+    "paypal-sdk-constants" "^1.0.11"
+
+"paypal@^1.0.1":
+  "integrity" "sha1-BYzVwWcMKgZ77Mj/vdFdFXTyKMU="
+  "resolved" "https://registry.npmjs.org/paypal/-/paypal-1.0.1.tgz"
+  "version" "1.0.1"
+  dependencies:
+    "underscore" "1.3.3"
+
 "pbkdf2@^3.0.3":
   "integrity" "sha512-4Ejy1OPxi9f2tt1rRV7Go7zmfDQ+ZectEQz3VGUQhgq62HtIRPDyG/JtnwIxs6x3uNMwo2V7q1fMvKjb+Tnpqg=="
   "resolved" "https://registry.npmjs.org/pbkdf2/-/pbkdf2-3.1.1.tgz"
@@ -9651,6 +9843,28 @@
   "integrity" "sha1-AerA/jta9xoqbAL+q7jB/vfgDqs="
   "resolved" "https://registry.npmjs.org/posix-character-classes/-/posix-character-classes-0.1.1.tgz"
   "version" "0.1.1"
+
+"post-robot@^10", "post-robot@^10.0.0":
+  "integrity" "sha512-LbA2E7gw/MkntjFtT2EPUrapIPCN/M9orKT3OTQC9A87raT5nmsL0nsHAr1AMZS0UoZxB6Z4K6OlnTxAgxXidw=="
+  "resolved" "https://registry.npmjs.org/post-robot/-/post-robot-10.0.44.tgz"
+  "version" "10.0.44"
+  dependencies:
+    "belter" "^1.0.41"
+    "cross-domain-safe-weakmap" "^1.0.1"
+    "cross-domain-utils" "^2.0.0"
+    "universal-serialize" "^1.0.4"
+    "zalgo-promise" "^1.0.3"
+
+"post-robot@^9", "post-robot@^9.0.0":
+  "integrity" "sha512-eTSuMG4EODm93k+TVmHYemD6JUbZDQO4uas7RcyfF78y6t3osAqIpD0+4e4YoTK7DPFnvgF+4PT3ywprF/a2qQ=="
+  "resolved" "https://registry.npmjs.org/post-robot/-/post-robot-9.0.36.tgz"
+  "version" "9.0.36"
+  dependencies:
+    "belter" "^1.0.41"
+    "cross-domain-safe-weakmap" "^1.0.1"
+    "cross-domain-utils" "^2.0.0"
+    "universal-serialize" "^1.0.4"
+    "zalgo-promise" "^1.0.3"
 
 "postcss-attribute-case-insensitive@^4.0.1":
   "integrity" "sha512-clkFxk/9pcdb4Vkn0hAHq3YnxBQ2p0CGD1dy24jN+reBck+EWxMbxSUqN4Yj7t0w8csl87K6p0gxBe1utkJsYA=="
@@ -11521,6 +11735,11 @@
   dependencies:
     "node-forge" "^0.10.0"
 
+"semver@^5.0.3":
+  "integrity" "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ=="
+  "resolved" "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz"
+  "version" "5.7.1"
+
 "semver@^5.3.0":
   "integrity" "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz"
@@ -12663,6 +12882,11 @@
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-3.7.5.tgz"
   "version" "3.7.5"
 
+"underscore@1.3.3":
+  "integrity" "sha1-R6xTaD2vgyv6lS4XdEF9pHgXrkI="
+  "resolved" "https://registry.npmjs.org/underscore/-/underscore-1.3.3.tgz"
+  "version" "1.3.3"
+
 "unicode-canonical-property-names-ecmascript@^1.0.4":
   "integrity" "sha512-jDrNnXWHd4oHiTZnx/ZG7gtUTVp+gCcTTKr8L0HjlwphROEW3+Him+IpvC+xcJEFegapiMZyZe02CyuOnRmbnQ=="
   "resolved" "https://registry.npmjs.org/unicode-canonical-property-names-ecmascript/-/unicode-canonical-property-names-ecmascript-1.0.4.tgz"
@@ -12772,6 +12996,11 @@
     "@types/unist" "^2.0.0"
     "unist-util-is" "^4.0.0"
     "unist-util-visit-parents" "^3.0.0"
+
+"universal-serialize@^1.0.4":
+  "integrity" "sha512-FdouA4xSFa0fudk1+z5vLWtxZCoC0Q9lKYV3uUdFl7DttNfolmiw2ASr5ddY+/Yz6Isr68u3IqC9XMSwMP+Pow=="
+  "resolved" "https://registry.npmjs.org/universal-serialize/-/universal-serialize-1.0.10.tgz"
+  "version" "1.0.10"
 
 "universalify@^0.1.0":
   "integrity" "sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg=="
@@ -13529,3 +13758,29 @@
   "integrity" "sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q=="
   "resolved" "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   "version" "0.1.0"
+
+"zalgo-promise@^1", "zalgo-promise@^1.0.10", "zalgo-promise@^1.0.11", "zalgo-promise@^1.0.22", "zalgo-promise@^1.0.26", "zalgo-promise@^1.0.28", "zalgo-promise@^1.0.3", "zalgo-promise@^1.0.45", "zalgo-promise@^1.0.46":
+  "integrity" "sha512-n6d/Gdv3Fl8l7h062WpWjpNYdDh5OFAg/e3UUqxdjbdUi4qdFcfYLJvaPIMrofmrgU7vEJ8ApLdg+yUeYCA9WQ=="
+  "resolved" "https://registry.npmjs.org/zalgo-promise/-/zalgo-promise-1.0.47.tgz"
+  "version" "1.0.47"
+
+"zoid@^7.0.0":
+  "integrity" "sha512-qCtOYtP0jFzwgx6pQhHhB2npQeC6Z+woOi/9/yoPRBNdf5GBLEWVHZGV4xwOFudQ1/YNHfBkd2WBEom/gZO4AA=="
+  "resolved" "https://registry.npmjs.org/zoid/-/zoid-7.0.29.tgz"
+  "version" "7.0.29"
+  dependencies:
+    "cross-domain-safe-weakmap" "^1.0.19"
+    "cross-domain-utils" "^2.0.3"
+    "jsx-pragmatic" "^1.0.7"
+    "post-robot" "^9"
+    "zalgo-promise" "^1.0.22"
+
+"zoid@^9.0.0":
+  "integrity" "sha512-wohgtumZ/5v8wSu92Dms6Er3JMhd6xF/9EXPFU0yLNJqQfzQ9GaiL/8OLrtD/+XTYzCcCqUUlrE27PKqbi1O5w=="
+  "resolved" "https://registry.npmjs.org/zoid/-/zoid-9.0.71.tgz"
+  "version" "9.0.71"
+  dependencies:
+    "belter" "^1.0.123"
+    "cross-domain-utils" "^2.0.33"
+    "post-robot" "^10"
+    "zalgo-promise" "^1.0.45"

@@ -3,7 +3,13 @@
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
+  "emulators": {
+    "hosting": {
+      "port": "3001"
+    }
+  },
   "hosting": {
+
     "public": "build",
     "site": "paarfitug",
     "ignore": [
