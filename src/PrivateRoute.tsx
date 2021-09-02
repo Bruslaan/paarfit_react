@@ -16,6 +16,9 @@ import {Logo} from './Components/Logo';
 import {makeStyles, Theme, createStyles} from '@material-ui/core/styles';
 import Milestones from './Pages/MilestonesPage';
 import Profile from './Pages/ProfilePage/Profile';
+import moment from "moment";
+import PricingComp from "./Pages/LandingPage/PricingPage/PricingComp";
+import Pricing from "./Pages/LandingPage/PricingPage/Pricing";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -29,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const PrivateRoute = ({...rest}) => {
-    const {authenticated, loadingAuthState, haveInformation} = useContext(
+    const {authenticated, loadingAuthState, haveInformation, userInformation} = useContext(
         AuthContext
     );
 
@@ -41,6 +44,39 @@ const PrivateRoute = ({...rest}) => {
             </div>
         );
     }
+
+
+    if (authenticated && userInformation?.registeredOn) {
+        if (!userInformation.payed) {
+
+
+            const registeredOn = moment(userInformation.registeredOn.toDate())
+            const today = moment()
+
+            console.log(registeredOn, "registed on")
+
+            if (registeredOn.add(14, "days").isBefore(today)) {
+                return (
+                    <div>
+                        <NavBarContainer/>
+                        <div className='spacer'></div>
+                        <div className='main__container mainContainerStyle'>
+                            <div className='ctMenuLeft disable_on_mobile'>
+                                <SidebarNavTopContainer/>
+                                <SidebarNavBottomContainer/>
+                            </div>
+                            <div className='contentArea'>
+                                <Pricing title={"Ihre 14 tägige Testphase ist abgelaufen!"}/>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+
+
+        }
+    }
+
 
     return (
         <Route

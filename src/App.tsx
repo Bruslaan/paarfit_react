@@ -9,7 +9,7 @@ import { AuthContext } from './AuthProvider';
 import Impressum from './Pages/Impressum';
 import Datenschutz from './Pages/Datenschutz';
 import AGB from './Pages/AGB';
-import PaymentComponent from "./Components/Payment/payment"
+
 let App = () => {
   const { authenticated, loadingAuthState, haveInformation } = useContext(
     AuthContext

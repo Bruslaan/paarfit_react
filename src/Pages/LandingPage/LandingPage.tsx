@@ -11,8 +11,7 @@ import Home from './Home';
 import NavBar from './NavBar';
 import Pricing from './PricingPage/Pricing';
 
-const LandingPage = ({ path }: any) => {
-  const pathName = window.location.pathname;
+const LandingPage = () => {
 
   return (
     <div className='landingPage'>

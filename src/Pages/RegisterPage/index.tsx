@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
 import {useHistory} from 'react-router-dom';
 // import { User, auth } from "firebase";
-import firebase from '../../firebase';
+import firebase, {db} from '../../firebase';
 import 'firebase/auth';
 import 'firebase/firestore';
 import {AuthContext} from '../../AuthProvider';
@@ -84,7 +84,7 @@ const Register = () => {
             [event.target.name]: event.target.value,
         }));
     };
-    const handleSubmit = (event: any) => {
+    const handleSubmit = async (event: any) => {
         event.preventDefault();
 
         if (values.password !== values.passwordrepeat) {
@@ -92,18 +92,23 @@ const Register = () => {
             return;
         }
 
-        firebase
+        const response = await firebase
             .auth()
-            .createUserWithEmailAndPassword(values.email, values.password)
-            .then((res: any) => {
-                authContext.setUser(res);
-                console.log(res, 'res');
-                history.push('/');
-            })
-            .catch((error: any) => {
+            .createUserWithEmailAndPassword(values.email, values.password).catch((error: any) => {
                 console.log(error.message);
                 alert(error.message);
+                return
             });
+
+        authContext.setUser(response.user);
+        console.log(response.user.uid, 'res');
+        const userID = response.user.uid
+
+        await db.collection("users").doc(userID).set({registeredOn: firebase.firestore.FieldValue.serverTimestamp()},{merge:true})
+
+        history.push('/')
+
+
     };
 
     return (

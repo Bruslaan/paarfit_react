@@ -1,8 +1,11 @@
 const functions = require('firebase-functions');
 const express = require('express');
+const admin = require("firebase-admin");
 const app = express();
 const cors = require('cors')({origin: true});
 app.use(cors);
+admin.initializeApp()
+const db = admin.firestore();
 
 const braintree = require("braintree");
 
@@ -19,35 +22,73 @@ app.get("/client_token", (req, res) => {
     });
 });
 
-app.post("/checkout", async (req, res) => {
-    const nonceFromTheClient = req.body.payment_method_nonce;
 
-    let result
-    try {
-        result = await gateway.customer.create({
-            firstName: "Charity5",
-            lastName: "Smith3",
-            paymentMethodNonce: nonceFromTheClient,
-        })
-    } catch (error) {
-        console.log("Cannot create user ", error)
-        res.send({status: "Failed"})
-    }
+app.post("/create_subscription_checkout", async (req, res) => {
+    const stripe = require('stripe')('sk_test_51JUuyZGuk1HRD8M6mcykXDsRM8WGvtBUT3D04ATQ2tsVg9EBDGovDTPLgOa9FQebPapW8gO0mFdiz1fUJQy4xCpG003i6VBFvq');
 
-    console.log(result)
-    // Use payment method nonce here
-    gateway.subscription.create({
-        paymentMethodToken: result["customer"].paymentMethods[0].token,
-        planId: "bulatschki",
+    const priceId = req.body.price_id
+    const userID = req.body.user_id
+// The price ID passed from the client
+//   const {priceId} = req.body;
 
-    }).then(result => {
-        res.send({status: result})
-    }).catch((error) => res.send({error: error}))
+    const session = await stripe.checkout.sessions.create({
+        mode: 'subscription',
+        payment_method_types: ['card'],
+        client_reference_id: userID,
+        line_items: [
+            {
+                price: priceId,
+                // For metered billing, do not pass quantity
+                quantity: 1,
+            },
+        ],
+        // {CHECKOUT_SESSION_ID} is a string literal; do not change it!
+        // the actual Session ID is returned in the query parameter when your customer
+        // is redirected to the success page.
+        success_url: 'http://localhost:3000/succ',
+        cancel_url: 'http://localhost:3000/succ',
+    });
+
+    console.log(session.url)
+
+    res.send({redirectUri: session.url})
+
 });
 
-app.get("/getAllPlans", async (req, res) => {
 
-    const plays = await gateway.plan.all()
-    res.send({test: plays});
+// Set your secret key. Remember to switch to your live secret key in production.
+// See your keys here: https://dashboard.stripe.com/apikeys
+
+app.post('/webhook', express.raw({type: 'application/json'}), async (req, res) => {
+    const stripe = require('stripe')('sk_test_51JUuyZGuk1HRD8M6mcykXDsRM8WGvtBUT3D04ATQ2tsVg9EBDGovDTPLgOa9FQebPapW8gO0mFdiz1fUJQy4xCpG003i6VBFvq');
+    console.log("Hallo ich wurde angerufen")
+    // Check if webhook signing is configured.
+
+    const webhookSecret = "whsec_tqd5UyRJYiCNmwWkz3CBxSHoUbiQW1L3"
+    let event;
+
+    try {
+        event = stripe.webhooks.constructEvent(req.rawBody, req.headers['stripe-signature'], webhookSecret);
+    } catch (err) {
+        console.log(`Webhook Error: ${err.message}`);
+        return;
+    }
+
+    // Handle the event
+    switch (event.type) {
+        case 'checkout.session.completed':
+            const data = event.data.object
+            console.log("Session completed with ", data["client_reference_id"])
+            await db.collection("users").doc(data["client_reference_id"]).set({payed: true}, {merge: true})
+            console.log("should be payed now")
+            // Then define and call a function to handle the event checkout.session.completed
+            break;
+        // ... handle other event types
+        default:
+            console.log(`Unhandled event type ${event.type}`);
+    }
+
+    // Return a 200 response to acknowledge receipt of the event
+    res.send();
 });
 exports.payment = functions.https.onRequest(app);

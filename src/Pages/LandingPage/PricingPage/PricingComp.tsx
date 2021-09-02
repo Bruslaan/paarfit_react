@@ -24,7 +24,7 @@ const PricingComp = ({ type }: any) => {
         <span className='pricingCompTitle'>{type.advice}</span>
         <span className='pricingTest'>{type.testTitle}</span>
 
-        <Button />
+        <Button type={type} />
       </div>
       <hr className='pricingHR' />
       <ul className='pricingCompBody'>
