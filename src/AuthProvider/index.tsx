@@ -51,7 +51,7 @@ export const AuthProvider = ({children}: any) => {
                 authenticated: user !== null,
                 setUser,
                 userInformation: userInformation,
-                haveInformation: userInformation !== null,
+                haveInformation: userInformation?.teamname,
                 loadingAuthState,
             }}
         >

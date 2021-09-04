@@ -101,7 +101,7 @@ const UserInformation = () => {
         afterImgURL: '',
         beforeImgURL: '',
         points: 0,
-      })
+      }, {merge:true})
       .then(function (docRef) {
         window.location.reload();
       })

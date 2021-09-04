@@ -73,7 +73,7 @@ export default function BoxTrainingActivity() {
     }
 
     const {userInformation} = useContext(AuthContext);
-    const isPflichtWorkout = userInformation.lastWorkoutDone ? moment().isAfter(moment(userInformation.lastWorkoutDone?.toDate()).add(2, "days"), "day") : true
+    const isPflichtWorkout = userInformation?.lastWorkoutDone ? moment().isAfter(moment(userInformation.lastWorkoutDone?.toDate()).add(2, "days"), "day") : true
 
     console.log(isPflichtWorkout)
     const classes = BoxTrainingActivityStyles();

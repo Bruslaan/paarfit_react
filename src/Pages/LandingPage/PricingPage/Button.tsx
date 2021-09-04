@@ -1,8 +1,12 @@
 import React, {useContext} from 'react';
 import './Button.css';
 import {AuthContext} from "../../../AuthProvider";
+import {useHistory} from "react-router";
 
 const Button = ({type}: any) => {
+
+    const history = useHistory()
+    console.log(type)
     const {user} = useContext(
         AuthContext
     );
@@ -10,6 +14,13 @@ const Button = ({type}: any) => {
     console.log(user?.uid)
 
     const createSession = async () => {
+
+        if(!user){
+            history.push("/registrieren")
+            return
+        }
+
+        const priceID = type.type === "monatlich" ? "price_1JUuxoFxclkzqGOHVKxoqtf1" : "price_1JUuxUFxclkzqGOHBB1bpIQT"
 
         console.log("hallo ich wurde gecalled")
         console.log(type.subPeriode)
@@ -21,7 +32,7 @@ const Button = ({type}: any) => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({price_id: "price_1JUuzvGuk1HRD8M6c5Uy8Our", user_id: user?.uid})
+            body: JSON.stringify({price_id: priceID, user_id: user?.uid})
         });
         const content = await rawResponse.json();
         console.log(content)

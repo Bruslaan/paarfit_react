@@ -17,7 +17,6 @@ import {makeStyles, Theme, createStyles} from '@material-ui/core/styles';
 import Milestones from './Pages/MilestonesPage';
 import Profile from './Pages/ProfilePage/Profile';
 import moment from "moment";
-import PricingComp from "./Pages/LandingPage/PricingPage/PricingComp";
 import Pricing from "./Pages/LandingPage/PricingPage/Pricing";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -45,6 +44,7 @@ const PrivateRoute = ({...rest}) => {
         );
     }
 
+    console.log(userInformation)
 
     if (authenticated && userInformation?.registeredOn) {
         if (!userInformation.payed) {
@@ -55,7 +55,10 @@ const PrivateRoute = ({...rest}) => {
 
             console.log(registeredOn, "registed on")
 
-            if (registeredOn.add(14, "days").isBefore(today)) {
+
+            console.log(registeredOn, today)
+
+            if (registeredOn.add(5, "minutes").isBefore(today)) {
                 return (
                     <div>
                         <NavBarContainer/>
