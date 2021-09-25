@@ -79,7 +79,7 @@ const Timer = ({
             case "Vorbereitung":
                 return (timer * 100) / 10
             case "Cooldown":
-                return (timer * 100) / 20
+                return (timer * 100) / 3
         }
 
     }
@@ -90,7 +90,7 @@ const Timer = ({
         if (SequenceArray[currentSequenceIndex] === 'Vorbereitung') {
             initTimerWith = 10
         } else if (SequenceArray[currentSequenceIndex] === 'Cooldown') {
-            initTimerWith = 20
+            initTimerWith = 3
         } else {
             SequenceArray[currentSequenceIndex] === 'Workout'
                 ? (initTimerWith = trainingTime)

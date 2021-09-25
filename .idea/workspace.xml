@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="Succc Page bearbeitet">
-      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
+    <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="no new workout is generated each time">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Timer/Timer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,14 +119,7 @@
       <workItem from="1630570606929" duration="5684000" />
       <workItem from="1630689842693" duration="104000" />
       <workItem from="1630755494532" duration="5638000" />
-      <workItem from="1632586980342" duration="933000" />
-    </task>
-    <task id="LOCAL-00003" summary="training merged into master">
-      <created>1614257207542</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1614257207542</updated>
+      <workItem from="1632586980342" duration="1283000" />
     </task>
     <task id="LOCAL-00004" summary="package lock on git ignore">
       <created>1614588820775</created>
@@ -463,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632587612474</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="no new workout is generated each time">
+      <created>1632588061319</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1632588061320</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +493,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Some Changes" />
     <MESSAGE value="firebase roots changed" />
     <MESSAGE value="Payment added" />
     <MESSAGE value="Ruslan Changes" />
@@ -517,6 +517,7 @@
     <MESSAGE value="payment succ" />
     <MESSAGE value="team name edit" />
     <MESSAGE value="Succc Page bearbeitet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Succc Page bearbeitet" />
+    <MESSAGE value="no new workout is generated each time" />
+    <option name="LAST_COMMIT_MESSAGE" value="no new workout is generated each time" />
   </component>
 </project>
