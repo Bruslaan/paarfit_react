@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="team name edit">
-      <change afterPath="$PROJECT_DIR$/src/Pages/SuccPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrivateRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrivateRoute.tsx" afterDir="false" />
+    <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="Succc Page bearbeitet">
+      <change beforePath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TrainingPage/TrainingActiveMaterial.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,14 +118,7 @@
       <workItem from="1630570606929" duration="5684000" />
       <workItem from="1630689842693" duration="104000" />
       <workItem from="1630755494532" duration="5638000" />
-      <workItem from="1632586980342" duration="611000" />
-    </task>
-    <task id="LOCAL-00002" summary="untracked files">
-      <created>1614256844606</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1614256844606</updated>
+      <workItem from="1632586980342" duration="933000" />
     </task>
     <task id="LOCAL-00003" summary="training merged into master">
       <created>1614257207542</created>
@@ -468,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630774293700</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Succc Page bearbeitet">
+      <created>1632587612473</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1632587612474</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +492,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="current changes" />
     <MESSAGE value="Some Changes" />
     <MESSAGE value="firebase roots changed" />
     <MESSAGE value="Payment added" />
@@ -522,6 +516,7 @@
     <MESSAGE value="best or nothing" />
     <MESSAGE value="payment succ" />
     <MESSAGE value="team name edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="team name edit" />
+    <MESSAGE value="Succc Page bearbeitet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Succc Page bearbeitet" />
   </component>
 </project>

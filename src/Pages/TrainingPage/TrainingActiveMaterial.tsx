@@ -130,7 +130,7 @@ export default function VerticalLinearStepper({stageNumber, onFinished}: any) {
        window.scrollTo({
            top: document.getElementsByClassName('makeStyles-active-15').offsetTop
        });*/
-    }, [activeStep]);
+    }, []);
 
     const handleNext = () => {
         if (activeStep === workouts.length - 1) {
