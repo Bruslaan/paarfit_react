@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="payment succ">
+    <list default="true" id="809e4e51-66c4-4716-a422-24cef80817d7" name="Default Changelist" comment="team name edit">
+      <change afterPath="$PROJECT_DIR$/src/Pages/SuccPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.YnVpbGQ.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthProvider/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthProvider/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/boxTrainingActivity/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreateUserInformation/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateUserInformation/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/LandingPage/PricingPage/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PrivateRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrivateRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,14 +122,8 @@
       <workItem from="1630505212390" duration="10613000" />
       <workItem from="1630570606929" duration="5684000" />
       <workItem from="1630689842693" duration="104000" />
-      <workItem from="1630755494532" duration="2741000" />
-    </task>
-    <task id="LOCAL-00001" summary="test">
-      <created>1613995500944</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1613995500945</updated>
+      <workItem from="1630755494532" duration="5638000" />
+      <workItem from="1632586980342" duration="611000" />
     </task>
     <task id="LOCAL-00002" summary="untracked files">
       <created>1614256844606</created>
@@ -468,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630589376505</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="team name edit">
+      <created>1630774293699</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1630774293700</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,7 +497,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TE and last workout is persitend now" />
     <MESSAGE value="current changes" />
     <MESSAGE value="Some Changes" />
     <MESSAGE value="firebase roots changed" />
@@ -522,6 +521,7 @@
     <MESSAGE value="reduced pause time" />
     <MESSAGE value="best or nothing" />
     <MESSAGE value="payment succ" />
-    <option name="LAST_COMMIT_MESSAGE" value="payment succ" />
+    <MESSAGE value="team name edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="team name edit" />
   </component>
 </project>

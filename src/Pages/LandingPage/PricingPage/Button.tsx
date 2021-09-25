@@ -20,10 +20,7 @@ const Button = ({type}: any) => {
             return
         }
 
-        const priceID = type.type === "monatlich" ? "price_1JUuxoFxclkzqGOHVKxoqtf1" : "price_1JUuxUFxclkzqGOHBB1bpIQT"
-
-        console.log("hallo ich wurde gecalled")
-        console.log(type.subPeriode)
+        const priceID = type.type === "monatlich" ? "price_1JXMhUCwuSLwjWaZ1fkmCU0T" : "price_1JXMhsCwuSLwjWaZkkbOC2jZ"
 
         const rawResponse = await fetch('https://us-central1-ruslantests.cloudfunctions.net/payment/create_subscription_checkout', {
             method: 'POST',

@@ -8,6 +8,7 @@ admin.initializeApp()
 const db = admin.firestore();
 
 const braintree = require("braintree");
+const sk = "sk_test_51IAYJKCwuSLwjWaZ03bvWPtJJcVux0k56RLR4cQm0iP0KKCBq5IEi6FOonGIZCvg1ZrWkqDYKtTvIGUVEyWhTEfy000Uchk8ct"
 
 const gateway = new braintree.BraintreeGateway({
     environment: braintree.Environment.Sandbox,
@@ -24,7 +25,7 @@ app.get("/client_token", (req, res) => {
 
 
 app.post("/create_subscription_checkout", async (req, res) => {
-    const stripe = require('stripe')('sk_test_51JUuyZGuk1HRD8M6mcykXDsRM8WGvtBUT3D04ATQ2tsVg9EBDGovDTPLgOa9FQebPapW8gO0mFdiz1fUJQy4xCpG003i6VBFvq');
+    const stripe = require('stripe')(sk);
 
     const priceId = req.body.price_id
     const userID = req.body.user_id
@@ -45,8 +46,8 @@ app.post("/create_subscription_checkout", async (req, res) => {
         // {CHECKOUT_SESSION_ID} is a string literal; do not change it!
         // the actual Session ID is returned in the query parameter when your customer
         // is redirected to the success page.
-        success_url: 'http://localhost:3000/succ',
-        cancel_url: 'http://localhost:3000/succ',
+        success_url: 'https://app.paarfit.de/succpage',
+        cancel_url: 'https://app.paarfit.de/',
     });
 
     console.log(session.url)
@@ -60,11 +61,11 @@ app.post("/create_subscription_checkout", async (req, res) => {
 // See your keys here: https://dashboard.stripe.com/apikeys
 
 app.post('/webhook', express.raw({type: 'application/json'}), async (req, res) => {
-    const stripe = require('stripe')('sk_test_51JUuyZGuk1HRD8M6mcykXDsRM8WGvtBUT3D04ATQ2tsVg9EBDGovDTPLgOa9FQebPapW8gO0mFdiz1fUJQy4xCpG003i6VBFvq');
+    const stripe = require('stripe')(sk);
     console.log("Hallo ich wurde angerufen")
     // Check if webhook signing is configured.
 
-    const webhookSecret = "whsec_tqd5UyRJYiCNmwWkz3CBxSHoUbiQW1L3"
+    const webhookSecret = "whsec_rB22YI1YcZOYCAkkfskKAqcFeQrvtgYO"
     let event;
 
     try {

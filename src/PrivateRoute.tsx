@@ -18,6 +18,7 @@ import Milestones from './Pages/MilestonesPage';
 import Profile from './Pages/ProfilePage/Profile';
 import moment from "moment";
 import Pricing from "./Pages/LandingPage/PricingPage/Pricing";
+import SuccPage from "./Pages/SuccPage"
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -45,6 +46,9 @@ const PrivateRoute = ({...rest}) => {
     }
 
     console.log(userInformation)
+
+
+
 
     if (authenticated && userInformation?.registeredOn) {
         if (!userInformation.payed) {
@@ -113,6 +117,9 @@ const PrivateRoute = ({...rest}) => {
                                         <Route exact path='/profile-page' component={Profile}/>
                                         <Route exact path='/milestones'>
                                             <Milestones/>
+                                        </Route>
+                                        <Route exact path='/succpage'>
+                                            <SuccPage/>
                                         </Route>
                                         <Redirect to='/'></Redirect>
                                     </Switch>
